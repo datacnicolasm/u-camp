@@ -1,7 +1,4 @@
-@import 'general';
-
-body {
-    font-size: $font-size;
-    color: white;
-    background-color: $primary-color;
-}
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '../adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '../adminlte/dist/css/adminlte.min.css';
+//@import 'adminlte/';
