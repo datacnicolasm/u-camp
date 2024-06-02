@@ -7878,6 +7878,16 @@ readers do not read off random characters that represent icons */
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+.main-sidebar-ucamp .item-div-sidebar {
+  height: 1px;
+  width: 100%;
+  background-color: #0ef2f2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.main-sidebar-ucamp .nav-treeview li.nav-item {
+  border-left: solid #0ef2f2 3px;
+}
 
 .header-cursos {
   border-radius: 5px;

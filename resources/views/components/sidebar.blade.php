@@ -22,10 +22,14 @@
         </div>
 
         <!-- Sidebar Menu -->
-        <nav class="mt-2">
+        <nav class="mt-2 sidebar-menu">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
 
+                <!-- Division de secciones -->
+                <div class="item-div-sidebar"></div>
+                
+                <!-- Seccion de Aprendizaje -->
                 <li class="nav-header"><strong>APRENDIZAJE</strong></li>
 
                 <!-- Cursos disponibles -->
@@ -42,7 +46,7 @@
                 </li>
 
                 <!-- Rutas de aprendizaje -->
-                <li class="nav-item">
+                <li class="nav-item nav-item-group">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-signs-post"></i>
                         <p>
@@ -82,6 +86,10 @@
                     </a>
                 </li>
 
+                <!-- Division de secciones -->
+                <div class="item-div-sidebar"></div>
+
+                <!-- Seccion de aplicacion de conocimientos -->
                 <li class="nav-header"><strong>APLICA TUS CONOCIMIENTOS</strong></li>
 
                 <!-- Proyectos -->
