@@ -1,0 +1,33 @@
+.main-sidebar{
+    .brand-link{
+        background-color: #fff !important;
+    }
+
+    .nav-sidebar{
+        .active-item-nav{
+            background-color: $color-secundario-ucamp;
+        }
+    }
+}
+
+.main-sidebar-ucamp{
+    background-color: #012244;
+
+    .nav-header{
+        background-color: inherit;
+        color: #fff;
+    }
+
+    .nav-item a{
+        color: #fff;
+    }
+
+    .nav-item a:hover{
+        color: #fff;
+    }
+
+    .nav-item:hover > .nav-link{
+        background-color: rgba(255,255,255,.1);
+        color: #fff;
+    }
+}

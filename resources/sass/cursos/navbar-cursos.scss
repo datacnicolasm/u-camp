@@ -1,0 +1,53 @@
+nav.view-curso-navbar {
+    background-color: #fff;
+    color: #1f2d3d;
+    border-bottom: .5px solid #dee2e6;
+    z-index: 1034;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+    font-size: .8rem;
+
+    .container {
+        max-width: 1200px;
+
+        .container-breadcrumb{
+            background-color: aqua;
+        }
+
+        .container-course-guide{
+            background-color: brown;
+        }
+
+        .container-course-tools{
+            background-color: chartreuse;
+        }
+
+        .view-curso-breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin-bottom: 0;
+            list-style: none;
+
+            li.item-breadcrumb {
+                list-style: none;
+                padding-left: .5rem;
+            }
+
+            li.item-breadcrumb:nth-child(n+2)::before {
+                float: left;
+                padding-right: .5rem;
+                color: #6c757d;
+                content: "/";
+            }
+
+            li.active {
+                color: #6c757d;
+            }
+        }
+    }
+}

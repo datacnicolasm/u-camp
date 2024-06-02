@@ -1,4 +1,56 @@
+@import './generals.scss';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '../adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
 @import '../adminlte/dist/css/adminlte.min.css';
+@import './user/login.scss';
+@import './components/sidebar.scss';
+@import './cursos/list-cursos.scss';
+@import './cursos/navbar-cursos.scss';
 //@import 'adminlte/';
+
+.btn-ucamp{
+    color: #fff;
+    background-color: $color-ucamp;
+    border-color: $color-ucamp;
+    box-shadow: none;
+}
+
+.bg-ucamp{
+    color: #fff;
+    background-color: $color-ucamp;
+}
+
+.bg-2-ucamp{
+    color: #fff;
+    background-color: $color-secundario-ucamp;
+}
+
+.bg-3-ucamp{
+    color: #fff;
+    background-color: $color-terciario-ucamp;
+}
+
+.text-small{
+    font-size: 0.7em;
+}
+
+.text-medium{
+    font-size: 0.9em;
+}
+
+.text-large{
+    font-size: 1.3em;
+}
+
+.bg-ucamp{
+    background-color: #e8c042 !important;
+    color: white;
+}
+
+.logo-ucamp{
+    color: $color-ucamp;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.5em;
+}

@@ -1,13 +1,17 @@
 const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .setResourceRoot('../')
-   .babelConfig({
-       presets: ['@babel/preset-env']
-   })
-   .sourceMaps()
-   .version();
+    .sass('resources/sass/app.scss', 'public/css', {
+        sassOptions: {
+            prependData: `@import "generals";`
+        }
+    })
+    .setResourceRoot('../')
+    .babelConfig({
+        presets: ['@babel/preset-env']
+    })
+    .sourceMaps()
+    .version();
 
 if (mix.inProduction()) {
     mix.version();
