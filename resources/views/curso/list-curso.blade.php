@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body>
+<body class="layout-fixed">
 
     <div class="wrapper">
 
@@ -43,7 +43,7 @@
                                     <div class="col-4">
                                         <div class="row card-curso px-2 py-3 m-1">
                                             <div class="col-12 level-curso">
-                                                <div class="px-2 mb-3 bg-3-ucamp rounded d-inline-block text-medium">
+                                                <div class="px-2 mb-3 bg-2-ucamp rounded d-inline-block text-medium">
                                                     {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
                                                 </div>
                                             </div>
@@ -54,11 +54,11 @@
                                                 CURSO
                                             </div>
                                             <div class="col-12 mb-3 pl-2 text-secondary descript-curso">
-                                                {{ $curso->descripcion }}
+                                                {{ $curso->short_description }}
                                             </div>
                                             <div class="col-12 mt-2 pl-2">
-                                                <a href="{{ route('view-curso', ['user' => $user->id, 'page' => 'cursos', 'curso' => $curso->id]) }}" class="btn-shine">
-                                                    <span>Inscribirse</span>
+                                                <a href="{{ route('view-curso', ['curso' => $curso->id]) }}" class="btn btn-ucamp btn-block">
+                                                    <span>Ver curso</span>
                                                 </a>
                                             </div>
                                         </div>

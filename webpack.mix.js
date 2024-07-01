@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const path = require('path');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css', {
@@ -23,3 +24,6 @@ mix.webpackConfig({
         publicPath: '/fonts/'
     }
 });
+
+// Copiar los archivos de jQuery UI CSS
+mix.copy('node_modules/jquery-ui/themes/base/all.css', 'public/css/jquery-ui.css');

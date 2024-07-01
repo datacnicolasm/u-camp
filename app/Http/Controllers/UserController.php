@@ -13,15 +13,75 @@ class UserController extends Controller
     /**
      * Display form login user
      */
-    public function loginUser(){
-        $message = isset($_GET['message']) ? $_GET['message'] : true;
-        return view('user.login', ['message' => $message]);
+    public function loginUser()
+    {
+        return view('user.login');
+    }
+
+    /**
+     * Logout user
+     */
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // Redirigir a la ruta deseada después de cerrar sesión
+        return redirect()->route('login');
+    }
+
+    /**
+     * Display form create user.
+     */
+    public function createUser()
+    {
+        return view('user.create-user');
+    }
+
+    /**
+     * Form process create user
+     */
+    public function createUserForm(Request $request)
+    {
+        // Mensajes de error personalizados
+        $messages = [
+            'email.required' => 'El campo correo electrónico es obligatorio.',
+            'email.email' => 'El formato del correo electrónico no es válido.',
+            'email.unique' => 'El correo electrónico ya está registrado.',
+            'password.required' => 'El campo contraseña es obligatorio.',
+            'password.min' => 'La contraseña es muy corta. Debe tener al menos 6 caracteres.',
+        ];
+
+        // Validar los datos del formulario con mensajes personalizados
+        $request->validate([
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|string|min:6',
+        ], $messages);
+
+        // Tomar el texto antes del @ del correo electrónico
+        $email = $request->email;
+
+        // Crear el usuario
+        $user = new User();
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $email;
+        $user->password = bcrypt($request->password); // Encriptar la contraseña
+        $user->save();
+
+        // Iniciar sesión automáticamente para el usuario creado
+        Auth::login($user);
+
+        // Redireccionar con un mensaje de éxito
+        return redirect()->route('login-dashboard');
     }
 
     /**
      * Form process login
      */
-    public function loginUserForm(Request $request){
+    public function loginUserForm(Request $request)
+    {
         // Validar los datos del formulario
         $request->validate([
             'email' => 'required|email|max:255',
@@ -34,12 +94,11 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             // La contraseña es válida
             // Iniciar sesión del usuario, redireccionar, etc.
-            $user = User::where('email', $request->input('email'))->first();
-            return redirect()->route('login-dashboard', ['user' => $user->id]);
+            return redirect()->route('login-dashboard');
         } else {
             // Las credenciales son inválidas
             // Mostrar un mensaje de error o redireccionar de nuevo al formulario de inicio de sesión
-            return redirect()->route('login', ['message' => false]);
+            return redirect()->route('login')->with('message', 'Error en el inicio de sesión');
         }
     }
 
@@ -48,13 +107,7 @@ class UserController extends Controller
      */
     public function loginDashboard()
     {
-        if (isset($_GET['user'])) {
-            $id = $_GET['user'];
-            $user = User::find($id);
-            return view('dashboard.dashboard')->with(['user' => $user]);
-        } else {
-            return view('dashboard.dashboard');
-        }
+        return view('dashboard.dashboard');
     }
 
     /**
@@ -62,13 +115,7 @@ class UserController extends Controller
      */
     public function userProfile()
     {
-        if (isset($_GET['user'])) {
-            $id = $_GET['user'];
-            $user = User::find($id);
-            return view('user.profile')->with(['user' => $user]);
-        } else {
-            return view('user.profile');
-        }
+        return view('user.profile');
     }
 
     /**

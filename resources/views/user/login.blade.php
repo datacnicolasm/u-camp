@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Llamado al archivo CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
+@include('components.header')
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        <!-- /.login-logo -->
+        @include('components.logo')
         <div class="card card-outline card-outline-ibero card-primary">
-            <div class="card-header text-center">
-                <a class="h1"><b>U</b>Camp</a>
-            </div>
             <div class="card-body">
-                @if($message == false)
+                <!-- -->
+                <div class="text-create text-center">
+                    <p class="text-center">¡Bienvenido de nuevo!</p>
+                </div>
+                @if(session('message'))
                     <div class="alert alert-danger">
                         Los datos suministrados son incorrectos.
                     </div>
@@ -45,7 +34,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-ucamp btn-block">Empezar a aprender Gratis</button>
+                            <button type="submit" class="btn btn-ucamp btn-block">Iniciar sesión</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -55,9 +44,13 @@
                     Al continuar, aceptas nuestros Términos y condiciones, nuestra Política de Privacidad y que tus datos sean almacenados.
                 </p>
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card -->
+        <!-- -->
+        <div class="card card-outline p-3 mt-3">
+            <p class="text-center m-0">
+                O haz <a href="{{ route('sign-up') }}"><b>Clic aquí</b></a> para crear tu cuenta gratuita.
+            </p>
+        </div>
     </div>
 
     <!-- Llamado al archivo JavaScript -->

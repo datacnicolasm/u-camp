@@ -1,56 +1,138 @@
 @import './generals.scss';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~jquery-ui/themes/base/all.css';
 @import '../adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
 @import '../adminlte/dist/css/adminlte.min.css';
 @import './user/login.scss';
+@import './user/create.scss';
 @import './components/sidebar.scss';
+@import './components/navbar.scss';
 @import './cursos/list-cursos.scss';
 @import './cursos/navbar-cursos.scss';
+@import './cursos/footer-cursos.scss';
+@import './cursos/view-curso.scss';
+@import './cursos/detalle-curso.scss';
+@import './cursos/video-curso.scss';
+@import './cursos/cuestionario-curso.scss';
+@import './cursos/interactivo-curso.scss';
+@import './cursos/cursos-dian/header-dian.scss';
+@import './cursos/cursos-dian/new-dian.scss';
+@import './cursos/cursos-dian/formulario-dian.scss';
+@import './cursos/dian-formularios/formulario-110-dian.scss';
+@import './cursos/dian-formularios/left-panel.scss';
+@import './rutas-profesionales/list-rutas.scss';
+@import './rutas-profesionales/view-rutas.scss';
 //@import 'adminlte/';
 
-.btn-ucamp{
+.logo {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    span {
+        font-family: "Madimi One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .u-logo {
+        font-size: 2.9rem;
+        color: $color-terciario-ucamp;
+    }
+
+    .camp-logo {
+        font-size: 2.9rem;
+        margin-left: 2px;
+        color: $color-ucamp;
+    }
+}
+
+.btn-ucamp {
     color: #fff;
-    background-color: $color-ucamp;
-    border-color: $color-ucamp;
+    background-color: #003b77;
+    border-color: #003b77;
     box-shadow: none;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-terciario-ucamp;
+        border-color: $color-terciario-ucamp;
+        box-shadow: none;
+    }
 }
 
-.bg-ucamp{
+.bg-ucamp {
     color: #fff;
     background-color: $color-ucamp;
 }
 
-.bg-2-ucamp{
+.text-ucamp{
+    color: $color-ucamp;
+}
+
+.bg-2-ucamp {
     color: #fff;
     background-color: $color-secundario-ucamp;
 }
 
-.bg-3-ucamp{
+.text-2-ucamp {
+    color: $color-secundario-ucamp;
+}
+
+.bg-3-ucamp {
     color: #fff;
     background-color: $color-terciario-ucamp;
 }
 
-.text-small{
+.text-3-ucamp {
+    color: $color-terciario-ucamp;
+}
+
+.text-small {
     font-size: 0.7em;
 }
 
-.text-medium{
+.text-medium {
     font-size: 0.9em;
 }
 
-.text-large{
+.text-large {
     font-size: 1.3em;
 }
 
-.bg-ucamp{
+.bg-ucamp {
     background-color: #e8c042 !important;
     color: white;
 }
 
-.logo-ucamp{
+.logo-ucamp {
     color: $color-ucamp;
     font-weight: bold;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     font-size: 1.5em;
+}
+
+.container-course-progress {
+    padding: 10px;
+
+    .progress-container {
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+
+        .progress-bar {
+            height: 15px;
+            width: 0%;
+            background-color: $color-terciario-ucamp;
+            text-align: center;
+            line-height: 30px; /* Alinea el texto verticalmente */
+            color: white;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+    }   
 }

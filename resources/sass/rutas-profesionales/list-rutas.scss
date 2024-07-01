@@ -1,0 +1,47 @@
+.content {
+    .header-rutas {
+        border-radius: 5px;
+        color: #fff;
+        background: #05192d;
+    }
+
+    .divisor-ruta {
+        background-color: #c3c2c2;
+        height: 1px;
+        width: 95%;
+        margin: 5px 2.5%;
+        display: block;
+    }
+
+    .count-ruta {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .card-ruta {
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #dfdfdf;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-badge {
+            background-color: #e7d10c;
+            padding: 3px 8px;
+            display: inline-block;
+            font-size: .8rem;
+            color: #000;
+            border-radius: 8px;
+    
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+}

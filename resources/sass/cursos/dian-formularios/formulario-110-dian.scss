@@ -1,0 +1,56 @@
+.content-formulario {
+    height: 100%;
+    padding: 15px 0;
+
+    .accordion {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 100%;
+    }
+
+    .accordion-header {
+        background-color: #eaeaea;
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    .accordion-header:hover {
+        background-color: #e1e1e1;
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        border-top: none;
+
+        .label-input{
+            margin: 0;
+        }
+    }
+
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .rotate {
+        transform: rotate(180deg);
+    }
+
+    .border-title {
+        border-left: 5px solid $color-terciario-ucamp;
+        padding-left: 10px;
+    }
+    
+    .content-right {
+        height: 100%;
+    }
+
+}

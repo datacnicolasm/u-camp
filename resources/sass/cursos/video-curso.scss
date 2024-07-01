@@ -1,0 +1,76 @@
+.video-view-curso{
+    width: 100vw; /* 100% del ancho de la ventana de visualización */
+    height: calc(100vh - 60px); /* 100% de la altura de la ventana de visualización menos 60px */
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto del elemento */
+    padding-bottom: 60px;
+    background-color: #dfe8ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video-container {
+        width: 80%;
+        max-width: 700px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .video-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 20px;
+        color: #000;
+    }
+    
+    .video-title {
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    .experience-points {
+        font-size: .9rem;
+        background-color: $color-secundario-ucamp;
+        padding: 3px 10px;
+        border-radius: 6px;
+        color:#fff;
+    }
+    
+    .video-player {
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 60px - 80px); /* Altura máxima restando header y padding */
+        outline: none;
+    }
+    
+    /* Estilo personalizado para los controles del video */
+    .video-player::-webkit-media-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-terciario-ucamp;
+        color: #fff;
+    }
+    
+    .video-player::-webkit-media-controls-play-button,
+    .video-player::-webkit-media-controls-pause-button,
+    .video-player::-webkit-media-controls-mute-button,
+    .video-player::-webkit-media-controls-unmute-button {
+        filter: invert(100%);
+    }
+    
+    .video-player::-webkit-media-controls-enclosure {
+        background-color: $color-terciario-ucamp;
+    }
+    
+    .video-player::-webkit-media-controls-timeline,
+    .video-player::-webkit-media-controls-current-time-display,
+    .video-player::-webkit-media-controls-time-remaining-display,
+    .video-player::-webkit-media-controls-fullscreen-button {
+        color: white;
+    }
+}

@@ -13,17 +13,10 @@ class CursoController extends Controller
      */
     public function listCursos()
     {
-        if (isset($_GET['user'])) {
-            $id = $_GET['user'];
-            $user = User::find($id);
+        // Obtener los primeros 9 cursos
+        $cursos = Curso::take(9)->get();
 
-            // Obtener los primeros 9 cursos
-            $cursos = Curso::take(9)->get();
-
-            return view('curso.list-curso')->with(['user' => $user, 'cursos' => $cursos]);
-        } else {
-            return view('dashboard.dashboard');
-        }
+        return view('curso.list-curso')->with(['cursos' => $cursos]);
     }
 
     /**
@@ -31,10 +24,21 @@ class CursoController extends Controller
      */
     public function viewCursos(Request $request, Curso $curso)
     {      
+        // Cargar las relaciones chapters y lessons
+        $curso->load('chapters.lessons');
+        
+        return view('curso.detalle-curso')->with(['curso' => $curso]);
+    }
+
+    /**
+     * View de formulario DIAN
+     */
+    public function formularioDIAN(Request $request, Curso $curso)
+    {
         if (isset($_GET['user'])) {
             $id = $_GET['user'];
             $user = User::find($id);
-            return view('curso.view-curso')->with(['user' => $user, 'curso' => $curso]);
+            return view('curso.dian-components.formulario-110-dian')->with(['user' => $user, 'curso' => $curso]);
 
         } else {
             return view('dashboard.dashboard');

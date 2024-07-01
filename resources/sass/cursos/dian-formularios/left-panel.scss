@@ -1,0 +1,50 @@
+#left-panel {
+
+    .content-panel {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 5px);
+        box-sizing: border-box;
+        padding: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .content-tab-panel {
+            height: 100%;
+            overflow-y: auto;
+            background-color: white;
+            padding: 10px;
+            flex-grow: 1;
+            box-sizing: border-box;
+
+            .subtle-title {
+                font-style: italic;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+            }
+
+            .financial-table {
+                margin-top: 20px;
+
+                td{
+                    padding: 0.4rem 0.75rem 0.4rem 2rem;
+                }
+            }
+
+            .table tbody {
+                td.clase-puc {
+                    background-color: #cbcbcb;
+                    padding: 0.4rem 0.75rem;
+                }
+
+                td.total-eeff {
+                    padding: 0.4rem 0.75rem 0.4rem 1rem;
+                }
+
+                tr:hover {
+                    background-color: #d9d8d8;
+                }
+            }
+        }
+    }
+
+}

@@ -3,6 +3,11 @@
 <body>
 
     <div class="wrapper">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('user') }}
+            </div>
+        @endif
 
         <!-- Barra de navegacion superior -->
         @include('components.navbar')

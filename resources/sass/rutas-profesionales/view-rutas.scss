@@ -1,0 +1,40 @@
+.header-ruta {
+    border-radius: 5px;
+    color: #fff;
+    background: #03182d;
+
+    // Estilos personalizados
+    .certificate-badge {
+        background-color: #ffeb3b;
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: bold;
+        color: #000;
+
+        i {
+            font-size: 1.2rem;
+        }
+
+        span {
+            margin-right: 15px;
+        }
+    }
+
+    .btn-ruta{
+        color: #fff;
+        background-color: $color-secundario-ucamp;
+        border: none;
+        box-shadow: none;
+        padding: 4px 20px !important;
+        font-size: 1.2rem;
+    }
+    
+    .toggle-more {
+        cursor: pointer;
+        color: #007bff;
+        text-decoration: underline;
+        &:hover {
+            color: #0056b3;
+        }
+    }
+}

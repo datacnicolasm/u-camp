@@ -7,25 +7,26 @@
         <div class="wrapper">
 
             <!-- Barra de navegacion superior -->
-            @include('curso.navbar-curso')
+            @include('curso.components.navbar-curso')
 
-            <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
-
-                <section class="content p-3">
-                    <div class="container-fluid">
-                        <div class="row">
-                            
-                        </div>
-                    </div>
-                </section>
-
+            <div class="content-type-lesson">
+                <!-- Content Wrapper. Contains page content -->
+                @if ( $lesson->type == 'video' )
+                    @include('curso.components.video-curso')
+                @elseif ( $lesson->type == 'questionnaire' )
+                    @include('curso.components.cuestionario-curso')
+                @elseif ( $lesson->type == 'interactive' )
+                    @include('curso.components.interactivo-curso')
+                @elseif ( $lesson->type == 'dian' )
+                    @include('curso.dian-components.formularios-dian')
+                @endif
             </div>
+
+            <!-- Barra de navegacion inferior -->
+            @include('curso.components.footer-curso')
 
         </div>
 
     </div>
 
     @include('components.footer')
-        
-        

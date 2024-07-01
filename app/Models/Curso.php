@@ -29,6 +29,25 @@ class Curso extends Model
         'tipo',
         'dificultad',
         'descripcion',
-        'tutor'
+        'short_description',
+        'long_description',
+        'tutor',
+        'ruta_profesional_id'
     ];
+
+    /**
+     * Get the tracks for the course.
+     */
+    public function rutaProfesional()
+    {
+        return $this->belongsTo(RutaProfesional::class);
+    }
+
+    /**
+     * Get the chapters for the course.
+     */
+    public function chapters()
+    {
+        return $this->hasMany(Chapter::class);
+    }
 }
