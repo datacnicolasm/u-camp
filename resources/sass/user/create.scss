@@ -1,9 +1,17 @@
-.login-page {
-    background-color: #f4f4f4 !important;
+.create-page {
+    background-image: url('../../images/background-create.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 
     .card-primary.card-outline-ibero {
 
-        .text-create p{
+        .text-create p {
             font-size: 1.1rem;
             font-weight: bold;
         }

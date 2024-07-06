@@ -27,3 +27,6 @@ mix.webpackConfig({
 
 // Copiar los archivos de jQuery UI CSS
 mix.copy('node_modules/jquery-ui/themes/base/all.css', 'public/css/jquery-ui.css');
+
+//
+mix.copy('resources/images', 'public/images')

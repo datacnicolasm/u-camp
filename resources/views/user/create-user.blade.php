@@ -1,8 +1,11 @@
 @include('components.header')
 
-<body class="hold-transition login-page">
+<body class="hold-transition create-page">
     <div class="login-box">
-        @include('components.logo')
+        <!-- -->
+        <a href="{{ route('home-page') }}">
+            @include('components.logo')
+        </a>
         <div class="card card-outline card-outline-ibero card-primary">
             <div class="card-body">
                 <!-- -->

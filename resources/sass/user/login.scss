@@ -1,5 +1,8 @@
 .login-page {
-    background-color: #f4f4f4 !important;
+    background-image: url('../../images/background-login.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     .card-primary.card-outline-ibero {
         border-top: 3px solid $color-secundario-ucamp;

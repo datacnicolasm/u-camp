@@ -22,7 +22,9 @@
 @import './cursos/dian-formularios/left-panel.scss';
 @import './rutas-profesionales/list-rutas.scss';
 @import './rutas-profesionales/view-rutas.scss';
-//@import 'adminlte/';
+@import './home/home-page.scss';
+@import './home/home-signup.scss';
+@import './home/home-navbar.scss';
 
 .logo {
     margin-bottom: 15px;
@@ -62,12 +64,26 @@
     }
 }
 
+.btn-ucamp-border {
+    color: $color-ucamp;
+    background-color: none;
+    border: 2px solid $color-ucamp;
+    box-shadow: none;
+
+    &:hover {
+        color: white;
+        background-color: $color-ucamp;
+        border: 2px solid $color-ucamp;
+        box-shadow: none;
+    }
+}
+
 .bg-ucamp {
     color: #fff;
     background-color: $color-ucamp;
 }
 
-.text-ucamp{
+.text-ucamp {
     color: $color-ucamp;
 }
 
@@ -129,10 +145,11 @@
             width: 0%;
             background-color: $color-terciario-ucamp;
             text-align: center;
-            line-height: 30px; /* Alinea el texto verticalmente */
+            line-height: 30px;
+            /* Alinea el texto verticalmente */
             color: white;
             border-radius: 10px;
             font-size: 0.8rem;
         }
-    }   
+    }
 }

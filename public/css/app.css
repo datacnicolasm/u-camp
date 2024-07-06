@@ -9394,17 +9394,28 @@ a.ui-button:active,
 /*# sourceMappingURL=adminlte.min.css.map */
 @charset "UTF-8";
 .login-page {
-  background-color: #f4f4f4 !important;
+  background-image: url(../images/background-login.svg?ff93cc9f6ce5e32421e0f10ef0d86d9e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .login-page .card-primary.card-outline-ibero {
   border-top: 3px solid rgb(211, 26, 113);
   padding: 4px 4px 0px 4px;
 }
 
-.login-page {
-  background-color: #f4f4f4 !important;
+.create-page {
+  background-image: url(../images/background-create.svg?e5ec261fffb92d5a041adf4ca1b0cafe);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
-.login-page .card-primary.card-outline-ibero .text-create p {
+.create-page .card-primary.card-outline-ibero .text-create p {
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -9778,7 +9789,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .video-view-curso .video-container {
   width: 80%;
-  max-width: 700px;
+  max-width: 1000px;
+  max-height: 100%;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -10326,10 +10338,13 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   align-items: center;
 }
 .content .card-ruta {
+  display: flex;
+  align-items: start;
+  justify-content: start;
   border-radius: 4px;
   border-style: solid;
-  border-width: 1px;
-  border-color: #dfdfdf;
+  border-width: 1.5px;
+  border-color: #888;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .content .card-ruta:hover {
@@ -10383,6 +10398,101 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   color: #0056b3;
 }
 
+body.page-home-camp {
+  padding-top: 80px;
+}
+body.page-home-camp .cont-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body.page-home-camp .cont-flex .flex-100 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+body.page-home-camp .cont-flex .flex-custom {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+body.page-home-camp #home-section-1 {
+  background-image: url(../images/home-1.svg?776663a70dff7656d03eeea2ec8afc7e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body.page-home-camp #home-section-1 h1 {
+  font-weight: bold;
+}
+body.page-home-camp #home-section-1 .text-home-1 p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+body.page-home-camp #home-section-1 .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+body.page-home-camp #home-section-1 .btn-home-1 .btn {
+  background-color: #021221;
+  border: 2px solid rgb(5, 189, 155);
+  color: white;
+}
+body.page-home-camp #home-section-1 .btn-home-1 .btn:hover {
+  background-color: rgb(5, 189, 155);
+}
+body.page-home-camp .section-home {
+  padding: 3rem 0;
+}
+body.page-home-camp .footer {
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+body.page-home-camp .footer p {
+  margin: 0;
+}
+
+body.page-home-camp .home-signup div.text-create p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #404040;
+}
+body.page-home-camp .home-signup p.text-small {
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+body.page-home-camp .navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+body.page-home-camp .navbar ul.navbar-nav .item-link::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: rgb(211, 26, 113);
+  display: block;
+  margin: auto;
+  transition: width 0.5s ease;
+  border-radius: 2px;
+}
+body.page-home-camp .navbar ul.navbar-nav .item-link:hover::after {
+  width: 100%;
+}
+body.page-home-camp .navbar .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+body.page-home-camp .navbar .btn-primary:hover {
+  background-color: #0062cc;
+  border-color: #0062cc;
+}
+
 .logo {
   margin-bottom: 15px;
   display: flex;
@@ -10414,6 +10524,19 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   color: #fff;
   background-color: rgb(5, 189, 155);
   border-color: rgb(5, 189, 155);
+  box-shadow: none;
+}
+
+.btn-ucamp-border {
+  color: #03182d;
+  background-color: none;
+  border: 2px solid #03182d;
+  box-shadow: none;
+}
+.btn-ucamp-border:hover {
+  color: white;
+  background-color: #03182d;
+  border: 2px solid #03182d;
   box-shadow: none;
 }
 
@@ -10484,7 +10607,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   width: 0%;
   background-color: rgb(5, 189, 155);
   text-align: center;
-  line-height: 30px; /* Alinea el texto verticalmente */
+  line-height: 30px;
+  /* Alinea el texto verticalmente */
   color: white;
   border-radius: 10px;
   font-size: 0.8rem;

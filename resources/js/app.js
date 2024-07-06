@@ -19,4 +19,5 @@ import './curso/dian-components/create-form-dian.js';
 import './curso/dian-components/formulario-110-dian.js';
 import './curso/dian-components/left-panel.js';
 import './rutas/view-rutas.js';
+import './rutas/list-rutas.js';
 //import '../adminlte/';

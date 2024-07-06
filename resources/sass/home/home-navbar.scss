@@ -1,0 +1,39 @@
+body.page-home-camp{
+    .navbar {
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 80px;
+        display: flex;
+        align-items: center;
+
+        ul.navbar-nav{
+            .item-link{
+
+                &::after{
+                    content: "";
+                    width: 0%;
+                    height: 5px;
+                    background-color: $color-secundario-ucamp;
+                    display: block;
+                    margin: auto;
+                    transition: width .5s ease;
+                    border-radius: 2px;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+    
+        .btn-primary {
+            background-color: $primary-color;
+            border-color: $primary-color;
+    
+            &:hover {
+                background-color: darken($primary-color, 10%);
+                border-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}

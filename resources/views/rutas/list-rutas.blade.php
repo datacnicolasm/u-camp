@@ -35,11 +35,11 @@
 
                         <!-- List Cursos -->
                         <div class="col-12 my-3">
-                            <div class="row">
+                            <div class="row list-rutas-items">
 
                                 @foreach ($rutas as $ruta)
-                                    <div class="col-6">
-                                        <div class="row card-ruta px-2 py-3 m-1">
+                                    <div class="col-6 mb-2">
+                                        <div class="row item-ruta card-ruta px-2 py-3 m-1">
                                             <div class="col-12 px-2 mb-2 text-muted text-medium">
                                                 RUTA PROFESIONAL
                                             </div>
@@ -56,12 +56,12 @@
                                             <div class="divisor-ruta"></div>
                                             <div class="col-12 mt-2 pl-2">
                                                 <div class="row py-1 px-3">
-                                                    <div class="col-7 count-ruta">34 Cursos y Proyectos</div>
                                                     <div class="col-5">
-                                                        <a href="{{ route('view-ruta-profesional', ['user' => $user->id, 'page' => 'rutas', 'ruta' => $ruta->id]) }}" class="btn btn-ucamp btn-block">
+                                                        <a href="{{ route('view-ruta-profesional', ['ruta' => $ruta->id]) }}" class="btn btn-ucamp btn-block">
                                                             <span>Ver detalles</span>
                                                         </a>
                                                     </div>
+                                                    <div class="col-7 count-ruta d-flex justify-content-end">34 Cursos y Proyectos</div>
                                                 </div>
                                             </div>
                                         </div>

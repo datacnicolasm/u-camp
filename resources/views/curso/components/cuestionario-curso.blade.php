@@ -1,7 +1,7 @@
 <div class="cuestionario-view-curso" data-pdf-url="{{ asset('pdf/dummy.pdf') }}">
 
     <div class="pdf-section">
-        <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="600px" />
+        <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="100%" />
     </div>
 
     <div class="questionnaire-section">

@@ -1,0 +1,76 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$dark-color: #000;
+
+// Estilos generales
+body.page-home-camp {
+    padding-top: 80px;
+
+    .cont-flex{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .flex-100{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .flex-custom{
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+    }
+
+    #home-section-1{
+        background-image: url('../../images/home-1.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        h1{
+            font-weight: bold;
+        }
+
+        .text-home-1 p{
+            text-align: justify;
+            font-size: .9rem;
+        }
+
+        .content{
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .btn-home-1 .btn{
+            background-color: #021221;
+            border: 2px solid $color-terciario-ucamp;
+            color: white;
+
+            &:hover{
+                background-color: $color-terciario-ucamp;
+            }
+        }
+    }
+
+    // Secciones de contenido
+    .section-home {
+        padding: 3rem 0;
+    }
+
+    // Footer
+    .footer {
+        padding: 20px 0;
+        background-color: $light-color;
+        color: $secondary-color;
+
+        p {
+            margin: 0;
+        }
+    }
+
+}

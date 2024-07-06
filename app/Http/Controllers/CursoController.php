@@ -35,13 +35,6 @@ class CursoController extends Controller
      */
     public function formularioDIAN(Request $request, Curso $curso)
     {
-        if (isset($_GET['user'])) {
-            $id = $_GET['user'];
-            $user = User::find($id);
-            return view('curso.dian-components.formulario-110-dian')->with(['user' => $user, 'curso' => $curso]);
-
-        } else {
-            return view('dashboard.dashboard');
-        }
+        return view('curso.dian-components.formulario-110-dian')->with(['curso' => $curso]);
     }
 }

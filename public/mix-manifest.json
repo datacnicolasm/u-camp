@@ -1,5 +1,16 @@
 {
-    "/js/app.js": "/js/app.js?id=65919c97002d56ca5cae3967618f5a7e",
-    "/css/app.css": "/css/app.css?id=b5507fc1989ff78336fd3df2aa8ab248",
-    "/css/jquery-ui.css": "/css/jquery-ui.css?id=6e2f32038cea74eb2d14e13313bf4a46"
+    "/js/app.js": "/js/app.js?id=22e58523d97fa376df6d94ec8ca6d09d",
+    "/css/app.css": "/css/app.css?id=8b2d60a84a9fadd1dc320e5fca482922",
+    "/css/jquery-ui.css": "/css/jquery-ui.css?id=6e2f32038cea74eb2d14e13313bf4a46",
+    "/images/background-create.svg": "/images/background-create.svg?id=4fbb6a4c86b27a040099b65de7476139",
+    "/images/background-login-1.svg": "/images/background-login-1.svg?id=b1a34f001cd1cd435700a27e1e45cb5f",
+    "/images/background-login.svg": "/images/background-login.svg?id=b1a34f001cd1cd435700a27e1e45cb5f",
+    "/images/home-1.svg": "/images/home-1.svg?id=fa200a1c1ac9ff823ef3f1df2153de8b",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_444444_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_444444_256x240.png?id=bed10eb948aa66a924e32f2022f0b7c1",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_555555_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_555555_256x240.png?id=d927e3a7feaea813b9bd0fd242e90de2",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_777620_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_777620_256x240.png?id=7c2eb0d985914d94938ebc386ad09e37",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_777777_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_777777_256x240.png?id=0c3579368edda27d14bb4910e27002b6",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_cc0000_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_cc0000_256x240.png?id=e5fe3b8d656a0dcf8c574ec8eb4cb6fe",
+    "/images/vendor/jquery-ui/themes/base/ui-icons_ffffff_256x240.png": "/images/vendor/jquery-ui/themes/base/ui-icons_ffffff_256x240.png?id=1e1f6219e7b6c134d1955b8db1907af5",
+    "/images/wave-haikei(1).svg": "/images/wave-haikei(1).svg?id=f9cddc71447f686a20b2ce04ddc22d57"
 }

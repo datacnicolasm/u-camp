@@ -4,6 +4,7 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\RutaProfesionalController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+Route::get('/', [HomeController::class, 'homePage'])->name('home-page');
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/', [UserController::class, 'loginUser'])->name('login');
+    Route::get('/log-in', [UserController::class, 'loginUser'])->name('login');
     Route::get('/sign-up', [UserController::class, 'createUser'])->name('sign-up');
     Route::post('/process-login', [UserController::class, 'loginUserForm'])->name('process-login');
     Route::post('/process-sign-up', [UserController::class, 'createUserForm'])->name('process-sign-up');

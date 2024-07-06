@@ -2,7 +2,9 @@
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        @include('components.logo')
+        <a href="{{ route('home-page') }}">
+            @include('components.logo')
+        </a>
         <div class="card card-outline card-outline-ibero card-primary">
             <div class="card-body">
                 <!-- -->
