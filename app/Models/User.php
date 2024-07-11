@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -42,4 +43,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function lessons(): BelongsToMany
+    {
+        return $this->belongsToMany(Lesson::class)->withTimestamps();
+    }
+
+    public function hasViewedLesson($lessonId)
+    {
+        return $this->lessons()->where('lesson_id', $lessonId)->where('user_id', $this->id)->exists();
+    }
 }

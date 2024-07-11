@@ -61,6 +61,12 @@
                     </a>
                 </li>
 
+                <!-- Division de secciones -->
+                <div class="item-div-sidebar"></div>
+
+                <!-- Seccion de aplicacion de conocimientos -->
+                <li class="nav-header"><strong>APLICA TUS CONOCIMIENTOS</strong></li>
+
                 <!-- Practica -->
                 <li class="nav-item">
                     <a href="pages/widgets.html" class="nav-link">
@@ -68,6 +74,12 @@
                         <p>Práctica</p>
                     </a>
                 </li>
+
+                <!-- Division de secciones -->
+                <div class="item-div-sidebar"></div>
+
+                <!-- Seccion de aplicacion de conocimientos -->
+                <li class="nav-header"><strong>EVALUA TUS CONOCIMIENTOS</strong></li>
 
                 <!-- Pruebas de conocimiento -->
                 <li class="nav-item">
@@ -79,25 +91,6 @@
 
                 <!-- Division de secciones -->
                 <div class="item-div-sidebar"></div>
-
-                <!-- Seccion de aplicacion de conocimientos -->
-                <li class="nav-header"><strong>APLICA TUS CONOCIMIENTOS</strong></li>
-
-                <!-- Proyectos -->
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-diagram-project"></i>
-                        <p>Proyectos</p>
-                    </a>
-                </li>
-
-                <!-- Casos de estudio -->
-                <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-timeline"></i>
-                        <p>Casos de estudio</p>
-                    </a>
-                </li>
 
                 <!-- Cerrar sesion -->
                 <li class="nav-item">

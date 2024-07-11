@@ -1,0 +1,57 @@
+// Estilos generales
+body.page-home-camp {
+    
+    // Footer
+    .footer {
+        padding: 40px 0;
+        background-color: $color-ucamp;
+        color: white;
+
+        p {
+            margin: 0;
+        }
+
+        .nosotros-footer{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            a{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .legal-temr{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0;
+
+            li{
+                display: block;
+            }
+        }
+
+        .items-social{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0;
+
+            li{
+                display: block;
+
+                .css-evebs5{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}

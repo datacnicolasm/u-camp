@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body class="layout-fixed">
+<body class="layout-fixed curso-page">
 
     <div class="wrapper">
 
@@ -28,8 +28,12 @@
                                     </h2>
                                 </div>
                                 <div class="col-10 btn-curso">
-                                    <a href="{{ route('view-curso', ['curso' => $curso->id]) }}" class="btn bg-3-ucamp mt-2">
-                                        <span>Continuar curso</span>
+                                    <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lastLesson["lesson_id"] ]) }}" class="btn bg-3-ucamp mt-2">
+                                        @if ($lastLesson["is_first"])
+                                            <span>Iniciar curso</span>
+                                        @else
+                                            <span>Continuar curso</span>
+                                        @endif
                                     </a>
                                 </div>
                                 <div class="col-10 mt-3 ml-2 datos-curso">
@@ -72,8 +76,13 @@
                                                         </div>
                                                         <div class="col-4 chapter-bar">
                                                             <div class="container-course-progress">
-
-                                                                <div class="progress-container">
+                                                                <?php
+                                                                    $class_progress = 0;
+                                                                    if ($chapter->total_lessons > 0){
+                                                                        $class_progress = ($chapter->viewed_lessons / $chapter->total_lessons)*100;
+                                                                    }
+                                                                ?>
+                                                                <div class="progress-container" data-progress="<?php echo round($class_progress) ?>">
                                                                     <div class="progress-bar" id="progress-bar"></div>
                                                                 </div>
                                                 
@@ -91,17 +100,18 @@
                                                                     <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lesson->id ]) }}">
                                                                         <div class="item-lesson-left">
                                                                             @if ( $lesson->type == 'video' )
-                                                                                <i class="fas fa-video"></i>
+                                                                                <i class="fas fa-video <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
                                                                             @elseif ( $lesson->type == 'questionnaire' )
-                                                                                <i class="fas fa-check-square"></i>
+                                                                                <i class="fas fa-check-square <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
                                                                             @elseif ( $lesson->type == 'interactive' )
-                                                                                <i class="fas fa-keyboard"></i>
+                                                                                <i class="fas fa-keyboard <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
                                                                             @elseif ( $lesson->type == 'dian' )
-                                                                                <i class="fas fa-file-invoice"></i>
+                                                                                <i class="fas fa-file-invoice <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
                                                                             @endif
                                                                             <span>{{ $lesson->title }}</span>
                                                                         </div>
-                                                                        <div class="item-lesson-right text-2-ucamp">
+                                                                        <div class="item-lesson-right <?php echo ($lesson->viewed) ? 'text-success' : 'text-2-ucamp'; ?>">
+                                                                            <?php echo ($lesson->viewed) ? '<i class="fas fa-check icon-circle"></i>' : ''; ?>
                                                                             {{ $lesson->points_xp }}xp
                                                                         </div>
                                                                     </a>

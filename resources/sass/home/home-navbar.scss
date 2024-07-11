@@ -27,12 +27,12 @@ body.page-home-camp{
         }
     
         .btn-primary {
-            background-color: $primary-color;
-            border-color: $primary-color;
+            background-color: #021221;
+            border-color: #021221;
     
             &:hover {
-                background-color: darken($primary-color, 10%);
-                border-color: darken($primary-color, 10%);
+                background-color: darken(#021221, 10%);
+                border-color: darken(#021221, 10%);
             }
         }
     }

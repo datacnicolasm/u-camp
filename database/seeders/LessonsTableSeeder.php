@@ -28,8 +28,8 @@ class LessonsTableSeeder extends Seeder
                 Lesson::create([
                     'title' =>          $lesson['title'],
                     'type' =>           $lesson['type'],
-                    'points_xp' =>      50,
-                    'chapter_id' =>     1
+                    'points_xp' =>      $lesson['points_xp'],
+                    'chapter_id' =>     $lesson['chapter_id']
                 ]);
             }
         } else {

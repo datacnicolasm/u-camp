@@ -1,4 +1,40 @@
 $color-ucamp: #03182d;
 $color-secundario-ucamp: rgb(211, 26, 113);
 $color-terciario-ucamp: rgb(5, 189, 155);
-$linear-ucamp: linear-gradient(to right, rgb(8, 42, 77), rgb(16, 74, 130), rgb(43, 126, 179), rgb(36, 107, 154), rgb(21, 88, 119))
+
+$tint-1: #021221;
+$tint-2: rgb(211, 26, 113);
+$tint-3: rgb(5, 189, 155);
+$tint-4: #03182d;
+$tint-5: rgb(33, 49, 71);
+
+.text-tint-1{
+    color: $tint-1;
+}
+
+.bg-tint-1{
+    background-color: $tint-1;
+}
+
+.text-tint-2{
+    color: $tint-2;
+}
+
+.text-tint-3{
+    color: $tint-3;
+}
+
+.text-tint-4{
+    color: $tint-4;
+}
+
+pre{
+    background-color: aliceblue;
+    max-width: 100%;
+    width: 100%;
+}
+
+.text-muted-dark{
+    color: #c8c8c8;
+    font-size: 0.9rem;
+}

@@ -5,6 +5,7 @@ use App\Http\Controllers\LessonController;
 use App\Http\Controllers\RutaProfesionalController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/check-email', [UserController::class, 'checkEmail']);
+
+Route::post('/payments', [PaymentController::class, 'store']);
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/', [HomeController::class, 'homePage'])->name('home-page');
+Route::get('/home/cursos', [HomeController::class, 'cursosPage'])->name('cursos-home');
+Route::get('/home/rutas', [HomeController::class, 'rutasPage'])->name('rutas-home');
+Route::get('/home/practicas', [HomeController::class, 'practicasPage'])->name('practicas-home');
+Route::get('/home/precios', [HomeController::class, 'preciosPage'])->name('precios-home');
+Route::get('/home/purchase', [HomeController::class, 'purchasePage'])->name('purchase-home');
+
+Route::post('/lessons/{lesson}/view', [LessonController::class, 'markAsViewed'])->middleware('auth');
+
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/log-in', [UserController::class, 'loginUser'])->name('login');

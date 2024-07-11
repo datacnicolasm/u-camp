@@ -1,0 +1,139 @@
+.page-pricing {
+    #price-section{
+        background-image: url('../../images/background-pricing-page.svg');
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+    
+    .pricing-table {
+        width: 100%;
+        margin: auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 5px;
+        box-shadow: 1.5px 1.5px 1px rgba(15,15,15,.3);
+
+        thead {
+            th {
+                padding: 20px;
+                font-weight: normal;
+                vertical-align: top;
+
+                &.none-header{
+                    background-color: none;
+                    border: none;
+                }
+
+                &.free-plan{
+                    background-color: #fff;
+                    color: #303030;
+
+                    .acceso{
+                        font-weight: normal;
+                        color: #8a8a8a;
+                    }
+
+                    .value-plan{
+                        .amount-value{
+                            font-size: 2.5rem;
+                            line-height: 72px;
+                        }
+                    }
+                }
+
+                &.premium-header{
+                    background-color: #fbf8f8;
+                    color: #303030;
+                    position: relative;
+                    border-left: solid 3px $color-terciario-ucamp;
+                    border-right: solid 3px $color-terciario-ucamp;
+
+                    .alert-premium{
+                        position: absolute;
+                        bottom: 100%;
+                        left: 0;
+                        background-color: $color-terciario-ucamp;
+                        width: 100%;
+                        height: 10px;
+
+                        span{
+                            background-color: $color-terciario-ucamp;
+                            border-radius: 8px;
+                            color: #fff;
+                            position: absolute;
+                            top: -10px;
+                            left: 30px;
+                            padding: 3px 15px;
+                        }
+                    }
+
+                    .acceso{
+                        font-weight: normal;
+                        color: #8a8a8a;
+                    }
+
+                    .value-plan{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: stretch;
+
+                        .amount-value{
+                            font-size: 3.0rem;
+                            line-height: 72px;
+                        }
+
+                        .info-value{
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            flex-flow: column;
+
+                            span{
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            border: solid .5px #dedede;
+
+            tr {
+
+                &:last-child {
+                    td.premium{
+                        border-bottom: solid 3px $color-terciario-ucamp;
+                        border-left: solid 3px $color-terciario-ucamp;
+                        border-right: solid 3px $color-terciario-ucamp;
+                    }    
+                }
+
+                td {
+                    color: #303030;
+                    padding: 15px;
+                    vertical-align: middle;
+                    background-color: #fff;
+
+                    &:first-child {
+                        border-right: solid .5px #dedede;
+                        border-left: solid .5px #dedede;
+                    }
+
+                    &.premium{
+                        background-color: #fbf8f8;
+                        border-left: solid 3px $color-terciario-ucamp;
+                        border-right: solid 3px $color-terciario-ucamp;
+                    }
+
+                    .fas {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+
+}

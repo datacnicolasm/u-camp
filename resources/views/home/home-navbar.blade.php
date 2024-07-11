@@ -14,13 +14,16 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item item-link mx-2">
-                    <a class="nav-link" href="#features">Cursos</a>
+                    <a class="nav-link" href="{{ route('cursos-home') }}">Cursos</a>
                 </li>
                 <li class="nav-item item-link mx-2">
-                    <a class="nav-link" href="#pricing">Rutas</a>
+                    <a class="nav-link" href="{{ route('rutas-home') }}">Rutas</a>
                 </li>
                 <li class="nav-item item-link mx-2">
-                    <a class="nav-link" href="#contact">Practica</a>
+                    <a class="nav-link" href="{{ route('practicas-home') }}">Practica</a>
+                </li>
+                <li class="nav-item item-link mx-2">
+                    <a class="nav-link" href="{{ route('precios-home') }}">Precios</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="btn btn-ucamp" href="{{ route('login') }}">Iniciar sesión</a>

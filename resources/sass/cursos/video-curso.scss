@@ -13,14 +13,16 @@
         max-width: 1000px;
         max-height: 100%;
         background-color: #ffffff;
-        border-radius: 10px;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        overflow: hidden;
+        border: solid 1px #d9d9d9;
+        box-shadow: 2px 2px 1px rgba(15,15,15,0.2);
     }
     
     .video-header {
+        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;

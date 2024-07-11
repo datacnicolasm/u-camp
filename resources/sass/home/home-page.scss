@@ -1,75 +1,210 @@
-// Variables
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$light-color: #f8f9fa;
-$dark-color: #000;
-
 // Estilos generales
 body.page-home-camp {
     padding-top: 80px;
 
-    .cont-flex{
+    .text-blue-camp {
+        color: #021221;
+    }
+
+    .text-two-camp{
+        color: $color-secundario-ucamp
+    }
+
+    .text-three-camp{
+        color: rgb(5, 189, 155);
+    }
+
+    .text-four-camp{
+        color: #06bdfc;
+    }
+
+    .text-five-camp{
+        color: #fcce0d;
+    }
+
+    .cont-flex {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
 
-        .flex-100{
+        .flex-100 {
             flex: 0 0 100%;
             max-width: 100%;
         }
 
-        .flex-custom{
+        .flex-custom {
             flex: 0 0 80%;
             max-width: 80%;
         }
     }
 
-    #home-section-1{
+
+    #home-section-1 {
         background-image: url('../../images/home-1.svg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        margin-top: -2px;
 
-        h1{
-            font-weight: bold;
-        }
-
-        .text-home-1 p{
+        .text-home-1 p {
             text-align: justify;
-            font-size: .9rem;
+            font-size: 1rem;
         }
 
-        .content{
+        .content {
             position: relative;
             z-index: 1;
             color: white;
         }
 
-        .btn-home-1 .btn{
+        .btn-home-1 .btn {
             background-color: #021221;
-            border: 2px solid $color-terciario-ucamp;
+            border: 2px solid #021221;
             color: white;
 
-            &:hover{
+            &:hover {
+                background-color: $color-secundario-ucamp;
+                border: 2px solid $color-secundario-ucamp;
+            }
+        }
+    }
+
+    #home-section-2 {
+        background-image: url('../../images/home-2.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: -2px;
+
+        .main-cont-flex {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .flex-100 {
+                text-align: center;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .text-home-2 {
+                text-align: center;
+                flex: 0 0 60%;
+                max-width: 60%;
+                margin: auto;
+            }
+
+            .btn-home-2 .btn {
+                background-color: $color-secundario-ucamp;
+                border: 2px solid $color-secundario-ucamp;
+                color: white;
+
+                &:hover {
+                    background-color: $color-terciario-ucamp;
+                    border: 2px solid $color-terciario-ucamp;
+                }
+            }
+        }
+    }
+
+    #home-section-3 {
+        background-image: url('../../images/home-2.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: -2px;
+
+        .btn-home-3 .btn {
+            background-color: $color-secundario-ucamp;
+            border: 2px solid $color-secundario-ucamp;
+            color: white;
+
+            &:hover {
                 background-color: $color-terciario-ucamp;
+                border: 2px solid $color-terciario-ucamp;
+            }
+        }
+    }
+
+    #title-home-section-4{
+        background-color: #021221;       
+    }
+
+    #home-section-4{
+        background-image: url('../../images/home-3.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: -2px;
+        padding-bottom: 4rem;
+
+        .item-ruta{
+            color:#021221;
+
+            &:hover{
+                background-color: #007bff;
+                color:#fff;
             }
         }
     }
 
     // Secciones de contenido
     .section-home {
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
 
     // Footer
     .footer {
-        padding: 20px 0;
-        background-color: $light-color;
-        color: $secondary-color;
+        padding: 40px 0;
+        background-color: $color-ucamp;
+        color: white;
 
         p {
             margin: 0;
+        }
+
+        .nosotros-footer{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            a{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .legal-temr{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0;
+
+            li{
+                display: block;
+            }
+        }
+
+        .items-social{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0;
+
+            li{
+                display: block;
+
+                .css-evebs5{
+                    color: #fff;
+                }
+            }
         }
     }
 

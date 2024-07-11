@@ -1,0 +1,292 @@
+.page-purchase-camp {
+    background-color: $tint-1;
+    padding: 30px;
+
+    .logo-purchase {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        span {
+            font-family: "Madimi One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .u-logo {
+            font-size: 2.4rem;
+            color: rgb(5, 189, 155);
+        }
+
+        .camp-logo {
+            font-size: 2.4rem;
+            margin-left: 2px;
+            color: #fff;
+        }
+    }
+
+    .text-purchase {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .payment-steps {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .payment-steps-number {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                color: #000;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2em;
+                border: solid 5px $tint-1;
+            }
+
+            .step-active {
+                background-color: $tint-3;
+                color: #fff;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #939393;
+                z-index: 0;
+            }
+        }
+
+        .payment-steps-text {
+            .step-text {
+                color: #fff;
+            }
+
+            .step-active {
+                color: $tint-3;
+            }
+        }
+    }
+
+    .form-sumary {
+        background-color: $tint-5;
+        border-radius: 5px;
+        padding: 40px 20px;
+        border-top: solid 3px $tint-3;
+
+        .sub-sumary {
+            border-top: solid .5px #ccc;
+            border-bottom: solid .5px #ccc;
+        }
+    }
+
+    .section-formulario {
+        background-color: $tint-5;
+        border-top: solid 3px $tint-3;
+        border-radius: 5px;
+        padding: 15px;
+        color: #fff;
+
+        input {
+            border-left: solid 5px $tint-3;
+
+            &:focus {
+                border: solid 2px $tint-3;
+            }
+        }
+
+        .text-muted {
+            font-size: .9rem;
+            text-align: justify;
+        }
+
+        .text-sesion {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            a:hover {
+                color: $tint-2;
+            }
+        }
+
+        .title-section-formulario {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .number {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                color: #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2em;
+                border: solid 5px $tint-5;
+            }
+
+            .number-activate {
+                background-color: $tint-3;
+                color: #fff;
+            }
+        }
+    }
+
+    #cuenta {
+        .content-cuenta {
+            display: none;
+
+            .invalid-feedback-mail{
+                display: none;
+                width: 100%;
+                margin-top: .25rem;
+                font-size: 80%;
+                color: #dc3545;
+            }
+
+            .invalid-feedback-user{
+                display: none;
+                width: 100%;
+                margin-top: .25rem;
+                font-size: 80%;
+                color: #dc3545;
+            }
+        }
+    }
+
+    #pago {
+        .content-pago {
+            display: none;
+        }
+
+        .pago-paypal {
+            img {
+                margin-left: 5px;
+                max-height: 23px;
+                width: auto;
+            }
+        }
+
+        #form-pago-wompi {
+            .waybox-button {
+                width: 100%;
+                border: solid 1px #fff;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 23px;
+                border-radius: .25rem;
+            }
+        }
+
+        .medios-pago-wompi {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img {
+                width: auto;
+                height: 40px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .payment-confirmation {
+        background: #fff;
+        border-radius: 15px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+        width: 80%;
+        max-width: 600px;
+        margin: auto;
+
+        .succes-payment{
+            width: 60%;
+            margin: 2rem auto;
+        }
+    
+        .confirmation-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+    
+            i {
+                font-size: 4rem;
+                border-radius: 50%;
+                border: solid 25px rgba(3, 255, 209, 0.3);
+
+                &.fa-times-circle{
+                    border: solid 25px rgba(255, 109, 109, 0.3)
+                }
+            }
+        }
+    
+        h1 {
+            margin-bottom: 20px;
+        }
+    
+        .payment-details {
+            border-top: dashed 2px #d0d0d0;
+            border-bottom: dashed 2px #d0d0d0;
+            padding: 15px;
+            margin-bottom: 20px;
+            margin: auto;
+            width: 90%;
+    
+            p {
+                margin: 10px 0;
+                color: $tint-1;
+            }
+        }
+    
+        .btn-success {
+            background-color: rgb(33, 49, 71);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+    
+            &:hover {
+                background-color: rgb(5, 189, 155);
+                color: #021221;
+            }
+        }
+    }
+
+    #confirmacion{
+        .content-confirmacion {
+            display: none;
+        }
+    }
+    
+}
