@@ -14,7 +14,7 @@
         <div class="content-wrapper">
 
             <section class="content content-teacher p-3">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
                         <!-- Header Cursos -->
                         <div class="col-12">

@@ -1,18 +1,16 @@
 .header-cursos {
   border-radius: 5px;
   color: #fff;
-  background: #003b77;
+  background: $tint-4;
 }
 
 .card-curso {
   border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dfdfdf;
+  border: 0;
+  box-shadow: 0 4px 6px 0 hsla(0,0%,0%,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.01);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }

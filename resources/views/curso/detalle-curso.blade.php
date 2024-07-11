@@ -13,8 +13,8 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
 
-            <section class="content content-teacher p-3">
-                <div class="container-fluid">
+            <section class="content p-3">
+                <div class="container">
                     <div class="row">
                         <!-- Header Curso -->
                         <div class="col-12">

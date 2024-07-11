@@ -5,13 +5,13 @@
 
     .nav-sidebar{
         .active-item-nav{
-            background-color: $color-secundario-ucamp;
+            background-color: $tint-2;
         }
     }
 }
 
 .main-sidebar-ucamp{
-    background-color: $color-ucamp;
+    background-color: $tint-1;
 
     .nav-header{
         background-color: inherit;
@@ -27,14 +27,14 @@
     }
 
     .nav-item:hover > .nav-link{
-        background-color: rgba(255,255,255,.1);
+        background-color: darken($tint-1, 2);
         color: #fff;
     }
 
     .item-div-sidebar{
         height: 1px;
         width: 90%;
-        background-color: #0ef2f2;
+        background-color: $tint-3;
         margin: .5rem auto;
     }
 
@@ -68,7 +68,7 @@
         .user-info{
             p{
                 margin: 0;
-                color: #393939;
+                color: $tint-1;
             }
         }
     }

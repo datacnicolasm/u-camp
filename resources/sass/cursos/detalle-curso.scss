@@ -7,20 +7,20 @@
 .header-detalle-cursos {
     border-radius: 5px;
     color: #fff;
-    background: #003b77;
+    background: $tint-4;
 
     .btn-curso a {
         color: #fff;
 
         &:hover {
-            background-color: $color-secundario-ucamp;
-            border-color: $color-secundario-ucamp;
+            background-color: $tint-2;
+            border-color: $tint-2;
             color: #fff
         }
     }
 
     .datos-curso {
-        border-left: solid 3px $color-secundario-ucamp;
+        border-left: solid 3px $tint-2;
     }
 }
 

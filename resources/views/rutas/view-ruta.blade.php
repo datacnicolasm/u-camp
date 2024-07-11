@@ -14,7 +14,7 @@
         <div class="content-wrapper">
 
             <section class="content content-teacher p-3">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
                          <!-- Header Cursos -->
                          <div class="col-12">
@@ -32,7 +32,7 @@
                                         <!-- Texto completo (oculto inicialmente) -->
                                         <div class="long-description d-none"><?php echo $ruta->long_description ?></div>
                                         <!-- Botón Ver más/Ver menos -->
-                                        <a href="#" class="toggle-more text-primary">Ver más</a>
+                                        <a href="#" class="toggle-more text-tint-5">Ver más</a>
                                     </div>
                                     <!-- Botón Iniciar ruta -->
                                     <a href="#" class="btn btn-ruta mt-3">INICIAR RUTA</a>

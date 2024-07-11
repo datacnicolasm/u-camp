@@ -46,19 +46,19 @@
                     background-color: #fbf8f8;
                     color: #303030;
                     position: relative;
-                    border-left: solid 3px $color-terciario-ucamp;
-                    border-right: solid 3px $color-terciario-ucamp;
+                    border-left: solid 3px $tint-3;
+                    border-right: solid 3px $tint-3;
 
                     .alert-premium{
                         position: absolute;
                         bottom: 100%;
                         left: 0;
-                        background-color: $color-terciario-ucamp;
+                        background-color: $tint-3;
                         width: 100%;
                         height: 10px;
 
                         span{
-                            background-color: $color-terciario-ucamp;
+                            background-color: $tint-3;
                             border-radius: 8px;
                             color: #fff;
                             position: absolute;
@@ -105,9 +105,9 @@
 
                 &:last-child {
                     td.premium{
-                        border-bottom: solid 3px $color-terciario-ucamp;
-                        border-left: solid 3px $color-terciario-ucamp;
-                        border-right: solid 3px $color-terciario-ucamp;
+                        border-bottom: solid 3px $tint-3;
+                        border-left: solid 3px $tint-3;
+                        border-right: solid 3px $tint-3;
                     }    
                 }
 
@@ -124,8 +124,8 @@
 
                     &.premium{
                         background-color: #fbf8f8;
-                        border-left: solid 3px $color-terciario-ucamp;
-                        border-right: solid 3px $color-terciario-ucamp;
+                        border-left: solid 3px $tint-3;
+                        border-right: solid 3px $tint-3;
                     }
 
                     .fas {

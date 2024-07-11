@@ -12,13 +12,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 191, 165, 0.7);
+            background-color: rgba(0, 108, 191, 0.7);
             z-index: 1;
         }
 
         .navigation-menu {
             position: relative;
-            z-index: 2; // Colocar el contenido por encima del fondo
+            z-index: 2;
 
             .container-top, .container-center, .container-bottom {
                 display: flex;

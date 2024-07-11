@@ -17,8 +17,9 @@
         flex-direction: column;
         cursor: pointer;
         overflow: hidden;
-        border: solid 1px #d9d9d9;
-        box-shadow: 2px 2px 1px rgba(15,15,15,0.2);
+        border: 0;
+        box-shadow: 0 4px 6px 0 hsla(0,0%,0%,0.2);
+        border-radius: 5px;
     }
     
     .video-header {
@@ -37,7 +38,7 @@
     
     .experience-points {
         font-size: .9rem;
-        background-color: $color-secundario-ucamp;
+        background-color: $tint-2;
         padding: 3px 10px;
         border-radius: 6px;
         color:#fff;
@@ -55,7 +56,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $color-terciario-ucamp;
+        background-color: $tint-3;
         color: #fff;
     }
     
@@ -67,7 +68,7 @@
     }
     
     .video-player::-webkit-media-controls-enclosure {
-        background-color: $color-terciario-ucamp;
+        background-color: $tint-3;
     }
     
     .video-player::-webkit-media-controls-timeline,

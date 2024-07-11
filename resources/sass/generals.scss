@@ -1,19 +1,14 @@
-$color-ucamp: #03182d;
-$color-secundario-ucamp: rgb(211, 26, 113);
-$color-terciario-ucamp: rgb(5, 189, 155);
+$tint-1: #1A334A;
+$tint-4: #1E536E;
+$tint-5: #18A3B7;
+$tint-6: #5AA5CD;
+$tint-2: #6F71A1;
+$tint-3: #27E6EC;
 
-$tint-1: #021221;
-$tint-2: rgb(211, 26, 113);
-$tint-3: rgb(5, 189, 155);
-$tint-4: #03182d;
-$tint-5: rgb(33, 49, 71);
 
+// Textos
 .text-tint-1{
     color: $tint-1;
-}
-
-.bg-tint-1{
-    background-color: $tint-1;
 }
 
 .text-tint-2{
@@ -26,6 +21,31 @@ $tint-5: rgb(33, 49, 71);
 
 .text-tint-4{
     color: $tint-4;
+}
+
+.text-tint-5{
+    color: $tint-5;
+}
+
+// Background
+.bg-tint-1{
+    background-color: $tint-1;
+}
+
+.bg-tint-2{
+    background-color: $tint-2;
+}
+
+.bg-tint-3{
+    background-color: $tint-3;
+}
+
+.bg-tint-4{
+    background-color: $tint-4;
+}
+
+.bg-tint-5{
+    background-color: $tint-5;
 }
 
 pre{

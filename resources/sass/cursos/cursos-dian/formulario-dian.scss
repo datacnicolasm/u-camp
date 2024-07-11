@@ -13,20 +13,20 @@
         left: 0;
         width: 100%;
         height: calc(100% - 60px);
-        background-color: rgba(0, 106, 91, 0.93);
+        background-color: rgba(255, 255, 255, 0.9);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: white;
-        z-index: 1000; // Asegura que esté por encima de otros elementos
+        z-index: 1000;
 
         .loading-icon {
             margin-left: -200px;
             width: 25px;
             height: 25px;
             border-radius: 50%;
-            background-color: rgb(211, 26, 113);
+            background-color: $tint-2;
         }
 
         p {
@@ -67,7 +67,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background-color: $color-ucamp;
+        background-color: $tint-1;
         color: #ffffff;
         border: none;
         padding: 10px;
@@ -83,7 +83,7 @@
         .panel-btn-text {
             position: absolute;
             padding: 8px 12px;
-            background-color: $color-terciario-ucamp;
+            background-color: $tint-3;
             color: #fff;
             border-radius: 5px;
             display: none;

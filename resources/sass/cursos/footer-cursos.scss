@@ -22,7 +22,7 @@ nav.view-curso-footer-nav{
         .button-container{
             margin: auto;
             display: flex;
-            gap: 10px; /* Margen entre los botones */
+            gap: 10px;
             
             .btn {
                 color: white;
@@ -32,7 +32,7 @@ nav.view-curso-footer-nav{
                 transition: background-color 0.3s, transform 0.3s;
                 outline: none;
                 border: none;
-                border-radius: 10px; /* Bordes redondeados */
+                border-radius: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -40,17 +40,17 @@ nav.view-curso-footer-nav{
             
             .left-btn, .right-btn {
                 width: 50px;
-                background-color: $color-terciario-ucamp;
+                background-color: $tint-3;
             }
             
             .center-btn {
                 flex: 2;
                 text-align: center;
-                background-color: $color-terciario-ucamp;
+                background-color: $tint-3;
             }
             
             .btn:hover {
-                background-color: #5ca3a2;
+                background-color: darken($tint-3, 2);
                 transform: scale(1.05);
             }
             
