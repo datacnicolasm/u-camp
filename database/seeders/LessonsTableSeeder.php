@@ -29,6 +29,7 @@ class LessonsTableSeeder extends Seeder
                     'title' =>          $lesson['title'],
                     'type' =>           $lesson['type'],
                     'points_xp' =>      $lesson['points_xp'],
+                    'order' =>      $lesson['order'],
                     'chapter_id' =>     $lesson['chapter_id']
                 ]);
             }

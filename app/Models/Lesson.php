@@ -14,6 +14,7 @@ class Lesson extends Model
         'title',
         'type',
         'points_xp',
+        'order',
         'chapter_id'
     ];
 

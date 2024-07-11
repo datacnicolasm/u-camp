@@ -2,25 +2,37 @@
     {
         "title": "Leccion de prueba de video",
         "type": "video",
+        "order": 1,
         "points_xp": 50,
         "chapter_id": 1
     },
     {
         "title": "Leccion de prueba de cuestionario",
         "type": "questionnaire",
+        "order": 3,
         "points_xp": 50,
         "chapter_id": 1
     },
     {
         "title": "Leccion de prueba de interactivo",
         "type": "interactive",
+        "order": 2,
         "points_xp": 50,
         "chapter_id": 1
     },
     {
         "title": "Leccion de prueba de formulario DIAN",
         "type": "dian",
+        "order": 4,
         "points_xp": 50,
         "chapter_id": 1
+    },
+    {
+        "title": "Leccion de hoy para verificar",
+        "type": "dian",
+        "order": 1,
+        "points_xp": 50,
+        "chapter_id": 2
     }
+
 ]

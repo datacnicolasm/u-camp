@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('type');
             $table->integer('points_xp');
+            $table->integer('order');
             $table->foreignId('chapter_id')->constrained('chapters')->onDelete('cascade');
             $table->timestamps();
         });
