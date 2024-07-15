@@ -16,11 +16,6 @@
                 
                 <button class="btn center-btn">Ver plan de curso</button>
                 
-                <!-- Siguiente leccion -->
-                @if( $nextLesson = \App\Models\Curso::getNextLesson($lesson->id) )
-                    <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $nextLesson ]) }}" class="btn right-btn"><i class="fas fa-arrow-right"></i></a>
-                @endif
-                
             </div>
         </div>
     </div>

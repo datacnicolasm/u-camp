@@ -44,6 +44,11 @@ class DatabaseSeeder extends Seeder
             LessonsTableSeeder::class,
         ]);
 
+        // Crear prefuntas de cuestionario
+        $this->call([
+            QuestionsTableSeeder::class,
+        ]);
+
         
     }
 }

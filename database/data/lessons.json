@@ -1,38 +1,23 @@
 [
     {
-        "title": "Leccion de prueba de video",
+        "title": "¿Qué es el sistema tributario de un país?",
         "type": "video",
         "order": 1,
-        "points_xp": 50,
+        "points_xp": 100,
         "chapter_id": 1
     },
     {
-        "title": "Leccion de prueba de cuestionario",
+        "title": "Práctica: Funciones del sistema tributario",
         "type": "questionnaire",
-        "order": 3,
-        "points_xp": 50,
-        "chapter_id": 1
-    },
-    {
-        "title": "Leccion de prueba de interactivo",
-        "type": "interactive",
         "order": 2,
         "points_xp": 50,
         "chapter_id": 1
     },
     {
-        "title": "Leccion de prueba de formulario DIAN",
-        "type": "dian",
-        "order": 4,
+        "title": "Práctica: Funciones del sistema tributario",
+        "type": "questionnaire",
+        "order": 3,
         "points_xp": 50,
         "chapter_id": 1
-    },
-    {
-        "title": "Leccion de hoy para verificar",
-        "type": "dian",
-        "order": 1,
-        "points_xp": 50,
-        "chapter_id": 2
     }
-
 ]

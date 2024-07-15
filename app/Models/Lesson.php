@@ -30,4 +30,12 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class)->withTimestamps();
     }
+
+    /**
+     * Relación con el modelo Question.
+     */
+    public function question()
+    {
+        return $this->hasOne(Question::class);
+    }
 }

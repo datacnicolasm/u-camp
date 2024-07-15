@@ -19,6 +19,10 @@ class LessonController extends Controller
         // Marcar la lección como vista
         $user->lessons()->syncWithoutDetaching([$lesson->id]);
 
+        if ($lesson->type == "questionnaire"){
+            $lesson->load('question');       
+        }
+
         return view('curso.view-curso')->with([
             'curso' => $curso,
             'lesson' => $lesson
@@ -35,5 +39,37 @@ class LessonController extends Controller
         return response()->json([
             'message' => 'Lección marcada como vista.',
         ]);
+    }
+
+    public function verifyResponse(Request $request, Lesson $lesson)
+    {
+        $user = $request->user();
+
+        // Cargar la relación question de la lección
+        $lesson->load('question');
+        
+        // Validar la opción seleccionada
+        $request->validate([
+            'option' => 'required|integer|between:1,4',
+        ]);
+
+        $selectedOption = $request->input('option');
+
+        // Comparar la opción seleccionada con la opción correcta
+        if ($selectedOption == $lesson->question->correct_option) {
+            return response()->json([
+                'data' => [
+                    'success' => true,
+                    'message' => 'Respuesta correcta'
+                ]
+            ]);
+        } else {
+            return response()->json([
+                'data' => [
+                    'success' => false,
+                    'message' => 'Respuesta incorrecta'
+                ]
+            ]);
+        }
     }
 }

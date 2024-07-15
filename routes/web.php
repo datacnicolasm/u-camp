@@ -40,8 +40,13 @@ Route::middleware(['guest'])->group(function () {
     Route::post('/process-sign-up', [UserController::class, 'createUserForm'])->name('process-sign-up');
 });
 
+// Aquí van las rutas que deseas proteger
 Route::middleware('auth')->group(function () {
-    // Aquí van las rutas que deseas proteger
+    
+    //
+    Route::post('/lessons/{lesson}/verifyResponse', [LessonController::class, 'verifyResponse'])->name('lessons.verifyResponse');
+
+    // Dashboard inicial
     Route::get('/dashboard', [UserController::class, 'loginDashboard'])->name('login-dashboard');
 
     // User

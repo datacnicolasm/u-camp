@@ -1,0 +1,22 @@
+[
+    {
+        "text_question":    "<p>Un país con un alto consumo de energía basada en combustibles fósiles enfrenta problemas ambientales como la contaminación y el cambio climático. Además, depende fuertemente de la importación de petróleo, lo cual es económicamente desventajoso. El gobierno de este país a decidido implementar las siguientes medidas para reducir la dependencia del país de los combustibles fósiles y fomentar una economía más verde:</p><ul><li>Créditos Tributarios para la Inversión en Energía Renovable: Las empresas que invierten en instalaciones de energía solar, eólica, o hidroeléctrica pueden beneficiarse de créditos fiscales que reducen su carga tributaria. Los particulares que instalan sistemas de energía renovable en sus hogares pueden recibir créditos fiscales similares, incentivándoles a optar por estas alternativas más sostenibles.</li><li>Exenciones Fiscales por Importación de Tecnología: Exención de impuestos aduaneros y IVA para la importación de tecnología avanzada necesaria para el desarrollo de infraestructuras de energía renovable.</li><li>Exenciones Fiscales por Ventas: Reducción o exención del IVA en la venta de equipos y servicios relacionados con energías renovables.</li><li>Subsidios Directos por Investigación y Desarrollo (I+D): Subsidios para proyectos de I+D en universidades y empresas que trabajen en tecnologías innovadoras de energía limpia.</li></ul><p>Con estas medidas el país espera:</p><ul><li>Resultados económicos Incremento en la inversión en energías renovables, reducción en la dependencia de importaciones de combustibles fósiles, y creación de empleos en el sector de energía verde.</li><li>Resultados sociales Mejoras en la calidad del aire y reducción de enfermedades respiratorias relacionadas con la contaminación. Fomento de una conciencia ambiental en la población.</li><li>Resultados de Innovación: Desarrollo de tecnología propia del país en el ámbito de las energías renovables, posicionando al país como un líder en innovación verde.</li></ul><h4>Este es un ejemplo claro del sistema tributario cumpliendo con una de sus funciones ¿cuál de las siguientes funciones del sistema tributario está siendo principalmente ejercida?</h4>",
+        "file_slide":       "slide_125015072024.pdf",
+        "option_1":         "Recaudación de ingresos.",
+        "option_2":         "Redistribución de la riqueza.",
+        "option_3":         "Promoción de objetivos económicos y sociales.",
+        "option_4":         "Estabilización económica.",
+        "correct_option":   3,
+        "lesson_id":        2
+    },
+    {
+        "text_question":    "<p>Un país enfrenta una inflación creciente que ha comenzado a afectar negativamente a la economía, reduciendo el poder adquisitivo de los ciudadanos y elevando el costo de vida. Para contrarrestar esta tendencia, el gobierno está considerando ajustar su política fiscal.</p><p>Para enfrentar la inflación, el gobierno propone incrementar temporalmente los impuestos sobre bienes de lujo y servicios no esenciales, con la intención de reducir la demanda agregada y estabilizar los precios. Al mismo tiempo, se está contemplando una reducción de impuestos para las pequeñas y medianas empresas (PyMEs) para fomentar la inversión y mantener los niveles de empleo.</p><h4>Considerando las medidas propuestas, ¿cuál de las siguientes opciones describe mejor el papel que está ejerciendo el sistema tributario en este escenario?</h4>",
+        "file_slide":       "slide_125015072024.pdf",
+        "option_1":         "Recaudación de ingresos para financiar directamente proyectos de infraestructura.",
+        "option_2":         "Redistribución de la riqueza para disminuir la desigualdad económica.",
+        "option_3":         "Estabilización económica mediante la gestión de la inflación y el estímulo al empleo.",
+        "option_4":         "Promoción de objetivos económicos y sociales a largo plazo mediante reformas estructurales.",
+        "correct_option":   3,
+        "lesson_id":        3
+    }
+]

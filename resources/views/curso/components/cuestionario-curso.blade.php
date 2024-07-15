@@ -1,4 +1,5 @@
-<div class="cuestionario-view-curso" data-pdf-url="{{ asset('pdf/dummy.pdf') }}">
+<div id="content-cuest" data-idlesson="{{ $lesson->id }}" class="cuestionario-view-curso"
+    data-pdf-url="{{ asset('pdf/' . $lesson->question->file_slide) }}">
 
     <div class="pdf-section">
         <embed id="pdf-embed" src="" type="application/pdf" width="100%" height="100%" />
@@ -11,9 +12,9 @@
         </div>
         <div class="questionnaire-content">
             <h3>{{ $lesson->title }}</h3>
-            <p>Explicación del escenario a evaluar.</p>
-            <br>
-            <h4>Pregunta: ¿Cuál es la capital de Francia?</h4>
+            <div class="text-question">
+                <?php echo $lesson->question->text_question; ?>
+            </div>
             <div class="response-options">
                 <div class="options-header">
                     <i class="fas fa-trophy"></i>
@@ -21,24 +22,50 @@
                     <span class="xp-badge">{{ $lesson->points_xp }}XP</span>
                 </div>
                 <form>
-                    <div>
-                        <input type="radio" id="option1" name="option" value="Paris">
-                        <label for="option1">Paris</label>
+                    <div class="option-response">
+                        <input type="radio" id="option1" name="option" value="1">
+                        <label for="option1">{{ $lesson->question->option_1 }}</label>
                     </div>
-                    <div>
-                        <input type="radio" id="option2" name="option" value="Londres">
-                        <label for="option2">Londres</label>
+                    <div class="option-response">
+                        <input type="radio" id="option2" name="option" value="2">
+                        <label for="option2">{{ $lesson->question->option_2 }}</label>
                     </div>
-                    <div>
-                        <input type="radio" id="option3" name="option" value="Madrid">
-                        <label for="option3">Madrid</label>
+                    <div class="option-response">
+                        <input type="radio" id="option3" name="option" value="3">
+                        <label for="option3">{{ $lesson->question->option_3 }}</label>
                     </div>
-                    <div>
-                        <input type="radio" id="option4" name="option" value="Berlin">
-                        <label for="option4">Berlin</label>
+                    <div class="option-response">
+                        <input type="radio" id="option4" name="option" value="4">
+                        <label for="option4">{{ $lesson->question->option_4 }}</label>
                     </div>
-                    <button type="submit">Enviar Respuesta</button>
                 </form>
+                <button id="submit-respuesta">Enviar Respuesta</button>
+                <div class="callout callout-danger">
+                    <p>
+                        <i class="icon fas fa-exclamation-triangle"></i>
+                        Debes seleccionar una opción!
+                    </p>
+                </div>
+                <div class="callout callout-success-incorrect">
+                    <p>
+                        <i class="icon fas fa-exclamation-triangle"></i>
+                        Oh! Esta no es la respuesta correcta, vuelve a intentarlo.
+                    </p>
+                </div>
+                <div class="callout callout-success">
+                    <p>
+                        <i class="icon fas fa-check"></i>
+                        Excelente! Es la respuesta correcta
+                    </p>
+                </div>
+
+                <!-- Siguiente leccion -->
+                @if ($nextLesson = \App\Models\Curso::getNextLesson($lesson->id))
+                    <div id="next-lesson-respuesta">
+                        <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $nextLesson]) }}"
+                            class="btn btn-ucamp btn-continuar">Continuar</a>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
