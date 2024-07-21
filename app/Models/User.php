@@ -22,7 +22,8 @@ class User extends Authenticatable
         'first-name',
         'last-name',
         'email',
-        'password'
+        'password',
+        'has_groups'
     ];
 
     /**
@@ -49,8 +50,21 @@ class User extends Authenticatable
         return $this->belongsToMany(Lesson::class)->withTimestamps();
     }
 
+    public function group(): BelongsToMany
+    {
+        return $this->belongsToMany(Group::class)->withTimestamps();
+    }
+
     public function hasViewedLesson($lessonId)
     {
         return $this->lessons()->where('lesson_id', $lessonId)->where('user_id', $this->id)->exists();
+    }
+    
+    /**
+     * Get the chapters for the course.
+     */
+    public function groups()
+    {
+        return $this->hasMany(Group::class);
     }
 }

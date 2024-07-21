@@ -19,36 +19,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Crear usuarios
         $this->call([
             UsersTableSeeder::class,
-        ]);
-
-        // Crear rutas
-        $this->call([
             TracksTableSeeder::class,
-        ]);
-
-        // Crear cursos
-        $this->call([
             CursosTableSeeder::class,
-        ]);
-
-        // Crear capitulos
-        $this->call([
             ChaptersTableSeeder::class,
-        ]);
-
-        // Crear lecciones
-        $this->call([
             LessonsTableSeeder::class,
-        ]);
-
-        // Crear prefuntas de cuestionario
-        $this->call([
             QuestionsTableSeeder::class,
+            GroupsTableSeeder::class,
+            GroupUserSeeder::class,
         ]);
-
-        
     }
 }

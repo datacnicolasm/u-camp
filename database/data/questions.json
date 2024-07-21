@@ -18,5 +18,45 @@
         "option_4":         "Promoción de objetivos económicos y sociales a largo plazo mediante reformas estructurales.",
         "correct_option":   3,
         "lesson_id":        3
+    },
+    {
+        "text_question":    "<p>El gobierno de un país planea financiar un nuevo programa de salud pública aumentando el impuesto sobre la renta para personas con altos ingresos. Sin embargo, este cambio no puede implementarse directamente por el ejecutivo, sino que debe seguir un proceso legislativo específico:</p></p><b>Presentación de la propuesta:</b> El Ministerio de Hacienda presenta al Congreso una propuesta detallada que explica la necesidad del aumento impositivo y el uso previsto de los fondos.</p></p><b>Debate legislativo:</b> La propuesta se debate en el congreso. Se realizan audiencias públicas y se consulta a expertos y a la sociedad civil.</p></p><b>Votación:</b> La propuesta se somete a votación en ambas cámaras del Congreso y necesita mayoría para su aprobación.</p></p><b>Promulgación e implementación:</b> Una vez aprobada, la ley es firmada por el presidente y entra en vigor en la fecha especificada. La administración tributaria ajusta sus procesos para aplicar el nuevo impuesto.</p><h4>Este escenario ilustra la aplicación de un principio específico del sistema tributario. ¿A cuál de los siguientes principios se refiere?</h4>",
+        "file_slide":       "slide_125815072024.pdf",
+        "option_1":         "Principio de equidad.",
+        "option_2":         "Principio de legalidad.",
+        "option_3":         "Principio de progresividad.",
+        "option_4":         "Principio de generalidad.",
+        "correct_option":   2,
+        "lesson_id":        5
+    },
+    {
+        "text_question":    "<p>En 2022, un grupo de empresarios realizó una serie de inversiones significativas en tecnología de energía renovable, aprovechando las políticas fiscales vigentes que ofrecían deducciones importantes. Sin embargo, debido a una crisis fiscal, el gobierno decide modificar retroactivamente estas políticas a principios de 2023. La nueva legislación propuesta busca aplicar tasas impositivas incrementadas a todas las inversiones hechas en el año anterior. Ante esta situación, varios empresarios argumentan que tal cambio violaría un principio clave del sistema tributario.</p><h4>¿Qué principio del sistema tributario podría estar siendo violado si el gobierno aplica retroactivamente la nueva legislación fiscal a inversiones realizadas antes de su promulgación?</h4>",
+        "file_slide":       "slide_125815072024.pdf",
+        "option_1":         "Principio de equidad: asegura que los impuestos se distribuyan de manera justa entre los contribuyentes.",
+        "option_2":         "Principio de irretroactividad: establece que las leyes no deben afectar actos o hechos que ocurrieron antes de su entrada en vigor.",
+        "option_3":         "Principio de legalidad: requiere que todos los impuestos sean aprobados por el congreso antes de su aplicación.",
+        "option_4":         "Principio de capacidad contributiva: estipula que los impuestos deben ajustarse a la capacidad económica del contribuyente.",
+        "correct_option":   2,
+        "lesson_id":        6
+    },
+    {
+        "text_question":    "<p>En un municipio de Antioquia, todos los propietarios de vehículos están sujetos a un impuesto vehicular, calculado sobre el valor comercial del vehículo. El Estado, a través de la Agencia Nacional de Transporte, actúa como la entidad cobradora del impuesto y mantiene el registro de todos los vehículos. Cada propietario de vehículo registrado debe cumplir con el pago del impuesto y mantener actualizada su información vehicular ante la entidad. El impuesto se basa en la propiedad del vehículo y el valor comercial del mismo sirve como base para calcular el impuesto con una tasa del 2% establecida por el consejo municipal, y es pagadero anualmente.</p><h4>Con base en la descripción anterior, ¿cuál de las siguientes afirmaciones sobre los elementos de la obligación tributaria es correcta?</h4>",
+        "file_slide":       "slide_144715072024.pdf",
+        "option_1":         "El sujeto pasivo de la obligación es el Estado, ya que es quien cobra el impuesto.",
+        "option_2":         "La tasa impositiva equivale al valor comercial del vehículo, ya que sobre este se calcula lo que se debe pagar.",
+        "option_3":         "El hecho generador de la obligación es la propiedad de un vehículo registrado en este municipio.",
+        "option_4":         "La base imponible es el 2%, que se utiliza para calcular el monto a pagar.",
+        "correct_option":   3,
+        "lesson_id":        8
+    },
+    {
+        "text_question":    "<p>En la ciudad de Cali, todos los negocios comerciales deben pagar un impuesto municipal sobre las ventas. Este impuesto se calcula aplicando una un porcentaje fijo sobre las ventas totales realizadas durante el año. La Alcaldía de Cali, a través del Departamento de Recaudación Tributaria, se encarga de la administración y recaudación de este impuesto. Cada negocio registrado en la ciudad debe reportar anualmente sus ventas totales y calcular el impuesto basado en una tarifa del 1.5%. La ley municipal estipula que el impuesto debe ser pagado antes del 31 de marzo de cada año para evitar multas.</p><h4>Con base en la descripción anterior, ¿cuál de las siguientes afirmaciones sobre los elementos de la obligación tributaria es correcta?</h4>",
+        "file_slide":       "slide_144715072024.pdf",
+        "option_1":         "El sujeto pasivo de la obligación es la Alcaldía de Cali, ya que es la entidad que recauda el impuesto.",
+        "option_2":         "La tasa impositiva es el valor de las ventas totales del negocio.",
+        "option_3":         "El hecho generador de la obligación es el pago del impuesto antes del 31 de marzo para evitar multas.",
+        "option_4":         "La base imponible es el total de ventas realizadas por el negocio durante el año.",
+        "correct_option":   4,
+        "lesson_id":        9
     }
 ]

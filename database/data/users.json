@@ -2,6 +2,37 @@
     {
         "first_name" : "ARLEY NICOLAS",
         "last_name" : "MUNOZ ALVAREZ",
-        "email" : "nico.munoz@example.com"
+        "email" : "nico.munoz@example.com",
+        "has_groups" : 1
+    },
+    {
+        "first_name" : "JHON JAIRO",
+        "last_name" : "ARIAS GOMEZ",
+        "email" : "jairo.arias@example.com",
+        "has_groups" : 0
+    },
+    {
+        "first_name" : "ANGIE MARILAIN",
+        "last_name" : "HERRERA GAITAN",
+        "email" : "aherre60@example.com",
+        "has_groups" : 0
+    },
+    {
+        "first_name" : "MANUEL FELIPE",
+        "last_name" : "LARA VASQUEZ",
+        "email" : "mlaravas@example.com",
+        "has_groups" : 0
+    },
+    {
+        "first_name" : "LINA FERNANDA",
+        "last_name" : "LOPEZ MALAGON",
+        "email" : "llopez39@example.com",
+        "has_groups" : 0
+    },
+    {
+        "first_name" : "JUAN FELIPE",
+        "last_name" : "MARIN LOTA",
+        "email" : "jmarinl1@example.com",
+        "has_groups" : 0
     }
 ]

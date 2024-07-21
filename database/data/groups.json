@@ -1,0 +1,27 @@
+[
+    {
+        "name" : "Tributaria 1 NRC 1114",
+        "color" : "#009fff",
+        "user_id" : 1
+    },
+    {
+        "name" : "Tributaria 2 NRC 1158",
+        "color" : "#00ff58",
+        "user_id" : 1
+    },
+    {
+        "name" : "Tributaria 1 NRC 1120",
+        "color" : "#ff6000",
+        "user_id" : 1
+    },
+    {
+        "name" : "Tributaria 2 NRC 2515",
+        "color" : "#ff1818",
+        "user_id" : 1
+    },
+    {
+        "name" : "Tributaria 3 NRC 1707",
+        "color" : "#ff5ecf",
+        "user_id" : 1
+    }
+]

@@ -22,3 +22,19 @@
         color: $tint-1;
     }
 }
+
+nav.navbar{
+    .nav-item-camp{
+        background-color: #eee;
+        margin-right: 10px !important;
+        border-radius: 20px;
+    }
+
+    .active-item-bar{
+        background-color: $tint-3;
+
+        a{
+            color: #fff !important;
+        }
+    }
+}

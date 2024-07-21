@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CertificatesController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\GruposController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\RutaProfesionalController;
 use App\Http\Controllers\UserController;
@@ -32,7 +34,6 @@ Route::get('/home/purchase', [HomeController::class, 'purchasePage'])->name('pur
 
 Route::post('/lessons/{lesson}/view', [LessonController::class, 'markAsViewed'])->middleware('auth');
 
-
 Route::middleware(['guest'])->group(function () {
     Route::get('/log-in', [UserController::class, 'loginUser'])->name('login');
     Route::get('/sign-up', [UserController::class, 'createUser'])->name('sign-up');
@@ -43,11 +44,25 @@ Route::middleware(['guest'])->group(function () {
 // Aquí van las rutas que deseas proteger
 Route::middleware('auth')->group(function () {
     
-    //
+    // Verificar la respuesta de un cuestionario
     Route::post('/lessons/{lesson}/verifyResponse', [LessonController::class, 'verifyResponse'])->name('lessons.verifyResponse');
 
     // Dashboard inicial
     Route::get('/dashboard', [UserController::class, 'loginDashboard'])->name('login-dashboard');
+
+    // Certificados
+    Route::get('/certificados', [CertificatesController::class, 'pageCertificates'])->name('certificados');
+
+    // Dashboard inicial de grupos
+    Route::get('/dashboard-grupos', [GruposController::class, 'dashboardGrupos'])->name('dashboard-grupos');
+
+    // Listado de grupos
+    Route::get('/list-groups', [GruposController::class, 'listGroups'])->name('list-groups');
+
+    Route::post('/group-get', [GruposController::class, 'getGroup'])->name('get-group');
+    Route::post('/edit-group', [GruposController::class, 'editGroup'])->name('edit-group');
+    Route::post('/create-group', [GruposController::class, 'createGroup'])->name('create-group');
+    Route::post('/delete-group', [GruposController::class, 'deleteGroup'])->name('delete-group');
 
     // User
     Route::get('/user-profile', [UserController::class, 'userProfile'])->name('user-profile');

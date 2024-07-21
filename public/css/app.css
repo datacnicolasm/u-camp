@@ -9394,43 +9394,43 @@ a.ui-button:active,
 /*# sourceMappingURL=adminlte.min.css.map */
 @charset "UTF-8";
 .text-tint-1 {
-  color: #1A334A;
+  color: #021221;
 }
 
 .text-tint-2 {
-  color: #6F71A1;
+  color: #d31a71;
 }
 
 .text-tint-3 {
-  color: #27E6EC;
+  color: #05bd9b;
 }
 
 .text-tint-4 {
-  color: #1E536E;
+  color: #213147;
 }
 
 .text-tint-5 {
-  color: #18A3B7;
+  color: #27E6EC;
 }
 
 .bg-tint-1 {
-  background-color: #1A334A;
+  background-color: #021221;
 }
 
 .bg-tint-2 {
-  background-color: #6F71A1;
+  background-color: #d31a71;
 }
 
 .bg-tint-3 {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 
 .bg-tint-4 {
-  background-color: #1E536E;
+  background-color: #213147;
 }
 
 .bg-tint-5 {
-  background-color: #18A3B7;
+  background-color: #27E6EC;
 }
 
 pre {
@@ -9451,7 +9451,7 @@ pre {
   background-position: center center;
 }
 .login-page .card-primary.card-outline-ibero {
-  border-top: 3px solid #6F71A1;
+  border-top: 3px solid #d31a71;
   padding: 4px 4px 0px 4px;
 }
 
@@ -9475,11 +9475,11 @@ pre {
   background-color: #fff !important;
 }
 .main-sidebar .nav-sidebar .active-item-nav {
-  background-color: #6F71A1;
+  background-color: #d31a71;
 }
 
 .main-sidebar-ucamp {
-  background-color: #1A334A;
+  background-color: #021221;
 }
 .main-sidebar-ucamp .nav-header {
   background-color: inherit;
@@ -9492,13 +9492,13 @@ pre {
   color: #fff;
 }
 .main-sidebar-ucamp .nav-item:hover > .nav-link {
-  background-color: #172e42;
+  background-color: #234c73;
   color: #fff;
 }
 .main-sidebar-ucamp .item-div-sidebar {
   height: 1px;
   width: 90%;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   margin: 0.5rem auto;
 }
 .main-sidebar-ucamp .user-sect-sodebar {
@@ -9528,7 +9528,7 @@ pre {
 }
 .main-sidebar-ucamp .user-sect-sodebar .user-info p {
   margin: 0;
-  color: #1A334A;
+  color: #021221;
 }
 
 .logo-navbar {
@@ -9545,18 +9545,30 @@ pre {
 }
 .logo-navbar .u-logo {
   font-size: 1.7rem;
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .logo-navbar .camp-logo {
   font-size: 1.7rem;
   margin-left: 2px;
-  color: #1A334A;
+  color: #021221;
+}
+
+nav.navbar .nav-item-camp {
+  background-color: #eee;
+  margin-right: 10px !important;
+  border-radius: 20px;
+}
+nav.navbar .active-item-bar {
+  background-color: #05bd9b;
+}
+nav.navbar .active-item-bar a {
+  color: #fff !important;
 }
 
 .header-cursos {
   border-radius: 5px;
   color: #fff;
-  background: #1E536E;
+  background: #213147;
 }
 
 .card-curso {
@@ -9610,7 +9622,7 @@ nav.view-curso-navbar .container .container-course-tools .btn-tool-left .help-ms
   top: 3rem;
   left: 0;
   padding: 8px 12px;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   color: #fff;
   border-radius: 7px;
   display: none;
@@ -9701,15 +9713,15 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn {
 }
 nav.view-curso-footer-nav div.footer-nav-contenido .button-container .left-btn, nav.view-curso-footer-nav div.footer-nav-contenido .button-container .right-btn {
   width: 50px;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 nav.view-curso-footer-nav div.footer-nav-contenido .button-container .center-btn {
   flex: 2;
   text-align: center;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn:hover {
-  background-color: #1ee5eb;
+  background-color: #05b393;
   transform: scale(1.05);
 }
 nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
@@ -9765,18 +9777,18 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .header-detalle-cursos {
   border-radius: 5px;
   color: #fff;
-  background: #1E536E;
+  background: #213147;
 }
 .header-detalle-cursos .btn-curso a {
   color: #fff;
 }
 .header-detalle-cursos .btn-curso a:hover {
-  background-color: #6F71A1;
-  border-color: #6F71A1;
+  background-color: #d31a71;
+  border-color: #d31a71;
   color: #fff;
 }
 .header-detalle-cursos .datos-curso {
-  border-left: solid 3px #6F71A1;
+  border-left: solid 3px #d31a71;
 }
 
 .chapters-curso .chapter-item {
@@ -9823,8 +9835,16 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left {
   color: #000;
 }
+.chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-right {
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-right.is-view-lesson {
+  justify-content: space-between;
+}
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-right .icon-circle {
-  display: inline-block;
   width: 25px;
   height: 25px;
   line-height: 25px;
@@ -9834,7 +9854,6 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   text-align: center;
 }
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li i {
-  margin-right: 20px;
   width: 20px;
   text-align: center;
 }
@@ -9883,7 +9902,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .video-view-curso .experience-points {
   font-size: 0.9rem;
-  background-color: #6F71A1;
+  background-color: #d31a71;
   padding: 3px 10px;
   border-radius: 6px;
   color: #fff;
@@ -9898,7 +9917,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   color: #fff;
 }
 .video-view-curso .video-player::-webkit-media-controls-play-button,
@@ -9908,7 +9927,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   filter: invert(100%);
 }
 .video-view-curso .video-player::-webkit-media-controls-enclosure {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 .video-view-curso .video-player::-webkit-media-controls-timeline,
 .video-view-curso .video-player::-webkit-media-controls-current-time-display,
@@ -9957,7 +9976,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .cuestionario-view-curso .questionnaire-section .questionnaire-header i {
   font-size: 1.1rem;
   margin-right: 10px;
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .cuestionario-view-curso .questionnaire-content {
   margin-top: 10px;
@@ -9998,10 +10017,10 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .cuestionario-view-curso .response-options .options-header i {
   font-size: 1.1rem;
   margin-right: 10px;
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .cuestionario-view-curso .response-options .options-header .xp-badge {
-  background-color: #6F71A1;
+  background-color: #d31a71;
   color: white;
   padding: 3px 6px;
   border-radius: 3px;
@@ -10018,6 +10037,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   border-radius: 5px;
   padding: 0.7rem 1rem;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .cuestionario-view-curso .response-options form .option-response.is-valid {
   border: solid 1px #28a745;
@@ -10034,12 +10056,15 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   margin: 0;
 }
 .cuestionario-view-curso .response-options form input[type=radio] {
-  margin-right: 7px;
+  margin-right: 10px;
+}
+.cuestionario-view-curso .response-options form input[type=radio]:hover {
+  cursor: pointer;
 }
 .cuestionario-view-curso .response-options button {
   margin: 10px 15px;
   padding: 10px 20px;
-  background-color: #6F71A1;
+  background-color: #d31a71;
   color: white;
   border: none;
   border-radius: 4px;
@@ -10047,7 +10072,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   font-size: 1.1rem;
 }
 .cuestionario-view-curso .response-options button:hover {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 .cuestionario-view-curso .response-options .callout-danger {
   margin: 10px 15px;
@@ -10283,7 +10308,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #6F71A1;
+  background-color: #d31a71;
 }
 .content-formularios .loading-screen p {
   margin: 45px 0 5px 0;
@@ -10315,7 +10340,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #1A334A;
+  background-color: #021221;
   color: #ffffff;
   border: none;
   padding: 10px;
@@ -10330,7 +10355,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .panel-btn .panel-btn-text {
   position: absolute;
   padding: 8px 12px;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   color: #fff;
   border-radius: 5px;
   display: none;
@@ -10407,7 +10432,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   transform: rotate(180deg);
 }
 .content-formulario .border-title {
-  border-left: 5px solid #27E6EC;
+  border-left: 5px solid #05bd9b;
   padding-left: 10px;
 }
 .content-formulario .content-right {
@@ -10455,7 +10480,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content .header-rutas {
   border-radius: 5px;
   color: #fff;
-  background: #1E536E;
+  background: #213147;
 }
 .content .divisor-ruta {
   background-color: #c3c2c2;
@@ -10496,7 +10521,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .header-ruta {
   border-radius: 5px;
   color: #fff;
-  background: #1E536E;
+  background: #213147;
 }
 .header-ruta .certificate-badge {
   background-color: #ffeb3b;
@@ -10513,7 +10538,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .header-ruta .btn-ruta {
   color: #fff;
-  background-color: #6F71A1;
+  background-color: #d31a71;
   border: none;
   box-shadow: none;
   padding: 4px 20px !important;
@@ -10530,7 +10555,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 
 body.page-home-camp .footer {
   padding: 40px 0;
-  background-color: #1A334A;
+  background-color: #021221;
   color: white;
 }
 body.page-home-camp .footer p {
@@ -10583,7 +10608,7 @@ body.page-home-camp .navbar ul.navbar-nav .item-link::after {
   content: "";
   width: 0%;
   height: 5px;
-  background-color: #6F71A1;
+  background-color: #d31a71;
   display: block;
   margin: auto;
   transition: width 0.5s ease;
@@ -10605,16 +10630,16 @@ body.page-home-camp {
   padding-top: 80px;
 }
 body.page-home-camp .text-blue-camp {
-  color: #1A334A;
+  color: #021221;
 }
 body.page-home-camp .text-two-camp {
-  color: #6F71A1;
+  color: #d31a71;
 }
 body.page-home-camp .text-three-camp {
-  color: #27E6EC;
+  color: #05bd9b;
 }
 body.page-home-camp .text-four-camp {
-  color: #18A3B7;
+  color: #27E6EC;
 }
 body.page-home-camp .text-five-camp {
   color: #fcce0d;
@@ -10650,13 +10675,13 @@ body.page-home-camp #home-section-1 .content {
   color: white;
 }
 body.page-home-camp #home-section-1 .btn-home-1 .btn {
-  background-color: #1A334A;
-  border: 2px solid #1A334A;
+  background-color: #021221;
+  border: 2px solid #021221;
   color: white;
 }
 body.page-home-camp #home-section-1 .btn-home-1 .btn:hover {
-  background-color: #6F71A1;
-  border: 2px solid #6F71A1;
+  background-color: #d31a71;
+  border: 2px solid #d31a71;
 }
 body.page-home-camp #home-section-2 {
   background-image: url(../images/home-2.svg?201e68677b359db7161a730e5a1ef669);
@@ -10683,13 +10708,13 @@ body.page-home-camp #home-section-2 .main-cont-flex .text-home-2 {
   margin: auto;
 }
 body.page-home-camp #home-section-2 .main-cont-flex .btn-home-2 .btn {
-  background-color: #6F71A1;
-  border: 2px solid #6F71A1;
+  background-color: #d31a71;
+  border: 2px solid #d31a71;
   color: white;
 }
 body.page-home-camp #home-section-2 .main-cont-flex .btn-home-2 .btn:hover {
-  background-color: #27E6EC;
-  border: 2px solid #27E6EC;
+  background-color: #05bd9b;
+  border: 2px solid #05bd9b;
 }
 body.page-home-camp #home-section-3 {
   background-image: url(../images/home-2.svg?201e68677b359db7161a730e5a1ef669);
@@ -10699,16 +10724,16 @@ body.page-home-camp #home-section-3 {
   margin-top: -2px;
 }
 body.page-home-camp #home-section-3 .btn-home-3 .btn {
-  background-color: #6F71A1;
-  border: 2px solid #6F71A1;
+  background-color: #d31a71;
+  border: 2px solid #d31a71;
   color: white;
 }
 body.page-home-camp #home-section-3 .btn-home-3 .btn:hover {
-  background-color: #27E6EC;
-  border: 2px solid #27E6EC;
+  background-color: #05bd9b;
+  border: 2px solid #05bd9b;
 }
 body.page-home-camp #title-home-section-4 {
-  background-color: #1A334A;
+  background-color: #021221;
 }
 body.page-home-camp #home-section-4 {
   background-image: url(../images/home-3.svg?34971a08f0ea86aebc77870e8a3dc482);
@@ -10719,10 +10744,10 @@ body.page-home-camp #home-section-4 {
   padding-bottom: 4rem;
 }
 body.page-home-camp #home-section-4 .item-ruta {
-  color: #1A334A;
+  color: #021221;
 }
 body.page-home-camp #home-section-4 .item-ruta:hover {
-  background-color: #18A3B7;
+  background-color: #27E6EC;
   color: #fff;
 }
 body.page-home-camp .section-home {
@@ -10730,7 +10755,7 @@ body.page-home-camp .section-home {
 }
 body.page-home-camp .footer {
   padding: 40px 0;
-  background-color: #1A334A;
+  background-color: #021221;
   color: white;
 }
 body.page-home-camp .footer p {
@@ -10811,19 +10836,19 @@ body.page-home-camp .footer .items-social li .css-evebs5 {
   background-color: #fbf8f8;
   color: #303030;
   position: relative;
-  border-left: solid 3px #27E6EC;
-  border-right: solid 3px #27E6EC;
+  border-left: solid 3px #05bd9b;
+  border-right: solid 3px #05bd9b;
 }
 .page-pricing .pricing-table thead th.premium-header .alert-premium {
   position: absolute;
   bottom: 100%;
   left: 0;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   width: 100%;
   height: 10px;
 }
 .page-pricing .pricing-table thead th.premium-header .alert-premium span {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   border-radius: 8px;
   color: #fff;
   position: absolute;
@@ -10857,9 +10882,9 @@ body.page-home-camp .footer .items-social li .css-evebs5 {
   border: solid 0.5px #dedede;
 }
 .page-pricing .pricing-table tbody tr:last-child td.premium {
-  border-bottom: solid 3px #27E6EC;
-  border-left: solid 3px #27E6EC;
-  border-right: solid 3px #27E6EC;
+  border-bottom: solid 3px #05bd9b;
+  border-left: solid 3px #05bd9b;
+  border-right: solid 3px #05bd9b;
 }
 .page-pricing .pricing-table tbody tr td {
   color: #303030;
@@ -10873,8 +10898,8 @@ body.page-home-camp .footer .items-social li .css-evebs5 {
 }
 .page-pricing .pricing-table tbody tr td.premium {
   background-color: #fbf8f8;
-  border-left: solid 3px #27E6EC;
-  border-right: solid 3px #27E6EC;
+  border-left: solid 3px #05bd9b;
+  border-right: solid 3px #05bd9b;
 }
 .page-pricing .pricing-table tbody tr td .fas {
   font-size: 1.2em;
@@ -10892,7 +10917,7 @@ body.page-home-camp .home-signup p.text-small {
 }
 
 .page-purchase-camp {
-  background-color: #1A334A;
+  background-color: #021221;
   padding: 30px;
 }
 .page-purchase-camp .logo-purchase {
@@ -10908,7 +10933,7 @@ body.page-home-camp .home-signup p.text-small {
 }
 .page-purchase-camp .logo-purchase .u-logo {
   font-size: 2.4rem;
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .page-purchase-camp .logo-purchase .camp-logo {
   font-size: 2.4rem;
@@ -10947,10 +10972,10 @@ body.page-home-camp .home-signup p.text-small {
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  border: solid 5px #1A334A;
+  border: solid 5px #021221;
 }
 .page-purchase-camp .payment-steps .payment-steps-number .step-active {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   color: #fff;
 }
 .page-purchase-camp .payment-steps .payment-steps-number::before {
@@ -10967,30 +10992,30 @@ body.page-home-camp .home-signup p.text-small {
   color: #fff;
 }
 .page-purchase-camp .payment-steps .payment-steps-text .step-active {
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .page-purchase-camp .form-sumary {
-  background-color: #18A3B7;
+  background-color: #27E6EC;
   border-radius: 5px;
   padding: 40px 20px;
-  border-top: solid 3px #27E6EC;
+  border-top: solid 3px #05bd9b;
 }
 .page-purchase-camp .form-sumary .sub-sumary {
   border-top: solid 0.5px #ccc;
   border-bottom: solid 0.5px #ccc;
 }
 .page-purchase-camp .section-formulario {
-  background-color: #18A3B7;
-  border-top: solid 3px #27E6EC;
+  background-color: #27E6EC;
+  border-top: solid 3px #05bd9b;
   border-radius: 5px;
   padding: 15px;
   color: #fff;
 }
 .page-purchase-camp .section-formulario input {
-  border-left: solid 5px #27E6EC;
+  border-left: solid 5px #05bd9b;
 }
 .page-purchase-camp .section-formulario input:focus {
-  border: solid 2px #27E6EC;
+  border: solid 2px #05bd9b;
 }
 .page-purchase-camp .section-formulario .text-muted {
   font-size: 0.9rem;
@@ -11002,7 +11027,7 @@ body.page-home-camp .home-signup p.text-small {
   align-items: center;
 }
 .page-purchase-camp .section-formulario .text-sesion a:hover {
-  color: #6F71A1;
+  color: #d31a71;
 }
 .page-purchase-camp .section-formulario .title-section-formulario {
   display: flex;
@@ -11019,10 +11044,10 @@ body.page-home-camp .home-signup p.text-small {
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  border: solid 5px #18A3B7;
+  border: solid 5px #27E6EC;
 }
 .page-purchase-camp .section-formulario .title-section-formulario .number-activate {
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   color: #fff;
 }
 .page-purchase-camp #cuenta .content-cuenta {
@@ -11110,7 +11135,7 @@ body.page-home-camp .home-signup p.text-small {
 }
 .page-purchase-camp .payment-confirmation .payment-details p {
   margin: 10px 0;
-  color: #1A334A;
+  color: #021221;
 }
 .page-purchase-camp .payment-confirmation .btn-success {
   background-color: rgb(33, 49, 71);
@@ -11129,6 +11154,90 @@ body.page-home-camp .home-signup p.text-small {
   display: none;
 }
 
+.sidebar-groups .btn-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-groups .btn-item .btn-invitar {
+  width: 90%;
+}
+
+.list-groups .btn-add-group {
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.list-groups .btn-add-group i {
+  margin-right: 8px;
+}
+.list-groups .table-groups .color-group {
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+}
+.list-groups .table-groups .content-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-groups .table-groups .content-btns .icon-button {
+  border: none;
+  background: none;
+  color: #6c757d;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.list-groups .table-groups .content-btns .icon-button:hover {
+  color: #05bd9b;
+}
+.list-groups #edit-modal .content-colors, .list-groups #crear-modal .content-colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.list-groups #edit-modal .content-colors .color-circle, .list-groups #crear-modal .content-colors .color-circle {
+  flex: 0 0 13%;
+  max-width: 13%;
+  width: 13%;
+  height: 0;
+  padding-top: 13%;
+  position: relative;
+}
+.list-groups #edit-modal .content-colors .color-circle div.color, .list-groups #crear-modal .content-colors .color-circle div.color {
+  border-radius: 50%;
+  border: solid 1px #e4e4e4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.list-groups #edit-modal .content-colors .color-circle div.color.is-select::after, .list-groups #crear-modal .content-colors .color-circle div.color.is-select::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
 .logo {
   margin-bottom: 15px;
   display: flex;
@@ -11142,91 +11251,91 @@ body.page-home-camp .home-signup p.text-small {
 }
 .logo .u-logo {
   font-size: 2.9rem;
-  color: #27E6EC;
+  color: #05bd9b;
 }
 .logo .camp-logo {
   font-size: 2.9rem;
   margin-left: 2px;
-  color: #1A334A;
+  color: #021221;
 }
 
 .btn-ucamp {
   color: #fff;
-  background-color: #1E536E;
-  border-color: #1E536E;
+  background-color: #213147;
+  border-color: #213147;
   box-shadow: none;
 }
 .btn-ucamp:hover {
   color: #fff;
-  background-color: #27E6EC;
-  border-color: #27E6EC;
+  background-color: #05bd9b;
+  border-color: #05bd9b;
   box-shadow: none;
 }
 
 .btn-ucamp-border {
-  color: #1A334A;
+  color: #021221;
   background-color: none;
-  border: 2px solid #1A334A;
+  border: 2px solid #021221;
   box-shadow: none;
 }
 .btn-ucamp-border:hover {
   color: white;
-  background-color: #1A334A;
-  border: 2px solid #1A334A;
+  background-color: #021221;
+  border: 2px solid #021221;
   box-shadow: none;
 }
 
 .btn-2-ucamp-border {
-  color: #6F71A1;
+  color: #d31a71;
   background-color: none;
-  border: 2px solid #6F71A1;
+  border: 2px solid #d31a71;
   box-shadow: none;
 }
 .btn-2-ucamp-border:hover {
   color: white;
-  background-color: #6F71A1;
-  border: 2px solid #6F71A1;
+  background-color: #d31a71;
+  border: 2px solid #d31a71;
   box-shadow: none;
 }
 
 .btn-3-ucamp {
   color: #fff;
-  background-color: #27E6EC;
-  border: 2px solid #27E6EC;
+  background-color: #05bd9b;
+  border: 2px solid #05bd9b;
   box-shadow: none;
 }
 .btn-3-ucamp:hover {
   color: #fff;
-  background-color: #1ee5eb;
-  border: 2px solid #1ee5eb;
+  background-color: #05b393;
+  border: 2px solid #05b393;
   box-shadow: none;
 }
 
 .bg-ucamp {
   color: #fff;
-  background-color: #1A334A;
+  background-color: #021221;
 }
 
 .text-ucamp {
-  color: #1A334A;
+  color: #021221;
 }
 
 .bg-2-ucamp {
   color: #fff;
-  background-color: #6F71A1;
+  background-color: #d31a71;
 }
 
 .text-2-ucamp {
-  color: #6F71A1;
+  color: #d31a71;
 }
 
 .bg-3-ucamp {
   color: #fff;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
 }
 
 .text-3-ucamp {
-  color: #27E6EC;
+  color: #05bd9b;
 }
 
 .text-small {
@@ -11247,7 +11356,7 @@ body.page-home-camp .home-signup p.text-small {
 }
 
 .logo-ucamp {
-  color: #1A334A;
+  color: #021221;
   font-weight: bold;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -11267,7 +11376,7 @@ body.page-home-camp .home-signup p.text-small {
 .container-course-progress .progress-container .progress-bar {
   height: 15px;
   width: 0%;
-  background-color: #27E6EC;
+  background-color: #05bd9b;
   text-align: center;
   line-height: 30px;
   /* Alinea el texto verticalmente */

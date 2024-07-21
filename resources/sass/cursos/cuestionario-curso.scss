@@ -113,6 +113,9 @@
                 border-radius: 5px;
                 padding: .7rem 1rem;
                 margin-bottom: 5px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
 
                 &.is-valid{
                     border: solid 1px #28a745;
@@ -133,7 +136,11 @@
             }
 
             input[type="radio"] {
-                margin-right: 7px;
+                margin-right: 10px;
+
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
         button {

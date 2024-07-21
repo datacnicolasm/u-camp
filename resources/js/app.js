@@ -22,4 +22,5 @@ import './rutas/view-rutas.js';
 import './rutas/list-rutas.js';
 import './purchase/purchase.js';
 import './lesson/questionario.js';
+import './groups/groups.js';
 //import '../adminlte/';

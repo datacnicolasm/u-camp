@@ -1,0 +1,90 @@
+.list-groups {
+    .btn-add-group {
+        padding: 5px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-add-group i {
+        margin-right: 8px;
+    }
+
+    .table-groups {
+        .color-group {
+            width: 25px;
+            height: 25px;
+            display: block;
+            margin: auto;
+            border-radius: 4px;
+        }
+
+        .content-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-button {
+                border: none;
+                background: none;
+                color: #6c757d;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .icon-button:hover {
+                color: $tint-3;
+            }
+        }
+    }
+
+    #edit-modal, #crear-modal {
+        .content-colors {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+
+            .color-circle {
+                flex: 0 0 13%;
+                max-width: 13%;
+                width: 13%;
+                height: 0;
+                padding-top: 13%;
+                position: relative;
+
+                div.color {
+                    border-radius: 50%;
+                    border: solid 1px #e4e4e4;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+
+                    &.is-select::after {
+                        content: "\f00c";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        color: white;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 999;
+                    }
+                }
+            }
+        }
+    }
+
+}

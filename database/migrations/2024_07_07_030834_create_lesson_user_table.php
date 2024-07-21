@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('lesson_id')->constrained()->onDelete('cascade');
-            $table->timestamps(); // Para registrar cuándo fue vista la lección
+            $table->timestamps();
         });
     }
 

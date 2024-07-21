@@ -1,6 +1,6 @@
 [
     {
-        "title": "¿Qué es el sistema tributario de un país?",
+        "title": "Funciones del sistema tributario de un país",
         "type": "video",
         "order": 1,
         "points_xp": 100,
@@ -17,6 +17,48 @@
         "title": "Práctica: Funciones del sistema tributario",
         "type": "questionnaire",
         "order": 3,
+        "points_xp": 50,
+        "chapter_id": 1
+    },
+    {
+        "title": "Principios del sistema tributario en Colombia",
+        "type": "video",
+        "order": 4,
+        "points_xp": 100,
+        "chapter_id": 1
+    },
+    {
+        "title": "Práctica: Principios del sistema tributario",
+        "type": "questionnaire",
+        "order": 5,
+        "points_xp": 50,
+        "chapter_id": 1
+    },
+    {
+        "title": "Práctica: Principios del sistema tributario",
+        "type": "questionnaire",
+        "order": 6,
+        "points_xp": 50,
+        "chapter_id": 1
+    },
+    {
+        "title": "Elementos de la obligación tributaria",
+        "type": "video",
+        "order": 7,
+        "points_xp": 100,
+        "chapter_id": 1
+    },
+    {
+        "title": "Práctica: Elementos de la obligación tributaria",
+        "type": "questionnaire",
+        "order": 8,
+        "points_xp": 50,
+        "chapter_id": 1
+    },
+    {
+        "title": "Práctica: Elementos de la obligación tributaria",
+        "type": "questionnaire",
+        "order": 9,
         "points_xp": 50,
         "chapter_id": 1
     }

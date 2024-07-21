@@ -89,7 +89,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p class="mt-3 mb-0">
+                                                    <p class="mt-3 mb-0 text-justify">
                                                         {{ $chapter->description }}
                                                     </p>
                                                     <div class="lessons-list">
@@ -110,7 +110,7 @@
                                                                             @endif
                                                                             <span>{{ $lesson->title }}</span>
                                                                         </div>
-                                                                        <div class="item-lesson-right <?php echo ($lesson->viewed) ? 'text-success' : 'text-2-ucamp'; ?>">
+                                                                        <div class="item-lesson-right <?php echo ($lesson->viewed) ? 'text-success is-view-lesson' : 'text-2-ucamp'; ?>">
                                                                             <?php echo ($lesson->viewed) ? '<i class="fas fa-check icon-circle"></i>' : ''; ?>
                                                                             {{ $lesson->points_xp }}xp
                                                                         </div>

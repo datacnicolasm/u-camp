@@ -1,18 +1,22 @@
 [
     {
         "title":        "Sistema tributario de un país",
+        "description":  "¡Bienvenido al curso! En este primer capitulo exploraremos los fundamentos del sistema tributario en Colombia. A lo largo de este capitulo, te sumergirás en el conocimiento de cómo se recaudan los impuestos, su función en redistribuir la riqueza, y su impacto en la estabilización económica y la promoción de objetivos sociales. Desde entender los principios básicos hasta aplicarlos en casos prácticos, este capitulo te equipará con una comprensión profunda del papel vital que juegan los impuestos en financiar servicios públicos y en fomentar un entorno equitativo para todos."
+    },
+    {
+        "title":        "Impuesto de renta para personas juridicas",
         "description":  "Este capitulo es de prueba"
     },
     {
-        "title":        "Capitulo de prueba",
+        "title":        "Impuesto al valor agregado (IVA)",
         "description":  "Este capitulo es de prueba"
     },
     {
-        "title":        "Capitulo de prueba",
+        "title":        "Impuesto de industria y comercio (ICA)",
         "description":  "Este capitulo es de prueba"
     },
     {
-        "title":        "Capitulo de prueba",
+        "title":        "Información exógena en medios electrónicos para la DIAN",
         "description":  "Este capitulo es de prueba"
     }
 ]

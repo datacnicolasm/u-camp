@@ -9,16 +9,24 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
 
-        <li class="nav-item">
+        <li class="nav-item mr-2">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
 
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Inicio</a>
+        <li class="nav-item-camp nav-item d-none d-sm-inline-block">
+            <a href="{{ route('login-dashboard') }}" class="nav-link">Inicio</a>
         </li>
 
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Mi aprendizaje</a>
+        <li class="nav-item-camp nav-item d-none d-sm-inline-block">
+            <a href="{{ route('certificados') }}" class="nav-link">Certificados</a>
+        </li>
+
+        <?php $class_items_grupos = "" ?>
+        @if (Route::currentRouteName() == 'dashboard-grupos')
+            <?php $class_items_grupos .= "active-item-bar" ?>
+        @endif
+        <li class="nav-item-camp nav-item d-none d-sm-inline-block <?php echo $class_items_grupos ?>">
+            <a href="{{ route('dashboard-grupos') }}" class="nav-link">Grupos</a>
         </li>
     </ul>
 </nav>
