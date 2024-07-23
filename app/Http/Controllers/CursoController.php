@@ -73,12 +73,4 @@ class CursoController extends Controller
             ];
         }
     }
-
-    /**
-     * View de formulario DIAN
-     */
-    public function formularioDIAN(Request $request, Curso $curso)
-    {
-        return view('curso.dian-components.formulario-110-dian')->with(['curso' => $curso]);
-    }
 }

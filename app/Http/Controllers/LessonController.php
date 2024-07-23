@@ -29,6 +29,17 @@ class LessonController extends Controller
         ]);
     }
 
+    /**
+     * View de formulario DIAN
+     */
+    public function formularioDIAN(Request $request, Curso $curso, Lesson $lesson)
+    {
+        return view('curso.dian-components.formulario-110-dian')->with([
+            'curso' => $curso,
+            'lesson' => $lesson
+        ]);
+    }
+
     public function markAsViewed(Request $request, Lesson $lesson)
     {
         $user = $request->user();

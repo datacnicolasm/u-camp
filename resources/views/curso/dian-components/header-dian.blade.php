@@ -2,14 +2,17 @@
     <nav class="navigation-menu">
         <div class="container-top">
             <div class="left-section">
-                <img src="{{ asset('img\logo-dian.png') }}" alt="Logo" style="width: 140px;">
+                <div class="logo-page-dian">
+                    <span class="u-logo">Account</span>
+                    <span class="camp-logo">Camp</span>
+                </div>
             </div>
             <div class="center-section">
-                <h1>FORMULARIOS</h1>
+                <h1>FORMULARIOS INTERACTIVOS</h1>
             </div>
             <div class="right-section">
-                <p>MOTOS Y SERVITECAS DE COLOMBIA S.A.S</p>
-                <p>GOMEZ GUERRERO EDGAR ANTONIO</p>
+                <p>EMPRESAS COMERCIALES DE COLOMBIA S.A.S</p>
+                <p>NOMBRES Y APELLIDOS DEL REPRESENTANTE LEGAL</p>
                 <p><?php echo date('M j, Y / H:i:s') ?></p>
             </div>
         </div>

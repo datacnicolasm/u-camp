@@ -73,9 +73,9 @@ Route::middleware('auth')->group(function () {
     // Cursos
     Route::get('/cursos', [CursoController::class, 'listCursos'])->name('list-cursos');
     Route::get('/cursos/{curso}', [CursoController::class, 'viewCursos'])->name('view-curso');
-    Route::get('/cursos/{curso}/formularioDIAN', [CursoController::class, 'formularioDIAN'])->name('formulario-curso-DIAN');
 
     // Lecciones
+    Route::get('/cursos/{curso}/formularioDIAN/{lesson}', [LessonController::class, 'formularioDIAN'])->name('formulario-curso-DIAN');
     Route::get('/cursos/{curso}/lessons/{lesson}', [LessonController::class, 'viewLesson'])->name('view-lesson');
 
     // Rutas Profesionales

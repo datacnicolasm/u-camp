@@ -10159,7 +10159,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   position: relative;
   z-index: 2;
 }
-.content-formularios .main-header-ucamp .navigation-menu .container-top, .content-formularios .main-header-ucamp .navigation-menu .container-center, .content-formularios .main-header-ucamp .navigation-menu .container-bottom {
+.content-formularios .main-header-ucamp .navigation-menu .container-top,
+.content-formularios .main-header-ucamp .navigation-menu .container-center,
+.content-formularios .main-header-ucamp .navigation-menu .container-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10171,9 +10173,27 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .main-header-ucamp .navigation-menu .container-top .left-section {
   flex: 1;
 }
-.content-formularios .main-header-ucamp .navigation-menu .container-top .left-section img {
-  max-width: 100%;
-  height: auto;
+.content-formularios .main-header-ucamp .navigation-menu .container-top .left-section .logo-page-dian {
+  background-color: #fff;
+  display: inline-block;
+  padding: 5px 25px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px rgba(225, 225, 225, 0.5);
+  border: none;
+}
+.content-formularios .main-header-ucamp .navigation-menu .container-top .left-section .logo-page-dian span {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content-formularios .main-header-ucamp .navigation-menu .container-top .left-section .logo-page-dian .u-logo {
+  font-size: 1.8rem;
+  color: #05bd9b;
+}
+.content-formularios .main-header-ucamp .navigation-menu .container-top .left-section .logo-page-dian .camp-logo {
+  font-size: 1.8rem;
+  margin-left: 2px;
+  color: #021221;
 }
 .content-formularios .main-header-ucamp .navigation-menu .container-top .center-section {
   flex: 1;
@@ -10241,8 +10261,29 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .content-section .content-box .content-item {
   padding: 10px 15px;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+}
+.content-formularios .content-section .content-box .content-item:hover .menu-options {
+  display: block;
+}
+.content-formularios .content-section .content-box .content-item .menu-options {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: #f0f0f0;
+  border: 0.5px solid #d2d2d2;
+  padding: 10px 0;
+  z-index: 999;
+}
+.content-formularios .content-section .content-box .content-item .menu-options div.option-item {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.content-formularios .content-section .content-box .content-item .menu-options div.option-item:hover {
+  background-color: #d2d2d2;
 }
 .content-formularios .content-section .content-box .content-item:hover .content-icon {
   transform: scale(1.1);
@@ -10279,6 +10320,13 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .content-section .content-box .content-item:last-child {
   padding-right: 15px;
 }
+.content-formularios .content-section .content-box .content-item:last-child a {
+  background-color: #05bd9b;
+  border: 2px solid #05bd9b !important;
+}
+.content-formularios .content-section .content-box .content-item:last-child a i {
+  color: white;
+}
 
 .content-formularios {
   height: calc(100vh - 60px);
@@ -10286,38 +10334,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   display: flex;
   padding: 5px 5px 60px 5px;
   flex-direction: column;
-  position: relative;
   overflow: auto;
-}
-.content-formularios .loading-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 60px);
-  background-color: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  z-index: 1000;
-}
-.content-formularios .loading-screen .loading-icon {
-  margin-left: -200px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: #d31a71;
-}
-.content-formularios .loading-screen p {
-  margin: 45px 0 5px 0;
-  text-align: center;
-}
-.content-formularios .loading-screen p.text-muted-dian {
-  font-size: 0.8rem;
-  color: white;
-  margin: 5px;
 }
 .content-formularios .side-panel {
   position: absolute;

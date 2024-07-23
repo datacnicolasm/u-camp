@@ -61,5 +61,12 @@
         "order": 9,
         "points_xp": 50,
         "chapter_id": 1
+    },
+    {
+        "title": "Prueba de DIAN",
+        "type": "dian",
+        "order": 10,
+        "points_xp": 50,
+        "chapter_id": 1
     }
 ]

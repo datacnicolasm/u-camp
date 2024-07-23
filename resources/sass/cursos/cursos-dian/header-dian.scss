@@ -20,7 +20,9 @@
             position: relative;
             z-index: 2;
 
-            .container-top, .container-center, .container-bottom {
+            .container-top,
+            .container-center,
+            .container-bottom {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -33,9 +35,31 @@
             .container-top {
                 .left-section {
                     flex: 1;
-                    img {
-                        max-width: 100%;
-                        height: auto;
+
+                    .logo-page-dian {
+                        background-color: #fff;
+                        display: inline-block;
+                        padding: 5px 25px;
+                        border-radius: 20px;
+                        box-shadow: 1px 1px 1px rgba(225, 225, 225, .5);
+                        border: none;
+
+                        span {
+                            font-family: "Madimi One", sans-serif;
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+
+                        .u-logo {
+                            font-size: 1.8rem;
+                            color: #05bd9b;
+                        }
+
+                        .camp-logo {
+                            font-size: 1.8rem;
+                            margin-left: 2px;
+                            color: #021221;
+                        }
                     }
                 }
 

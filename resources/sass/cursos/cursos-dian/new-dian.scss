@@ -19,8 +19,35 @@
             .content-item {
                 padding: 10px 15px;
                 display: flex;
+                position: relative;
                 flex-direction: column;
                 align-items: center;
+
+                &:hover{
+                    .menu-options{
+                        display: block;
+                    }    
+                }
+
+                .menu-options{
+                    display: none;
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    background-color: #f0f0f0;
+                    border: .5px solid #d2d2d2;
+                    padding: 10px 0;
+                    z-index: 999;
+
+                    div.option-item{
+                        padding: 10px 20px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #d2d2d2;
+                        }
+                    }
+                }
 
                 &:hover .content-icon {
                     transform: scale(1.1);
@@ -64,6 +91,15 @@
 
                 &:last-child {
                     padding-right: 15px;
+
+                    a{
+                        background-color: $tint-3;
+                        border: 2px solid $tint-3 !important;
+
+                        i{
+                            color: white;
+                        }
+                    }
                 }
             }
         }
