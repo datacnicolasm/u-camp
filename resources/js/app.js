@@ -23,4 +23,5 @@ import './rutas/list-rutas.js';
 import './purchase/purchase.js';
 import './lesson/questionario.js';
 import './groups/groups.js';
+import './groups/members.js';
 //import '../adminlte/';

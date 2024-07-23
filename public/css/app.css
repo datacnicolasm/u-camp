@@ -11181,6 +11181,15 @@ body.page-home-camp .home-signup p.text-small {
   margin: auto;
   border-radius: 4px;
 }
+.list-groups .table-groups tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.list-groups .table-groups tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.list-groups .table-groups tr:hover {
+  background-color: #eee;
+}
 .list-groups .table-groups .content-btns {
   display: flex;
   justify-content: center;
@@ -11236,6 +11245,145 @@ body.page-home-camp .home-signup p.text-small {
   justify-content: center;
   align-items: center;
   z-index: 999;
+}
+
+.list-members .title-members {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.list-members .title-members span {
+  padding: 10px 0;
+}
+.list-members .title-members .select-group {
+  border-radius: 25px;
+  padding: 10px 10px 10px 15px;
+  position: relative;
+}
+.list-members .title-members .select-group ul.select-options-group {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  border: solid 0.5px #ddd;
+  background-color: #fff;
+  border-radius: 7px;
+  padding-top: 10px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 10px;
+  z-index: 9999;
+  margin: 0;
+  width: 150%;
+  max-width: 400px;
+}
+.list-members .title-members .select-group ul.select-options-group li {
+  list-style: none;
+  margin: 0;
+  font-size: 1rem;
+  padding: 5px 15px;
+}
+.list-members .title-members .select-group ul.select-options-group li:hover {
+  background-color: #eaeaea;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group-all {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group-all .color-item {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0;
+  border-radius: 4px;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group-all .name-item {
+  font-weight: normal;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group .color-item {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0;
+  border-radius: 4px;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group .name-item {
+  font-weight: bold;
+}
+.list-members .title-members .select-group ul.select-options-group li.item-list-group .count-item {
+  color: #8b8b8b;
+}
+.list-members .title-members .select-group:hover {
+  background-color: #eaeaea;
+}
+.list-members .title-members i {
+  font-size: 1.2rem;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.list-members .card {
+  border-top: 6px solid #05bd9b;
+}
+.list-members .card-header .tools-table {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.list-members .card-header .tools-table .btn-tool-table {
+  border: 1px solid #ced4da;
+  background-color: #fff;
+}
+.list-members .card-header .tools-table .btn-tool-table:hover {
+  color: White;
+  background-color: #05bd9b;
+  border: 1px solid #05bd9b;
+}
+.list-members table.table-estudiantes tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.list-members table.table-estudiantes tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.list-members table.table-estudiantes tr:hover {
+  background-color: #eee;
+}
+.list-members table.table-estudiantes .badge-grupo {
+  font-size: 90% !important;
+}
+.list-members .card-body {
+  position: relative;
+}
+.list-members .card-body .loading-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.list-members .card-body .loading-overlay .content-loading {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-members .card-body .loading-overlay .spinner {
+  font-size: 2rem;
+  color: #333;
 }
 
 .logo {

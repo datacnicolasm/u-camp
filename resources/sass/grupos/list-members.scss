@@ -1,0 +1,171 @@
+.list-members {
+    .title-members {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        cursor: pointer;
+
+        span {
+            padding: 10px 0;
+        }
+
+        .select-group {
+            border-radius: 25px;
+            padding: 10px 10px 10px 15px;
+            position: relative;
+
+            ul.select-options-group {
+                display: none;
+                position: absolute;
+                top: 110%;
+                left: 0;
+                border: solid .5px #ddd;
+                background-color: #fff;
+                border-radius: 7px;
+                padding-top: 10px;
+                padding-right: 0;
+                padding-left: 0;
+                padding-bottom: 10px;
+                z-index: 9999;
+                margin: 0;
+                width: 150%;
+                max-width: 400px;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    font-size: 1rem;
+                    padding: 5px 15px;
+
+                    &:hover {
+                        background-color: #eaeaea;
+                    }
+
+                    &.item-list-group-all {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .color-item {
+                            width: 15px;
+                            height: 15px;
+                            display: block;
+                            margin: 0;
+                            border-radius: 4px;
+                        }
+
+                        .name-item {
+                            font-weight: normal;
+                        }
+                    }
+
+                    &.item-list-group {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .color-item {
+                            width: 15px;
+                            height: 15px;
+                            display: block;
+                            margin: 0;
+                            border-radius: 4px;
+                        }
+
+                        .name-item {
+                            font-weight: bold;
+                        }
+
+                        .count-item {
+                            color: #8b8b8b;
+                        }
+                    }
+                }
+            }
+        }
+
+        .select-group:hover {
+            background-color: #eaeaea;
+        }
+
+        i {
+            font-size: 1.2rem;
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+
+    }
+
+    .card {
+        border-top: 6px solid $tint-3;
+    }
+
+    .card-header {
+        .tools-table {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .btn-tool-table {
+                border: 1px solid #ced4da;
+                background-color: #fff;
+
+                &:hover {
+                    color: White;
+                    background-color: $tint-3;
+                    border: 1px solid $tint-3;
+                }
+            }
+        }
+    }
+
+    table.table-estudiantes {
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #eee;
+        }
+
+        .badge-grupo {
+            font-size: 90% !important;
+        }
+    }
+
+    .card-body {
+        position: relative;
+
+        .loading-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+            .content-loading{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .spinner {
+                font-size: 2rem;
+                color: #333;
+            }
+        }
+    }
+}

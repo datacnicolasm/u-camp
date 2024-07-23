@@ -21,6 +21,18 @@
             border-radius: 4px;
         }
 
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #eee;
+        }
+
         .content-btns {
             display: flex;
             justify-content: center;

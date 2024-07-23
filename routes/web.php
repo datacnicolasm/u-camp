@@ -59,6 +59,9 @@ Route::middleware('auth')->group(function () {
     // Listado de grupos
     Route::get('/list-groups', [GruposController::class, 'listGroups'])->name('list-groups');
 
+    // Mostrar el listado de miembros
+    Route::get('/list-members', [GruposController::class, 'listMembers'])->name('list-members');
+
     Route::post('/group-get', [GruposController::class, 'getGroup'])->name('get-group');
     Route::post('/edit-group', [GruposController::class, 'editGroup'])->name('edit-group');
     Route::post('/create-group', [GruposController::class, 'createGroup'])->name('create-group');

@@ -26,11 +26,30 @@ class Group extends Model
         return $this->belongsToMany(User::class)->withTimestamps();
     }
 
-    static function getGroupsUser(User $user){
-        
+    static function getGroupsUser(User $user)
+    {
+
         $groups = Group::where('user_id', $user->id)->withCount('users')->get();
 
         return $groups;
+    }
+
+    static function getUsersGroups(User $user)
+    {
+        // Obtener los IDs de los grupos del usuario
+        $groupIds = Group::where('user_id', $user->id)->pluck('id');
+
+        // Obtener los usuarios únicos que pertenecen a estos grupos
+        $users = User::whereHas('group', function ($query) use ($groupIds) {
+            $query->whereIn('groups.id', $groupIds);
+        })->distinct()->get();
+
+        // Filtrar los grupos de cada usuario para incluir solo los del usuario especificado
+        foreach ($users as $userItem) {
+            $userItem->setRelation('group', $userItem->group->whereIn('id', $groupIds));
+        }
+
+        return $users;
     }
 
     /**

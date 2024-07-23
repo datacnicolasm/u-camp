@@ -34,9 +34,13 @@
                     </a>
                 </li>
 
-                <!--  -->
+                <!-- Listado de miembros / estudiantes -->
+                <?php $class_items_members = "" ?>
+                @if (Route::currentRouteName() == 'list-members')
+                    <?php $class_items_members .= "active-item-nav" ?>
+                @endif
                 <li class="nav-item">
-                    <a class="nav-link">
+                    <a href="{{ route('list-members') }}" class="nav-link <?php echo $class_items_members ?>">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Estudiantes</p>
                     </a>

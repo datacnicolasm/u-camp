@@ -86,4 +86,9 @@ class GruposController extends Controller
         // Devolver una respuesta JSON con el grupo actualizado
         return response()->json(['data' => $group], 200);
     }
+
+    public function listMembers()
+    {
+        return view('grupos.list-members');
+    }
 }
