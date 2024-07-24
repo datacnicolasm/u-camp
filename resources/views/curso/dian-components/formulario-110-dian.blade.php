@@ -37,36 +37,138 @@
                 <!-- -->
                 <div class="content-formulario">
                     <div class="accordion">
-                        <h3 class="accordion-header">Sección 1 <i class="fas fa-chevron-down arrow-icon"></i></h3>
+                        <!-- Datos Declarante -->
+                        <h3 class="accordion-header">Datos Declarante<i class="fas fa-chevron-down arrow-icon"></i></h3>
                         <div class="accordion-content">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-5">
+                                    <p class="border-title text-right m-0">SECCIÓN DATOS DEL DECLARANTE</p>
+                                    <div class="content-right"></div>
+                                </div>
+
+                                <!-- Datos Declarante -->
+                                <div class="col-7">
                                     <form>
                                         <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <p class="label-input">Input 1</p>
-                                                <input type="text" class="form-control" id="input1" placeholder="Input 1">
+                                            <div class="form-group col-10">
+                                                <p class="label-input">5. Identificación Tributaria NIT</p>
+                                                <input disabled type="text" class="form-control"placeholder="900000001">
                                             </div>
-                                            <div class="form-group col-md-6">
-                                                <p class="label-input">Input 1</p>
-                                                <input type="text" class="form-control" id="input2" placeholder="Input 2">
+                                            <div class="form-group col-2">
+                                                <p class="label-input">6. DV</p>
+                                                <input disabled type="text" class="form-control" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">7. Primer apellido</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">8. Segundo apellido</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">9. Primer nombre</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">10. Otros nombres</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-10">
+                                                <p class="label-input">11. Razón social</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-2">
+                                                <p class="label-input">12. Cod</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">24. Actividad Económica</p>
+                                                <select disabled class="custom-select rounded-0">
+                                                    <option>Value 1</option>
+                                                    <option>Value 2</option>
+                                                    <option>Value 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <p class="label-input">Si es una correccioón indique 25. Cod</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <p class="label-input">26. Nro. formulario anterior</p>
+                                                <input disabled type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <p class="label-input">29. Fracción año gravable siguiente</p>
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <p class="label-input">30. Renuncio a pertenecer al régimen tributario especial</p>
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <p class="label-input">31. Vinculado al pago de obras por impuestos</p>
+                                                <input type="checkbox">
+                                            </div>
+                                            <div class="form-group col-12">
+                                                <p class="label-input">163. Género</p>
+                                                <select disabled class="custom-select rounded-0">
+                                                    <option>No aplica</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-md-6">
-                                    <h4 class="border-title">Título</h4>
-                                    <div class="content-right"></div>
-                                </div>
                             </div>
                         </div>
-                        <h3 class="accordion-header">Sección 2 <i class="fas fa-chevron-down arrow-icon"></i></h3>
+
+                        @foreach($campos as $campo)
+                            <!-- {{ $campo["title"] }} -->
+                            <h3 class="accordion-header">{{ $campo["title"] }}<i class="fas fa-chevron-down arrow-icon"></i></h3>
+                            <div class="accordion-content">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="border-title text-right m-0">{{ $campo["description"] }}</p>
+                                        <div class="content-right"></div>
+                                    </div>
+    
+                                    <!-- {{ $campo["title"] }} -->
+                                    <div class="col-6">
+                                        <form>
+                                            <div class="form-row">
+                                                @foreach($campo["fields"] as $title => $field)
+                                                    <div class="form-group <?php echo $field["col-#"] ?>">
+                                                        <p class="<?php echo $field["class"] ?> label-input"><?php echo $field["number"] . ". " . $field["title"] ?></p>
+                                                        <input type="text" class="form-control input-dian">
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                        <!-- FRIMAS -->
+                        <h3 class="accordion-header">Firmas<i class="fas fa-chevron-down arrow-icon"></i></h3>
                         <div class="accordion-content">
-                            <p>Contenido de la sección 2.</p>
-                        </div>
-                        <h3 class="accordion-header">Sección 3 <i class="fas fa-chevron-down arrow-icon"></i></h3>
-                        <div class="accordion-content">
-                            <p>Contenido de la sección 3.</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="border-title text-right m-0">SECCIÓN FIRMAS</p>
+                                    <div class="content-right"></div>
+                                </div>
+
+                                <!-- FRIMAS -->
+                                <div class="col-6">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-8">
+                                                <p class="label-input">994. Con salvedades</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

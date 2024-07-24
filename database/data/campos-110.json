@@ -1,0 +1,560 @@
+[
+    {
+        "title": "Datos informativos",
+        "description": "SECCIÓN DATOS INFORMATIVOS DEL DECLARANTE",
+        "fields": {
+            "001": {
+                "number": "33",
+                "title": "Total costos y gastos de nómina",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "002": {
+                "number": "34",
+                "title": "Aportes al sistema de seguridad social",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "003": {
+                "number": "35",
+                "title": "Aportes al SENA, ICBF, cajas de compensación",
+                "col-#": "col-8",
+                "class": ""
+            }
+        }
+    },
+    {
+        "title": "Patrimonio",
+        "description": "SECCIÓN PATRIMONIO DEL DECLARANTE",
+        "fields": {
+            "004": {
+                "number": "36",
+                "title": "Efectivo y equivalentes a efectivo",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "005": {
+                "number": "37",
+                "title": "Inversiones e instrumentos financieros derivados",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "006": {
+                "number": "38",
+                "title": "Cuentas, documentos y arrendamientos financieros por cobrar",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "007": {
+                "number": "39",
+                "title": "Inventarios",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "008": {
+                "number": "40",
+                "title": "Activos intangibles",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "009": {
+                "number": "41",
+                "title": "Activos biológicos ",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "010": {
+                "number": "42",
+                "title": "Propiedades, planta y equipo, propiedades de inversión y ANCMV",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "011": {
+                "number": "43",
+                "title": "Otros activos",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "012": {
+                "number": "44",
+                "title": "Total patrimonio bruto",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "013": {
+                "number": "45",
+                "title": "Pasivos",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "014": {
+                "number": "46",
+                "title": "Total patrimonio líquido",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            }
+        }
+    },
+    {
+        "title": "Ingresos",
+        "description": "SECCIÓN INGRESOS DEL DECLARANTE",
+        "fields": {
+            "015": {
+                "number": "47",
+                "title": "Ingresos brutos de actividades ordinarias",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "016": {
+                "number": "48",
+                "title": "Ingresos financieros",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "017": {
+                "number": "49",
+                "title": "Dividendos y/o participaciones no constitutivos de renta ni ganancia ocasional",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "018": {
+                "number": "50",
+                "title": "Dividendos o participaciones distribuidos por entidades no residentes en Colombia a una CHC y prima en colocación de acciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "019": {
+                "number": "51",
+                "title": "Dividendos y/o participaciones gravadas a la tarifa general provenientes de sociedades y entidades extranjeras o de sociedades nacionales",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "020": {
+                "number": "52",
+                "title": "Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2016 y anteriores)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "021": {
+                "number": "53",
+                "title": "Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2017 y siguientes)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "022": {
+                "number": "54",
+                "title": "Dividendos y/o participaciones gravadas al 10%",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "023": {
+                "number": "55",
+                "title": "Dividendos y/o participaciones gravadas a tarifa general (EP y sociedades extranjeras - Utilidades generadas a partir del año 2017)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "024": {
+                "number": "56",
+                "title": "Dividendos y participaciones provenientes de proyectos calificados como megainversión gravadas al 27%",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "025": {
+                "number": "57",
+                "title": "Otros Ingresos",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "026": {
+                "number": "58",
+                "title": "Total Ingresos brutos",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "027": {
+                "number": "59",
+                "title": "Devoluciones, rebajas y descuentos en ventas",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "028": {
+                "number": "60",
+                "title": "Ingresos no constitutivos de renta ni ganancia ocasional",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "029": {
+                "number": "61",
+                "title": "Total ingresos netos",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            }
+        }
+    },
+    {
+        "title": "Costos y deducciones",
+        "description": "SECCIÓN COSTOS Y DEDUCCIONES",
+        "fields": {
+            "030": {
+                "number": "62",
+                "title": "Costos",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "031": {
+                "number": "63",
+                "title": "Gastos de administración",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "032": {
+                "number": "64",
+                "title": "Gastos de distribución y ventas",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "033": {
+                "number": "65",
+                "title": "Gastos financieros",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "034": {
+                "number": "66",
+                "title": "Otros gastos y deducciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "035": {
+                "number": "67",
+                "title": "Total costos y gastos deducibles",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            }
+        }
+    },
+    {
+        "title": "ESAL (R.T.E.)",
+        "description": "SECCIÓN ESAL - RÉGIMEN TRIBUTARIO ESPECIAL",
+        "fields": {
+            "036": {
+                "number": "68",
+                "title": "Inversiones Efectuadas en el año",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "037": {
+                "number": "69",
+                "title": "Inversiones liquidadas en periodos gravables anteriores",
+                "col-#": "col-8",
+                "class": ""
+            }
+        }
+    },
+    {
+        "title": "Renta",
+        "description": "SECCIÓN LIQUIDACIÓN PRIVADA",
+        "fields": {
+            "038": {
+                "number": "70",
+                "title": "Renta por recuperación de deducciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "039": {
+                "number": "71",
+                "title": "Renta Pasiva - ECE sin residencia fiscal en Colombia",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "040": {
+                "number": "72",
+                "title": "Renta líquida ordinaria del ejercicio",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "041": {
+                "number": "73",
+                "title": "Pérdida líquida del ejercicio",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "042": {
+                "number": "74",
+                "title": "Compensaciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "043": {
+                "number": "75",
+                "title": "Renta líquida ",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "044": {
+                "number": "76",
+                "title": "Renta presuntiva",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "045": {
+                "number": "77",
+                "title": "Renta exenta",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "046": {
+                "number": "78",
+                "title": "Rentas gravables",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "047": {
+                "number": "79",
+                "title": "Renta líquida gravable",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            }
+        }
+    },
+    {
+        "title": "Ganancias ocasionales",
+        "description": "SECCIÓN GANANCIAS OCASIONALES",
+        "fields": {
+            "048": {
+                "number": "80",
+                "title": "Ingresos por ganancias ocasionales",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "049": {
+                "number": "81",
+                "title": "Costos por ganancias ocasionales",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "050": {
+                "number": "82",
+                "title": "Ganancias ocasionales no gravadas y exentas",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "051": {
+                "number": "83",
+                "title": "Ganancias ocasionales gravables",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            }
+        }
+    },
+    {
+        "title": "Liquidación privada",
+        "description": "SECCIÓN LIQUIDACIÓN PRIVADA",
+        "fields": {
+            "052": {
+                "number": "84",
+                "title": "Impuesto sobre la renta líquida gravable",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "053": {
+                "number": "85",
+                "title": "Puntos adicionales a la tarifa del impuesto renta",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "054": {
+                "number": "86",
+                "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del 10% (base casilla 54)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "055": {
+                "number": "87",
+                "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del artículo 240 del E.T. (base casilla 55)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "056": {
+                "number": "88",
+                "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del 27% (base casilla 56)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "057": {
+                "number": "89",
+                "title": "De dividendos y/o participaciones gravadas a la tarifa del artículo 240 E.T. (base casilla 53)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "058": {
+                "number": "90",
+                "title": "Impuesto de dividendos y/o participaciones gravadas a la tarifa del 33% (base casilla 52)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "059": {
+                "number": "91",
+                "title": "Total impuesto sobre las rentas líquidas gravables",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "060": {
+                "number": "92",
+                "title": "Valor a adicionar (VAA)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "061": {
+                "number": "93",
+                "title": "Descuentos tributarios",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "062": {
+                "number": "94",
+                "title": "Impuesto neto de renta (sin impuesto adicionado)",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "063": {
+                "number": "95",
+                "title": "Impuesto a adicionar (IA)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "064": {
+                "number": "96",
+                "title": "Impuesto neto de renta (con impuesto adicionado)",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "065": {
+                "number": "97",
+                "title": "Impuesto de ganancias ocasionales",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "066": {
+                "number": "98",
+                "title": "Descuento por impuestos pagados en el exterior por ganancias ocasionales",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "067": {
+                "number": "99",
+                "title": "Total impuesto a cargo",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "068": {
+                "number": "100",
+                "title": "Valor inversion obras por impuestos hasta del 50% del valor de la casilla 99 (Modalidad de pago 1)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "069": {
+                "number": "101",
+                "title": "Descuentos efectivo inversión obras por impuesos (Modalidad de pago 2)",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "070": {
+                "number": "102",
+                "title": "Crédito fiscal artículo 256-1 E.T.",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "071": {
+                "number": "103",
+                "title": "Anticipo renta liquidado año gravable anterior",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "072": {
+                "number": "104",
+                "title": "Saldo a favor año gravable anterior sin solicitud de devolución y/o compensación",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "073": {
+                "number": "105",
+                "title": "Autoretenciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "074": {
+                "number": "106",
+                "title": "Otras Retenciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "075": {
+                "number": "107",
+                "title": "Total retenciones año gravable a declarar",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "076": {
+                "number": "108",
+                "title": "Anticipo renta para el año gravable siguiente",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "077": {
+                "number": "109",
+                "title": "Anticipo Puntos adicionales año gravable anterior",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "078": {
+                "number": "110",
+                "title": "Anticipo Puntos adicionales año gravable siguiente",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "079": {
+                "number": "111",
+                "title": "Saldo a pagar por impuesto",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "080": {
+                "number": "112",
+                "title": "Sanciones",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "081": {
+                "number": "113",
+                "title": "Total saldo a pagar",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "082": {
+                "number": "114",
+                "title": "Total saldo a favor",
+                "col-#": "col-8",
+                "class": "font-weight-bold"
+            },
+            "083": {
+                "number": "115",
+                "title": "Valor impuesto exigible por Obras Impuestos modalidad de pago 1",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "084": {
+                "number": "116",
+                "title": "Valor impuesto exigible por Obras Impuestos modalidad de pago 2",
+                "col-#": "col-8",
+                "class": ""
+            },
+            "085": {
+                "number": "117",
+                "title": "Aporte voluntario Art. 244-1 E.T",
+                "col-#": "col-8",
+                "class": ""
+            }
+        }
+    }
+]

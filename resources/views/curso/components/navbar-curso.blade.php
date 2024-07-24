@@ -5,14 +5,8 @@
         <div class="row">
 
             <!-- Tools de curso-->
-            <div class="col-4 container-course-tools">
+            <div class="col-2 container-course-tools">
                 <div class="row">
-                    <div class="btn-tool-left mr-2">
-                        <i class="nav-icon fas fa-file"></i>
-                        <div class="help-msg">
-                            <span>Ver diapositivas</span>
-                        </div>
-                    </div>
                     <div class="btn-tool-left">
                         <i class="nav-icon fas fa-comment"></i>
                         <div class="help-msg">
@@ -22,7 +16,7 @@
                     <div class="text-points">
                         <i class="nav-icon fas fa-trophy"></i>
                         <div class="text-points-span">
-                            <span>XP diarios</span>
+                            <span>XP</span>
                         </div>
                         <div class="text-points-num">
                             <strong>100</strong>
@@ -32,7 +26,7 @@
             </div>
 
             <!-- Guia del curso-->
-            <div class="col-4 container-course-progress">
+            <div class="col-3 container-course-progress">
 
                 <div class="progress-container">
                     <div class="progress-bar" id="progress-bar"></div>
@@ -41,7 +35,7 @@
             </div>
 
             <!-- Breadcrumb -->
-            <div class="col-4 container-breadcrumb">
+            <div class="col-7 container-breadcrumb">
 
                 <ol class="view-curso-breadcrumb float-right">
                     <li class="item-breadcrumb">

@@ -6,6 +6,7 @@ use App\Models\Curso;
 use App\Models\Lesson;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class LessonController extends Controller
 {
@@ -34,9 +35,19 @@ class LessonController extends Controller
      */
     public function formularioDIAN(Request $request, Curso $curso, Lesson $lesson)
     {
+        // Ruta al archivo JSON
+        $jsonPath = database_path('data/campos-110.json');
+
+        // Leer el contenido del archivo JSON
+        if (File::exists($jsonPath)) {
+            $json = File::get($jsonPath);
+            $campos_DIAN = json_decode($json, true);
+        }
+
         return view('curso.dian-components.formulario-110-dian')->with([
-            'curso' => $curso,
-            'lesson' => $lesson
+            'campos'    => $campos_DIAN,
+            'curso'     => $curso,
+            'lesson'    => $lesson
         ]);
     }
 

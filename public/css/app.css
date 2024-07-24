@@ -10329,6 +10329,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 
 .content-formularios {
+  position: relative;
   height: calc(100vh - 60px);
   box-sizing: border-box;
   display: flex;
@@ -10339,13 +10340,13 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .side-panel {
   position: absolute;
   top: 0;
-  bottom: 0; /* Asegura que el panel se extienda hasta el fondo del contenedor */
+  bottom: 0;
   width: 50%;
   z-index: 10;
   display: block;
-  padding: 5px 5px 60px 5px;
-  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-  overflow: hidden; /* Permite el desplazamiento vertical dentro del panel */
+  padding: 5px 5px 67px 5px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .content-formularios #left-panel {
   left: -50%;
@@ -10410,8 +10411,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 
 .content-formulario {
-  height: 100%;
   padding: 15px 0;
+  display: block;
 }
 .content-formulario .accordion {
   width: 100%;
@@ -10442,6 +10443,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formulario .accordion-content .label-input {
   margin: 0;
 }
+.content-formulario .accordion-content .input-dian {
+  text-align: right;
+}
 .content-formulario .arrow-icon {
   transition: transform 0.3s ease;
 }
@@ -10449,8 +10453,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   transform: rotate(180deg);
 }
 .content-formulario .border-title {
-  border-left: 5px solid #05bd9b;
-  padding-left: 10px;
+  border-right: 5px solid #05bd9b;
+  padding-right: 10px;
 }
 .content-formulario .content-right {
   height: 100%;

@@ -1,4 +1,5 @@
 .content-formularios {
+    position: relative;
     height: calc(100vh - 60px);
     box-sizing: border-box;
     display: flex;
@@ -6,17 +7,16 @@
     flex-direction: column;
     overflow: auto;
 
-    // Estilo de los paneles laterales
     .side-panel {
         position: absolute;
         top: 0;
-        bottom: 0; /* Asegura que el panel se extienda hasta el fondo del contenedor */
+        bottom: 0;
         width: 50%;
         z-index: 10;
         display: block;
-        padding: 5px 5px 60px 5px;
-        box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-        overflow: hidden; /* Permite el desplazamiento vertical dentro del panel */
+        padding: 5px 5px 67px 5px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     #left-panel {
