@@ -10413,6 +10413,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formulario {
   padding: 15px 0;
   display: block;
+  position: relative;
+  height: 100%;
 }
 .content-formulario .accordion {
   width: 100%;
@@ -10420,7 +10422,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   border-radius: 4px;
   height: 100%;
 }
-.content-formulario .accordion-header {
+.content-formulario .accordion .accordion-header {
   background-color: #eaeaea;
   cursor: pointer;
   padding: 10px;
@@ -10431,36 +10433,70 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   align-items: center;
   margin: 0;
 }
-.content-formulario .accordion-header:hover {
+.content-formulario .accordion .accordion-header:hover {
   background-color: #e1e1e1;
 }
-.content-formulario .accordion-content {
+.content-formulario .accordion .accordion-content {
   display: none;
   padding: 10px 20px;
   border-bottom: 1px solid #ccc;
   border-top: none;
 }
-.content-formulario .accordion-content .label-input {
+.content-formulario .accordion .accordion-content .label-input {
   margin: 0;
 }
-.content-formulario .accordion-content .input-dian {
+.content-formulario .accordion .accordion-content .input-dian {
   text-align: right;
 }
-.content-formulario .arrow-icon {
+.content-formulario .accordion .arrow-icon {
   transition: transform 0.3s ease;
 }
-.content-formulario .rotate {
-  transform: rotate(180deg);
-}
-.content-formulario .border-title {
+.content-formulario .accordion .border-title {
   border-right: 5px solid #05bd9b;
   padding-right: 10px;
 }
-.content-formulario .content-right {
+.content-formulario .accordion .content-right {
   height: 100%;
+}
+.content-formulario .btns-content {
+  width: 60px;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content-formulario .btns-content .btn-form-dian {
+  box-shadow: 2px 2px 3px rgba(225, 225, 225, 0.5);
+  border-radius: 50%;
+  width: 100%;
+  height: 60px;
+  flex: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.content-formulario .btns-content .btn-form-dian:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.content-formulario .btns-content .btn-form-dian i {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.content-formulario .btns-content #btn-show {
+  display: flex;
+  background-color: #05bd9b;
+}
+.content-formulario .btns-content #btn-send {
+  background-color: #d31a71;
 }
 
 #left-panel .content-panel {
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   height: calc(100% - 5px);
@@ -10496,6 +10532,54 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 #left-panel .content-panel .content-tab-panel .table tbody tr:hover {
   background-color: #d9d8d8;
+}
+
+#right-panel .content-panel {
+  font-size: 0.9rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 5px);
+  box-sizing: border-box;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c5c5c5;
+  border-radius: 3px;
+}
+#right-panel .instruc-section {
+  overflow-y: auto;
+}
+#right-panel .instruc-section .instruc-header {
+  background-color: #d9d9d9;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+#right-panel .instruc-section .instruc-header i {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: #05bd9b;
+}
+#right-panel .instruc-section .instruc-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+#right-panel .instruc-section .instruc-content {
+  margin-top: 10px;
+  padding-top: 5px;
+}
+#right-panel .instruc-section .instruc-content h3 {
+  padding: 0 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+}
+#right-panel .instruc-section .instruc-content .text-instruc {
+  padding: 5px 15px 5px 15px;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: justify;
 }
 
 .content .header-rutas {

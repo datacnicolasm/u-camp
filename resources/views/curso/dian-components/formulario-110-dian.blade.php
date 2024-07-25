@@ -139,7 +139,7 @@
                                                 @foreach($campo["fields"] as $title => $field)
                                                     <div class="form-group <?php echo $field["col-#"] ?>">
                                                         <p class="<?php echo $field["class"] ?> label-input"><?php echo $field["number"] . ". " . $field["title"] ?></p>
-                                                        <input type="text" class="form-control input-dian">
+                                                        <input data-cod-field="110-{{ $title }}" type="text" class="form-control input-dian" placeholder="0">
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -169,6 +169,14 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="btns-content">
+                        <div id="btn-send" class="mt-2 btn-form-dian">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div id="btn-show" class="mt-2 btn-form-dian">
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
                 </div>
