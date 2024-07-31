@@ -10335,7 +10335,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   display: flex;
   padding: 5px 5px 60px 5px;
   flex-direction: column;
-  overflow: auto;
+  overflow: hidden;
 }
 .content-formularios .side-panel {
   position: absolute;
@@ -10409,9 +10409,275 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
     opacity: 1;
   }
 }
+.content-formularios .container-resultados-DIAN {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(208, 208, 208, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+.content-formularios .container-resultados-DIAN .container {
+  height: 80%;
+  max-height: 80%;
+  overflow-y: scroll;
+  position: relative;
+}
+.content-formularios .container-resultados-DIAN .container .card-body-resultados {
+  background-color: #f4f4f4 !important;
+}
+.content-formularios .container-resultados-DIAN .container .card-resultados {
+  border-top: solid 4px #d31a71;
+  display: none;
+}
+.content-formularios .container-resultados-DIAN .content-btn {
+  position: absolute;
+  bottom: 80px;
+  display: none;
+}
+.content-formularios .container-resultados-DIAN .content-btn .resultados-btn {
+  background-color: #d31a71;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general {
+  width: 60%;
+  margin: auto;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-especificos {
+  border: solid 0.5px #e2e2e2;
+  overflow: hidden;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-especificos .progress-td {
+  vertical-align: middle;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-especificos .progress-td .progress-bar {
+  background-color: rgb(0, 255, 88);
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate {
+  font-size: 0.8rem;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-fondo-form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+  color: rgba(208, 208, 208, 0.25);
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-fondo-form .camp-logo {
+  margin-left: 20px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .casilla-general-dian {
+  background-color: #fff;
+  border: solid 0.5px #5b1973;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .casilla-general-dian .input-dian-info-form {
+  height: 30px;
+  max-height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .casilla-general-dian .input-dian-info-form-1 {
+  border-right: solid 0.5px #5b1973;
+  height: 30px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .title-dian {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-dian-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-dian-form .u-logo {
+  font-size: 1.5rem;
+  color: #05bd9b;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-dian-form span {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-dian-form .camp-logo {
+  font-size: 1.5rem;
+  margin-left: 2px;
+  color: #021221;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .number-dian {
+  padding: 2px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .number-dian span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5b1973;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .year-input-space {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .year-input-space .cuadro-input-dian {
+  width: 15px;
+  height: 15px;
+  border: solid 0.5px #000;
+  border-right: none;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .year-input-space .cuadro-input-dian:last-child {
+  border: solid 0.5px #000;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .content-info-sect {
+  border-right: solid 0.5px #5b1973;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .content-info-sect .casilla-verticla-text-dian {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .content-info-sect .verticla-text-dian {
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .value-info-dian {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number {
+  background-color: rgba(208, 208, 208, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+  border-bottom: solid 0.5px #5b1973;
+  overflow: hidden;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .verticla-sect-text-dian {
+  writing-mode: tb;
+  text-orientation: mixed;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  flex: 0 0 8%;
+  width: 8%;
+  line-height: 15px;
+  font-size: 0.8rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number {
+  flex: 0 0 92%;
+  width: 92%;
+  font-size: 0.8rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .name-input-form {
+  border-left: solid 0.5px #5b1973;
+  border-right: solid 0.5px #5b1973;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .name-input-form-sm {
+  font-size: 0.7rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .number-input-form {
+  border-left: solid 0.5px #5b1973;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .cod-input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number > div:nth-child(6n+1) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number > div:nth-child(6n+2) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number > div:nth-child(6n+3) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number {
+  background-color: rgba(208, 208, 208, 0) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+  overflow: hidden;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-verticla-sect-text-dian {
+  writing-mode: tb;
+  text-orientation: mixed;
+  text-align: center;
+  display: inline-block;
+  flex: 0 0 8%;
+  width: 8%;
+  line-height: 15px;
+  font-size: 0.7rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number {
+  flex: 0 0 92%;
+  width: 92%;
+  font-size: 0.8rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .name-input-form {
+  border-left: solid 0.5px #5b1973;
+  border-right: solid 0.5px #5b1973;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .name-input-form-sm {
+  font-size: 0.7rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .number-input-form {
+  border-left: solid 0.5px #5b1973;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .cod-input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number {
+  border-left: solid 0.5px #5b1973;
+}
 
 .content-formulario {
-  padding: 15px 0;
+  padding-top: 15px;
+  padding-bottom: 60px;
+  overflow-y: scroll;
   display: block;
   position: relative;
   height: 100%;
@@ -10420,10 +10686,11 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
-  height: 100%;
+  max-width: 1400px;
+  margin: auto;
 }
 .content-formulario .accordion .accordion-header {
-  background-color: #eaeaea;
+  background-color: #f4f4f4;
   cursor: pointer;
   padding: 10px;
   border-bottom: 1px solid #ccc;
@@ -10444,12 +10711,10 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .content-formulario .accordion .accordion-content .label-input {
   margin: 0;
+  font-size: 0.9rem;
 }
 .content-formulario .accordion .accordion-content .input-dian {
   text-align: right;
-}
-.content-formulario .accordion .arrow-icon {
-  transition: transform 0.3s ease;
 }
 .content-formulario .accordion .border-title {
   border-right: 5px solid #05bd9b;
@@ -10457,6 +10722,15 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .content-formulario .accordion .content-right {
   height: 100%;
+}
+.content-formulario .accordion .content-right .content-notas-DIAN .item-nota {
+  text-align: justify;
+  display: none;
+  background-color: #bef1e7;
+  color: #04483c;
+  min-height: 0px;
+  padding: 15px;
+  border-radius: 5px;
 }
 .content-formulario .btns-content {
   width: 60px;
@@ -10508,7 +10782,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   height: 100%;
   overflow-y: auto;
   background-color: white;
-  padding: 10px;
+  padding: 10px 20px;
   flex-grow: 1;
   box-sizing: border-box;
 }
@@ -10530,8 +10804,21 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 #left-panel .content-panel .content-tab-panel .table tbody td.total-eeff {
   padding: 0.4rem 0.75rem 0.4rem 1rem;
 }
-#left-panel .content-panel .content-tab-panel .table tbody tr:hover {
-  background-color: #d9d8d8;
+#left-panel .content-panel .content-tab-panel .table tbody tr:hover .content-btn-mark-line {
+  opacity: 1;
+}
+#left-panel .content-panel .content-tab-panel .table tbody .content-btn-mark-line {
+  opacity: 0;
+  background-color: #05bd9b;
+  width: 30px;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#left-panel .content-panel .content-tab-panel .table tbody .content-btn-mark-line:hover i {
+  font-size: 1rem;
 }
 
 #right-panel .content-panel {
@@ -10580,6 +10867,63 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   font-size: 0.9rem;
   color: #333;
   text-align: justify;
+}
+#right-panel .instruc-section .instruc-content .accordion {
+  width: 100%;
+  border: 0.5px solid #eaeaea;
+  height: 100%;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-header {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-bottom: 0.5px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 0.9rem;
+  box-shadow: 0px 1px 1px rgba(155, 155, 155, 0.2);
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-header .arrow-icon {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #d31a71;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-header:hover {
+  background-color: #f5f5f5;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-content {
+  display: none;
+  padding: 15px;
+  border-bottom: 0.5px solid #eaeaea;
+  border-left: 5px solid #05bd9b;
+  border-top: none;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-content .label-input {
+  margin: 0;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-content .input-dian {
+  text-align: right;
+}
+#right-panel .instruc-section .instruc-content .accordion .accordion-content .text-info-year {
+  font-weight: bolder;
+  color: #05bd9b;
+  margin-bottom: 10px;
+}
+#right-panel .instruc-section .instruc-content .accordion .border-title {
+  border-right: 5px solid #05bd9b;
+  padding-right: 10px;
+}
+#right-panel .instruc-section .instruc-content .accordion .content-right {
+  height: 100%;
 }
 
 .content .header-rutas {
@@ -11618,6 +11962,14 @@ body.page-home-camp .home-signup p.text-small {
 
 .container-course-progress {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-course-progress .progress-text {
+  color: #05bd9b;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 .container-course-progress .progress-container {
   width: 100%;
@@ -11632,7 +11984,6 @@ body.page-home-camp .home-signup p.text-small {
   background-color: #05bd9b;
   text-align: center;
   line-height: 30px;
-  /* Alinea el texto verticalmente */
   color: white;
   border-radius: 10px;
   font-size: 0.8rem;

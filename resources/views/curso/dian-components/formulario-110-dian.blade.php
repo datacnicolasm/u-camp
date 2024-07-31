@@ -10,8 +10,9 @@
             @include('curso.components.navbar-curso')
 
             <!-- Content Wrapper. Contains page content -->
-            <div class="content-formularios">            
-                <!-- -->
+            <div class="content-formularios">
+
+                <!-- Header de formularios DIAN -->
                 @include('curso.dian-components.header-dian')
 
                 <!-- Paneles laterales -->
@@ -34,7 +35,7 @@
                     <span class="panel-btn-text">Ver instrucciones</span>
                 </button>
             
-                <!-- -->
+                <!-- Contenido de campos del formulario -->
                 <div class="content-formulario">
                     <div class="accordion">
                         <!-- Datos Declarante -->
@@ -76,7 +77,7 @@
                                             </div>
                                             <div class="form-group col-10">
                                                 <p class="label-input">11. Razón social</p>
-                                                <input disabled type="text" class="form-control" placeholder="">
+                                                <input disabled type="text" class="form-control" placeholder="EMPRESAS COMERCIALES DE COLOMBIA S.A.S">
                                             </div>
                                             <div class="form-group col-2">
                                                 <p class="label-input">12. Cod</p>
@@ -85,9 +86,7 @@
                                             <div class="form-group col-6">
                                                 <p class="label-input">24. Actividad Económica</p>
                                                 <select disabled class="custom-select rounded-0">
-                                                    <option>Value 1</option>
-                                                    <option>Value 2</option>
-                                                    <option>Value 3</option>
+                                                    <option>Actividad Económica</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-6">
@@ -129,17 +128,34 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p class="border-title text-right m-0">{{ $campo["description"] }}</p>
-                                        <div class="content-right"></div>
+                                        <div class="content-right">
+                                            <div class="content-notas-DIAN">
+                                                @foreach($campo["fields"] as $title => $field)
+                                                    @if($field["nota"])
+                                                        <div class="item-nota" id="110-{{ $title }}">
+                                                            <?php echo $field["nota"]; ?>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+                                        </div>
                                     </div>
     
                                     <!-- {{ $campo["title"] }} -->
-                                    <div class="col-6">
+                                    <div class="col-6 py-3">
                                         <form>
                                             <div class="form-row">
                                                 @foreach($campo["fields"] as $title => $field)
                                                     <div class="form-group <?php echo $field["col-#"] ?>">
-                                                        <p class="<?php echo $field["class"] ?> label-input"><?php echo $field["number"] . ". " . $field["title"] ?></p>
-                                                        <input data-cod-field="110-{{ $title }}" type="text" class="form-control input-dian" placeholder="0">
+                                                        <p class="<?php echo $field["class"] ?> label-input"><?php echo $field["number"] . ". " . $field["title"] . " (" . $title . ")" ?></p>
+                                                        <input id="input-{{ $title }}" 
+                                                        <?php 
+                                                            $group_field = isset($field["group"]) ? 'data-group-field="'.$field["group"].'"' : "";
+                                                            echo $group_field;
+                                                            $disabled_field = isset($field["disabled"]) ? 'disabled' : "";
+                                                            echo $disabled_field;
+                                                        ?>
+                                                        data-cod-field="110-{{ $title }}" type="text" class="form-control input-dian" placeholder="0">
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -180,7 +196,10 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Contenido de campos del formulario -->
+                @include('curso.dian-components.resultados-dian')
+
             </div>
 
             <!-- Barra de navegacion inferior -->

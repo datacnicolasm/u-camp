@@ -172,6 +172,15 @@
 
 .container-course-progress {
     padding: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .progress-text{
+        color: $tint-3;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
 
     .progress-container {
         width: 100%;
@@ -186,7 +195,6 @@
             background-color: $tint-3;
             text-align: center;
             line-height: 30px;
-            /* Alinea el texto verticalmente */
             color: white;
             border-radius: 10px;
             font-size: 0.8rem;

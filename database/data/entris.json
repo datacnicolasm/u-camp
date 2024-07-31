@@ -1,0 +1,349 @@
+[
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Efectivo y equivalentes al efectivo",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Cuentas comerciales por cobrar y otras cuentas por cobrar corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Inventarios corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Activos por impuestos corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Activos biológicos corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Otros activos financieros corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Otros activos no financieros corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Activos corrientes distintos al efectivo pignorados",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "current-assets",
+        "name_es": "Activos no corrientes mantenidos para la venta",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Propiedad de inversión",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Propiedades, planta y equipo",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Plusvalía",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Activos intangibles distintos de la plusvalía",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Activos biológicos no corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Cuentas comerciales por cobrar y otras cuentas por cobrar no corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Inventarios no corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Activos por impuestos diferidos",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Activos por impuestos no corriente",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Otros activos financieros no corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Otros activos no financieros no corrientes",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "assets",
+        "sub_type_group": "non-current-assets",
+        "name_es": "Activos no corrientes distintos al efectivo pignorados",
+        "name_en": "Cash"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Provisiones corrientes por beneficios a los empleados",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Otras provisiones corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Cuentas por pagar comerciales y otras cuentas por pagar corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Pasivos por impuestos corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Otros pasivos financieros corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Otros pasivos no financieros corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "current-liabilities",
+        "name_es": "Pasivos mantenidos para la venta",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Provisiones no corrientes por beneficios a los empleados",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Otras provisiones no corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Cuentas comerciales por pagar y otras cuentas por pagar no corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Pasivo por impuestos diferidos",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Pasivos por impuestos no corriente",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Otros pasivos financieros no corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "liabilities",
+        "sub_type_group": "non-current-liabilities",
+        "name_es": "Otros pasivos no financieros no corrientes",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Capital emitido",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Prima de emisión",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Acciones propias en cartera",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Inversión suplementaria al capital asignado",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Otras participaciones en el patrimonio",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Superavit por revaluación",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Otras reservas",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Ganancias acumuladas",
+        "name_en": "Equity social"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "gross-profit",
+        "name_es": "Ingresos",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "gross-profit",
+        "name_es": "Costo de ventas",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-operating",
+        "name_es": "Otros ingresos",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-operating",
+        "name_es": "Gastos de ventas",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-operating",
+        "name_es": "Gastos de administración",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-operating",
+        "name_es": "Otros gastos",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-tax",
+        "name_es": "Ingresos financieros",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-tax",
+        "name_es": "Costos financieros",
+        "name_en": "Approved"
+    },
+    {
+        "type_eeff": "comprehensive-income",
+        "type_group": "profit-loss",
+        "name_es": "Ingreso (gasto) por impuestos",
+        "name_en": "Approved"
+    }
+]

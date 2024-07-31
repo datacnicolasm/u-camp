@@ -102,11 +102,9 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     flex-grow: 1;
-                    margin-right: 20px; // Espaciado después del texto
+                    margin-right: 20px;
                     font-size: 1.2rem;
                 }
-
-                // Espaciado extra para el último ícono (apagado)
                 .fas.fa-power-off {
                     margin-right: 0;
                 }

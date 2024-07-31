@@ -38,4 +38,12 @@ class Lesson extends Model
     {
         return $this->hasOne(Question::class);
     }
+
+    /**
+     * Relación con el modelo Workshop.
+     */
+    public function workshop()
+    {
+        return $this->hasOne(Workshop::class);
+    }
 }

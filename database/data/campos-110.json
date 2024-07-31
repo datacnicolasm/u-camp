@@ -7,91 +7,116 @@
                 "number": "33",
                 "title": "Total costos y gastos de nómina",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "Incluya en esta casilla el valor total de los salarios, prestaciones sociales y demás pagos laborales causados en el año gravable o en la fracción del período a declarar, independiente de ser costo o gasto."
             },
             "002": {
                 "number": "34",
                 "title": "Aportes al sistema de seguridad social",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "Incluya en esta casilla el valor total de los aportes pagados al Sistema de Seguridad Social durante el año gravable o en la fracción del período a declarar, correspondientes a aportes por salud, a fondos de pensiones de jubilación e invalidez y por riesgos laborales."
             },
             "003": {
                 "number": "35",
                 "title": "Aportes al SENA, ICBF, cajas de compensación",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "Registre el valor de los aportes parafiscales pagados durante el año gravable o en la fracción del período a declarar, los cuales deben corresponder al valor solicitado como costo y deducción, de conformidad con el artículo 114 del E.T. que exige el pago para su procedencia o aceptación."
             }
         }
     },
     {
         "title": "Patrimonio",
+        "cod_section": "002",
         "description": "SECCIÓN PATRIMONIO DEL DECLARANTE",
         "fields": {
             "004": {
                 "number": "36",
                 "title": "Efectivo y equivalentes a efectivo",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Registre en esta casilla el valor patrimonial de los recursos líquidos al 31 de diciembre, incluyendo caja, depósitos en bancos y otros fondos disponibles. Incluya también aquellos recursos con restricciones legales que no estén inmediatamente disponibles, como ciertos aportes en entidades sin ánimo de lucro. Para determinar el valor, tenga en cuenta lo siguiente:</p><ul><li><strong>Depósitos bancarios:</strong> De acuerdo con el artículo 268 del estatuto tributario, registre el saldo final del año, incluyendo la corrección monetaria y los intereses acumulados no cobrados.</li><li><strong>Activos en moneda extranjera:</strong> Conforme al artículo 269 del estatuto tributario, estime su valor en moneda nacional al cierre del año, utilizando la tasa representativa del mercado (TRM) del día de reconocimiento inicial.</li></ul>",
+                "group": "patrimonio-bruto"
             },
             "005": {
                 "number": "37",
                 "title": "Inversiones e instrumentos financieros derivados",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Registre aquí el valor al 31 de diciembre de todas las inversiones realizadas en el año, incluyendo:</p><ul><li><strong>Inversiones en bonos y acciones:</strong> Cualquier inversión hecha con el objetivo de obtener ganancias, ya sea por cambios en los precios o con la intención de mantenerlas hasta su vencimiento.</li><li><strong>Inversiones estratégicas:</strong> Aquellas realizadas con el propósito de tener una influencia significativa o control sobre las decisiones de la entidad en la que se invierte.</li><li><strong>Instrumentos derivados:</strong> Incluyendo aquellos usados para especulación o como cobertura contra riesgos.</li></ul>",
+                "group": "patrimonio-bruto"
             },
             "006": {
                 "number": "38",
                 "title": "Cuentas, documentos y arrendamientos financieros por cobrar",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Registre el valor al 31 de diciembre del año gravable de todos los saldos a su favor. Esto incluye:</p><ul><li><strong>Cartera de clientes:</strong> Montos que otros deben a la empresa por operaciones que son parte de su actividad principal.</li><li><strong>Deudas de partes relacionadas:</strong> Sumas adeudadas por empleados, accionistas, socios y otras partes relacionadas que no son parte de las ventas habituales.</li><li><strong>Anticipos realizados:</strong> Dinero entregado a proveedores o contratistas de los cuales se espera recibir bienes, servicios o beneficios futuros.</li></ul><p>Además, recuerde considerar la deducción por deterioro de cartera para cuentas de difícil cobro a la hora de calcular el valor fiscal.</p>",
+                "group": "patrimonio-bruto"
             },
             "007": {
                 "number": "39",
                 "title": "Inventarios",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>En esta casilla debe registrar el costo fiscal de los bienes que poseía al finalizar el año fiscal, esto incluye los bienes que se adquirieron o se produjeron con el fin de comercializarlos, las materias primas, los bienes en proceso de producción, así como las piezas de repuesto y el equipo auxiliar clasificados como inventarios, productos en tránsito, los provenientes de recursos naturales y de activos biológicos.</p>",
+                "group": "patrimonio-bruto"
             },
             "008": {
                 "number": "40",
                 "title": "Activos intangibles",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>En esta casilla, registre el valor de los activos intangibles al cierre del año fiscal. Estos incluyen bienes identificables no monetarios sin presencia física que la empresa controla, como patentes, marcas, y derechos de autor. Incluya el valor de la plusvalía (Goodwill) si aplica, y cualquier amortización correspondiente.</p>",
+                "group": "patrimonio-bruto"
             },
             "009": {
                 "number": "41",
                 "title": "Activos biológicos ",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Incluya en esta casilla el valor patrimonial correspondiente al último día del año gravable de los animales vivos, plantas productoras y cultivos consumibles. Asegúrese de considerar lo estipulado en los artículos 92 a 95 del Estatuto Tributario para su correcta evaluación.</p>",
+                "group": "patrimonio-bruto"
             },
             "010": {
                 "number": "42",
                 "title": "Propiedades, planta y equipo, propiedades de inversión y ANCMV",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Incluya en esta casilla el valor patrimonial al último día del año gravable de propiedades, plantas y equipos usados en sus operaciones, construcciones en proceso, y otros activos tangibles. Excluya las 'plantas productoras' agrícolas, que se reportan como activos biológicos, y también incluya propiedades de inversión y activos no corrientes destinados para la venta, conforme a lo establecido en los artículos 128 al 140 y 290 del Estatuto Tributario. Los activos medidos a valor razonable contablemente deben registrarse al costo para fines fiscales, según el artículo 69. Finalmente, para bienes adquiridos vía arrendamiento financiero, su valor se determinará según el artículo 127-1 del Estatuto Tributario.</p>",
+                "group": "patrimonio-bruto"
             },
             "011": {
                 "number": "43",
                 "title": "Otros activos",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Incluya en esta casilla el valor patrimonial a 31 de diciembre de los bienes no listados en casillas anteriores. Esto incluye activos como planes de beneficios para empleados, activos que sólo se reconocen para fines fiscales, activos por impuestos corrientes y gastos pagados por anticipado.</p>",
+                "group": "patrimonio-bruto"
             },
             "012": {
                 "number": "44",
                 "title": "Total patrimonio bruto",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "013": {
                 "number": "45",
                 "title": "Pasivos",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Registre el valor total de las obligaciones a pagar al 31 de diciembre del año gravable en esta casilla. Incluya deudas como obligaciones financieras, cuentas por pagar, arrendamientos, impuestos, y otros pasivos con terceros. Recuerde que los pasivos en moneda extranjera deben convertirse a la moneda nacional usando la tasa representativa del mercado al día de su reconocimiento inicial. Consulte los artículos 285, 288, 291 y 287 del E.T. para detalles sobre la valoración de deudas. No incluya provisiones contables que no sean aceptadas fiscalmente.</p>"
             },
             "014": {
                 "number": "46",
                 "title": "Total patrimonio líquido",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             }
         }
     },
@@ -103,91 +128,121 @@
                 "number": "47",
                 "title": "Ingresos brutos de actividades ordinarias",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla el total de ingresos brutos (gravados y no gravados) obtenidos durante el año gravable que correspondan al desarrollo ordinario de su objeto social, excepto los intereses y demás rendimientos financieros recibidos por actividades productoras de renta, los cuales se deben registrar en la casilla siguiente. Para efectos fiscales tenga en cuenta el tratamiento previsto en el artículo 32 E.T. para los contratos de concesión y APP, así como los momentos de realización del ingreso que regula el artículo 28 E.T. y el artículo 290 E.T. Régimen de Transición. Formato Reporte Conciliación fiscal Anexo 110 (Estado de Resultado Integral- Renta Líquida, en adelante ERI - Renta Líquida): Ingresos brutos Actividad Industrial, comercial y servicios + Ingresos por mediciones a valor razonable + Ingresos por reversión de deterioro del valor + Ingresos por reversión de provisiones (pasivos de monto o fecha inciertos) + Ingresos por reversión de pasivos por beneficios a los empleados.</p>",
+                "group": "ingresos-brutos"
             },
             "016": {
                 "number": "48",
                 "title": "Ingresos financieros",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla los ingresos financieros obtenidos durante el período gravable, tales como: el componente financiero del arrendamiento financiero o mercantil, intereses recibidos por los contribuyentes y entidades pertenecientes al sector financiero vigiladas por la Superintendencia Financiera de Colombia, el ajuste por diferencia en cambio de los activos en moneda extranjera poseídos a 31 de diciembre del año gravable determinados de conformidad con los artículos 288 y 291 E.T. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Ingresos financieros.</p>",
+                "group": "ingresos-brutos"
             },
             "017": {
                 "number": "49",
                 "title": "Dividendos y/o participaciones no constitutivos de renta ni ganancia ocasional",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla el total de los ingresos obtenidos o capitalizados durante el año gravable por concepto de dividendos y participaciones distribuidos a título de ingresos no constitutivos de renta ni ganancia ocasional o no sometidos al impuesto de dividendos de conformidad con el numeral 3 del artículo 49 del E.T. y el artículo 36-3 del E.T. Nota : el artículo 36-3 del E.T. fue derogado a partir del 1 de enero de 2023 por el articulo 96 de la Ley 2277 de 2022. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y participaciones no constitutivas de renta ni ganancia ocasional (incluye capitalizaciones no gravadas).</p>",
+                "group": "ingresos-brutos"
             },
             "018": {
                 "number": "50",
                 "title": "Dividendos o participaciones distribuidos por entidades no residentes en Colombia a una CHC y prima en colocación de acciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla el total de los ingresos obtenidos o capitalizados durante el año gravable por concepto de dividendos y participaciones distribuidos a título de ingresos no constitutivos de renta ni ganancia ocasional o no sometidos al impuesto de dividendos de conformidad con el numeral 3 del artículo 49 del E.T. y el artículo 36-3 del E.T. Nota : el artículo 36-3 del E.T. fue derogado a partir del 1 de enero de 2023 por el articulo 96 de la Ley 2277 de 2022. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y participaciones no constitutivas de renta ni ganancia ocasional (incluye capitalizaciones no gravadas).</p>",
+                "group": "ingresos-brutos"
             },
             "019": {
                 "number": "51",
                 "title": "Dividendos y/o participaciones gravadas a la tarifa general provenientes de sociedades y entidades extranjeras o de sociedades nacionales",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla el total de los ingresos pagados o abonados en cuenta durante el año gravable por concepto de dividendos y/o participaciones, que sean recibidos de sociedades y entidades extranjeras o provenientes de utilidades gravadas de sociedades nacionales (parágrafo 2 artículo 49 E.T.). No incluya en esta casilla los dividendos que se registraron en la casilla 50 (Dividendos y/o participaciones distribuidos por entidades no residentes en Colombia a una CHC y prima en colocación de acciones). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida Dividendos y/o participaciones gravadas a la tarifa general provenientes de sociedades y entidades extranjeras o de sociedades nacionales).</p>",
+                "group": "ingresos-brutos"
             },
             "020": {
                 "number": "52",
                 "title": "Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2016 y anteriores)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>si usted es una persona natural sin residencia fiscal en Colombia, registre en esta casilla el valor de los dividendos y/o participaciones gravadas que le fueron pagadas o abonadas en cuenta durante el año gravable, que correspondían a utilidades generadas y no distribuidas de períodos anteriores al año gravable 2017 (numeral 2 del parágrafo 1° artículo 1.2.1.10.3. del DUR 1625/2016). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2016 y anteriores).</p>",
+                "group": "ingresos-brutos"
             },
             "021": {
                 "number": "53",
                 "title": "Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2017 y siguientes)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla los dividendos y/o participaciones que hayan sido distribuidos a partir del primero (1) de enero del año gravable que se está declarando y/o fracción del año gravable siguiente, con cargo a utilidades generadas a partir del primero (1) de enero de 2017 que no hayan sido decretados en calidad de exigibles hasta el treinta y uno (31) de diciembre del año gravable anterior que se está declarando. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y/o participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2017 y siguientes.</p>",
+                "group": "ingresos-brutos"
             },
             "022": {
                 "number": "54",
                 "title": "Dividendos y/o participaciones gravadas al 10%",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>Incluya en esta casilla el valor de los ingresos obtenidos por concepto de dividendos y/o participaciones decretados en calidad de exigibles en el año gravable que se está declarando y/o fracción del año gravable siguiente, con cargo a utilidades generadas a partir del primero (1) de enero de 2017 y siguientes, recibidos por sociedades y entidades extranjeras, personas naturales no residentes y por establecimientos permanentes en Colombia de sociedades extranjeras, cuando provengan de utilidades que hayan sido distribuidas a título de ingreso no constitutivo de renta ni ganancia ocasional (inciso primero de los artículos 245 y 246 E.T.). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y participaciones gravadas al 10%.</p>",
+                "group": "ingresos-brutos"
             },
             "023": {
                 "number": "55",
                 "title": "Dividendos y/o participaciones gravadas a tarifa general (EP y sociedades extranjeras - Utilidades generadas a partir del año 2017)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla el valor de los ingresos obtenidos por concepto de dividendos y/o participaciones decretados en calidad de exigibles en el año gravable que se está declarando y/o fracción del año gravable siguiente, con cargo a utilidades generadas a partir del primero (1) de enero de 2017 y siguientes, recibidos por sociedades y entidades extranjeras, personas naturales no residentes y por establecimientos permanentes en Colombia de sociedades extranjeras cuando provengan de utilidades gravadas conforme a las reglas de los artículos 48 y 49 E.T. (parágrafo 1 artículo 245 e inciso segundo artículo 246 E.T.). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y/o participaciones gravadas a tarifa general (EP y sociedades extranjeras - utilidades generadas a partir del año 2017).</p>",
+                "group": "ingresos-brutos"
             },
             "024": {
                 "number": "56",
                 "title": "Dividendos y participaciones provenientes de proyectos calificados como megainversión gravadas al 27%",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla los dividendos y participaciones que correspondan a utilidades gravadas, conforme con lo dispuesto en el parágrafo 2 del artículo 49 del E.T., provenientes de proyectos calificados como megainversión que cumplan los requisitos previstos en el artículo 235-3 del E.T., estarán sometidos a la tarifa del impuesto sobre la renta del veintisiete por ciento (27%), de conformidad con lo previsto en el numeral 4 del artículo 235-3 del E.T.. Nota: cuando los dividendos o participaciones provengan de proyectos calificados como megainversión que cumplieron los requisitos previstos en el artículo 235-3 del E.T., y suscribieron contrato de estabilidad tributaria hasta el treinta y uno (31) de diciembre de 2022, estarán sometidos a la tarifa de retención en la fuente del veintisiete por ciento (27%), durante el término de vigencia del respectivo contrato. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Dividendos y participaciones provenientes de proyectos calificados como megainversión gravadas al 27%.</p>",
+                "group": "ingresos-brutos"
             },
             "025": {
                 "number": "57",
                 "title": "Otros Ingresos",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla aquellos conceptos de ingreso que no se hayan registrado previamente; tales como los obtenidos en la enajenación de activos diferentes a los inventarios, si fueron poseídos por menos de dos años, indemnizaciones, intereses presuntivos (artículo 35 E.T.), entre otros. Adicionalmente, los contribuyentes   deberán   incluir en   esta casilla   los ingresos   generados   como consecuencia de una enajenación indirecta, en los términos del artículo 90-3 E.T. Si usted es una entidad sin ánimo de lucro del Régimen Tributario Especial de que trata el artículo 19 ET., que le decretaron dividendos y/o participaciones por alguno de los conceptos mencionados en las casillas 50, 51, 54, 55 o 57, en el año gravable que se está declarando y/o fracción del año gravable siguiente, registre en esta casilla el valor de los dividendos y/o participaciones decretados. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Utilidad en la venta o enajenación de activos, bienes poseídos por menos de dos años + Otros ingresos + Ajustes fiscales (es importante anotar que estas casillas del formato 2516 tienen ajustes para administrar el renglón separando la renta líquida por recuperación de deducciones).</p>",
+                "group": "ingresos-brutos"
             },
             "026": {
                 "number": "58",
                 "title": "Total Ingresos brutos",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "027": {
                 "number": "59",
                 "title": "Devoluciones, rebajas y descuentos en ventas",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor de las devoluciones, rebajas y descuentos en ventas. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Devoluciones, rebajas y descuentos.</p>",
+                "group": "ingresos-netos"
             },
             "028": {
                 "number": "60",
                 "title": "Ingresos no constitutivos de renta ni ganancia ocasional",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla los ingresos que por expresa disposición legal son no constitutivos de renta ni ganancia ocasional, tales como: la parte correspondiente al daño emergente en los seguros de daños, invertida en su totalidad en la reposición de bienes iguales o semejantes al objeto de indemnización, los dividendos y participaciones recibidos o capitalizados a que se refiere la casilla 49 (Dividendos y participaciones no constitutivos de renta ni ganancia ocasional) de este formulario, etc. Incluya en esta casilla las utilidades repartidas a través de acciones a los trabajadores de las sociedades de Beneficio e Interés Colectivo (BIC) organizadas como una sociedad por acciones y que sean contribuyentes del impuesto sobre la renta y complementario, y que corresponde a las utilidades repartidas en el mismo año gravable que se generaron, artículo 1.2.1.12.10. del DUR 1625/2016. Nota: si usted es un contribuyente que pertenece al Régimen Tributario Especial, tenga en cuenta que solamente podrá incluir en esta casilla los ingresos no constitutivos de renta ni ganancia ocasional que obtenga por los contratos de obra pública e interventoría suscritos con entidades estatales cuando haya lugar a ello. (Parágrafo del artículo 1.2.1.5.1.20. del DUR 1625/2016). No incluya en esta casilla aquellos ingresos relativos a las rentas exentas. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Ingresos no constitutivos de renta ni ganancia ocasional.</p>",
+                "group": "ingresos-netos"
             },
             "029": {
                 "number": "61",
                 "title": "Total ingresos netos",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             }
         }
     },
@@ -199,37 +254,49 @@
                 "number": "62",
                 "title": "Costos",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el costo de ventas, incluyendo el costo asignado por el ente económico a los artículos y productos vendidos, de acuerdo con el sistema que legalmente le corresponda para establecer el costo de los activos movibles enajenados, y el costo de los servicios prestados. Los rubros a incluir son los de la cuenta “Costo de ventas y de prestación de servicios”, o el determinado conforme al juego de inventarios para el sistema periódico (si aplica). Tenga en cuenta que la realización del costo para los obligados a llevar contabilidad está prevista en el artículo 59 del E.T., para lo cual se debe dar aplicación a las excepciones establecidas para el reconocimiento fiscal de los costos devengados en el período, así como las reglas para el régimen de transición estipuladas en el artículo 290 del E.T. No obstante, es obligación del contribuyente verificar lo dispuesto en el Estatuto Tributario y en la reglamentación y aplicar lo pertinente cuando corresponda. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): TOTAL COSTOS.</p>",
+                "group": "costos-deducibles"
             },
             "031": {
                 "number": "63",
                 "title": "Gastos de administración",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla los gastos en que se incurre durante  el ejercicio, asociados con actividades de administración, originados en el desarrollo de la operación básica o principal de la empresa, tales como: mano de obra, honorarios, impuestos, arrendamientos, contribuciones, seguros, servicios, regalías, asistencia técnica, otros servicios, investigación y desarrollo, reparaciones, depreciaciones, entre otros, asociados a los ingresos gravados, siempre que se trate de expensas necesarias, es decir, que tengan relación de causalidad, necesidad y proporcionalidad con la renta y cumplan los demás requisitos necesarios para su deducción. Para el año gravable 2022 el contribuyente podrá optar por tomar como descuento tributario del impuesto sobre la renta el cincuenta por ciento (50%) del impuesto de industria y comercio, avisos y tableros efectivamente pagado durante el año gravable, siempre y cuando tenga relación de causalidad con la actividad económica; o tomar como deducción el cien por ciento (100%) del impuesto de industria y comercio, avisos y tableros efectivamente pagado durante el año gravable, siempre y cuando tenga relación de causalidad (artículo 115 del E.T.). Estas dos opciones no podrán tomarse de manera simultanea. A partir del periodo gravable 2023 solo será deducible el cien por ciento (100%) de los impuestos, tasas y contribuciones, que efectivamente se hayan pagado durante el año o período gravable por parte del contribuyente, que tengan relación de causalidad con su actividad económica, con excepción del impuesto sobre la renta y complementario. En el caso del gravamen a los movimientos financieros será deducible el cincuenta por ciento (50%) que haya sido efectivamente pagado por los contribuyentes durante el respectivo año gravable, independientemente que tenga o no relación de causalidad con la actividad económica del contribuyente, siempre que se encuentre debidamente certificado por el agente retenedor. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Gastos de administración menos la proporción del ajuste por precios de transferencia (Menor gasto o deducción - Ajuste Precios de Transferencia x (Gastos de administración / (Gastos de administración + Gastos de distribución y ventas + Gastos financieros).</p>",
+                "group": "costos-deducibles"
             },
             "032": {
                 "number": "64",
                 "title": "Gastos de distribución y ventas",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla los gastos en que se incurre durante el ejercicio, asociados con actividades de distribución y ventas, originados en el desarrollo de la operación básica o principal de la empresa, tales como: mano de obra, honorarios, impuestos, arrendamientos, contribuciones, seguros, servicios, regalías, asistencia técnica, otros servicios, investigación y desarrollo, reparaciones, depreciaciones, entre otros, asociados a los ingresos gravados, siempre que se trate de expensas necesarias, es decir, que tengan relación de causalidad, necesidad y proporcionalidad con la renta y cumplan los demás requisitos necesarios para su deducción. A partir del periodo gravable 2023 solo será deducible el cien por ciento (100%) de los impuestos, tasas y contribuciones, que efectivamente se hayan pagado durante el año o período gravable por parte del contribuyente, que tengan relación de causalidad con su actividad económica, con excepción del impuesto sobre la renta y complementario. Para el año gravable 2022 el contribuyente podrá optar por tomar como descuento tributario del impuesto sobre la renta el cincuenta por ciento (50%) del impuesto de industria y comercio, avisos y tableros efectivamente pagado durante el año gravable, siempre y cuando tenga relación de causalidad con la actividad económica; o tomar como deducción el cien por ciento (100%) del impuesto de industria y comercio, avisos y tableros efectivamente pagado durante el año gravable, siempre y cuando tenga relación de causalidad (artículo 115 del E.T.). Estas dos opciones no podrán tomarse de manera simultanea. En el caso del gravamen a los movimientos financieros será deducible el cincuenta por ciento (50%) que haya sido efectivamente pagado por los contribuyentes durante el respectivo año gravable, independientemente que tenga o no relación de causalidad con la actividad económica del contribuyente, siempre que se encuentre debidamente certificado por el agente retenedor. Nota: tenga en cuenta que las deducciones de impuestos, tasas y contribuciones que efectivamente se hayan pagado durante el año o período gravable y que hayan sido solicitadas en la casilla 63 (Gastos de administración) no podrán ser solicitadas nuevamente en esta casilla. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Gastos de distribución y ventas menos la proporción del ajuste por precios de transferencia (Menor gasto o deducción - Ajuste Precios de Transferencia x (Gastos de distribución y ventas / (Gastos de administración + Gastos de distribución y ventas + Gastos financieros).</p>",
+                "group": "costos-deducibles"
             },
             "033": {
                 "number": "65",
                 "title": "Gastos financieros",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre el valor de los gastos en que incurre la empresa durante el año gravable en la ejecución de operaciones financieras, tales como: el componente financiero del arrendamiento operativo, intereses sector financiero, intereses por préstamos de terceros, diferencia en cambio, intereses por acciones preferenciales, entre otros, que tengan relación de causalidad, necesidad y proporcionalidad con la renta y cumplan los demás requisitos necesarios para su deducción. No constituirá deducción, el componente inflacionario de los intereses y demás costos y gastos financieros, incluidos los ajustes por diferencia en cambio, en la forma señalada en el artículo 81 del E.T. Nota: tenga en cuenta la limitación prevista por el artículo 118-1 del E.T. para la deducción o capitalización de intereses, según la regla de subcapitalización, en concordancia con el parágrafo 1 del artículo 59 del E.T.; así como el tratamiento previsto por el artículo 288 del E.T. para la deducibilidad de la diferencia en cambio y el régimen de transición a que hace referencia el artículo 291 del E.T. Tenga en cuenta que la regla de subcapitalización fue modificada a partir del año gravable 2019. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Gastos financieros menos la proporción del ajuste por precios de transferencia (Menor gasto o deducción - Ajuste Precios de Transferencia x (Gastos financieros / (Gastos de administración + Gastos de distribución y ventas + Gastos financieros).</p>",
+                "group": "costos-deducibles"
             },
             "034": {
                 "number": "66",
                 "title": "Otros gastos y deducciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>incluya en esta casilla aquellos conceptos a que haya lugar, que no se hayan registrado previamente y que tengan relación de causalidad, necesidad y proporcionalidad con la actividad productora de renta, y que cumplan con los demás requisitos necesarios para su deducción, tales como: transferencias, subvenciones y ayudas gubernamentales, deducciones fiscales, entre otras.Igualmente incluya en esta casilla el costo fiscal de los activos fijos poseídos por menos de dos años; así como el valor de la deducción por inversión en activos fijos para quienes con anterioridad al 1 de noviembre de 2010 hubiesen firmado contrato de estabilidad jurídica y se encuentre vigente en el año gravable que se está declarando y fracción del periodo gravable siguiente. Adicionalmente, los contribuyentes que actúen en calidad de enajenantes indirectos deberán incluir el costo fiscal asociado a la enajenación indirecta, en los términos señalados en el artículo  Nota: el artículo 174 de la Ley 1955 de 2019 (PND) modificó el texto del artículo 11 de la Ley 1715 de 2014 mediante el cual se concede un beneficio especial en el impuesto sobre la renta como fomento a la investigación, desarrollo e inversión en el ámbito de la producción de energía eléctrica con FNCE (fuentes no convencionales de energía) y la gestión eficiente de la energía. Los obligados a declarar renta que realicen directamente inversiones en este sentido tendrán derecho a deducir de su renta, en un período no mayor de 15 años, contados a partir del año gravable siguiente en el que haya entrado en operación la inversión, el 50% del total de la inversión realizada. El valor a deducir por este concepto en ningún caso podrá ser superior al cincuenta por ciento (50%) de la renta líquida del contribuyente, determinada antes de restar el valor de la inversión. Para los efectos de la obtención del presente beneficio tributario, la inversión causante del mismo deberá ser certificada como proyecto de generación de energía eléctrica a partir de FNCE por la Unidad de Planeación Minero - Energética (UPME). Deducción transitoria del impuesto sobre la renta. Las personas naturales y jurídicas nacionales que desarrollen actividades de hotelería, agencia de viajes, tiempo compartido y turismo receptivo, que estén obligados a presentar declaraciones de renta y complementarios, cuenten con un establecimiento de comercio domiciliado en San Andrés Isla, Providencia y/o Santa Catalina con anterioridad al 16 de noviembre de 2020 y tengan a su cargo trabajadores residentes en estas entidades territoriales, tendrán derecho a deducir de la renta el 150% del valor de los salarios y prestaciones sociales durante la vigencia del año 2023. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Pérdidas por inversiones en subsidiarias, asociadas y negocios conjuntos + Pérdidas por mediciones a valor razonable + Pérdida en la venta o enajenación de activos fijos + Gastos por provisiones (pasivos de monto o fecha inciertos) + Otros gastos.</p>",
+                "group": "costos-deducibles"
             },
             "035": {
                 "number": "67",
                 "title": "Total costos y gastos deducibles",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             }
         }
     },
@@ -241,13 +308,15 @@
                 "number": "68",
                 "title": "Inversiones Efectuadas en el año",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "037": {
                 "number": "69",
                 "title": "Inversiones liquidadas en periodos gravables anteriores",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             }
         }
     },
@@ -259,61 +328,75 @@
                 "number": "70",
                 "title": "Renta por recuperación de deducciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla, el valor de los ingresos provenientes de la recuperación de deducciones, los cuales no pueden ser afectados con costos ni deducciones de la renta ordinaria (artículos 195 a 198 E.T.). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): RENTA LIQUIDA POR RECUPERACION DE DEDUCCIONES.</p>"
             },
             "039": {
                 "number": "71",
                 "title": "Renta Pasiva - ECE sin residencia fiscal en Colombia",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>esta casilla deberá ser diligenciada por todos aquellos residentes fiscales colombianos que tengan, directa o indirectamente, una participación igual o superior al 10% en el capital de la ECE o en los resultados de la misma. Para ello, tome el valor de los ingresos pasivos y reste el valor de los costos y deducciones asociadas a dichos ingresos y el resultado regístrelo en esta casilla, de conformidad con lo señalado en los artículos 882 a 893 E.T. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Rentas líquidas pasivas - ECE.</p>"
             },
             "040": {
                 "number": "72",
                 "title": "Renta líquida ordinaria del ejercicio",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "041": {
                 "number": "73",
                 "title": "Pérdida líquida del ejercicio",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "042": {
                 "number": "74",
                 "title": "Compensaciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "043": {
                 "number": "75",
                 "title": "Renta líquida ",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": "<p>Corresponde al resultado de restar el valor de la Renta líquida ordinaria del ejercicio el valor de las compensaciones.</p>",
+                "disabled": true
             },
             "044": {
                 "number": "76",
                 "title": "Renta presuntiva",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "045": {
                 "number": "77",
                 "title": "Renta exenta",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "046": {
                 "number": "78",
                 "title": "Rentas gravables",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor total de las rentas gravables como son el valor de los activos omitidos y/o el de los pasivos inexistentes declarados en períodos anteriores no revisables por la DIAN, de conformidad con el artículo 239-1 del E.T. y renta por comparación patrimonial de conformidad con los artículos 236 y 238 del E.T. Las entidades que se encuentren dentro del Régimen Tributario Especial de que trata el artículo 1.2.1.5.1.2. del DUR 1625/2016, tratarán como renta gravable, el beneficio neto o excedente que no se destinó o ejecutó en los términos del artículo 1.2.1.5.1.27. del citado decreto. De igual forma, en esta casilla se deben incluir el valor de las inversiones a que se refiere el artículo 1.2.1.5.1.22. del DUR 1625/2016 cuando se destinaron a fines diferentes a lo establecido en dicho artículo, los valores de las rentas líquidas gravables procedentes y las rentas que se gravarían en los términos del numeral 2 del artículo 1.2.1.5.1.36. del DUR 1625/2016. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Rentas Gravables (renta líquida).</p>"
             },
             "047": {
                 "number": "79",
                 "title": "Renta líquida gravable",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             }
         }
     },
@@ -325,25 +408,30 @@
                 "number": "80",
                 "title": "Ingresos por ganancias ocasionales",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>resgistre en esta casilla la suma de todos los ingresos gravados y no gravados susceptibles de constituir ganancia ocasional, como son: los provenientes de la enajenación de bienes de cualquier naturaleza, que hayan hecho parte del activo fijo del contribuyente por un término igual o superior a dos años, los provenientes por liquidación de sociedades con duración igual o superior a dos años, las provenientes de donaciones o cualquier otro acto jurídico celebrado a título gratuito, rifas, loterías y similares, etc., atendiendo para la cuantificación de los mismos, las normas especiales para cada tipo de ingreso. Si se generaron ganancias ocasionales de rentas pasivas de las ECE, en esta sección deberá incluirse la totalidad de los ingresos pasivos realizados por la ECE que constituyen ganancia ocasional (Concepto General Unificado ECE No. 386 de 2018). Registre en esta casilla las rentas derivadas de la venta o transmisión de la participación de una CHC en entidades no residentes en Colombia de conformidad con los artículos 894 y 896 E.T. Hasta el 31 de diciembre de 2021, las rebajas, descuentos o quitas de capital, multas; sanciones o intereses que obtengan los deudores, serán gravados en todos los casos como ganancia ocasional y no como renta ordinaria o renta líquida, cuando dichos rendimientos, ganancias, rebajas, descuentos o quitas se presenten o sean el resultado y parte de los acuerdos de reorganización celebrados o modificados en el marco del régimen de la Ley 1116 de 2006 y los Decretos Legislativos 560 y 772 de 2020. Igualmente, de manera excepcional, para los deudores contribuyentes en el período gravable 2021, las ganancias ocasionales obtenidas en virtud de lo establecido en el artículo 15 del Decreto Legislativo 772 de 2020 podrán ser compensadas con las pérdidas ocasionales del ejercicio o con las pérdidas fiscales que traiga acumuladas del contribuyente al tenor del artículo 147 E.T. Nota: las utilidades susceptibles de constituir ganancias ocasionales se tratan de conformidad con lo establecido en el Libro Primero, Título III E.T. Adicionalmente, los contribuyentes deberán incluir los ingresos por ganancias ocasionales generados como consecuencia de una enajenación indirecta, en los términos del artículo 90-3 E.T. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Total Ingresos por ganancias ocasionales.</p>"
             },
             "049": {
                 "number": "81",
                 "title": "Costos por ganancias ocasionales",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el costo de los activos fijos enajenados, para cuya determinación se debe tener en cuenta lo contemplado en el Capítulo II del Título I del Libro Primero E.T., en cuanto le sea aplicable, ya se trate de ganancia ocasional gravada, no gravada o exenta. Si se generaron ganancias ocasionales de rentas pasivas de las ECE deberá incluirse en esta casilla la totalidad de los costos y deducciones asociados a esos ingresos pasivos. (Concepto General Unificado ECE No. 386 de 2018). Adicionalmente, los contribuyentes que actúen en calidad de enajenantes   indirectos deberán incluir el costo por ganancias ocasionales asociados a la enajenación indirecta en los términos señalados en el artículo 90-3 E.T. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Total costos por ganancias ocasionales.</p>"
             },
             "050": {
                 "number": "82",
                 "title": "Ganancias ocasionales no gravadas y exentas",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor que por ley corresponde al valor neto de la ganancia ocasional no gravada o exenta. Las rentas derivadas de la venta o transmisión de las acciones o participaciones en una CHC estarán exentas excepto por el valor correspondiente a las utilidades obtenidas por actividades realizadas en Colombia. En el caso de socios o accionistas no residentes, las rentas de la venta o transmisión de las acciones o participaciones en una CHC tendrán el tratamiento de rentas de fuente extranjera respecto de la proporción de la venta atribuible a las actividades realizadas o los activos poseídos por entidades no residentes, según lo dispuesto en el artículo 25 E.T. (artículo 896 E.T.). Lo dispuesto en el artículo 896 E.T. no se aplicará cuando el perceptor de las rentas derivadas de la venta de las acciones en la CHC o distribuidas por esta, tenga su domicilio o sea residente en una jurisdicción no cooperante de baja o nula imposición y/o de un régimen tributario preferencial, según lo dispuesto en el artículo 260-7 E.T. y sus normas reglamentarias o las disposiciones que los modifiquen o sustituyan. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Ganancias ocasionales no gravadas por la venta de acciones ECE + Otras ganancias ocasionales no gravadas y exentas.</p>"
             },
             "051": {
                 "number": "83",
                 "title": "Ganancias ocasionales gravables",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             }
         }
     },
@@ -355,205 +443,254 @@
                 "number": "84",
                 "title": "Impuesto sobre la renta líquida gravable",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "053": {
                 "number": "85",
                 "title": "Puntos adicionales a la tarifa del impuesto renta",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "054": {
                 "number": "86",
                 "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del 10% (base casilla 54)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "055": {
                 "number": "87",
                 "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del artículo 240 del E.T. (base casilla 55)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "056": {
                 "number": "88",
                 "title": "Impuesto de dividendos y/o participaciones gravadas, a la tarifa del 27% (base casilla 56)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "057": {
                 "number": "89",
                 "title": "De dividendos y/o participaciones gravadas a la tarifa del artículo 240 E.T. (base casilla 53)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "058": {
                 "number": "90",
                 "title": "Impuesto de dividendos y/o participaciones gravadas a la tarifa del 33% (base casilla 52)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false,
+                "group": "tota-impuesto-rentas-liquidas"
             },
             "059": {
                 "number": "91",
                 "title": "Total impuesto sobre las rentas líquidas gravables",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "060": {
                 "number": "92",
                 "title": "Valor a adicionar (VAA)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "061": {
                 "number": "93",
                 "title": "Descuentos tributarios",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre los valores que por disposición de la ley se pueden restar del impuesto de renta determinado, los cuales no pueden ser tratados simultáneamente como costo o deducción. Notas: *  Tenga en cuenta las limitaciones al monto y las condiciones de cada descuento tributario establecidos en la ley. *  En ningún caso el descuento tributario puede exceder el impuesto sobre la renta líquida gravable. *  Tenga en cuenta lo establecido en los artículos 257-1 y 258 del E.T. *  El impuesto de renta después de descuentos tributarios no puede ser inferior al setenta y cinco por ciento (75%) del impuesto calculado por el sistema de renta presuntiva sobre patrimonio líquido, antes de cualquier descuento o del setenta por ciento (70%) cuando los descuentos se originen en certificados de reembolso tributario. *  Solo hasta el año gravable 2022 el contribuyente podrá tomar como descuento tributario del impuesto sobre la renta el cincuenta por ciento (50%) del impuesto de industria y comercio, avisos y tableros. Para la procedencia del descuento del inciso anterior, se requiere que el impuesto de industria y comercio, avisos y tableros sea efectivamente pagado durante el año gravable y que tenga relación de causalidad con su actividad económica. Este impuesto no podrá tomarse como costo o gasto. A partir del año gravable 2023 el impuesto del industria y comercio, avisos y tableros ya no podrá llevarse como descuento tributario. Los descuentos tributarios que se encuentran vigentes son los establecidos en los artículos 115, 254, 255, 256, 256-1, 257, 257-1 y 258-1 del E.T., el artículo 104 de la Ley 788 de 2002 y los previstos para las ZOMAC. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Descuentos tributarios.</p>"
             },
             "062": {
                 "number": "94",
                 "title": "Impuesto neto de renta (sin impuesto adicionado)",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "063": {
                 "number": "95",
                 "title": "Impuesto a adicionar (IA)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "064": {
                 "number": "96",
                 "title": "Impuesto neto de renta (con impuesto adicionado)",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "065": {
                 "number": "97",
                 "title": "Impuesto de ganancias ocasionales",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": "<p>el valor de esta casilla corresponde a la aplicación de la tarifa del veinte por ciento (20%) al valor de la casilla 83 (Ganancias ocasionales gravables), cuando este corresponda a ingresos por loterías, rifas y apuestas devengados en el período. En el evento que requiera modificar el cálculo podrá editar el valor calculado de esta casilla. La base a la que debe aplicar la tarifa es el valor del premio sin descontar la retención en la fuente que le fue practicada. Además, debe liquidar el impuesto por el valor de las demás ganancias ocasionales de la casilla 83 (Ganancias ocasionales gravables) que corresponda a la tarifa única del diez por ciento (10%) para el año gravable 2022 y del quince por ciento (15%) para el año 2023 y siguientes. Para las micro y pequeñas empresas, instaladas en las ZOMAC por el año gravable 2022 la tarifa general del impuesto sobre las ganancias ocasionales será del dos punto cinco por ciento (2.5%). Para los años gravables 2023 y 2024 la tarifa general del impuesto de ganancias ocasionales será del tres punto setenta y cinco por ciento (3.75%). Para las micro y pequeñas empresas por los años gravables 2025 a 2027 la tarifa será del siete punto cinco por ciento (7.5%) de conformidad con el artículo 237 de la Ley 1819 de 2016. En adelante tributarán a la tarifa general. Para las medianas y grandes empresas instaladas en la ZOMAC por el año gravable 2022 la tarifa será del siete punto cinco por ciento (7.5%) y por los años gravables 2023 a 2027 la tarifa será del once punto veinticinco por ciento (11.25%) del valor de los ingresos de la casilla 83 (Ganancias ocasionales gravables). En adelante tributarán a la tarifa general. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Impuesto de ganancia ocasional</p>"
             },
             "066": {
                 "number": "98",
                 "title": "Descuento por impuestos pagados en el exterior por ganancias ocasionales",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla los impuestos pagados en el exterior a descontar del impuesto de ganancias ocasionales de acuerdo con lo establecido en el artículo 254 del E.T. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Descuento por impuestos pagados en el exterior por ganancias ocasionales.</p>"
             },
             "067": {
                 "number": "99",
                 "title": "Total impuesto a cargo",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "068": {
                 "number": "100",
                 "title": "Valor inversion obras por impuestos hasta del 50% del valor de la casilla 99 (Modalidad de pago 1)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor de la inversión realizada en la Modalidad de pago 1 “Obras por Impuestos”, el cual no puede superar el cincuenta por ciento (50%) del valor de la casilla 99 (Total impuesto a cargo), conforme lo establecido en el numeral 1 del artículo 1.6.5.1.3. del DUR 1625/2016. La extinción del impuesto sobre la renta y complementario asociado con esta inversión se efectuará una vez recibida la obra, de conformidad con lo previsto en el artículo 1.6.5.4.1. del DUR 1625/2016. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Valor inversión obras por impuestos hasta del 50% del valor del impuesto a cargo (Modalidad de pago 1).</p>"
             },
             "069": {
                 "number": "101",
                 "title": "Descuentos efectivo inversión obras por impuesos (Modalidad de pago 2)",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "070": {
                 "number": "102",
                 "title": "Crédito fiscal artículo 256-1 E.T.",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "071": {
                 "number": "103",
                 "title": "Anticipo renta liquidado año gravable anterior",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre el valor de la casilla correspondiente al “Anticipo renta para el año gravable siguiente” de la declaración de renta y complementario del año gravable anterior al que se está declarando. Si no declaró o no liquidó anticipo, el SI de Diligenciamiento registra automáticamente el valor cero (0). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Anticipo renta liquidado año anterior.</p>"
             },
             "072": {
                 "number": "104",
                 "title": "Saldo a favor año gravable anterior sin solicitud de devolución y/o compensación",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre el valor incluido en la casilla correspondiente al “Total saldo a favor” de la declaración de renta y complementario del año gravable anterior al que se está declarando, que no haya sido solicitado en devolución y compensación. Si no tuvo saldo a favor del período anterior o no presentó declaración, el SI de Diligenciamiento registra automáticamente el valor cero (0). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Saldo a favor año gravable anterior sin solicitud de devolución o compensación.</p>"
             },
             "073": {
                 "number": "105",
                 "title": "Autoretenciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor de las autorretenciones en la fuente a título del impuesto sobre la renta, practicadas durante el año gravable. También incluya las autorretenciones practicadas en virtud del artículo 1.2.6.6. del DUR 1625/2016. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Total autorretenciones.</p>"
             },
             "074": {
                 "number": "106",
                 "title": "Otras Retenciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>registre en esta casilla el valor de las retenciones en la fuente a título del impuesto sobre la renta y de ganancias ocasionales que le fueron practicadas durante el año gravable. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Total otras retenciones.</p>"
             },
             "075": {
                 "number": "107",
                 "title": "Total retenciones año gravable a declarar",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "076": {
                 "number": "108",
                 "title": "Anticipo renta para el año gravable siguiente",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>en el caso de contribuyentes que declaran por primera vez, el porcentaje de anticipo será del veinticinco por ciento (25%) del valor de la casilla 96 (Impuesto neto de renta (con impuesto adicionado)). Para determinar la base del anticipo, al impuesto neto de renta del año gravable, o al promedio de los dos (2) últimos años a opción del contribuyente, se aplica el porcentaje previsto en el inciso anterior. Del resultado así obtenido se descuenta el valor de la retención en la fuente correspondiente al respectivo ejercicio fiscal, con lo cual se obtiene el anticipo a pagar. En el caso de contribuyentes que declaran por primera vez, el porcentaje de anticipo de que trata el artículo 807 del E.T., será del veinticinco por ciento (25%) para el primer año, cincuenta por ciento (50%) para el segundo año y setenta y cinco por ciento (75%) para los años siguientes. Nota: las entidades que se encuentren dentro del Régimen Tributario Especial de que trata el artículo 1.2.1.5.1.2. del DUR 1625/2016 y del sector cooperativo del artículo 19-4 del E.T., no deben liquidar anticipo del impuesto sobre la renta. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Anticipo renta por el año gravable siguiente</p>"
             },
             "077": {
                 "number": "109",
                 "title": "Anticipo Puntos adicionales año gravable anterior",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>para el año gravable 2022 las instituciones financieras deben registrar en esta casilla el valor liquidado en la casilla correspondiente al “Anticipo sobretasa instituciones financieras año gravable siguiente” (casilla 109) de la declaración de renta del año gravable anterior al que se está declarando. Para las entidades aseguradoras y reaseguradoras, las sociedades comisionistas de bolsa de valores, las sociedades comisionistas agropecuarias, las bolsas de bienes y productos agropecuarios, agroindustriales o de otros commodities y los proveedores de infraestructura del mercado de valores, Las sociedades nacionales y sus asimiladas, los establecimientos permanentes de entidades del exterior y las personas jurídicas extranjeras con o sin residencia en el país cuando desarrollen actividades económicas de extracción de hulla (carbón de piedra) CIIU – 0510 y extracción de carbón lignito CIIU – 0520; extracción de petróleo crudo CIIU – 0610 y los contribuyentes cuya actividad económica principal sea la generación de energía eléctrica a través de recursos hídricos, por el año gravable 2022 esta casilla se debe diligenciar con el valor cero (0). Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Anticipo sobretasa instituciones financieras año gravable anterior.</p>"
             },
             "078": {
                 "number": "110",
                 "title": "Anticipo Puntos adicionales año gravable siguiente",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": "<p>las instituciones financieras, las entidades aseguradoras y reaseguradoras, las sociedades comisionistas de bolsa de valores, las sociedades comisionistas agropecuarias, las bolsas de bienes y productos agropecuarios, agroindustriales o de otros commodities y los proveedores de infraestructura del mercado de valores están sujetas para los periodos gravables 2022, 2023, 2024, 2025 y 2026, a un anticipo del ciento por ciento (100%) del valor de los puntos adicionales, calculado sobre la base gravable del impuesto sobre la renta y complementario sobre la cual el contribuyente liquidó el mencionado impuesto para el año gravable inmediatamente anterior. El anticipo de los puntos adicionales del impuesto sobre la renta y complementario deberá pagarse en dos cuotas iguales anuales en los plazos que fije el reglamento. El anticipo de los puntos adicionales solo es aplicable a las personas jurídicas señaladas en el anterior inciso y que, en el año gravable correspondiente, tengan una renta gravable igual o superior a 120.000 UVT. Los contribuyentes cuya actividad económica principal sea la generación de energía eléctrica a través de recursos hídricos están sujetos para los periodos gravables 2022, 2023, 2024, 2025 y 2026, a un anticipo del ciento por ciento (100%) del valor de los puntos adicionales, calculado sobre la base gravable del impuesto sobre la renta y complementario sobre la cual el contribuyente liquidó el mencionado impuesto para el año gravable inmediatamente anterior. El anticipo de los puntos adicionales del impuesto sobre la renta y complementario deberá pagarse en dos cuotas iguales anuales en los plazos que fije el reglamento. El anticipo de los puntos adicionales solo es aplicable a las personas jurídicas que desarrollan la actividad económica señalada en el anterior inciso y que en el año gravable correspondiente, tengan una renta gravable igual o superior a 30.000 UVT. El umbral anterior se calculará de manera agregada para las actividades realizadas por personas vinculadas según los criterios de vinculación previstos en el artículo 260-1 del E.T. Nota: para las fracciones de años gravables no hay lugar a liquidar anticipo de los puntos adicionales. Formato Reporte Conciliación fiscal Anexo 110 (ERI - Renta Líquida): Anticipo Puntos adicionales instituciones financieras año gravable siguiente.</p>"
             },
             "079": {
                 "number": "111",
                 "title": "Saldo a pagar por impuesto",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "080": {
                 "number": "112",
                 "title": "Sanciones",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "081": {
                 "number": "113",
                 "title": "Total saldo a pagar",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "082": {
                 "number": "114",
                 "title": "Total saldo a favor",
                 "col-#": "col-8",
-                "class": "font-weight-bold"
+                "class": "font-weight-bold",
+                "nota": false,
+                "disabled": true
             },
             "083": {
                 "number": "115",
                 "title": "Valor impuesto exigible por Obras Impuestos modalidad de pago 1",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "084": {
                 "number": "116",
                 "title": "Valor impuesto exigible por Obras Impuestos modalidad de pago 2",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             },
             "085": {
                 "number": "117",
                 "title": "Aporte voluntario Art. 244-1 E.T",
                 "col-#": "col-8",
-                "class": ""
+                "class": "",
+                "nota": false
             }
         }
     }

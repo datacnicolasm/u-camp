@@ -19,15 +19,21 @@
         <div class="container-center">
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-bars"></i>
-            <span class="menu-text">Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas</span>
+            <span class="menu-text">
+                @if($lesson->workshop->cod_form == "110")
+                    Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas
+                @endif
+            </span>
             <i class="fas fa-home"></i>
             <i class="fas fa-folder"></i>
             <i class="fas fa-bell"></i>
             <i class="fas fa-calendar"></i>
             <i class="fas fa-power-off" style="color: red;"></i>
         </div>        
-        <div class="container-bottom">
-            110 - Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas
+        <div class="container-bottom font-weight-bold">
+            @if($lesson->workshop->cod_form == "110")
+                110 - Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas
+            @endif
         </div>
     </nav>
 </header>

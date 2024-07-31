@@ -25,12 +25,13 @@
                 </div>
             </div>
 
-            <!-- Guia del curso-->
+            <!-- Progress Bar -->
             <div class="col-3 container-course-progress">
 
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress-bar"></div>
-                </div>
+                <div class="progress-text mr-2"></div>
+                <div class="progress-container" data-progress="10">
+                    <div class="progress-bar"></div>
+                </div>                                                               
 
             </div>
 

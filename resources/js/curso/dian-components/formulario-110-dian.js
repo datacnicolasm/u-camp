@@ -1,19 +1,268 @@
 window.$ = window.jQuery = require('jquery');
 import { gsap } from 'gsap';
+import Chart from 'chart.js/auto';
 
 function formatCurrency(value) {
     // Redondear
     let roundedValue = (Math.round(value / 1000) * 1000).toFixed(0);
-    
+
     // Convertir a formato de moneda con separador de miles
     let parts = roundedValue.split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     return parts.join(",");
 }
 
+function slideAnimation(item_HTML){
+    gsap.fromTo(
+        item_HTML,
+        {
+            opacity: 0,
+            y: 100
+        },
+        {
+            display: "flex",
+            opacity: 1,
+            y: 0,
+            duration: .5,
+            ease: "power1.out"
+        }
+    );
+}
+
+function getValueByName(name, data) {
+    // Encontrar el objeto
+    const obj = data.find(item => item.name === name);
+    // Asignar el valor del objeto a una variable
+    let value = obj ? obj.val : null;
+    return value;
+}
+
+function updateFormValues() {
+    // Inicializar variables en 0
+    var total_patrimonio = 0;
+    var ingresos_brutos = 0;
+    var ingresos_netos = 0;
+    var total_costos_gastos = 0;
+    var renta_liquida = 0;
+    var perdida_liquida = 0;
+    var total_impuesto_rentas = 0;
+
+    // Construccion de matriz con valores
+    var matrix_inputs = []
+
+    $("input.input-dian").each(function (index, element) {
+        var val_input = $(element).val() ? $(element).val() : "0"
+        var float_input = parseFloat(val_input.replace(/\./g, '').replace(',', '.'))
+        var name_input = $(element).data("cod-field")
+
+        matrix_inputs.push({
+            name: name_input,
+            val: float_input
+        })
+    })
+
+    // Iteracion para sumar variables
+    $("input.input-dian").each(function (index, element) {
+        var val_input = $(element).val() ? $(element).val() : "0"
+        var float_input = parseFloat(val_input.replace(/\./g, '').replace(',', '.'))
+        var group_input = $(element).data("group-field")
+
+        switch (group_input) {
+            case "patrimonio-bruto":
+                total_patrimonio += float_input
+                break;
+            case "ingresos-brutos":
+                ingresos_brutos += float_input
+                break;
+            case "ingresos-netos":
+                ingresos_netos -= float_input
+                break;
+            case "costos-deducibles":
+                total_costos_gastos += float_input
+                break;
+            case "tota-impuesto-rentas-liquidas":
+                total_impuesto_rentas += float_input
+                break;
+            default:
+                break;
+        }
+    })
+
+    // Pasivos
+    var pasivos_float = getValueByName('110-013', matrix_inputs)
+
+    // Asignacion de totales en casillas
+    $("#input-012").val(formatCurrency(total_patrimonio))
+    $("#input-014").val(formatCurrency(total_patrimonio - pasivos_float))
+    $("#input-026").val(formatCurrency(ingresos_brutos))
+    $("#input-029").val(formatCurrency(ingresos_brutos + ingresos_netos))
+    $("#input-035").val(formatCurrency(total_costos_gastos))
+    $("#input-059").val(formatCurrency(total_impuesto_rentas))
+
+    // Renta liquida ordinaria del ejercicio
+    var input_69 = getValueByName('110-037', matrix_inputs)
+    var input_70 = getValueByName('110-038', matrix_inputs)
+    var input_71 = getValueByName('110-039', matrix_inputs)
+    var input_52 = getValueByName('110-020', matrix_inputs)
+    var input_53 = getValueByName('110-021', matrix_inputs)
+    var input_54 = getValueByName('110-022', matrix_inputs)
+    var input_55 = getValueByName('110-023', matrix_inputs)
+    var input_56 = getValueByName('110-024', matrix_inputs)
+    var input_68 = getValueByName('110-036', matrix_inputs)
+
+    renta_liquida = ingresos_brutos + ingresos_netos
+    renta_liquida += input_69 + input_70 + input_71
+    renta_liquida -= (input_52 + input_53 + input_54 + input_55 + input_56 + total_costos_gastos + input_68)
+
+    if (renta_liquida > 0) {
+        $("#input-040").val(formatCurrency(renta_liquida))
+        $("#input-041").val(0)
+        $("#input-043").val(formatCurrency(renta_liquida - getValueByName('110-042', matrix_inputs)))
+
+        var renta_liquida_75 = getValueByName('110-043', matrix_inputs)
+        var renta_presuntiva = getValueByName('110-044', matrix_inputs)
+        var renta_exenta = getValueByName('110-045', matrix_inputs)
+        var rentas_gravables = getValueByName('110-046', matrix_inputs)
+        var renta_liquida_gravable = renta_liquida_75 - renta_exenta + rentas_gravables
+
+        $("#input-047").val(formatCurrency(renta_liquida_gravable))
+    } else {
+        perdida_liquida = Math.abs(renta_liquida)
+        $("#input-041").val(formatCurrency(perdida_liquida))
+        $("#input-040").val(0)
+        $("#input-043").val(0)
+    }
+
+    // Ganancias ocasionales
+    var input_80 = getValueByName('110-048', matrix_inputs)
+    var input_81 = getValueByName('110-049', matrix_inputs)
+    var input_82 = getValueByName('110-050', matrix_inputs)
+    var input_83 = input_80 - input_81 - input_82
+
+    if (input_83 > 0) {
+        $("#input-051").val(formatCurrency(input_83))
+    } else {
+        $("#input-051").val(0)
+    }
+
+    // Impuesto neto de renta
+    var input_92 = getValueByName('110-060', matrix_inputs)
+    var input_93 = getValueByName('110-061', matrix_inputs)
+    var input_94 = total_impuesto_rentas + input_92 - input_93
+
+    if (input_94 > 0) {
+        $("#input-062").val(formatCurrency(input_94))
+    } else {
+        $("#input-062").val(0)
+    }
+
+    // Impuesto neto de renta + adicionado
+    var input_95 = getValueByName('110-063', matrix_inputs)
+    var input_96 = input_94 + input_95
+
+    if (input_96 > 0) {
+        $("#input-064").val(formatCurrency(input_96))
+    } else {
+        $("#input-064").val(0)
+    }
+
+    // Total impuesto a cargo
+    var input_97 = getValueByName('110-065', matrix_inputs)
+    var input_98 = getValueByName('110-066', matrix_inputs)
+    var input_99 = input_96 + input_97 - input_98
+
+    if (input_99 > 0) {
+        $("#input-067").val(formatCurrency(input_99))
+    } else {
+        $("#input-067").val(0)
+    }
+
+    // Total retenciones
+    var input_105 = getValueByName('110-077', matrix_inputs)
+    var input_106 = getValueByName('110-076', matrix_inputs)
+    var input_107 = input_105 + input_106
+
+    if (input_107 > 0) {
+        $("#input-075").val(formatCurrency(input_107))
+    } else {
+        $("#input-075").val(0)
+    }
+
+    // Saldo a pagar
+    var input_108 = getValueByName('110-076', matrix_inputs)
+    var input_110 = getValueByName('110-076', matrix_inputs)
+    var input_100 = getValueByName('110-076', matrix_inputs)
+    var input_101 = getValueByName('110-076', matrix_inputs)
+    var input_102 = getValueByName('110-076', matrix_inputs)
+    var input_103 = getValueByName('110-076', matrix_inputs)
+    var input_104 = getValueByName('110-076', matrix_inputs)
+    var input_109 = getValueByName('110-076', matrix_inputs)
+    var input_111 = input_99 + input_108 + input_110 - input_100 - input_101 - input_102 - input_103 - input_104 - input_107 - input_109
+
+    if (input_111 > 0) {
+        $("#input-079").val(formatCurrency(input_111))
+    } else {
+        $("#input-079").val(0)
+    }
+
+    var input_112 = getValueByName('110-080', matrix_inputs)
+    var input_113 = input_111 + input_112
+    if (input_113 > 0) {
+        $("#input-081").val(formatCurrency(input_113))
+        $("#input-082").val(0)
+    } else {
+        $("#input-082").val(formatCurrency(Math.abs(input_113)))
+        $("#input-081").val(0)
+    }
+
+}
+
+function showChart() {
+    const ctx = document.getElementById('progress-circle').getContext('2d');
+
+    // Crear degradados
+    const gradientGreen = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientGreen.addColorStop(0, 'rgba(0, 255, 88, 0.5)');
+    gradientGreen.addColorStop(1, 'rgba(0, 255, 88, 1)');
+
+    const gradientRed = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientRed.addColorStop(0, 'rgba(255, 99, 132, 0.5)');
+    gradientRed.addColorStop(1, 'rgba(255, 99, 132, 1)');
+
+    const data = {
+        labels: ['Aciertos', 'Errores'],
+        datasets: [
+            {
+                label: 'Resultados',
+                data: [125, 25],
+                backgroundColor: [gradientGreen, gradientRed],
+            }
+        ]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: true,
+                    text: 'Resultados generales - Formulario 110'
+                }
+            }
+        },
+    };
+
+    new Chart(ctx, config);
+}
+
 $(function ($) {
 
-    $(".accordion-header").on("click", function () {
+    $(".content-formulario .accordion-header").on("click", function () {
 
         var content = $(this).next();
         var icon = $(this).find(".arrow-icon");
@@ -21,8 +270,37 @@ $(function ($) {
         // Alterna la visibilidad del contenido
         content.slideToggle();
 
-        // Alterna la clase 'rotate' en el icono
-        icon.toggleClass("rotate");
+        if (!icon.hasClass("actived")) {
+            gsap.fromTo(
+                icon,
+                {
+                    rotation: 0
+                },
+                {
+                    rotation: 180,
+                    duration: .5,
+                    ease: "power1.out",
+                    onComplete: function () {
+                        icon.addClass("actived")
+                    }
+                }
+            );
+        } else {
+            gsap.fromTo(
+                icon,
+                {
+                    rotation: 180
+                },
+                {
+                    rotation: 0,
+                    duration: .5,
+                    ease: "power1.out",
+                    onComplete: function () {
+                        icon.removeClass("actived")
+                    }
+                }
+            );
+        }
     });
 
     $("#btn-show").on("click", function (event) {
@@ -88,12 +366,12 @@ $(function ($) {
         }
     })
 
-    $("input.input-dian").each(function(index, element){
-        $(element).on('keydown', function(e) {
+    $("input.input-dian").each(function (index, element) {
+        $(element).on('keydown', function (e) {
             // Permitir teclas de control como backspace, tab, enter, escape, delete y flechas
             if (
-                e.key === "Backspace" || e.key === "Tab" || e.key === "Enter" || 
-                e.key === "Escape" || e.key === "Delete" || 
+                e.key === "Backspace" || e.key === "Tab" || e.key === "Enter" ||
+                e.key === "Escape" || e.key === "Delete" ||
                 (e.key >= "ArrowLeft" && e.key <= "ArrowDown")
             ) {
                 return; // Permitir el evento
@@ -106,29 +384,31 @@ $(function ($) {
 
             // Prevenir el evento por defecto para cualquier otra tecla
             e.preventDefault();
-        });       
+        });
 
-        $(element).on('focus', function() {
+        $(element).on('focus', function () {
             // Al hacer foco, eliminar los puntos
             let value = $(this).val().replace(/\./g, '').replace(',', '.');
             $(this).val(value);
         });
-    
-        $(element).on('blur', function() {
+
+        $(element).on('blur', function () {
             // Al desenfocar, formatear el valor
             let value = parseFloat($(this).val().replace(/\./g, '').replace(',', '.'));
             if (!isNaN(value)) {
                 let formattedValue = formatCurrency(value);
                 $(this).val(formattedValue);
             }
+            updateFormValues();
         });
     })
 
-    $("#btn-send").on("click", function(){
+    // Enviar y calificar formulario
+    $("#btn-send").on("click", function () {
         var matrix_inputs = []
-        $("input.input-dian").each(function(index, element){
+        $("input.input-dian").each(function (index, element) {
             var val_input = $(element).val() ? $(element).val() : 0
-            var name_input = $(element).data("cod-field")  
+            var name_input = $(element).data("cod-field")
 
             matrix_inputs.push({
                 name: name_input,
@@ -136,7 +416,73 @@ $(function ($) {
             })
         })
 
-        console.log(matrix_inputs)
+        const cont_resultados = $(".container-resultados-DIAN")
+        cont_resultados.css("display", "flex")
+        const item_resultados = $(".card-resultados")
+
+        gsap.fromTo(
+            item_resultados,
+            {
+                opacity: 0,
+                y: 200
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: .5,
+                ease: "power1.out",
+                onComplete: function () {
+                    cont_resultados.find(".content-btn").show()
+                    showChart()
+                    slideAnimation($(".card-resultados.card-left"))
+                    slideAnimation($(".card-resultados.card-right"))
+                }
+            }
+        );
+    })
+
+    // Ocultar resultados
+    $(".btn-resultados").on("click", function () {
+        const cont_resultados = $(".container-resultados-DIAN")
+        const resultados_item = $(".container-resultados-DIAN .card-resultados")
+
+        gsap.fromTo(
+            resultados_item,
+            {   
+                opacity: 1,
+                y: 0,
+                duration: .5,
+                ease: "power1.out"
+            },
+            {
+                opacity: 0,
+                y: 200,
+                onComplete: function () {
+                    cont_resultados.hide()
+                }
+            }
+        );
+    })
+
+    $("input.input-dian").each(function (index, element) {
+        $(element).on('focus', function (e) {
+
+            const top_position = $(element.parentNode).position().top - 2
+
+            const cod_field = $(element).data("cod-field")
+
+            $("#" + cod_field).show()
+            $("#" + cod_field).css("margin-top", top_position + "px")
+
+        });
+
+        $(element).on('blur', function (e) {
+
+            const cod_field = $(element).data("cod-field")
+
+            $("#" + cod_field).hide()
+
+        });
     })
 
 });

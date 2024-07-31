@@ -5,9 +5,31 @@
             <h2>Instrucciones</h2>
         </div>
         <div class="instruc-content">
-            <h3>Práctica: Elementos de la obligación tributaria</h3>
+            <h3>Contexto del ejercicio</h3>
             <div class="text-instruc">
-                En la ciudad de Cali, todos los negocios comerciales deben pagar un impuesto municipal sobre las ventas. Este impuesto se calcula aplicando una un porcentaje fijo sobre las ventas totales realizadas durante el año. La Alcaldía de Cali, a través del Departamento de Recaudación Tributaria, se encarga de la administración y recaudación de este impuesto. Cada negocio registrado en la ciudad debe reportar anualmente sus ventas totales y calcular el impuesto basado en una tarifa del 1.5%. La ley municipal estipula que el impuesto debe ser pagado antes del 31 de marzo de cada año para evitar multas.
+                <?php echo $lesson->workshop->context_workshop ?>
+            </div>
+            <h3>Indicaciones de la actividad</h3>
+            <div class="text-instruc">
+                <?php echo $lesson->workshop->context_workshop ?>
+            </div>
+            <h3>Normativa relacionada</h3>
+            <div class="text-instruc laws-content">
+                @if($lesson->workshop->laws)
+                    <div class="accordion law-item">
+                    
+                        @foreach($lesson->workshop->laws as $law)
+                            <h4 class="accordion-header"><?php echo $law->type_law . " - Art." . $law->num_law . " " . $law->title_law ?><i class="fas fa-chevron-down arrow-icon"></i></h4>
+                            <div class="accordion-content">
+                                <div class="text-info-year">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    <?php echo "Esta normativa tiene vigencia para el año " . $law->year_law ?>    
+                                </div>
+                                {{ $law->text_law }}
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
             </div>
         </div>
     </div>

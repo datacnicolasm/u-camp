@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Chapter;
 use App\Models\Curso;
 use App\Models\Lesson;
+use App\Models\Statement;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -28,6 +29,13 @@ class DatabaseSeeder extends Seeder
             QuestionsTableSeeder::class,
             GroupsTableSeeder::class,
             GroupUserSeeder::class,
+            WorkshopsTableSeeder::class,
+            LawsTableSeeder::class,
+            LawWorkshopSeeder::class,
+            EntryTableSeeder::class,
+            StatementsTableSeeder::class,
+            FieldsTableSeeder::class,
+            WorkshopEntriesTableSeeder::class
         ]);
     }
 }

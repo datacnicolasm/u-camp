@@ -44,6 +44,8 @@ class LessonController extends Controller
             $campos_DIAN = json_decode($json, true);
         }
 
+        $lesson->load('workshop.laws','workshop.statements.entry');
+
         return view('curso.dian-components.formulario-110-dian')->with([
             'campos'    => $campos_DIAN,
             'curso'     => $curso,

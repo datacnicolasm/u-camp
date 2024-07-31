@@ -5,7 +5,7 @@
     display: flex;
     padding: 5px 5px 60px 5px;
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
 
     .side-panel {
         position: absolute;
@@ -91,6 +91,323 @@
 
         to {
             opacity: 1;
+        }
+    }
+
+    .container-resultados-DIAN {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(208, 208, 208, 0.5);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+
+        .container {
+            height: 80%;
+            max-height: 80%;
+            overflow-y: scroll;
+            position: relative;
+
+            .card-body-resultados {
+                background-color: #f4f4f4 !important;
+            }
+
+            .card-resultados {
+                border-top: solid 4px $tint-2;
+                display: none;
+            }
+        }
+
+        .content-btn {
+            position: absolute;
+            bottom: 80px;
+            display: none;
+
+            .resultados-btn {
+                background-color: $tint-2;
+            }
+        }
+
+        #resultados {
+            .table-general {
+                width: 60%;
+                margin: auto;
+            }
+
+            .table-especificos {
+                border: solid 0.5px #e2e2e2;
+                overflow: hidden;
+
+                .progress-td {
+                    vertical-align: middle;
+
+                    .progress-bar {
+                        background-color: rgba(0, 255, 88, 1);
+                    }
+                }
+            }
+        }
+
+        #formulario {
+            .content-formulario-generate {
+                font-size: 0.8rem;
+                background-color: #fff;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+                .logo-fondo-form {
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+
+                    font-family: "Madimi One", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 7rem;
+                    color: rgba(208, 208, 208, 0.25);
+
+                    .camp-logo {
+                        margin-left: 20px;
+                    }
+                }
+
+                .casilla-general-dian {
+                    background-color: #fff;
+                    border: solid 0.5px $borde-dian;
+
+                    .input-dian-info-form {
+                        height: 30px;
+                        max-height: 30px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left: 10px;
+                    }
+
+                    .input-dian-info-form-1 {
+                        border-right: solid 0.5px $borde-dian;
+                        height: 30px;
+                    }
+                }
+
+                .title-dian {
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+
+                .logo-dian-form {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .u-logo {
+                        font-size: 1.5rem;
+                        color: $tint-3;
+                    }
+
+                    span {
+                        font-family: "Madimi One", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+
+                    .camp-logo {
+                        font-size: 1.5rem;
+                        margin-left: 2px;
+                        color: #021221;
+                    }
+                }
+
+                .number-dian {
+                    padding: 2px;
+
+                    span {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $borde-dian;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .year-input-space {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .cuadro-input-dian {
+                        width: 15px;
+                        height: 15px;
+                        border: solid .5px #000;
+                        border-right: none;
+
+                        &:last-child {
+                            border: solid .5px #000;
+                        }
+                    }
+                }
+
+                .content-info-sect {
+                    border-right: solid 0.5px $borde-dian;
+
+                    .casilla-verticla-text-dian {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .verticla-text-dian {
+                        writing-mode: sideways-lr;
+                        text-orientation: mixed;
+                        font-weight: bold;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+
+                .value-info-dian {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-size: .9rem;
+                }
+
+                .sect-dian-form-number {
+                    background-color: rgba(208, 208, 208, 0);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-right: -7.5px;
+                    margin-left: -7.5px;
+                    border-bottom: solid 0.5px $borde-dian;
+                    overflow: hidden;
+
+                    .verticla-sect-text-dian {
+                        writing-mode: tb;
+                        text-orientation: mixed;
+                        font-weight: bold;
+                        text-align: center;
+                        display: inline-block;
+                        flex: 0 0 8%;
+                        width: 8%;
+                        line-height: 15px;
+                        font-size: .8rem;
+                    }
+
+                    .content-inputs-number {
+                        flex: 0 0 92%;
+                        width: 92%;
+                        font-size: .8rem;
+
+                        .name-input-form {
+                            border-left: solid 0.5px $borde-dian;
+                            border-right: solid 0.5px $borde-dian;
+                            line-height: 15px;
+                        }
+
+                        .name-input-form-sm{
+                            font-size: .7rem;
+                        }
+
+                        .number-input-form {
+                            border-left: solid 0.5px $borde-dian;
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            line-height: 15px;
+                        }
+
+                        .cod-input-form {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: 15px;
+                        }
+
+                        > div:nth-child(6n+1) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        > div:nth-child(6n+2) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        > div:nth-child(6n+3) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+                    }
+                }
+
+                .sub-sect-dian-form-number{
+                    background-color: rgba(208, 208, 208, 0) !important;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-right: -7.5px;
+                    margin-left: -7.5px;
+                    overflow: hidden;
+
+                    .sub-verticla-sect-text-dian {
+                        writing-mode: tb;
+                        text-orientation: mixed;
+                        text-align: center;
+                        display: inline-block;
+                        flex: 0 0 8%;
+                        width: 8%;
+                        line-height: 15px;
+                        font-size: .7rem;
+                    }
+
+                    .sub-content-inputs-number {
+                        flex: 0 0 92%;
+                        width: 92%;
+                        font-size: .8rem;
+
+                        .name-input-form {
+                            border-left: solid 0.5px $borde-dian;
+                            border-right: solid 0.5px $borde-dian;
+                            line-height: 15px;
+                        }
+
+                        .name-input-form-sm{
+                            font-size: .7rem;
+                        }
+
+                        .number-input-form {
+                            border-left: solid 0.5px $borde-dian;
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            line-height: 15px;
+                        }
+
+                        .cod-input-form {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: 15px;
+                        }
+                    }
+                }
+
+                .padre-content-inputs-number{
+                    border-left: solid 0.5px $borde-dian;
+                }
+            }
         }
     }
 }

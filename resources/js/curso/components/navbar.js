@@ -2,18 +2,14 @@ window.$ = window.jQuery = require('jquery');
 import { gsap } from 'gsap';
 
 $(function ($) {
-    
-    // Función para actualizar la barra de progreso
-    function updateProgressBar(percentage) {
-        var progressBar = $('#progress-bar');
-        if (percentage >= 0 && percentage <= 100) {
-            progressBar.css('width', percentage + '%');
-            progressBar.text(percentage + '%');
-        }
-    }
 
-    // Ejemplo: Actualizar la barra de progreso al 50%
-    updateProgressBar(50);
+    const progress_value = $(".container-course-progress").find('.progress-container').data('progress')
+    const progress_bar = $(".container-course-progress").find('.progress-bar')
+    const progress_text = $(".container-course-progress").find(".progress-text")
+
+    progress_bar.css('width', progress_value + '%');
+    progress_text.text(progress_value + '%');
+    
 
     // Animacion de NavBar
     const navbar = $('.view-curso-navbar');

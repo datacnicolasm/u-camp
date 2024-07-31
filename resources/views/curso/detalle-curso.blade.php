@@ -82,6 +82,7 @@
                                                                         $class_progress = ($chapter->viewed_lessons / $chapter->total_lessons)*100;
                                                                     }
                                                                 ?>
+                                                                <div class="progress-text mr-2"></div>
                                                                 <div class="progress-container" data-progress="<?php echo round($class_progress) ?>">
                                                                     <div class="progress-bar" id="progress-bar"></div>
                                                                 </div>
