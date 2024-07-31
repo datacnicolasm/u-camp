@@ -48,18 +48,6 @@
                 </li>
 
                 <!-- Rutas de aprendizaje -->
-                <li class="nav-item">
-                    <?php $class_items_rutas = "" ?>
-                    @if (Route::currentRouteName() == 'list-rutas-profesional')
-                        <?php $class_items_rutas .= "active-item-nav" ?>
-                    @elseif (Route::currentRouteName() == 'view-ruta-profesional')
-                        <?php $class_items_rutas .= "active-item-nav" ?>
-                    @endif
-                    <a href="{{ route('list-rutas-profesional') }}" class="nav-link <?php echo $class_items_rutas ?>">
-                        <i class="fas fa-layer-group nav-icon"></i>
-                        <p>Rutas Profesionales</p>
-                    </a>
-                </li>
 
                 <!-- Division de secciones -->
                 <div class="item-div-sidebar"></div>

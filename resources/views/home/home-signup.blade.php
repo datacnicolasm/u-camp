@@ -9,7 +9,7 @@
             <form method="POST" action="{{ route('process-sign-up') }}">
                 @csrf <!-- Directiva Blade para incluir el token CSRF -->
                 <div class="input-group mb-3">
-                    <input type="text" id="first_name" class="form-control" name="first_name" placeholder="First name"
+                    <input type="text" id="first_name" class="form-control" name="first_name" placeholder="Nombres"
                         required>
                     <div class="input-group-append">
                         <div class="input-group-text">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" id="last_name" class="form-control" name="last_name" placeholder="Last name"
+                    <input type="text" id="last_name" class="form-control" name="last_name" placeholder="Apellidos"
                         required>
                     <div class="input-group-append">
                         <div class="input-group-text">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="email" id="email" class="form-control" name="email" placeholder="Email Address"
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Correo electrónico"
                         required>
                     <div class="input-group-append">
                         <div class="input-group-text">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>

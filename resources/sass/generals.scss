@@ -5,56 +5,126 @@ $tint-6: #003b77;
 $tint-2: #d31a71;
 $tint-3: #05bd9b;
 $borde-dian: #5b1973;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-large: 1200px;
+
+@mixin responsive($size) {
+    @if $size == mobile {
+        @media (max-width: $breakpoint-mobile) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media (min-width: calc($breakpoint-mobile + 1px)){
+            @content;
+        }
+    }
+    @else if $size == desktop {
+        @media (min-width: calc($breakpoint-tablet + 1px)){
+            @content;
+        }
+    }
+    @else if $size == large {
+        @media (min-width: calc($breakpoint-desktop + 1px)){
+            @content;
+        }
+    }
+    @else if $size == extra-large {
+        @media (min-width: calc($breakpoint-large + 1px)) {
+            @content;
+        }
+    }
+}
+
+.text-sm-center{
+    @include responsive(mobile) {
+        text-align: center !important;
+        margin: auto;
+    }
+    @include responsive(extra-large) {
+        text-align: inherit !important;
+    }
+}
+
+h1{
+    @include responsive(mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+h2{
+    @include responsive(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.p-sm{
+    @include responsive(mobile) {
+        padding: 0 20px;
+    }
+}
+
+.text-md-large{
+    @include responsive(mobile) {
+        font-size: 1rem;
+    }
+    @include responsive(extra-large) {
+        font-size: 1.3rem;
+    }
+}
+
 
 // Textos
-.text-tint-1{
+.text-tint-1 {
     color: $tint-1;
 }
 
-.text-tint-2{
+.text-tint-2 {
     color: $tint-2;
 }
 
-.text-tint-3{
+.text-tint-3 {
     color: $tint-3;
 }
 
-.text-tint-4{
+.text-tint-4 {
     color: $tint-4;
 }
 
-.text-tint-5{
+.text-tint-5 {
     color: $tint-5;
 }
 
 // Background
-.bg-tint-1{
+.bg-tint-1 {
     background-color: $tint-1;
 }
 
-.bg-tint-2{
+.bg-tint-2 {
     background-color: $tint-2;
 }
 
-.bg-tint-3{
+.bg-tint-3 {
     background-color: $tint-3;
 }
 
-.bg-tint-4{
+.bg-tint-4 {
     background-color: $tint-4;
 }
 
-.bg-tint-5{
+.bg-tint-5 {
     background-color: $tint-5;
 }
 
-pre{
+pre {
     background-color: aliceblue;
     max-width: 100%;
     width: 100%;
 }
 
-.text-muted-dark{
+.text-muted-dark {
     color: #c8c8c8;
     font-size: 0.9rem;
 }

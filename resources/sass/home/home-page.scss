@@ -6,19 +6,19 @@ body.page-home-camp {
         color: $tint-1;
     }
 
-    .text-two-camp{
+    .text-two-camp {
         color: $tint-2
     }
 
-    .text-three-camp{
+    .text-three-camp {
         color: $tint-3;
     }
 
-    .text-four-camp{
+    .text-four-camp {
         color: $tint-5;
     }
 
-    .text-five-camp{
+    .text-five-camp {
         color: #fcce0d;
     }
 
@@ -28,14 +28,39 @@ body.page-home-camp {
         align-items: center;
         flex-wrap: wrap;
 
-        .flex-100 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
+        .main-cont-flex {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
 
-        .flex-custom {
-            flex: 0 0 80%;
-            max-width: 80%;
+            .flex-100 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .flex-custom {
+                @include responsive(mobile) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                @include responsive(tablet) {
+                    flex: 0 0 90%;
+                    max-width: 90%;
+                }
+                @include responsive(desktop) {
+                    flex: 0 0 80%;
+                    max-width: 80%;
+                }
+                @include responsive(large) {
+                    flex: 0 0 80%;
+                    max-width: 80%;
+                }
+                @include responsive(extra-large) {
+                    flex: 0 0 80%;
+                    max-width: 80%;
+                }
+            }
         }
     }
 
@@ -48,8 +73,18 @@ body.page-home-camp {
         margin-top: -2px;
 
         .text-home-1 p {
-            text-align: justify;
-            font-size: 1rem;
+            @include responsive(mobile) {
+                text-align: center;
+                font-size: 1rem;
+            }
+            @include responsive(desktop) {
+                text-align: justify;
+                font-size: 1.3em;
+            }
+            @include responsive(large) {
+                text-align: justify;
+                font-size: 1.3em;
+            }
         }
 
         .content {
@@ -58,14 +93,16 @@ body.page-home-camp {
             color: white;
         }
 
-        .btn-home-1 .btn {
-            background-color: $tint-1;
-            border: 2px solid $tint-1;
-            color: white;
-
-            &:hover {
+        .btn-home-1{
+            @include responsive(mobile) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .btn {
                 background-color: $tint-2;
                 border: 2px solid $tint-2;
+                color: white;
             }
         }
     }
@@ -94,16 +131,31 @@ body.page-home-camp {
                 flex: 0 0 60%;
                 max-width: 60%;
                 margin: auto;
+
+                @include responsive(mobile) {
+                    text-align: center;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    margin: auto;
+                }
             }
 
-            .btn-home-2 .btn {
-                background-color: $tint-2;
-                border: 2px solid $tint-2;
-                color: white;
+            .btn-home-2{
+                @include responsive(mobile) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-                &:hover {
-                    background-color: $tint-3;
-                    border: 2px solid $tint-3;
+                .btn {
+                    background-color: $tint-2;
+                    border: 2px solid $tint-2;
+                    color: white;
+    
+                    &:hover {
+                        background-color: $tint-3;
+                        border: 2px solid $tint-3;
+                    }
                 }
             }
         }
@@ -128,83 +180,59 @@ body.page-home-camp {
         }
     }
 
-    #title-home-section-4{
-        background-color: $tint-1;       
-    }
-
-    #home-section-4{
-        background-image: url('../../images/home-3.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        margin-top: -2px;
+    #home-section-4 {
+        background-color: #fff;
         padding-bottom: 4rem;
 
-        .item-ruta{
-            color:$tint-1;
+        .main-cont-flex {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
 
-            &:hover{
-                background-color: $tint-5;
-                color:#fff;
+        .btn-home-4{
+            @include responsive(mobile) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
+        }
+    }
+
+    #home-section-5 {
+        .flex-custom {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            @include responsive(desktop) {
+                padding-left: 20%;
+            }
+        }
+
+        .btn-home-5{
+            @include responsive(mobile) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .main-cont-flex {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
     }
 
     // Secciones de contenido
     .section-home {
-        padding: 4rem 0;
-    }
-
-    // Footer
-    .footer {
-        padding: 40px 0;
-        background-color: $tint-1;
-        color: white;
-
-        p {
-            margin: 0;
+        @include responsive(mobile) {
+            padding: 2rem 0;
         }
-
-        .nosotros-footer{
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
-
-            a{
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
-
-        .legal-temr{
-            list-style: none;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0;
-            padding: 1rem 0;
-
-            li{
-                display: block;
-            }
-        }
-
-        .items-social{
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin: 0;
-            padding: 1rem 0;
-
-            li{
-                display: block;
-
-                .css-evebs5{
-                    color: #fff;
-                }
-            }
+        @include responsive(desktop) {
+            padding: 4.5rem 0;
         }
     }
 

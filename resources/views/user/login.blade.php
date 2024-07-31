@@ -9,7 +9,7 @@
             <div class="card-body">
                 <!-- -->
                 <div class="text-create text-center">
-                    <p class="text-center">¡Bienvenido de nuevo!</p>
+                    <p class="text-center font-weight-bold">¡Bienvenido de nuevo!</p>
                 </div>
                 @if(session('message'))
                     <div class="alert alert-danger">
@@ -19,7 +19,7 @@
                 <form method="POST" action="{{ route('process-login') }}" >
                     @csrf <!-- Directiva Blade para incluir el token CSRF -->
                     <div class="input-group mb-3">
-                        <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" required>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Correo electrónico" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

@@ -1,8 +1,12 @@
 // Estilos generales
 body.page-home-camp {
-    
+
     // Footer
     .footer {
+        @include responsive(mobile) {
+            padding: 20px 0;
+        }
+
         padding: 40px 0;
         background-color: $tint-1;
         color: white;
@@ -11,32 +15,19 @@ body.page-home-camp {
             margin: 0;
         }
 
-        .nosotros-footer{
+        .nosotros-footer {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-wrap: wrap;
 
-            a{
+            a {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
         }
 
-        .legal-temr{
-            list-style: none;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0;
-            padding: 1rem 0;
-
-            li{
-                display: block;
-            }
-        }
-
-        .items-social{
+        .items-social {
             list-style: none;
             display: flex;
             justify-content: flex-end;
@@ -44,11 +35,44 @@ body.page-home-camp {
             margin: 0;
             padding: 1rem 0;
 
-            li{
+            @include responsive(mobile) {
+                justify-content: center;
+            }
+
+            li {
                 display: block;
 
-                .css-evebs5{
+                .css-evebs5 {
                     color: #fff;
+                }
+            }
+        }
+
+        .legal-temr {
+            list-style: none;
+            display: flex;
+
+            @include responsive(mobile) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0;
+
+            li {
+                display: block;
+
+                @include responsive(mobile) {
+                    padding: 5px 0;
+                    flex: 0 0 100%;
+                    width: 100%;
+                    max-width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
