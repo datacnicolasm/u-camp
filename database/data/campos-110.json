@@ -73,7 +73,7 @@
             },
             "009": {
                 "number": "41",
-                "title": "Activos biológicos ",
+                "title": "Activos biológicos",
                 "col-#": "col-8",
                 "class": "",
                 "nota": "<p>Incluya en esta casilla el valor patrimonial correspondiente al último día del año gravable de los animales vivos, plantas productoras y cultivos consumibles. Asegúrese de considerar lo estipulado en los artículos 92 a 95 del Estatuto Tributario para su correcta evaluación.</p>",
@@ -363,7 +363,7 @@
             },
             "043": {
                 "number": "75",
-                "title": "Renta líquida ",
+                "title": "Renta líquida",
                 "col-#": "col-8",
                 "class": "font-weight-bold",
                 "nota": "<p>Corresponde al resultado de restar el valor de la Renta líquida ordinaria del ejercicio el valor de las compensaciones.</p>",

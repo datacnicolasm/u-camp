@@ -1,7 +1,427 @@
 [
     {
-        "value_input": 1000000,
+        "value_input": 10000000,
+        "cod_input": "001",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 10000000,
+        "cod_input": "002",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 10000000,
+        "cod_input": "003",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "004",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "005",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "006",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "007",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "008",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "009",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "010",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "011",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "012",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "013",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "014",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "015",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "016",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "017",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "018",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "019",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "020",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "021",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "022",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "023",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "024",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "025",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "026",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "027",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "028",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "029",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
         "cod_input": "030",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "031",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "032",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "033",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "034",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "035",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "036",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "037",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "038",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "039",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "040",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "041",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "042",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "043",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "044",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "045",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "046",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "047",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "048",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "049",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "050",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "051",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "052",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "053",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "054",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "055",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "056",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "057",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "058",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "059",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "060",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "061",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "062",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "063",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "064",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "065",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "066",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "067",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "068",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "069",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "070",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "071",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "072",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "073",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "074",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "075",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "076",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "077",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "078",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "079",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "080",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "081",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "082",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "083",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "084",
+        "workshop_id": 1
+    },
+    {
+        "value_input": 0,
+        "cod_input": "085",
         "workshop_id": 1
     }
 ]

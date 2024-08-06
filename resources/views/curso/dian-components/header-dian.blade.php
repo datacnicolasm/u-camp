@@ -32,7 +32,7 @@
         </div>        
         <div class="container-bottom font-weight-bold">
             @if($lesson->workshop->cod_form == "110")
-                110 - Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas
+                <?php echo $lesson->workshop->cod_form . " - Declaración de Renta y Complementario o de Ingresos y Patrimonio para Personas Personas Personas" ?>
             @endif
         </div>
     </nav>

@@ -12,23 +12,6 @@ function formatCurrency(value) {
     return parts.join(",");
 }
 
-function slideAnimation(item_HTML){
-    gsap.fromTo(
-        item_HTML,
-        {
-            opacity: 0,
-            y: 100
-        },
-        {
-            display: "flex",
-            opacity: 1,
-            y: 0,
-            duration: .5,
-            ease: "power1.out"
-        }
-    );
-}
-
 function getValueByName(name, data) {
     // Encontrar el objeto
     const obj = data.find(item => item.name === name);
@@ -217,49 +200,6 @@ function updateFormValues() {
 
 }
 
-function showChart() {
-    const ctx = document.getElementById('progress-circle').getContext('2d');
-
-    // Crear degradados
-    const gradientGreen = ctx.createLinearGradient(0, 0, 0, 400);
-    gradientGreen.addColorStop(0, 'rgba(0, 255, 88, 0.5)');
-    gradientGreen.addColorStop(1, 'rgba(0, 255, 88, 1)');
-
-    const gradientRed = ctx.createLinearGradient(0, 0, 0, 400);
-    gradientRed.addColorStop(0, 'rgba(255, 99, 132, 0.5)');
-    gradientRed.addColorStop(1, 'rgba(255, 99, 132, 1)');
-
-    const data = {
-        labels: ['Aciertos', 'Errores'],
-        datasets: [
-            {
-                label: 'Resultados',
-                data: [125, 25],
-                backgroundColor: [gradientGreen, gradientRed],
-            }
-        ]
-    };
-
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: false,
-                },
-                title: {
-                    display: true,
-                    text: 'Resultados generales - Formulario 110'
-                }
-            }
-        },
-    };
-
-    new Chart(ctx, config);
-}
-
 $(function ($) {
 
     $(".content-formulario .accordion-header").on("click", function () {
@@ -305,7 +245,7 @@ $(function ($) {
 
     $("#btn-show").on("click", function (event) {
 
-        const btn_send = $("#btn-send")
+        const btn_send = $(".btns-forms")
 
         const icon_plus = $("#btn-show i")
 
@@ -403,44 +343,6 @@ $(function ($) {
         });
     })
 
-    // Enviar y calificar formulario
-    $("#btn-send").on("click", function () {
-        var matrix_inputs = []
-        $("input.input-dian").each(function (index, element) {
-            var val_input = $(element).val() ? $(element).val() : 0
-            var name_input = $(element).data("cod-field")
-
-            matrix_inputs.push({
-                name: name_input,
-                val: val_input
-            })
-        })
-
-        const cont_resultados = $(".container-resultados-DIAN")
-        cont_resultados.css("display", "flex")
-        const item_resultados = $(".card-resultados")
-
-        gsap.fromTo(
-            item_resultados,
-            {
-                opacity: 0,
-                y: 200
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: .5,
-                ease: "power1.out",
-                onComplete: function () {
-                    cont_resultados.find(".content-btn").show()
-                    showChart()
-                    slideAnimation($(".card-resultados.card-left"))
-                    slideAnimation($(".card-resultados.card-right"))
-                }
-            }
-        );
-    })
-
     // Ocultar resultados
     $(".btn-resultados").on("click", function () {
         const cont_resultados = $(".container-resultados-DIAN")
@@ -448,7 +350,7 @@ $(function ($) {
 
         gsap.fromTo(
             resultados_item,
-            {   
+            {
                 opacity: 1,
                 y: 0,
                 duration: .5,

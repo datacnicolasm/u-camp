@@ -100,9 +100,9 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(208, 208, 208, 0.5);
+        background-color: rgba(176, 176, 176, 0.75);
         z-index: 1000;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         padding-bottom: 60px;
@@ -110,16 +110,54 @@
         .container {
             height: 80%;
             max-height: 80%;
-            overflow-y: scroll;
             position: relative;
 
-            .card-body-resultados {
-                background-color: #f4f4f4 !important;
+            .card-header {
+                background-color: #fff;
             }
 
             .card-resultados {
-                border-top: solid 4px $tint-2;
-                display: none;
+                border-top: solid 3px $tint-3;
+            }
+
+            .card-body-resultados {
+                background-color: #f4f4f4 !important;
+                overflow-y: scroll;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                position: relative;
+
+                .content-result-aviso {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 33, 84, 0.86);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+
+                    .info-resultado {
+                        text-align: center;
+                        display: none;
+
+                        p {
+                            text-align: center;
+                        }
+
+                        i {
+                            color: #fff;
+                            font-size: 3rem;
+                            margin: 2rem auto;
+                        }
+
+                        button {
+                            margin: auto;
+                        }
+                    }
+                }
             }
         }
 
@@ -135,8 +173,55 @@
 
         #resultados {
             .table-general {
-                width: 60%;
+                width: 100%;
                 margin: auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top: solid 0.5px #e0e0e0;
+
+                .item-general {
+                    margin-top: 1rem;
+                    flex: 0 0 50%;
+                    width: 50%;
+                    text-align: center;
+
+                    p {
+                        font-weight: bold;
+                        font-size: 2rem;
+                    }
+
+                    .icon-general {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .errores {
+
+                    border-left: solid 0.5px #e0e0e0;
+
+                    .icon-general {
+                        background-color: #ffa7ba;
+                    }
+                }
+
+                .aciertos {
+
+                    .icon-general {
+                        background-color: #55ff90;
+                    }
+                }
             }
 
             .table-especificos {
@@ -286,6 +371,14 @@
                     font-size: .9rem;
                 }
 
+                .value-info-dian.is-true {
+                    background-color: $is-true;
+                }
+
+                .value-info-dian.is-false {
+                    background-color: $is-false;
+                }
+
                 .sect-dian-form-number {
                     background-color: rgba(208, 208, 208, 0);
                     display: flex;
@@ -319,7 +412,7 @@
                             line-height: 15px;
                         }
 
-                        .name-input-form-sm{
+                        .name-input-form-sm {
                             font-size: .7rem;
                         }
 
@@ -331,6 +424,14 @@
                             line-height: 15px;
                         }
 
+                        .number-input-form.is-true {
+                            background-color: $is-true;
+                        }
+        
+                        .number-input-form.is-false {
+                            background-color: $is-false;
+                        }
+
                         .cod-input-form {
                             display: flex;
                             justify-content: center;
@@ -338,21 +439,21 @@
                             line-height: 15px;
                         }
 
-                        > div:nth-child(6n+1) {
+                        >div:nth-child(6n+1) {
                             background-color: lighten($borde-dian, 65%);
                         }
 
-                        > div:nth-child(6n+2) {
+                        >div:nth-child(6n+2) {
                             background-color: lighten($borde-dian, 65%);
                         }
 
-                        > div:nth-child(6n+3) {
+                        >div:nth-child(6n+3) {
                             background-color: lighten($borde-dian, 65%);
                         }
                     }
                 }
 
-                .sub-sect-dian-form-number{
+                .sub-sect-dian-form-number {
                     background-color: rgba(208, 208, 208, 0) !important;
                     display: flex;
                     justify-content: space-between;
@@ -377,35 +478,144 @@
                         width: 92%;
                         font-size: .8rem;
 
-                        .name-input-form {
+                        .sub-name-input-form {
                             border-left: solid 0.5px $borde-dian;
                             border-right: solid 0.5px $borde-dian;
                             line-height: 15px;
+                            position: relative;
+                            padding-right: 7.5px;
+                            padding-left: 7.5px;
+                            flex: 0 0 55%;
+                            max-width: 55%;
                         }
 
-                        .name-input-form-sm{
+                        .sub-name-input-form-sm {
                             font-size: .7rem;
                         }
 
-                        .number-input-form {
+                        .sub-number-input-form {
                             border-left: solid 0.5px $borde-dian;
                             display: flex;
                             justify-content: end;
                             align-items: center;
                             line-height: 15px;
+                            padding-right: 7.5px;
+                            padding-left: 7.5px;
+                            flex: 0 0 35.7%;
+                            max-width: 35.7%;
                         }
 
-                        .cod-input-form {
+                        .sub-number-input-form.is-true {
+                            background-color: $is-true;
+
+                            span{
+                                margin: 0 !important;
+                            }
+                        }
+        
+                        .sub-number-input-form.is-false {
+                            background-color: $is-false;
+
+                            span{
+                                margin: 0 !important;
+                            }
+                        }
+
+                        .sub-cod-input-form {
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             line-height: 15px;
+                            position: relative;
+                            padding-right: 7.5px;
+                            padding-left: 7.5px;
+                            flex: 0 0 9.3%;
+                            max-width: 9.3%;
+                        }
+
+                        >div:nth-child(6n+1) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        >div:nth-child(6n+2) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        >div:nth-child(6n+3) {
+                            background-color: lighten($borde-dian, 65%);
                         }
                     }
                 }
 
-                .padre-content-inputs-number{
+                .padre-content-inputs-number {
                     border-left: solid 0.5px $borde-dian;
+
+                    .sect-sub-dian-form-number {
+                        position: relative;
+                        width: 100%;
+                        border-top: solid 0.5px $borde-dian;
+                        background-color: rgba(208, 208, 208, 0) !important;
+                        border-bottom: solid 0.5px $borde-dian;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -7.5px;
+                        margin-left: -.9px;
+
+                        .name-sub-input-form {
+                            border-right: solid 0.5px $borde-dian;
+                            border-left: solid 0.5px $borde-dian;
+                            line-height: 15px;
+                            position: relative;
+                            flex: 0 0 58.4%;
+                            max-width: 58.4%;
+                        }
+
+                        .name-sub-input-form-sm {
+                            font-size: .7rem;
+                        }
+
+                        .number-sub-input-form {
+                            border-left: solid 0.5px $borde-dian;
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            line-height: 15px;
+                            position: relative;
+                            flex: 0 0 33.266667%;
+                            max-width: 33.266667%;
+                        }
+
+                        .number-sub-input-form.is-true {
+                            background-color: $is-true;
+                        }
+        
+                        .number-sub-input-form.is-false {
+                            background-color: $is-false;
+                        }
+
+                        .cod-sub-input-form {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: 15px;
+                            position: relative;
+                        }
+
+                        >div:nth-child(6n+1) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        >div:nth-child(6n+2) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                        >div:nth-child(6n+3) {
+                            background-color: lighten($borde-dian, 65%);
+                        }
+
+                    }
                 }
             }
         }

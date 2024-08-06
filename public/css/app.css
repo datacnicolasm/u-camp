@@ -10456,9 +10456,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(208, 208, 208, 0.5);
+  background-color: rgba(176, 176, 176, 0.75);
   z-index: 1000;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
@@ -10466,15 +10466,47 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formularios .container-resultados-DIAN .container {
   height: 80%;
   max-height: 80%;
-  overflow-y: scroll;
   position: relative;
+}
+.content-formularios .container-resultados-DIAN .container .card-header {
+  background-color: #fff;
+}
+.content-formularios .container-resultados-DIAN .container .card-resultados {
+  border-top: solid 3px #05bd9b;
 }
 .content-formularios .container-resultados-DIAN .container .card-body-resultados {
   background-color: #f4f4f4 !important;
+  overflow-y: scroll;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
 }
-.content-formularios .container-resultados-DIAN .container .card-resultados {
-  border-top: solid 4px #d31a71;
+.content-formularios .container-resultados-DIAN .container .card-body-resultados .content-result-aviso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 33, 84, 0.86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.content-formularios .container-resultados-DIAN .container .card-body-resultados .content-result-aviso .info-resultado {
+  text-align: center;
   display: none;
+}
+.content-formularios .container-resultados-DIAN .container .card-body-resultados .content-result-aviso .info-resultado p {
+  text-align: center;
+}
+.content-formularios .container-resultados-DIAN .container .card-body-resultados .content-result-aviso .info-resultado i {
+  color: #fff;
+  font-size: 3rem;
+  margin: 2rem auto;
+}
+.content-formularios .container-resultados-DIAN .container .card-body-resultados .content-result-aviso .info-resultado button {
+  margin: auto;
 }
 .content-formularios .container-resultados-DIAN .content-btn {
   position: absolute;
@@ -10485,8 +10517,43 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   background-color: #d31a71;
 }
 .content-formularios .container-resultados-DIAN #resultados .table-general {
-  width: 60%;
+  width: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 0.5px #e0e0e0;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .item-general {
+  margin-top: 1rem;
+  flex: 0 0 50%;
+  width: 50%;
+  text-align: center;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .item-general p {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .item-general .icon-general {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .item-general .icon-general i {
+  color: #fff;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .errores {
+  border-left: solid 0.5px #e0e0e0;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .errores .icon-general {
+  background-color: #ffa7ba;
+}
+.content-formularios .container-resultados-DIAN #resultados .table-general .aciertos .icon-general {
+  background-color: #55ff90;
 }
 .content-formularios .container-resultados-DIAN #resultados .table-especificos {
   border: solid 0.5px #e2e2e2;
@@ -10610,6 +10677,12 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   align-items: center;
   font-size: 0.9rem;
 }
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .value-info-dian.is-true {
+  background-color: #7bffa9;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .value-info-dian.is-false {
+  background-color: #ff9090;
+}
 .content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number {
   background-color: rgba(208, 208, 208, 0);
   display: flex;
@@ -10651,6 +10724,12 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   align-items: center;
   line-height: 15px;
 }
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .number-input-form.is-true {
+  background-color: #7bffa9;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .number-input-form.is-false {
+  background-color: #ff9090;
+}
 .content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sect-dian-form-number .content-inputs-number .cod-input-form {
   display: flex;
   justify-content: center;
@@ -10690,29 +10769,120 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   width: 92%;
   font-size: 0.8rem;
 }
-.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .name-input-form {
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-name-input-form {
   border-left: solid 0.5px #5b1973;
   border-right: solid 0.5px #5b1973;
   line-height: 15px;
+  position: relative;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  flex: 0 0 55%;
+  max-width: 55%;
 }
-.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .name-input-form-sm {
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-name-input-form-sm {
   font-size: 0.7rem;
 }
-.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .number-input-form {
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-number-input-form {
   border-left: solid 0.5px #5b1973;
   display: flex;
   justify-content: end;
   align-items: center;
   line-height: 15px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  flex: 0 0 35.7%;
+  max-width: 35.7%;
 }
-.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .cod-input-form {
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-number-input-form.is-true {
+  background-color: #7bffa9;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-number-input-form.is-true span {
+  margin: 0 !important;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-number-input-form.is-false {
+  background-color: #ff9090;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-number-input-form.is-false span {
+  margin: 0 !important;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number .sub-cod-input-form {
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 15px;
+  position: relative;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  flex: 0 0 9.3%;
+  max-width: 9.3%;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number > div:nth-child(6n+1) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number > div:nth-child(6n+2) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .sub-sect-dian-form-number .sub-content-inputs-number > div:nth-child(6n+3) {
+  background-color: #f2dff8;
 }
 .content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number {
   border-left: solid 0.5px #5b1973;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number {
+  position: relative;
+  width: 100%;
+  border-top: solid 0.5px #5b1973;
+  background-color: rgba(208, 208, 208, 0) !important;
+  border-bottom: solid 0.5px #5b1973;
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -7.5px;
+  margin-left: -0.9px;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .name-sub-input-form {
+  border-right: solid 0.5px #5b1973;
+  border-left: solid 0.5px #5b1973;
+  line-height: 15px;
+  position: relative;
+  flex: 0 0 58.4%;
+  max-width: 58.4%;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .name-sub-input-form-sm {
+  font-size: 0.7rem;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .number-sub-input-form {
+  border-left: solid 0.5px #5b1973;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  line-height: 15px;
+  position: relative;
+  flex: 0 0 33.266667%;
+  max-width: 33.266667%;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .number-sub-input-form.is-true {
+  background-color: #7bffa9;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .number-sub-input-form.is-false {
+  background-color: #ff9090;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number .cod-sub-input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 15px;
+  position: relative;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number > div:nth-child(6n+1) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number > div:nth-child(6n+2) {
+  background-color: #f2dff8;
+}
+.content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .padre-content-inputs-number .sect-sub-dian-form-number > div:nth-child(6n+3) {
+  background-color: #f2dff8;
 }
 
 .content-formulario {
@@ -10757,6 +10927,14 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .content-formulario .accordion .accordion-content .input-dian {
   text-align: right;
 }
+.content-formulario .accordion .accordion-content .input-dian.is-true {
+  background-color: #aeffca;
+  border-right: solid 3px #007b2b;
+}
+.content-formulario .accordion .accordion-content .input-dian.is-false {
+  background-color: #ffc3c3;
+  border-right: solid 3px #f60000;
+}
 .content-formulario .accordion .border-title {
   border-right: 5px solid #05bd9b;
   padding-right: 10px;
@@ -10783,24 +10961,45 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   justify-content: center;
   align-items: center;
 }
+.content-formulario .btns-content .btns-forms {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .content-formulario .btns-content .btn-form-dian {
   box-shadow: 2px 2px 3px rgba(225, 225, 225, 0.5);
   border-radius: 50%;
   width: 100%;
   height: 60px;
   flex: 100%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .content-formulario .btns-content .btn-form-dian:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+.content-formulario .btns-content .btn-form-dian:hover .help-msg {
+  display: block;
+}
 .content-formulario .btns-content .btn-form-dian i {
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
+}
+.content-formulario .btns-content .btn-form-dian .help-msg {
+  position: absolute;
+  top: 15%;
+  right: 110%;
+  padding: 5px 15px;
+  background-color: #eaeaea;
+  color: #454545;
+  border-radius: 10px;
+  display: none;
+  white-space: nowrap;
 }
 .content-formulario .btns-content #btn-show {
   display: flex;
@@ -10808,6 +11007,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .content-formulario .btns-content #btn-send {
   background-color: #d31a71;
+}
+.content-formulario .btns-content #btn-resultados {
+  background-color: #213147;
 }
 
 #left-panel .content-panel {

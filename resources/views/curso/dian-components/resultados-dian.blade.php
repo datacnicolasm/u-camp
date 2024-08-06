@@ -1,8 +1,8 @@
 <div class="container-resultados-DIAN">
-    <div class="container card-resultados">
+    <div class="container" id="card-resultados">
         <div class="row">
-            <div class="col-12">
-                <div class="card">
+            <div class="col-12 pb-3">
+                <div class="card card-resultados">
 
                     <div class="card-header p-2">
                         <ul class="nav nav-pills">
@@ -23,25 +23,30 @@
                                     <div class="col-4">
                                         <div class="card card-resultados card-left m-0">
                                             <div class="card-body">
+                                                <p class="font-weight-bold my-2 text-center">Resultados generales - Formulario 110</p>
                                                 <div style="width: 80%; margin: auto;">
                                                     <canvas id="progress-circle"></canvas>
                                                 </div>
-                                                <table class="table-general mt-4 table table-sm table-bordered">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-center text-muted text-sm"
-                                                                style="width: 50%">Aciertos</th>
-                                                            <th class="text-center text-muted text-sm"
-                                                                style="width: 50%">Errores</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-success text-center">75</td>
-                                                            <td class="text-danger text-center">25</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <div class="table-general mt-4 p-2">
+                                                    <div class="item-general aciertos">
+                                                        <div class="icon-general">
+                                                            <i class="fas fa-check-circle"></i>
+                                                        </div>
+                                                        <p class="m-0">75</p>
+                                                        <span class="text-muted">
+                                                            Aciertos
+                                                        </span>
+                                                    </div>
+                                                    <div class="item-general errores">
+                                                        <div class="icon-general">
+                                                            <i class="fas fa-times-circle"></i>
+                                                        </div>
+                                                        <p class="m-0">75</p>
+                                                        <span class="text-muted">
+                                                            Errores
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -56,22 +61,10 @@
                                                             <th style="width: 10px">#</th>
                                                             <th>Seccion</th>
                                                             <th>Calificacion</th>
-                                                            <th style="width: 40px">Puntaje</th>
+                                                            <th style="width: 60px">Puntaje</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>Datos informativos</td>
-                                                            <td class="progress-td">
-                                                                <div class="progress progress-xs">
-                                                                    <div class="progress-bar progress-bar-danger"
-                                                                        style="width: 55%"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center"><span
-                                                                    class="badge bg-danger">55%</span></td>
-                                                        </tr>
+                                                    <tbody id="body-resultados">
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -83,7 +76,7 @@
 
                             <!-- Formulario generado -->
                             <div class="tab-pane" id="formulario">
-                                <div class="container-fluid content-formulario-generate">
+                                <div class="container-fluid content-formulario-generate pb-2">
                                     <div class="row">
                                         <div class="col-2 casilla-general-dian logo-dian-form">
                                             <div class="logo-dian-form">
@@ -232,24 +225,21 @@
                                                             <div class="row">
                                                                 <dis class="col-6">33. Total costos y gastos de nómina
                                                                 </dis>
-                                                                <dis class="col-6 value-info-dian font-weight-bold">
-                                                                    172.000.000</dis>
+                                                                <dis id="form-001" class="col-6 value-info-dian font-weight-bold">0</dis>
                                                             </div>
                                                         </div>
                                                         <div class="col-4">
                                                             <div class="row">
                                                                 <dis class="col-6">34. Aportes de seguridad social
                                                                 </dis>
-                                                                <dis class="col-6 value-info-dian font-weight-bold">
-                                                                    172.000.000</dis>
+                                                                <dis id="form-002" class="col-6 value-info-dian font-weight-bold">0</dis>
                                                             </div>
                                                         </div>
                                                         <div class="col-4">
                                                             <div class="row">
                                                                 <dis class="col-6">35. Aportes al SENA, ICBF, caja de
                                                                     compensacion</dis>
-                                                                <dis class="col-6 value-info-dian font-weight-bold">
-                                                                    172.000.000</dis>
+                                                                <dis id="form-003" class="col-6 value-info-dian font-weight-bold">0</dis>
                                                             </div>
                                                         </div>
                                                     </dis>
@@ -268,7 +258,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         36
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-004" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -279,7 +269,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         37
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-005" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -290,7 +280,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         38
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-006" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -301,7 +291,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         39
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-007" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -312,7 +302,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         40
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-008" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -323,7 +313,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         41
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-009" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -334,7 +324,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         42
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-010" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -345,7 +335,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         43
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-011" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -356,7 +346,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         44
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-012" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -367,7 +357,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         45
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-013" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -378,7 +368,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         46
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-014" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -395,7 +385,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         47
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-015" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -406,7 +396,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         48
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-016" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -418,7 +408,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         49
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-017" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -431,7 +421,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         50
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-018" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -443,43 +433,19 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         51
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
-                                                        <span class="mr-2">0</span>
-                                                    </div>
-
-                                                    <!-- 52 Dividendos y participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2016 y anteriores) -->
-                                                    <div class="col-7 py-1 name-input-form name-input-form-sm">
-                                                        Dividendos y participaciones gravadas recibidas por personas
-                                                        naturales sin residencia fiscal (año 2016 y anteriores)
-                                                    </div>
-                                                    <div class="col-1 py-1 cod-input-form">
-                                                        52
-                                                    </div>
-                                                    <div class="col-4 py-1 number-input-form">
-                                                        <span class="mr-2">0</span>
-                                                    </div>
-
-                                                    <!-- 53 Dividendos y participaciones gravadas recibidas por personas naturales sin residencia fiscal (año 2017 y anteriores) -->
-                                                    <div class="col-7 py-1 name-input-form name-input-form-sm">
-                                                        Dividendos y participaciones gravadas recibidas por personas
-                                                        naturales sin residencia fiscal (año 2017 y siguientes)
-                                                    </div>
-                                                    <div class="col-1 py-1 cod-input-form">
-                                                        53
-                                                    </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-019" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
                                                     <!-- 54 Dividendos y participaciones gravadas a las tarifas de los articulos 245 a 246 E.T. -->
-                                                    <div class="col-7 py-1 name-input-form name-input-form-sm">
+                                                    <div class="col-7 py-1 name-input-form">
                                                         Dividendos y participaciones gravadas a las tarifas de los
                                                         articulos 245 a 246 E.T.
                                                     </div>
                                                     <div class="col-1 py-1 cod-input-form">
                                                         54
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-022" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -492,7 +458,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         55
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-023" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -505,7 +471,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         56
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-024" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -516,7 +482,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         57
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-025" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -527,7 +493,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         58
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-026" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -538,7 +504,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         59
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-027" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -549,7 +515,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         60
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-028" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -560,7 +526,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         61
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-029" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -577,7 +543,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         62
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-030" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -588,7 +554,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         63
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-031" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -599,7 +565,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         64
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-032" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -610,7 +576,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         65
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-033" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -621,7 +587,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         66
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-034" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -632,7 +598,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         67
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-035" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -649,7 +615,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         68
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-036" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -660,7 +626,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         69
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-037" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -677,7 +643,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         70
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-038" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -688,7 +654,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         71
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-039" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -699,7 +665,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         72
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-040" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -710,7 +676,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         73
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-041" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -721,7 +687,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         74
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-042" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -732,18 +698,18 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         75
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-043" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
                                                     <!-- 76 Renta presuntiva -->
-                                                    <div class="col-7 py-1 name-input-form">
+                                                    <div class="col-7 pt-1 pb-2 name-input-form">
                                                         Renta presuntiva
                                                     </div>
-                                                    <div class="col-1 py-1 cod-input-form">
+                                                    <div class="col-1 pt-1 pb-2 cod-input-form">
                                                         76
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-044" class="col-4 pt-1 pb-2 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -762,7 +728,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         77
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-045" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -773,7 +739,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         78
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-046" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -784,7 +750,7 @@
                                                     <div class="col-1 py-1 cod-input-form font-weight-bold">
                                                         79
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-047" class="col-4 py-1 number-input-form font-weight-bold">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -801,7 +767,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         80
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-048" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -812,7 +778,7 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         81
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-049" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -823,18 +789,18 @@
                                                     <div class="col-1 py-1 cod-input-form">
                                                         82
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form">
+                                                    <div id="form-050" class="col-4 py-1 number-input-form">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
                                                     <!-- 83 Ganancias ocasionales gravables -->
-                                                    <div class="col-7 py-1 name-input-form font-weight-bold">
+                                                    <div class="col-7 py-1 name-input-form font-weight-bold" id="input-dian-110">
                                                         Ganancias ocasionales gravables
                                                     </div>
-                                                    <div class="col-1 py-1 cod-input-form font-weight-bold">
+                                                    <div class="col-1 py-1 cod-input-form font-weight-bold" id="cod-input-dian-110">
                                                         83
                                                     </div>
-                                                    <div class="col-4 py-1 number-input-form font-weight-bold">
+                                                    <div id="form-051" class="col-4 py-1 number-input-form font-weight-bold" id="val-input-dian-110">
                                                         <span class="mr-2">0</span>
                                                     </div>
 
@@ -845,99 +811,434 @@
                                                 <div class="row content-inputs-number padre-content-inputs-number">
 
                                                     <div class="col-12 sub-sect-dian-form-number">
-                                                        <div class="sub-verticla-sect-text-dian">
+                                                        <div class="sub-verticla-sect-text-dian font-weight-bold">
                                                             Impuesto sobre las rentas<br>liquidas gravables
                                                         </div>
                                                         <div class="row sub-content-inputs-number">
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
+                                                            
+                                                            <!-- 84 Sobre la renta liquida gravable -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                Sobre la renta liquida gravable
                                                             </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                84
                                                             </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
-                                                            </div>
-
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
-                                                            </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
-                                                            </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
+                                                            <div id="form-052" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
                                                             </div>
 
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
+                                                            <!-- 85 Puntos adicionales a la tarifa del impuesto renta -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                Puntos adicionales a la tarifa del impuesto renta
                                                             </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                85
                                                             </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
-                                                            </div>
-
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
-                                                            </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
-                                                            </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
+                                                            <div id="form-053" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
                                                             </div>
 
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
+                                                            <!-- 86 De dividendos y participaciones 10% año 2022 y 20% año 2023 -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                De dividendos y participaciones 10% año 2022 y 20% año 2023 (base casilla 54)
                                                             </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                86
                                                             </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
-                                                            </div>
-
-                                                            <!-- 80 Ingresos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Ingresos por ganancias ocasionales
-                                                            </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                80
-                                                            </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
+                                                            <div id="form-054" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
                                                             </div>
 
-                                                            <!-- 81 Costos por ganancias ocasionales -->
-                                                            <div class="col-7 py-1 name-input-form">
-                                                                Costos por ganancias ocasionales
+                                                            <!-- 87 De dividendos y participaciones gravadas a la tarifa art. 240 (base casilla 56) -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                De dividendos y participaciones gravadas a la tarifa art. 240 (base casilla 56)
                                                             </div>
-                                                            <div class="col-1 py-1 cod-input-form">
-                                                                81
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                87
                                                             </div>
-                                                            <div class="col-4 py-1 number-input-form">
-                                                                <span class="mr-2">0</span>
+                                                            <div id="form-055" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
                                                             </div>
+
+                                                            <!-- 88 De dividendos y participaciones gravadas a la tarifa del 27% (base casilla 56) -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                De dividendos y participaciones gravadas a la tarifa del 27% (base casilla 56)
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                88
+                                                            </div>
+                                                            <div id="form-056" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
+                                                            </div>
+
+                                                            <!-- 89 De dividendos y participaciones gravadas a la tarifa art. 240 (base casilla 53) -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                De dividendos y participaciones gravadas a la tarifa art. 240 (base casilla 53)
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                89
+                                                            </div>
+                                                            <div id="form-057" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
+                                                            </div>
+
+                                                            <!-- 90 De dividendos y participaciones gravadas a la tarifa del 33% (base casilla 52) -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                De dividendos y participaciones gravadas a la tarifa del 33% (base casilla 52)
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                90
+                                                            </div>
+                                                            <div id="form-058" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
+                                                            </div>
+                                                            
                                                         </div>
+                                                    </div>
+
+                                                    <div class="sect-sub-dian-form-number">
+                                                        <!-- 91 Total impuesto sobre las rentas líquidas gravadas -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Total impuesto sobre las rentas líquidas gravadas
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            91
+                                                        </div>
+                                                        <div id="form-059" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 92 Valor a adicionar (VAA) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Valor a adicionar (VAA)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            92
+                                                        </div>
+                                                        <div id="form-060" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 93 Descuentos tributarios -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Descuentos tributarios
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            93
+                                                        </div>
+                                                        <div id="form-061" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 94 Impuesto neto de renta (sin adicionado) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            <strong>Impuesto neto de renta</strong> (sin adicionado)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            94
+                                                        </div>
+                                                        <div id="form-062" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 95 Impuesto a adicionar (IA) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Impuesto a adicionar (IA)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            95
+                                                        </div>
+                                                        <div id="form-063" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 96 Impuesto neto de renta (con adicionado) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            <strong>Impuesto neto de renta</strong> (con adicionado)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            96
+                                                        </div>
+                                                        <div id="form-064" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 97 Impuesto de ganancias ocasionales -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Impuesto de ganancias ocasionales
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            97
+                                                        </div>
+                                                        <div id="form-065" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 98 Descuento por impuestos pagados en el exterior por ganancias ocasionales -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Descuento por impuestos pagados en el exterior por ganancias ocasionales
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            98
+                                                        </div>
+                                                        <div id="form-066" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 99 Total impuesto a cargo -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Total impuesto a cargo
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            99
+                                                        </div>
+                                                        <div id="form-067" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 100 Valos inversión obras por impuestos hasta el 50% del valor de la casilla 99 (Modalidad de pago 1) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Valos inversión obras por impuestos hasta el 50% del valor de la casilla 99 (Modalidad de pago 1)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            100
+                                                        </div>
+                                                        <div id="form-068" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 101 Descuento efectivo inversión obras por impuestos (Modalidad de pago 2) -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Descuento efectivo inversión obras por impuestos (Modalidad de pago 2)
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            101
+                                                        </div>
+                                                        <div id="form-069" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 102 Crédito fiscal artículo 256-1 E.T. -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Crédito fiscal artículo 256-1 E.T.
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            102
+                                                        </div>
+                                                        <div id="form-070" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 103 Anticipo renta liquidado año gravable anterior -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Anticipo renta liquidado año gravable anterior
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            103
+                                                        </div>
+                                                        <div id="form-071" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 104 Saldo a favor año gravable anterior sin solicitud de devolución y compensación -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Saldo a favor año gravable anterior sin solicitud de devolución y compensación
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            104
+                                                        </div>
+                                                        <div id="form-072" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 sub-sect-dian-form-number">
+                                                        <div class="sub-verticla-sect-text-dian font-weight-bold">
+                                                            Retenciones
+                                                        </div>
+                                                        <div class="row sub-content-inputs-number">
+                                                            
+                                                            <!-- 105 Autorretenciones -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                Autorretenciones
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                105
+                                                            </div>
+                                                            <div id="form-073" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
+                                                            </div>
+
+                                                            <!-- 106 Otras retenciones -->
+                                                            <div class="py-1 sub-name-input-form">
+                                                                Otras retenciones
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form">
+                                                                106
+                                                            </div>
+                                                            <div id="form-074" class="py-1 sub-number-input-form">
+                                                                <span>0</span>
+                                                            </div>
+
+                                                            <!-- 107 Total retenciones año gravable a declarar -->
+                                                            <div class="py-1 sub-name-input-form font-weight-bold">
+                                                                Total retenciones año gravable
+                                                            </div>
+                                                            <div class="py-1 sub-cod-input-form font-weight-bold">
+                                                                107
+                                                            </div>
+                                                            <div id="form-075" class="py-1 sub-number-input-form font-weight-bold">
+                                                                <span>0</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="sect-sub-dian-form-number">
+                                                        <!-- 108 Anticipo renta para el año gravable siguiente -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Anticipo renta para el año gravable siguiente
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            108
+                                                        </div>
+                                                        <div id="form-076" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 109 Anticipo puntos adicionales año gravable anterior -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Anticipo puntos adicionales año gravable anterior
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            109
+                                                        </div>
+                                                        <div id="form-077" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 110 Anticipo puntos adicionales año gravable siguiente -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Anticipo puntos adicionales año gravable siguiente
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            110
+                                                        </div>
+                                                        <div id="form-078" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 111 Saldo a pagar por impuesto -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Saldo a pagar por impuesto
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            111
+                                                        </div>
+                                                        <div id="form-079" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 112 Sanciones -->
+                                                        <div class="col-7 py-1 name-sub-input-form">
+                                                            Sanciones
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form">
+                                                            112
+                                                        </div>
+                                                        <div id="form-080" class="col-4 py-1 number-sub-input-form">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 113 Total saldo a pagar -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Total saldo a pagar
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            113
+                                                        </div>
+                                                        <div id="form-081" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+
+                                                        <!-- 114 Total saldo a favor -->
+                                                        <div class="col-7 py-1 name-sub-input-form font-weight-bold">
+                                                            Total saldo a favor
+                                                        </div>
+                                                        <div class="col-1 py-1 cod-sub-input-form font-weight-bold">
+                                                            114
+                                                        </div>
+                                                        <div id="form-082" class="col-4 py-1 number-sub-input-form font-weight-bold">
+                                                            <span class="mr-2">0</span>
+                                                        </div>
+                                                        
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="sect-patrimonio sect-dian-form-number">
+                                                <div class="verticla-sect-text-dian"><br></div>
+                                                <div class="row content-inputs-number">
+
+                                                    <!-- 115 Obras por impuesto Modalidad de pago 1 -->
+                                                    <div class="col-7 py-1 name-input-form">
+                                                        Obras por impuesto Modalidad de pago 1
+                                                    </div>
+                                                    <div class="col-1 py-1 cod-input-form">
+                                                        115
+                                                    </div>
+                                                    <div id="form-083" class="col-4 py-1 number-input-form">
+                                                        <span class="mr-2">0</span>
+                                                    </div>
+
+                                                    <!-- 116 Obras por impuesto Modalidad de pago 2 -->
+                                                    <div class="col-7 py-1 name-input-form">
+                                                        Obras por impuesto Modalidad de pago 2
+                                                    </div>
+                                                    <div class="col-1 py-1 cod-input-form">
+                                                        116
+                                                    </div>
+                                                    <div id="form-084" class="col-4 py-1 number-input-form">
+                                                        <span class="mr-2">0</span>
+                                                    </div>
+
+                                                    <!-- 117 Aporte voluntario Art. 244-1 E.T -->
+                                                    <div class="col-7 py-1 name-input-form">
+                                                        Aporte voluntario Art. 244-1 E.T.
+                                                    </div>
+                                                    <div class="col-1 py-1 cod-input-form">
+                                                        117
+                                                    </div>
+                                                    <div id="form-085" class="col-4 py-1 number-input-form">
+                                                        <span class="mr-2">0</span>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="logo-fondo-form">
-                                        <span class="u-logo">Account</span>
-                                        <span class="camp-logo">Camp</span>
-                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="content-result-aviso">
+
+                            <!-- NO Aprobado --> 
+                            <div class="info-resultado no-aprobado">
+                                <i class="fas fa-check-circle"></i>
+                                <h3 class="font-weight-bold">¡Felicitaciones!</h3>
+                                <p class="my-4">Has aprobado el ejercicio</p>
+                                <button class="btn-result-aviso btn-3-ucamp btn">Ver resultados</button>
+                            </div>
+
+                            <!-- Aprobado --> 
+                            <div class="info-resultado si-aprobado">
+                                <i class="fas fa-check-circle"></i>
+                                <h3 class="font-weight-bold">¡Felicitaciones!</h3>
+                                <p class="my-4">Has aprobado el ejercicio</p>
+                                <button class="btn-result-aviso btn-3-ucamp btn">Ver resultados</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -946,6 +1247,6 @@
         </div>
     </div>
     <div class="content-btn">
-        <div class="btn btn-2-ucamp-border btn-resultados">Ocultar resultados</div>
+        <div class="btn btn-2-ucamp btn-resultados">Ocultar resultados</div>
     </div>
 </div>
