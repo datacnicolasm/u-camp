@@ -9,7 +9,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\WorkshopController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +24,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Ruta de autenticación con verificación de email habilitada
+Auth::routes(['verify' => true]);
+
+// Ruta para verificar el email
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) { 
+    $request->fulfill();
+    return redirect('/dashboard');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+// Ruta para reenviar la notificación de verificación
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
 Route::post('/check-email', [UserController::class, 'checkEmail']);
 
 Route::post('/payments', [PaymentController::class, 'store']);
@@ -43,7 +61,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 // Aquí van las rutas que deseas proteger
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth'])->group(function () {
 
     // Calificar formulario DIAN
     Route::post('/workshop/{workshop}/calificarWorkshop', [WorkshopController::class, 'calificarWorkshop'])->name('calificar-workshop');

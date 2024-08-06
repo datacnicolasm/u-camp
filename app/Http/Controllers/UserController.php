@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 
 class UserController extends Controller
 {
@@ -59,7 +60,6 @@ class UserController extends Controller
             'password' => 'required|string|min:6',
         ], $messages);
 
-        // Tomar el texto antes del @ del correo electrónico
         $email = $request->email;
 
         // Crear el usuario
@@ -67,8 +67,11 @@ class UserController extends Controller
         $user->first_name = strtoupper($request->first_name);
         $user->last_name = strtoupper($request->last_name);
         $user->email = strtoupper($email);
-        $user->password = bcrypt($request->password); // Encriptar la contraseña
+        $user->password = bcrypt($request->password);
         $user->save();
+
+        // Generar evento de registro
+        event(new Registered($user));
 
         // Iniciar sesión automáticamente para el usuario creado
         Auth::login($user);
