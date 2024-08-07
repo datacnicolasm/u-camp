@@ -7,7 +7,7 @@ $(function ($) {
     $("#submit-respuesta").on("click", function (e) {
         e.preventDefault;
 
-        $('input[name="option"]').each(function(index, element){
+        $('input[name="option"]').each(function (index, element) {
             $(element.parentElement).removeClass("is-valid").removeClass("is-invalid")
         })
 
@@ -32,17 +32,41 @@ $(function ($) {
                     if (response.data.success) {
                         $($('input[name="option"]:checked')[0].parentElement).addClass("is-valid")
 
-                        $(".response-options").find(".callout-danger").hide()
-                        $(".response-options").find(".callout-success-incorrect").hide()
-                        $("#submit-respuesta").hide()
-                        $(".response-options").find(".callout-success").show()
-                        $("#next-lesson-respuesta").show()
+                        const respuesta_correcta = $(".response-options .respuesta-correcta");
+                        gsap.fromTo(
+                            respuesta_correcta,
+                            {
+                                opacity: 0
+                            },
+                            {
+                                display: "flex",
+                                opacity: 1,
+                                duration: .5,
+                                ease: "power1.out",
+                                onComplete: () => {
+                                    $(respuesta_correcta).find(".aprobado").show()
+                                }
+                            }
+                        );
                     } else {
                         $($('input[name="option"]:checked')[0].parentElement).addClass("is-invalid")
 
-                        $(".response-options").find(".callout-success").hide()
-                        $(".response-options").find(".callout-danger").hide()
-                        $(".response-options").find(".callout-success-incorrect").show()
+                        const respuesta_correcta = $(".response-options .respuesta-correcta");
+                        gsap.fromTo(
+                            respuesta_correcta,
+                            {
+                                opacity: 0
+                            },
+                            {
+                                display: "flex",
+                                opacity: 1,
+                                duration: .5,
+                                ease: "power1.out",
+                                onComplete: () => {
+                                    $(respuesta_correcta).find(".no-aprobado").show()
+                                }
+                            }
+                        );
                     }
                 },
                 error: function (xhr) {
@@ -53,5 +77,25 @@ $(function ($) {
             // Mostrar aviso
             $(".response-options").find(".callout-danger").show()
         }
+    })
+
+    // Volver a intentar
+    $("#nuevo-intento").on("click", function(){
+        const respuesta_correcta = $(".response-options .respuesta-correcta");
+
+        $(respuesta_correcta).find(".no-aprobado").hide()
+
+        gsap.fromTo(
+            respuesta_correcta,
+            {
+                opacity: 1
+            },
+            {
+                display: "none",
+                opacity: 0,
+                duration: .5,
+                ease: "power1.out"
+            }
+        );
     })
 });

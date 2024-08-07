@@ -1,4 +1,4 @@
-<header class="main-header-ucamp" style="background-image: url('{{ asset('img/header-forms-dian-background.jpg') }}');">
+<header class="main-header-ucamp">
     <nav class="navigation-menu">
         <div class="container-top">
             <div class="left-section">

@@ -195,7 +195,7 @@
                     </div>
                     <div class="btns-content">
                         <div class="btns-forms">
-                            <div id="btn-resultados" class="mt-2 btn-form-dian">
+                            <div id="btn-resultados" data-resultados="false" class="mt-2 btn-form-dian">
                                 <i class="fas fa-check-circle"></i>
                                 <span class="help-msg">Ver calificación</span>
                             </div>

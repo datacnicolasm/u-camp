@@ -40,32 +40,30 @@
                     </div>
                 </form>
                 <button id="submit-respuesta">Enviar Respuesta</button>
-                <div class="callout callout-danger">
-                    <p>
-                        <i class="icon fas fa-exclamation-triangle"></i>
-                        Debes seleccionar una opción!
-                    </p>
-                </div>
-                <div class="callout callout-success-incorrect">
-                    <p>
-                        <i class="icon fas fa-exclamation-triangle"></i>
-                        Oh! Esta no es la respuesta correcta, vuelve a intentarlo.
-                    </p>
-                </div>
-                <div class="callout callout-success">
-                    <p>
-                        <i class="icon fas fa-check"></i>
-                        Excelente! Es la respuesta correcta
-                    </p>
-                </div>
+                <div class="respuesta-correcta">
 
-                <!-- Siguiente leccion -->
-                @if ($nextLesson = \App\Models\Curso::getNextLesson($lesson->id))
-                    <div id="next-lesson-respuesta">
-                        <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $nextLesson]) }}"
-                            class="btn btn-ucamp btn-continuar">Continuar</a>
+                    <!-- SI Aprobado -->
+                    <div class="info-resultado aprobado">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 class="font-weight-bold">¡Felicitaciones!</h3>
+                        <p class="my-4">Has aprobado el ejercicio</p>
+                        <!-- Siguiente leccion -->
+                        @if ($nextLesson = \App\Models\Curso::getNextLesson($lesson->id))
+                            <div id="next-lesson-respuesta">
+                                <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $nextLesson]) }}"
+                                    class="btn btn-3-ucamp btn-sm">Continuar</a>
+                            </div>
+                        @endif
                     </div>
-                @endif
+
+                    <!-- NO Aprobado -->
+                    <div class="info-resultado no-aprobado">
+                        <i class="fas fa-times-circle"></i>
+                        <h3 class="font-weight-bold">¡Incorrecto!</h3>
+                        <p class="my-4">Has seleccionado la opción incorrecta</p>
+                        <button id="nuevo-intento" class="btn btn-3-ucamp btn-sm">Volver a intentar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

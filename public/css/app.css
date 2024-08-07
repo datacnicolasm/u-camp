@@ -9485,6 +9485,12 @@ pre {
   font-size: 0.9rem;
 }
 
+.bg-danger-camp {
+  color: #dc3545 !important;
+  border: solid 0.5px #dc3545 !important;
+  background-color: #f3c7cb !important;
+}
+
 .login-page {
   background-image: url(../images/background-login.svg?ff93cc9f6ce5e32421e0f10ef0d86d9e);
   background-size: cover;
@@ -9895,8 +9901,8 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   text-align: center;
 }
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li i {
-  width: 20px;
-  text-align: center;
+  width: 40px;
+  text-align: left;
 }
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li i.no-viewed {
   color: #737373;
@@ -10019,48 +10025,49 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   margin-right: 10px;
   color: #05bd9b;
 }
-.cuestionario-view-curso .questionnaire-content {
+.cuestionario-view-curso .questionnaire-section .questionnaire-content {
   margin-top: 10px;
   padding-top: 5px;
 }
-.cuestionario-view-curso .questionnaire-content h3 {
+.cuestionario-view-curso .questionnaire-section .questionnaire-content h3 {
   padding: 0 15px;
   font-size: 1.2rem;
   font-weight: 700;
   color: #333;
 }
-.cuestionario-view-curso .questionnaire-content div.text-question {
+.cuestionario-view-curso .questionnaire-section .questionnaire-content div.text-question {
   padding: 5px 30px 5px 15px;
   font-size: 0.9rem;
   color: #333;
   text-align: justify;
 }
-.cuestionario-view-curso .questionnaire-content div.text-question h4 {
+.cuestionario-view-curso .questionnaire-section .questionnaire-content div.text-question h4 {
   font-size: 1rem;
   color: #333;
   margin-top: 20px;
   font-weight: bold;
 }
-.cuestionario-view-curso .response-options {
+.cuestionario-view-curso .questionnaire-section .response-options {
   margin-top: 20px;
+  position: relative;
 }
-.cuestionario-view-curso .response-options .options-header {
+.cuestionario-view-curso .questionnaire-section .response-options .options-header {
   background-color: #d9d9d9;
   padding: 10px 20px;
   display: flex;
   align-items: center;
 }
-.cuestionario-view-curso .response-options .options-header h2 {
+.cuestionario-view-curso .questionnaire-section .response-options .options-header h2 {
   margin: 0;
   font-size: 1rem;
   color: #333;
 }
-.cuestionario-view-curso .response-options .options-header i {
+.cuestionario-view-curso .questionnaire-section .response-options .options-header i {
   font-size: 1.1rem;
   margin-right: 10px;
   color: #05bd9b;
 }
-.cuestionario-view-curso .response-options .options-header .xp-badge {
+.cuestionario-view-curso .questionnaire-section .response-options .options-header .xp-badge {
   background-color: #d31a71;
   color: white;
   padding: 3px 6px;
@@ -10069,11 +10076,11 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   font-size: 0.9rem;
   float: right;
 }
-.cuestionario-view-curso .response-options form {
+.cuestionario-view-curso .questionnaire-section .response-options form {
   margin-top: 10px;
   padding: 10px 15px;
 }
-.cuestionario-view-curso .response-options form .option-response {
+.cuestionario-view-curso .questionnaire-section .response-options form .option-response {
   border: solid 0.5px #d5d5d5;
   border-radius: 5px;
   padding: 0.7rem 1rem;
@@ -10082,84 +10089,75 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   justify-content: flex-start;
   align-items: center;
 }
-.cuestionario-view-curso .response-options form .option-response.is-valid {
+.cuestionario-view-curso .questionnaire-section .response-options form .option-response.is-valid {
   border: solid 1px #28a745;
   box-shadow: 0.5px 0.5px 1px #28a745;
 }
-.cuestionario-view-curso .response-options form .option-response.is-invalid {
+.cuestionario-view-curso .questionnaire-section .response-options form .option-response.is-invalid {
   border: solid 1px #bd2130;
   box-shadow: 0.5px 0.5px 1px #bd2130;
 }
-.cuestionario-view-curso .response-options form label {
+.cuestionario-view-curso .questionnaire-section .response-options form label {
   font-weight: normal;
   text-align: justify;
   font-size: 0.9rem;
   margin: 0;
 }
-.cuestionario-view-curso .response-options form input[type=radio] {
+.cuestionario-view-curso .questionnaire-section .response-options form input[type=radio] {
   margin-right: 10px;
 }
-.cuestionario-view-curso .response-options form input[type=radio]:hover {
+.cuestionario-view-curso .questionnaire-section .response-options form input[type=radio]:hover {
   cursor: pointer;
 }
-.cuestionario-view-curso .response-options button {
+.cuestionario-view-curso .questionnaire-section .response-options button {
   margin: 10px 15px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   background-color: #d31a71;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1.1rem;
 }
-.cuestionario-view-curso .response-options button:hover {
+.cuestionario-view-curso .questionnaire-section .response-options button:hover {
   background-color: #05bd9b;
 }
-.cuestionario-view-curso .response-options .callout-danger {
-  margin: 10px 15px;
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 53, 121, 0.79);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
 }
-.cuestionario-view-curso .response-options .callout-danger p {
-  font-size: 0.9rem;
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .info-resultado {
+  text-align: center;
 }
-.cuestionario-view-curso .response-options .callout-danger p i {
-  font-size: 1.25rem;
-  margin-right: 5px;
-  color: #bd2130;
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .info-resultado h3 {
+  color: #fff;
 }
-.cuestionario-view-curso .response-options .callout-success {
-  margin: 10px 15px;
-  display: none;
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .info-resultado p {
+  text-align: center;
 }
-.cuestionario-view-curso .response-options .callout-success p {
-  font-size: 0.9rem;
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .info-resultado i {
+  color: #fff;
+  font-size: 3rem;
+  margin: 1rem auto;
 }
-.cuestionario-view-curso .response-options .callout-success p i {
-  font-size: 1.25rem;
-  margin-right: 5px;
-  color: #28a745;
-}
-.cuestionario-view-curso .response-options .callout-success-incorrect {
-  margin: 10px 15px;
-  display: none;
-  border-left-color: #bd2130;
-}
-.cuestionario-view-curso .response-options .callout-success-incorrect p {
-  font-size: 0.9rem;
-}
-.cuestionario-view-curso .response-options .callout-success-incorrect p i {
-  font-size: 1.25rem;
-  margin-right: 5px;
-  color: #bd2130;
-}
-.cuestionario-view-curso .response-options #next-lesson-respuesta {
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .info-resultado #next-lesson-respuesta {
   margin: 10px 15px;
   padding: 10px 0;
-  display: none;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.1rem;
+}
+.cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .aprobado, .cuestionario-view-curso .questionnaire-section .response-options .respuesta-correcta .no-aprobado {
+  display: none;
 }
 
 .interactivo-view-curso {
@@ -10193,7 +10191,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 108, 191, 0.7);
+  background-image: linear-gradient(to bottom right, #05bd9b, #003b77);
   z-index: 1;
 }
 .content-formularios .main-header-ucamp .navigation-menu {
@@ -10290,6 +10288,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
   box-sizing: border-box;
 }
 .content-formularios .content-section .content-box {
@@ -10367,6 +10366,10 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .content-formularios .content-section .content-box .content-item:last-child a i {
   color: white;
+}
+.content-formularios .content-section .callout {
+  font-size: 0.9rem;
+  display: none;
 }
 
 .content-formularios {
@@ -11010,6 +11013,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 }
 .content-formulario .btns-content #btn-resultados {
   background-color: #213147;
+  opacity: 0;
 }
 
 #left-panel .content-panel {
