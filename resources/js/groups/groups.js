@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
 
 $(function ($) {
@@ -16,7 +17,7 @@ $(function ($) {
             $("#edit-modal").attr("data-idgroup", id_group)
 
             $.ajax({
-                url: '/ibero-lab/public/group-get',
+                url: GLOBAL_VARS.api_url + 'group-get',
                 type: 'POST',
                 data: {
                     id: id_group,
@@ -57,7 +58,7 @@ $(function ($) {
         const color_grupo = $("#edit-modal").find("#color-group").attr("value")
 
         $.ajax({
-            url: '/ibero-lab/public/edit-group',
+            url: GLOBAL_VARS.api_url + 'edit-group',
             type: 'POST',
             data: {
                 id: id_grupo,
@@ -97,7 +98,7 @@ $(function ($) {
         const color_grupo = $("#crear-modal").find("#color-group").attr("value")
 
         $.ajax({
-            url: '/ibero-lab/public/create-group',
+            url: GLOBAL_VARS.api_url + 'create-group',
             type: 'POST',
             data: {
                 name: name_grupo,
@@ -123,7 +124,7 @@ $(function ($) {
             const paren_element = event.currentTarget.parentElement.parentElement.parentElement
 
             $.ajax({
-                url: '/ibero-lab/public/delete-group',
+                url: GLOBAL_VARS.api_url + 'delete-group',
                 type: 'POST',
                 data: {
                     id: id_group,

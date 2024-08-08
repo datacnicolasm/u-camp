@@ -1,20 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import { GLOBAL_VARS } from '@globals';
 
 $(function($) {
-    $("#clases-teacher").DataTable({
-        layout: {
-            bottomEnd: {
-                paging: {
-                    boundaryNumbers: true
-                }
-            }
-        },
-        info: true,
-        paging: true,
-        responsive: true,
-        lengthChange: false,
-        searching: true,
-        ordering: true,
-        autoWidth: false
-    });
-})
+});

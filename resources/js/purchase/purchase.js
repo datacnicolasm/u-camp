@@ -1,5 +1,5 @@
 window.$ = window.jQuery = require('jquery');
-//import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 
 $(function ($) {
 
@@ -54,7 +54,7 @@ $(function ($) {
             $("#cuenta").find('.invalid-feedback-mail').hide()
 
             $.ajax({
-                url: '/ibero-lab/public/check-email',
+                url: GLOBAL_VARS.api_url + 'check-email',
                 type: 'POST',
                 data: {
                     email: email,
@@ -124,7 +124,7 @@ $(function ($) {
         };
 
         $.ajax({
-            url: '/ibero-lab/public/payments',
+            url: GLOBAL_VARS.api_url + 'payments',
             type: 'POST',
             data: formData,
             success: function(response) {

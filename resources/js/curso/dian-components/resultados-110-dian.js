@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
 import Chart from 'chart.js/auto';
 
@@ -264,7 +265,7 @@ $(function ($) {
         }
 
         $.ajax({
-            url: '/ibero-lab/public/workshop/' + data_send.id_workshop + '/calificarWorkshop',
+            url: GLOBAL_VARS.api_url + 'workshop/' + data_send.id_workshop + '/calificarWorkshop',
             type: 'POST',
             data: {
                 id_workshop: data_send.id_workshop,

@@ -1,5 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 gsap.registerPlugin(MotionPathPlugin);

@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
 
 $(function ($) {
@@ -18,7 +19,7 @@ $(function ($) {
         if (selectedOption) {
 
             var lessonId = $("#content-cuest").data("idlesson");
-            var url = `/ibero-lab/public/lessons/${lessonId}/verifyResponse`;
+            var url = `${GLOBAL_VARS.api_url}lessons/${lessonId}/verifyResponse`;
 
             // Enviar la opción seleccionada por AJAX
             $.ajax({

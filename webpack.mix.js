@@ -20,6 +20,11 @@ if (mix.inProduction()) {
 
 // Establecer la ruta pública por defecto para las fuentes de Font Awesome
 mix.webpackConfig({
+    resolve: {
+        alias: {
+            '@globals': path.resolve(__dirname, 'resources/js/globals.js')
+        }
+    },
     output: {
         publicPath: '/fonts/'
     }

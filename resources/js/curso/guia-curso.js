@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require('jquery');
+import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
 
 function getScreenSize() {
@@ -299,7 +300,7 @@ $(function ($) {
             $(".modal-content-guia").css("display", "flex")
 
             $.ajax({
-                url: '/ibero-lab/public/lesson/getGuiaJSON',
+                url: GLOBAL_VARS.api_url + 'lesson/getGuiaJSON',
                 type: 'POST',
                 data: {
                     _token: $('meta[name="csrf-token"]').attr('content')
@@ -329,7 +330,7 @@ $(function ($) {
         $(".container-guia").css("display", "flex")
 
         $.ajax({
-            url: '/ibero-lab/public/lesson/getGuiaJSON',
+            url: GLOBAL_VARS.api_url + 'lesson/getGuiaJSON',
             type: 'POST',
             data: {
                 _token: $('meta[name="csrf-token"]').attr('content')

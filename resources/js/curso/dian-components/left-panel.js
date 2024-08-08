@@ -1,6 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 import 'jquery-ui/ui/widgets/tabs';
 import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 
 $(function ($) {
 
