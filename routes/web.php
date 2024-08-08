@@ -69,6 +69,9 @@ Route::middleware(['auth'])->group(function () {
     // Verificar la respuesta de un cuestionario
     Route::post('/lessons/{lesson}/verifyResponse', [LessonController::class, 'verifyResponse'])->name('lessons.verifyResponse');
 
+    // Obtener JSON de guia
+    Route::post('/lesson/getGuiaJSON', [LessonController::class, 'getGuiaJSON'])->name('lessons.guiajson');
+
     // Dashboard inicial
     Route::get('/dashboard', [UserController::class, 'loginDashboard'])->name('login-dashboard');
 

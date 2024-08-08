@@ -20,13 +20,48 @@ class LessonController extends Controller
         // Marcar la lección como vista
         $user->lessons()->syncWithoutDetaching([$lesson->id]);
 
-        if ($lesson->type == "questionnaire"){
-            $lesson->load('question');       
+        if ($lesson->type == "questionnaire") {
+            $lesson->load('question');
+        }
+
+        if ($lesson->type == "dian") {
+            // Ruta al archivo JSON
+            $jsonPath = database_path('data/guia.json');
+
+            // Leer el contenido del archivo JSON
+            if (File::exists($jsonPath)) {
+                $json = File::get($jsonPath);
+                $guia_DIAN = json_decode($json, true);
+            }
+
+            return view('curso.view-curso')->with([
+                'curso' => $curso,
+                'lesson' => $lesson,
+                'guia' => $guia_DIAN
+            ]);
         }
 
         return view('curso.view-curso')->with([
             'curso' => $curso,
             'lesson' => $lesson
+        ]);
+    }
+
+    /**
+     * 
+     */
+    public function getGuiaJSON(Request $request){
+        // Ruta al archivo JSON
+        $jsonPath = database_path('data/guia.json');
+
+        // Leer el contenido del archivo JSON
+        if (File::exists($jsonPath)) {
+            $json = File::get($jsonPath);
+            $guia = json_decode($json, true);
+        }
+
+        return response()->json([
+            'data' => $guia
         ]);
     }
 
@@ -44,12 +79,22 @@ class LessonController extends Controller
             $campos_DIAN = json_decode($json, true);
         }
 
-        $lesson->load('workshop.laws','workshop.statements.entry');
+        // Ruta al archivo JSON
+        $jsonPath = database_path('data/guia.json');
+
+        // Leer el contenido del archivo JSON
+        if (File::exists($jsonPath)) {
+            $json = File::get($jsonPath);
+            $guia_DIAN = json_decode($json, true);
+        }
+
+        $lesson->load('workshop.laws', 'workshop.statements.entry');
 
         return view('curso.dian-components.formulario-110-dian')->with([
             'campos'    => $campos_DIAN,
             'curso'     => $curso,
-            'lesson'    => $lesson
+            'lesson'    => $lesson,
+            'guia' => $guia_DIAN
         ]);
     }
 
@@ -71,7 +116,7 @@ class LessonController extends Controller
 
         // Cargar la relación question de la lección
         $lesson->load('question');
-        
+
         // Validar la opción seleccionada
         $request->validate([
             'option' => 'required|integer|between:1,4',

@@ -1,6 +1,9 @@
 <main class="content-section">
+    <script>
+        sessionStorage.setItem('guiaCamp', "0");
+    </script>
     <div class="content-box">
-        <div class="content-item item-year">
+        <div class="item-step-1 content-item item-year">
             <div class="content-icon"><i class="fas fa-calendar" style="color: gold;"></i></div>
             <p>Año</p>
             <p><strong class="value-set">Sin asignar</strong></p>
@@ -18,7 +21,7 @@
                 ?>
             </div>
         </div>
-        <div class="content-item item-periodicidad">
+        <div class="item-step-2 content-item item-periodicidad">
             <div class="content-icon"><i class="fas fa-sync-alt"></i></div>
             <p>Periodicidad</p>
             <p><strong class="value-set">Sin asignar</strong></p>
@@ -26,7 +29,7 @@
                 <div data-valium="Anual" class='option-item option-periodi'>Anual</div>
             </div>
         </div>
-        <div class="content-item item-periodo">
+        <div class="item-step-3 content-item item-periodo">
             <div class="content-icon"><i class="fas fa-calendar"></i></div>
             <p>Periodo</p>
             <p><strong class="value-set">Sin asignar</strong></p>
@@ -39,7 +42,7 @@
             <p>Primer</p>
             <p>Pago</p>
         </div>
-        <div class="content-item">
+        <div class="item-step-4 content-item">
             <a id="crear-formulario-btn"
                 data-urlwork="{{ route('formulario-curso-DIAN', ['curso' => $curso->id, 'lesson' => $lesson->id]) }}"
                 href="" class="content-icon"><i class="fas fa-arrow-right"></i></a>

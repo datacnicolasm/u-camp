@@ -1,0 +1,109 @@
+[
+    {
+        "name_visita": "DIAN_110",
+        "text_portada": "<p>Bienvenido a nuestro espacio interactivo para impuestos nacionales en Colombia. Aquí podrás practicar la declaración de impuestos tal como lo harías en la plataforma oficial.</p><p>Te daremos una guía rápida por los elementos clave para que aproveches al máximo esta práctica.</p><p class='text-large'><strong>¿Listo?</strong></p>",
+        "text_btn": "¡Vamos!",
+        "steps_guia": [
+            {
+                "selector": ".item-step-1",
+                "border": "solid 2px #d31a71",
+                "border_radius": "8px",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-1",
+                "text_callout": "<strong>1.</strong> Selecciona el año sobre el que vas a declarar.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-2",
+                "border": "solid 2px #d31a71",
+                "border_radius": "8px",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-2",
+                "text_callout": "<strong>2.</strong> Dado que algunos impuestos se presentan en diferentes periodicidades, selecciona la que corresponda.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-3",
+                "border": "solid 2px #d31a71",
+                "border_radius": "8px",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-3",
+                "text_callout": "<strong>3.</strong> Selecciona el período del año correspondiente a la periodicidad del impuesto.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-4",
+                "border": "solid 2px #d31a71",
+                "border_radius": "8px",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-4",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": true,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-5",
+                "border": "solid 2px #d31a71",
+                "border_radius": "8px",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-5",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-6",
+                "border": "solid 2px #d31a71",
+                "border_radius": "",
+                "background_color": "",
+                "selector_callout": "callout-step-6",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-7",
+                "border": "solid 2px #d31a71",
+                "border_radius": "",
+                "background_color": "",
+                "selector_callout": "callout-step-7",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": "#left-panel-btn"
+            },
+            {
+                "selector": ".item-step-8",
+                "border": "solid 2px #d31a71",
+                "border_radius": "",
+                "background_color": "",
+                "selector_callout": "callout-step-8",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": false
+            },
+            {
+                "selector": ".item-step-9",
+                "border": "solid 2px #d31a71",
+                "border_radius": "",
+                "background_color": "#fff",
+                "selector_callout": "callout-step-9",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": "#right-panel-btn"
+            },
+            {
+                "selector": ".item-step-10",
+                "border": "solid 2px #d31a71",
+                "border_radius": "",
+                "background_color": "",
+                "selector_callout": "callout-step-10",
+                "text_callout": "<strong>4.</strong> Ahora puedes crear el formulario para iniciar la declaración del impuesto.",
+                "last_page": false,
+                "trigger": false
+            }
+        ]
+    }
+]

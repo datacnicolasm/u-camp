@@ -1,4 +1,4 @@
-<div class="content-panel panel-tabs">
+<div class="item-step-7 content-panel panel-tabs">
     <ul>
         <li><a href="#tabs-1">Estado de Situacion Financiera</a></li>
         <li><a href="#tabs-2">Estado de Resultados Integral</a></li>

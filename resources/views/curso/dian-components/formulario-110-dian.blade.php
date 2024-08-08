@@ -12,6 +12,14 @@
             <!-- Content Wrapper. Contains page content -->
             <div class="content-formularios">
 
+                @php
+                    foreach ($guia as $key => $value) {
+                        if ($value['name_visita'] == 'DIAN_110') {
+                            $obj_guia = $value;
+                        }
+                    }
+                @endphp
+
                 <!-- Header de formularios DIAN -->
                 @include('curso.dian-components.header-dian')
 
@@ -26,18 +34,18 @@
                 </div>
 
                 <!-- Botones para mostrar paneles -->
-                <button id="left-panel-btn" class="panel-btn left-btn">
+                <button id="left-panel-btn" class="item-step-6 panel-btn left-btn">
                     <i class="fas fa-arrow-right"></i>
                     <span class="panel-btn-text">Ver estados financieros</span>
                 </button>
-                <button id="right-panel-btn" class="panel-btn right-btn">
+                <button id="right-panel-btn" class="item-step-8 panel-btn right-btn">
                     <i class="fas fa-arrow-left"></i>
                     <span class="panel-btn-text">Ver instrucciones</span>
                 </button>
 
                 <!-- Contenido de campos del formulario -->
                 <div id="workshop" data-cod-workshop="{{ $lesson->workshop->id }}" class="content-formulario">
-                    <div class="accordion">
+                    <div class="item-step-5 accordion">
                         <!-- Datos Declarante -->
                         <h3 class="accordion-header">Datos Declarante<i class="fas fa-chevron-down arrow-icon"></i></h3>
                         <div class="accordion-content">
@@ -204,7 +212,7 @@
                                 <span class="help-msg">Enviar ejercicio</span>
                             </div>
                         </div>
-                        <div id="btn-show" class="mt-2 btn-form-dian">
+                        <div id="btn-show" class="item-step-10 mt-2 btn-form-dian">
                             <i class="fas fa-plus"></i>
                         </div>
                     </div>
@@ -212,6 +220,9 @@
 
                 <!-- Contenido de campos del formulario -->
                 @include('curso.dian-components.resultados-dian')
+
+                <!-- -->
+                @include('curso.guia-curso')
 
             </div>
 

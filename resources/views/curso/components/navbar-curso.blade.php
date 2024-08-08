@@ -8,6 +8,12 @@
             <div class="col-2 container-course-tools">
                 <div class="row">
                     <div class="btn-tool-left">
+                        <i id="ayuda-curso" class="fas fa-question-circle"></i>
+                        <div class="help-msg">
+                            <span>Ayuda</span>
+                        </div>
+                    </div>
+                    <div class="btn-tool-left">
                         <i class="nav-icon fas fa-comment"></i>
                         <div class="help-msg">
                             <span>Reportar mejora</span>

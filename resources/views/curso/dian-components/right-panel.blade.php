@@ -1,4 +1,4 @@
-<div class="content-panel">
+<div class="item-step-9 content-panel">
     <div class="instruc-section">
         <div class="instruc-header">
             <i class="fas fa-info-circle"></i>
