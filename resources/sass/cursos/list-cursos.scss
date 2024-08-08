@@ -1,14 +1,14 @@
 .header-cursos {
   border-radius: 5px;
   color: #fff;
-  background: $tint-4;
+  background-image: linear-gradient(to bottom right, $tint-4, $tint-6);
 }
 
 .card-curso {
+  background-color: #fff;
+  border: solid .1px #ccc;
   border-radius: 4px;
-  border: 0;
-  box-shadow: 0 4px 6px 0 hsla(0,0%,0%,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
   &:hover {
     transform: scale(1.01);

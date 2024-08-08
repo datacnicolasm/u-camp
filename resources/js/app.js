@@ -14,6 +14,7 @@ import './curso/detalle-curso.js';
 import './curso/video.js';
 import './curso/cuestionario.js';
 import './curso/guia-curso.js';
+import './curso/contenido-curso.js';
 import './curso/dian-components/new-dian.js';
 import './curso/dian-components/formulario-dian.js';
 import './curso/dian-components/create-form-dian.js';

@@ -7,7 +7,16 @@ $(function ($) {
         const listItems = $(element.parentElement).find('.lessons-list-items')
 
         $(element).on("click", { items: listItems }, function (event) {
-            $(event.data.items).toggle();
+            
+            if ($(event.data.items).hasClass('active')) {
+                $(element).text('Ver contenido')
+                $(event.data.items).removeClass('active')
+                $(event.data.items).toggle()
+            }else{
+                $(element).text('Ocultar contenido')
+                $(event.data.items).addClass('active')
+                $(event.data.items).toggle()
+            }
         })
     })
 

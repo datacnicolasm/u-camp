@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Point;
 use App\Models\UserWorkshop;
 use App\Models\UserWorkshopEntry;
 use App\Models\Workshop;
@@ -30,6 +31,8 @@ class WorkshopController extends Controller
         $userWorkshop->user_id = $user->id;
         $userWorkshop->workshop_id = $workshop->id;
         $userWorkshop->save();
+
+        $userWorkshop->load('workshop.lesson');
 
         // Acceder a la entrada 'entries_workshop' como un array
         $entries_workshop = $request->input('entries_workshop', []);
@@ -77,6 +80,16 @@ class WorkshopController extends Controller
                 'val_input' => intval($entry['val']),
                 'verify' => $verify_input
             ];
+        }
+
+        $aprobado = ( $int_aciertos / ($int_errores + $int_aciertos)) > 0.7 ? true : false;
+
+        if ( $aprobado ) {
+            // Registrar la lección vista
+            $user->lessons()->syncWithoutDetaching([$userWorkshop->workshop->lesson->id]);
+
+            // Cuando un usuario completa una lección, se debe registrar en el modelo Point.
+            Point::completeLesson($user, $userWorkshop->workshop->lesson, 'dian');
         }
 
         // Modificar el userworkshop

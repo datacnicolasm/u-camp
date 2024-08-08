@@ -1,5 +1,5 @@
-.curso-page{
-    .content-wrapper{
+.curso-page {
+    .content-wrapper {
         background-color: #f7f7fc;
     }
 }
@@ -7,7 +7,7 @@
 .header-detalle-cursos {
     border-radius: 5px;
     color: #fff;
-    background: $tint-4;
+    background-image: linear-gradient(to bottom right, $tint-4, $tint-6);
 
     .btn-curso a {
         color: #fff;
@@ -27,9 +27,9 @@
 .chapters-curso {
     .chapter-item {
         background-color: #fff;
-        border: solid .3px #ccc;
-        border-radius: 5px;
-        box-shadow: 1px 1px 2px rgba(15, 15, 15, 0.2);
+        border: solid .1px #ccc;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 
         .chapter-header {
             display: flex;
@@ -79,7 +79,7 @@
                             justify-content: flex-end;
                             align-items: center;
 
-                            &.is-view-lesson{
+                            &.is-view-lesson {
                                 justify-content: space-between;
                             }
 

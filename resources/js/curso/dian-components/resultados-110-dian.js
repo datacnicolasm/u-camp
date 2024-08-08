@@ -67,6 +67,8 @@ function generateFormulario(matriz) {
         const element = matriz[index];
         const id_element = "#input-" + element.cod_input;
 
+        $(id_element).removeClass(["is-true", "is-false"])
+
         switch (element.verify) {
             case "acierto":
                 $(id_element).addClass("is-true")    
@@ -88,6 +90,8 @@ function generateFormulario(matriz) {
         const val_input = formatCurrency(element.val_input)
 
         $(id_element).html('<span class="mr-2">' + val_input + '</span>')
+
+        $(id_element).removeClass(["is-true", "is-false"])
 
         switch (element.verify) {
             case "acierto":
@@ -220,9 +224,11 @@ function showChart(matriz) {
     const total_items = count_acierto + count_errores
     const cumplimiento = Math.round((count_acierto / total_items) * 100)
 
-    if (cumplimiento > 80) {
+    if (cumplimiento > 70) {
+        $(".no-aprobado").hide()
         $(".si-aprobado").show()
     } else {
+        $(".si-aprobado").hide()
         $(".no-aprobado").show()
     }
 

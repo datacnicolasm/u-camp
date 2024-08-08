@@ -18,6 +18,12 @@ class Lesson extends Model
         'chapter_id'
     ];
 
+    // Relación con el modelo Point (opcional si se necesita)
+    public function points()
+    {
+        return $this->hasMany(Point::class);
+    }
+
     /**
      * Get the chapter that owns the lesson.
      */

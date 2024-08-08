@@ -10,9 +10,4 @@ $(function ($) {
 
     progress_bar.css('width', progress_value + '%');
     progress_text.text(progress_value + '%');
-    
-
-    // Animacion de NavBar
-    const navbar = $('.view-curso-navbar');
-    gsap.from(navbar, { duration: 1.0, scale: 0, opacity: 0, ease: 'power2.out' });
 })

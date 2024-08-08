@@ -47,9 +47,7 @@
                         <!-- Detalle Curso -->
                         <div class="col-12 mt-3">
                             <div class="row panel-detalles-curso">
-                                <div class="col-3 panel-left">
-                                </div>
-                                <div class="col-9 panel-right p-3">
+                                <div class="col-12 panel-right p-3">
                                     <p class="m-0 font-weight-bold text-large">Descripcion</p>
                                     <p class="m-0">{{ $curso->long_description }}</p>
                                     <p class="mt-3 font-weight-bold text-large">Contenido del curso</p>

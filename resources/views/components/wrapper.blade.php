@@ -2,6 +2,13 @@
 
     @php
         $formattedName = ucwords(strtolower(Auth::user()->first_name));
+
+        $today_points = \App\Models\Point::getPointsToday(Auth::user());
+        $daily_points = \App\Models\Point::getDailyPoints(Auth::user());
+        $total_points = \App\Models\Point::getTotalPoints(Auth::user());
+        $consecutive_days = \App\Models\Point::getConsecutiveDays(Auth::user());
+        $pointsOfWeek = \App\Models\Point::getPointsOfWeek(Auth::user());
+
     @endphp
 
     <!-- Notificaciones -->
@@ -23,47 +30,131 @@
         </div>
     </div>
 
-
-
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Dashboard</h1>
-                </div>
-                <div class="col-sm-6">
-                    <div class="float-sm-right">
-                        <button class="btn btn-ucamp btn-add-group" data-toggle="modal" data-target="#crear-modal"
-                            type="button">
-                            <i class="fas fa-plus"></i> Crear grupo
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Main content -->
-    <section class="content">
+    <section class="mt-3 content">
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-12">
-                    <div class="card">
-
-                        <!-- Card header -->
-                        <div class="card-header py-3">
-                            <h3 class="card-title">Este es el listado de tus grupos</h3>
-                        </div>
-
+                <div class="col-4">
+                    <div class="card card-user-dashboard">
                         <!-- Card body -->
-                        <div class="card-body p-0">
+                        <div class="card-body">
+                            <div class="user-sect">
+                                <div class="user-icon">
+                                    <img class="img-fluid" src="{{ asset('img/user-default-1.jpg') }}" alt="">
+                                </div>
+                                <div class="user-info">
+                                    <span class="m-0">Hola, {{ $formattedName }}!</span>
+                                </div>
+                            </div>
+                            <div class="user-points">
+                                <div class="points">
+                                    <span class="num-points m-0">{{ $total_points }}</span>
+                                    <span class="title m-0">Total XP</span>
+                                </div>
+                                <div class="points">
+                                    <span class="num-points m-0">{{ $today_points }}</span>
+                                    <span class="title m-0">Today XP</span>
+                                </div>
+                            </div>
+                            <div class="user-streak">
+                                <span class="number-racha m-0">
+                                    <div class="icon-dias">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    @php
+                                        echo '<p class="m-0">';
+                                        echo $consecutive_days;
 
+                                        $text_dias = $consecutive_days > 1 ? 'días' : 'día';
+                                        echo ' ' . $text_dias;
+                                        echo '</p>';
+                                    @endphp
+                                </span>
+                                <span class="title m-0">Tus días de racha</span>
+                            </div>
+                            <div class="user-week">
+                                <div class="week-days">
+                                    @php
+                                        $days_week = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+                                        foreach ($pointsOfWeek as $key => $day) {
+                                            $class_active = $day['points'] > 0 ? 'active' : '';
+                                            echo '<div class="item-week ' . $class_active . '">';
+                                            echo '<span>' . $days_week[$key] . '</span>';
+                                            echo '</div>';
+                                        }
+                                    @endphp
+                                </div>
+                                <span class="title m-0">Tu semana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 pt-2">
+                    <div class="row">
+                        <div class="col-6 font-weight-bold">
+                            Tu aprendizaje
+                        </div>
+                        <div class="col-6">
+                            <div class="float-sm-right">
+                                <dis class="suscrib-text">
+                                    <span class="text-basis mr-2">
+                                        Suscripción básica
+                                    </span>
+                                    •
+                                    <a href="{{ route('precios-home') }}"
+                                        class="text-upgrate ml-2 text-3-ucamp font-weight-bold">
+                                        Obtener Premium
+                                        <span class="icon-up">
+                                            <i class="fas fa-arrow-up"></i>
+                                        </span>
+                                    </a>
+                                </dis>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3 item-cursos-dash">
+                            <span class="text-muted">
+                                <span class="font-weight-bold">Tus cursos</span>
+                                @php
+                                    $coursesWithProgress = App\Models\User::getCoursesWithProgress(Auth::user());
+                                @endphp
+                                <ul class="list-cursos">
+                                    @foreach ($coursesWithProgress as $curso)
+                                        <li class="card item-curso-dash">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div
+                                                            class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
+                                                            {{ \App\Models\Curso::$dificultadTexto[$curso["course"]->dificultad] }}
+                                                        </div>
+                                                        <div class="title-curso">
+                                                            {{ $curso["course"]->titulo }}
+                                                        </div>
+                                                        <div class="container-course-progress">
+                                                            <div class="progress-text mr-2"></div>
+                                                            <div class="progress-container" data-progress="{{ $curso["progress"] }}">
+                                                                <div class="progress-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 content-btn-continuar">
+                                                        <a href="{{ route('view-curso', ['curso' => $curso["course"]->id]) }}" class="btn btn-3-ucamp">
+                                                            Continuar
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </div>

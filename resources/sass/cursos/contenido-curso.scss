@@ -1,0 +1,23 @@
+nav.view-curso-footer-nav{
+    .contenido-curso-main{
+        display: none;
+        position: absolute;
+        width: 80%;
+
+        .modal-content{
+            padding-bottom: 1rem;
+        }
+
+        .modal-header{
+            .title-modal{
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: $tint-3;
+            }
+        }
+
+        .modal-body{
+            overflow-y: scroll;
+        }
+    }
+}

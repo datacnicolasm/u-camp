@@ -9615,14 +9615,14 @@ nav.navbar .active-item-bar a {
 .header-cursos {
   border-radius: 5px;
   color: #fff;
-  background: #213147;
+  background-image: linear-gradient(to bottom right, #213147, #003b77);
 }
 
 .card-curso {
+  background-color: #fff;
+  border: solid 0.1px #ccc;
   border-radius: 4px;
-  border: 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-curso:hover {
   transform: scale(1.01);
@@ -9719,6 +9719,23 @@ nav.view-curso-navbar .container .view-curso-breadcrumb li.active {
   color: #6c757d;
 }
 
+nav.view-curso-footer-nav .contenido-curso-main {
+  display: none;
+  position: absolute;
+  width: 80%;
+}
+nav.view-curso-footer-nav .contenido-curso-main .modal-content {
+  padding-bottom: 1rem;
+}
+nav.view-curso-footer-nav .contenido-curso-main .modal-header .title-modal {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #05bd9b;
+}
+nav.view-curso-footer-nav .contenido-curso-main .modal-body {
+  overflow-y: scroll;
+}
+
 nav.view-curso-footer-nav {
   background-color: #fff;
   color: #1f2d3d;
@@ -9731,7 +9748,7 @@ nav.view-curso-footer-nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 100%;
 }
 nav.view-curso-footer-nav div.footer-nav-contenido {
@@ -9774,33 +9791,6 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn:hover 
 nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   font-size: 16px;
 }
-nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main {
-  display: none;
-  position: absolute;
-  bottom: calc(100% + 10px);
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 3px;
-  overflow-y: scroll;
-  box-shadow: 2px 2px 1px rgba(117, 117, 117, 0.2);
-  width: 60%;
-  height: 80vh;
-}
-nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header-contenido {
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header-contenido h4 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header-contenido i {
-  font-size: 1.7rem;
-  cursor: pointer;
-}
 
 .content-type-lesson {
   position: relative;
@@ -9814,7 +9804,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: rgba(117, 117, 117, 0.5);
+  background-color: rgba(175, 175, 175, 0.9);
 }
 
 .content-formularios .container-guia {
@@ -9922,7 +9912,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 .header-detalle-cursos {
   border-radius: 5px;
   color: #fff;
-  background: #213147;
+  background-image: linear-gradient(to bottom right, #213147, #003b77);
 }
 .header-detalle-cursos .btn-curso a {
   color: #fff;
@@ -9938,9 +9928,9 @@ nav.view-curso-footer-nav div.footer-nav-contenido .contenido-curso-main .header
 
 .chapters-curso .chapter-item {
   background-color: #fff;
-  border: solid 0.3px #ccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(15, 15, 15, 0.2);
+  border: solid 0.1px #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 .chapters-curso .chapter-item .chapter-header {
   display: flex;
@@ -12256,6 +12246,186 @@ body.page-home-camp .home-signup p.text-small {
 .list-members .card-body .loading-overlay .spinner {
   font-size: 2rem;
   color: #333;
+}
+
+.dashboard-container .card-user-dashboard .user-sect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 0.1px #eaeaea;
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+.dashboard-container .card-user-dashboard .user-sect .user-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 0.5px #b5b5b5;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.dashboard-container .card-user-dashboard .user-sect .user-info {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #021221;
+}
+.dashboard-container .card-user-dashboard .user-points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 0.1px #eaeaea;
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+.dashboard-container .card-user-dashboard .user-points .points {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dashboard-container .card-user-dashboard .user-points .points:first-child {
+  border-right: solid 0.1px #eaeaea;
+}
+.dashboard-container .card-user-dashboard .user-points .points .num-points {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #05bd9b;
+}
+.dashboard-container .card-user-dashboard .user-points .points .title {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #535353;
+}
+.dashboard-container .card-user-dashboard .user-streak {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 0.1px #eaeaea;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  flex-direction: column;
+}
+.dashboard-container .card-user-dashboard .user-streak .number-racha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-container .card-user-dashboard .user-streak .number-racha p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #05bd9b;
+}
+.dashboard-container .card-user-dashboard .user-streak .number-racha .icon-dias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  border: solid 2px #d2d2d2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.dashboard-container .card-user-dashboard .user-streak .number-racha .icon-dias i {
+  font-size: 1.5rem;
+  color: #ffe300;
+}
+.dashboard-container .card-user-dashboard .user-streak .title {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #535353;
+}
+.dashboard-container .card-user-dashboard .user-week {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  flex-direction: column;
+}
+.dashboard-container .card-user-dashboard .user-week .week-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.dashboard-container .card-user-dashboard .user-week .week-days .item-week {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  border: solid 2px #92fce8;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin: 10px 0;
+}
+.dashboard-container .card-user-dashboard .user-week .week-days .item-week.active {
+  background-color: #05bd9b;
+}
+.dashboard-container .card-user-dashboard .user-week .week-days .item-week.active span {
+  color: #fff;
+}
+.dashboard-container .card-user-dashboard .user-week .week-days .item-week span {
+  font-size: 0.9rem;
+  color: #535353;
+}
+.dashboard-container .card-user-dashboard .user-week .title {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #535353;
+}
+.dashboard-container .suscrib-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-container .suscrib-text .text-upgrate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-container .suscrib-text .text-upgrate .icon-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05bd9b;
+  border: solid 2px #f5fffd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.dashboard-container .suscrib-text .text-upgrate .icon-up i {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.dashboard-container .item-cursos-dash .list-cursos {
+  margin: 1rem 0;
+  padding: 0;
+}
+.dashboard-container .item-cursos-dash .list-cursos .item-curso-dash {
+  list-style: none;
+}
+.dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .title-curso {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+.dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .content-btn-continuar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .container-course-progress {
+  width: 250px;
 }
 
 .logo {

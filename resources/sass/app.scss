@@ -9,6 +9,7 @@
 @import './components/navbar.scss';
 @import './cursos/list-cursos.scss';
 @import './cursos/navbar-cursos.scss';
+@import './cursos/contenido-curso.scss';
 @import './cursos/footer-cursos.scss';
 @import './cursos/view-curso.scss';
 @import './cursos/guia-curso.scss';
@@ -38,6 +39,7 @@
 @import './grupos/sidebar-grupos.scss';
 @import './grupos/list-groups.scss';
 @import './grupos/list-members.scss';
+@import './dashboard/dashboard-home.scss';
 
 .logo {
     margin-bottom: 15px;

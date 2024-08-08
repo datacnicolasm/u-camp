@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use App\Models\Lesson;
+use App\Models\Point;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -17,13 +18,24 @@ class LessonController extends Controller
     {
         $user = $request->user();
 
-        // Marcar la lección como vista
-        $user->lessons()->syncWithoutDetaching([$lesson->id]);
+        // Cargar las relaciones chapters y lessons
+        $curso->load('chapters.lessons');
 
+        // Condicional para cargar video
+        if ($lesson->type == "video") {
+            // Registrar la lección vista
+            $user->lessons()->syncWithoutDetaching([$lesson->id]);
+
+            // Cuando un usuario completa una lección, se debe registrar en el modelo Point.
+            Point::completeLesson($user, $lesson, 'lesson_video');
+        }
+
+        // Carrgar la relacion de questions
         if ($lesson->type == "questionnaire") {
             $lesson->load('question');
         }
 
+        // Condicional para cargar leccion DIAN
         if ($lesson->type == "dian") {
             // Ruta al archivo JSON
             $jsonPath = database_path('data/guia.json');
@@ -50,7 +62,8 @@ class LessonController extends Controller
     /**
      * 
      */
-    public function getGuiaJSON(Request $request){
+    public function getGuiaJSON(Request $request)
+    {
         // Ruta al archivo JSON
         $jsonPath = database_path('data/guia.json');
 
@@ -105,8 +118,11 @@ class LessonController extends Controller
         // Registrar la lección vista
         $user->lessons()->syncWithoutDetaching([$lesson->id]);
 
+        // Cuando un usuario completa una lección, se debe registrar en el modelo Point.
+        Point::completeLesson($user, $lesson, $request->input('activity_type'));
+
         return response()->json([
-            'message' => 'Lección marcada como vista.',
+            'data' => true,
         ]);
     }
 
@@ -126,6 +142,12 @@ class LessonController extends Controller
 
         // Comparar la opción seleccionada con la opción correcta
         if ($selectedOption == $lesson->question->correct_option) {
+            // Registrar la lección vista
+            $user->lessons()->syncWithoutDetaching([$lesson->id]);
+
+            // Cuando un usuario completa una lección, se debe registrar en el modelo Point.
+            Point::completeLesson($user, $lesson, 'questionnaire');
+
             return response()->json([
                 'data' => [
                     'success' => true,
