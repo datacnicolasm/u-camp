@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('workshops', function (Blueprint $table) {
             $table->id();
             $table->text('context_workshop');
+            $table->text('indicaciones_workshop');
             $table->string('cod_form');
             $table->string('text_form');
             $table->string('year_form');

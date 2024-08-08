@@ -12,6 +12,7 @@ class Workshop extends Model
 
     protected $fillable = [
         'context_workshop',
+        'indicaciones_workshop',
         'cod_form',
         'text_form',
         'year_form',

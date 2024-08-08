@@ -27,6 +27,7 @@ class WorkshopsTableSeeder extends Seeder
             foreach ($workshops as $item) {
                 Workshop::create([
                     'context_workshop' => $item['context_workshop'],
+                    'indicaciones_workshop' => $item['indicaciones_workshop'],
                     'cod_form' => $item['cod_form'],
                     'text_form' => $item['text_form'],
                     'year_form' => $item['year_form'],

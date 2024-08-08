@@ -11,7 +11,7 @@
             </div>
             <h3>Indicaciones de la actividad</h3>
             <div class="text-instruc">
-                <?php echo $lesson->workshop->context_workshop ?>
+                <?php echo $lesson->workshop->indicaciones_workshop ?>
             </div>
             <h3>Normativa relacionada</h3>
             <div class="text-instruc laws-content">
