@@ -14,6 +14,7 @@
                     </div>
 
                     <div class="card-body card-body-resultados">
+
                         <div class="tab-content">
 
                             <!-- Calificacion de ejercicio -->
@@ -1225,9 +1226,9 @@
 
                             <!-- NO Aprobado --> 
                             <div class="info-resultado no-aprobado">
-                                <i class="fas fa-check-circle"></i>
-                                <h3 class="font-weight-bold">¡Felicitaciones!</h3>
-                                <p class="my-4">Has aprobado el ejercicio</p>
+                                <i class="fas fa-times-circle"></i>
+                                <h3 class="font-weight-bold">¡Incorrecto!</h3>
+                                <p class="my-4">Has tenido demasiados errores, revisa tus resultados y vuelve a intentarlo.</p>
                                 <button class="btn-result-aviso btn-3-ucamp btn">Ver resultados</button>
                             </div>
 
@@ -1235,7 +1236,7 @@
                             <div class="info-resultado si-aprobado">
                                 <i class="fas fa-check-circle"></i>
                                 <h3 class="font-weight-bold">¡Felicitaciones!</h3>
-                                <p class="my-4">Has aprobado el ejercicio</p>
+                                <p class="my-4">Has aprobado el ejercicio.</p>
                                 <button class="btn-result-aviso btn-3-ucamp btn">Ver resultados</button>
                             </div>
 

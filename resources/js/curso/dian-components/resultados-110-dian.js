@@ -112,19 +112,22 @@ function btnResultados() {
     })
 }
 
+// Variable global para almacenar la instancia del gráfico
+var chartInstance = null;
+
 function showChart(matriz) {
+    // Limpiar la tabla de resultados
+    $("#body-resultados").empty();
 
     // Obtener el resultado agrupado
     const groupedData = groupBySection(matriz);
-
-    console.log(groupedData)
 
     var index_table = 1
 
     // Iterar sobre el resultado y generar la tabla
     $.each(groupedData, function (section, counts) {
         const total_items = counts.trueCount + counts.falseCount
-        const cumplimiento = total_items>0 ? Math.round((counts.trueCount / total_items) * 100) : 100;
+        const cumplimiento = total_items > 0 ? Math.round((counts.trueCount / total_items) * 100) : 100;
         const row = `<tr>            
             <td>${index_table}.</td>
             <td>${section}</td>
@@ -154,7 +157,7 @@ function showChart(matriz) {
             case "error":
                 count_errores += 1;
                 break;
-        
+
             default:
                 break;
         }
@@ -164,6 +167,11 @@ function showChart(matriz) {
     $(".table-general .errores p").html(count_errores);
 
     const ctx = document.getElementById('progress-circle').getContext('2d');
+
+    // Verificar si ya existe una instancia del gráfico y destruirla
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
 
     // Crear degradados
     const gradientGreen = ctx.createLinearGradient(0, 0, 0, 400);
@@ -202,7 +210,8 @@ function showChart(matriz) {
         },
     };
 
-    new Chart(ctx, config);
+    // Crear una nueva instancia del gráfico
+    chartInstance = new Chart(ctx, config);
 
     slideAnimation($(".card-resultados.card-left"))
     slideAnimation($(".card-resultados.card-right"))
@@ -226,73 +235,72 @@ function showChart(matriz) {
     generateFormulario(matriz)
 
     btnResultados()
+
+    $(".content-result-aviso").css("display", "flex")
 }
 
 $(function ($) {
 
     // Enviar y calificar formulario
     $("#btn-send").on("click", function () {
+        const codWorkshop = $("#workshop").data("cod-workshop")
+        var matrix_inputs = []
 
-        if ( !$("#btn-resultados").hasClass("show-resultados") ) {
-            const codWorkshop = $("#workshop").data("cod-workshop")
-            var matrix_inputs = []
+        $("input.input-dian").each(function (index, element) {
+            var val_input = $(element).val() ? parseFloat($(element).val().replace(/\./g, '').replace(',', '.')) : 0
+            var name_input = $(element).data("cod-field")
+            var name_section = $(element).data("section")
 
-            $("input.input-dian").each(function (index, element) {
-                var val_input = $(element).val() ? parseFloat($(element).val().replace(/\./g, '').replace(',', '.')) : 0
-                var name_input = $(element).data("cod-field")
-                var name_section = $(element).data("section")
-
-                matrix_inputs.push({
-                    name: name_input,
-                    val: val_input,
-                    name_section: name_section
-                })
+            matrix_inputs.push({
+                name: name_input,
+                val: val_input,
+                name_section: name_section
             })
+        })
 
-            const data_send = {
-                id_workshop: codWorkshop,
-                entries_workshop: matrix_inputs
-            }
-
-            $.ajax({
-                url: '/ibero-lab/public/workshop/' + data_send.id_workshop + '/calificarWorkshop',
-                type: 'POST',
-                data: {
-                    id_workshop: data_send.id_workshop,
-                    entries_workshop: data_send.entries_workshop,
-                    _token: $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function (response) {
-                    $("#btn-resultados").addClass("show-resultados")
-                    $("#btn-resultados").css("opacity", 1)
-
-                    const cont_resultados = $(".container-resultados-DIAN")
-                    cont_resultados.css("display", "flex")
-                    const item_resultados = $(".card-resultados")
-
-                    gsap.fromTo(
-                        item_resultados,
-                        {
-                            opacity: 0,
-                            y: 200
-                        },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: .5,
-                            ease: "power1.out",
-                            onComplete: function () {
-                                cont_resultados.find(".content-btn").show()
-                                showChart(response.data.matriz)
-                            }
-                        }
-                    );
-                },
-                error: function (xhr) {
-                    console.log(xhr)
-                }
-            });
+        const data_send = {
+            id_workshop: codWorkshop,
+            entries_workshop: matrix_inputs
         }
+
+        $.ajax({
+            url: '/ibero-lab/public/workshop/' + data_send.id_workshop + '/calificarWorkshop',
+            type: 'POST',
+            data: {
+                id_workshop: data_send.id_workshop,
+                entries_workshop: data_send.entries_workshop,
+                _token: $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (response) {
+                $("#btn-resultados").addClass("show-resultados")
+                $("#btn-resultados").css("opacity", 1)
+
+                const cont_resultados = $(".container-resultados-DIAN")
+                cont_resultados.css("display", "flex")
+                const item_resultados = $(".card-resultados")
+
+                gsap.fromTo(
+                    item_resultados,
+                    {
+                        opacity: 0,
+                        y: 200
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: .5,
+                        ease: "power1.out",
+                        onComplete: function () {
+                            cont_resultados.find(".content-btn").show()
+                            showChart(response.data.matriz)
+                        }
+                    }
+                );
+            },
+            error: function (xhr) {
+                console.log(xhr)
+            }
+        });
     })
 
     $("#btn-resultados").on("click", function (event) {
