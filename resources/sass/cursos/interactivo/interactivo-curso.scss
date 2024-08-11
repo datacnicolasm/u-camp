@@ -1,0 +1,153 @@
+.interactivo-view-curso {
+    position: relative;
+    height: calc(100vh - 60px);
+    box-sizing: border-box;
+    display: flex;
+    padding: 5px 5px 60px 5px;
+    flex-direction: column;
+    overflow: hidden;
+
+    .btn-left-panel {
+        left: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .panel-btn-text {
+            top: 0px;
+            left: 45px;
+        }
+    }
+
+    .btn-right-panel {
+        right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        .panel-btn-text {
+            top: 0px;
+            right: 45px;
+        }
+    }
+
+    .panel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgb(2, 18, 33);
+        color: rgb(255, 255, 255);
+        border: medium;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+
+        &:hover .panel-btn-text {
+            display: inline-block;
+            animation: 0.5s forwards fadeInText;
+        }
+
+        i {
+            font-size: 20px;
+        }
+
+        .panel-btn-text {
+            position: absolute;
+            padding: 8px 12px;
+            background-color: rgb(5, 189, 155);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            display: none;
+            white-space: nowrap;
+        }
+    }
+
+    .side-panel {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        z-index: 10;
+        display: block;
+        padding: 5px 5px 60px 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .content-panel {
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 5px);
+            box-sizing: border-box;
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+
+            .content-tab-panel {
+                height: 100%;
+                overflow-y: auto;
+                background-color: white;
+                padding: 10px 20px;
+                flex-grow: 1;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    #workshop-account {
+        padding: 5px;
+        height: calc(100% - 5px);
+
+        .container-paneles-c {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .panel-c {
+                flex: 1;
+                overflow: hidden;
+                background-color: #fff;
+                padding: 10px;
+            }
+
+            .left-panel-c {
+                padding-right: 30px;
+            }
+
+            .right-panel-c {
+                padding-left: 30px;
+            }
+
+            .resizer {
+                background: #e6e6e6;
+                width: 2px;
+                cursor: ew-resize;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: calc(50% - 5px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .resizer-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #e6e6e6;
+                border: solid 3px #fff;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+
+                i {
+                    color: #7d7d7d;
+                    font-size: 20px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}

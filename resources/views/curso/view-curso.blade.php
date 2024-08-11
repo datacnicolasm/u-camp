@@ -16,7 +16,7 @@
                 @elseif ( $lesson->type == 'questionnaire' )
                     @include('curso.components.cuestionario-curso')
                 @elseif ( $lesson->type == 'interactive' )
-                    @include('curso.components.interactivo-curso')
+                    @include('curso.interactivo.interactivo-curso')
                 @elseif ( $lesson->type == 'dian' )
                     @include('curso.dian-components.formularios-dian')
                 @endif

@@ -68,5 +68,12 @@
         "order": 10,
         "points_xp": 50,
         "chapter_id": 1
+    },
+    {
+        "title": "Prueba de Interactico",
+        "type": "interactive",
+        "order": 11,
+        "points_xp": 50,
+        "chapter_id": 1
     }
 ]

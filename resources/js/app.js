@@ -28,4 +28,7 @@ import './purchase/purchase.js';
 import './lesson/questionario.js';
 import './groups/groups.js';
 import './groups/members.js';
+
+import './curso/interactivo/interactivo.js';
+import './curso/interactivo/tabla-causaciones.js';
 //import '../adminlte/';

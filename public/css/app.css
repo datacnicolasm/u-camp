@@ -10248,25 +10248,6 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   display: none;
 }
 
-.interactivo-view-curso {
-  width: 100vw;
-  height: calc(100vh - 60px);
-  box-sizing: border-box;
-  padding: 10px 15px 60px 15px;
-  background-color: #dfe8ee;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.interactivo-view-curso .section-left-interactivo {
-  width: 50%;
-  background-color: chartreuse;
-}
-.interactivo-view-curso .section-rights-interactivo {
-  width: 50%;
-  background-color: chocolate;
-}
-
 .content-formularios .main-header-ucamp {
   width: 100%;
   position: relative;
@@ -12426,6 +12407,227 @@ body.page-home-camp .home-signup p.text-small {
 }
 .dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .container-course-progress {
   width: 250px;
+}
+
+.interactivo-view-curso {
+  position: relative;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px 5px 60px 5px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.interactivo-view-curso .btn-left-panel {
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.interactivo-view-curso .btn-left-panel .panel-btn-text {
+  top: 0px;
+  left: 45px;
+}
+.interactivo-view-curso .btn-right-panel {
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.interactivo-view-curso .btn-right-panel .panel-btn-text {
+  top: 0px;
+  right: 45px;
+}
+.interactivo-view-curso .panel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(2, 18, 33);
+  color: rgb(255, 255, 255);
+  border: medium;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+.interactivo-view-curso .panel-btn:hover .panel-btn-text {
+  display: inline-block;
+  animation: 0.5s forwards fadeInText;
+}
+.interactivo-view-curso .panel-btn i {
+  font-size: 20px;
+}
+.interactivo-view-curso .panel-btn .panel-btn-text {
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgb(5, 189, 155);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: none;
+  white-space: nowrap;
+}
+.interactivo-view-curso .side-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 10;
+  display: block;
+  padding: 5px 5px 60px 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.interactivo-view-curso .side-panel .content-panel {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 5px);
+  box-sizing: border-box;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.interactivo-view-curso .side-panel .content-panel .content-tab-panel {
+  height: 100%;
+  overflow-y: auto;
+  background-color: white;
+  padding: 10px 20px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.interactivo-view-curso #workshop-account {
+  padding: 5px;
+  height: calc(100% - 5px);
+}
+.interactivo-view-curso #workshop-account .container-paneles-c {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .panel-c {
+  flex: 1;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 10px;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .left-panel-c {
+  padding-right: 30px;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .right-panel-c {
+  padding-left: 30px;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .resizer {
+  background: #e6e6e6;
+  width: 2px;
+  cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .resizer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+  border: solid 3px #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.interactivo-view-curso #workshop-account .container-paneles-c .resizer-icon i {
+  color: #7d7d7d;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.interactivo-view-curso #left-interactivo {
+  left: -50%;
+}
+
+.interactivo-view-curso #right-interactivo {
+  right: -50%;
+}
+
+#workshop-account .content-causaciones {
+  height: 100%;
+}
+#workshop-account .content-causaciones .card-causaciones {
+  height: 100%;
+}
+#workshop-account .content-causaciones .card-causaciones .card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.125);
+}
+#workshop-account .content-causaciones .card-causaciones .card-body {
+  background-color: #eef7ff;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones {
+  border: none;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones th {
+  padding: 0.3rem 0;
+  color: #fff;
+  background-color: #021221;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones th.none-th {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  border: none;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones:hover td.btn-mark-asiento {
+  opacity: 1;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones td {
+  padding: 0;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones td.btn-mark-asiento {
+  opacity: 0;
+  background-color: #05bd9b;
+  width: 30px;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  border: none;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones input.form-causacion {
+  display: block;
+  width: 100%;
+  height: calc(2rem + 2px);
+  padding: 0 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: none;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones input.form-causacion.val-causacion {
+  text-align: right;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones input:focus-visible {
+  color: #495057;
+  border: none;
+  outline: 0;
+  box-shadow: inset 0 0 0 transparent;
+}
+#workshop-account .content-causaciones .card-causaciones .card-body .table-causaciones .row-causaciones input:focus {
+  color: #495057;
+  border: none;
+  outline: 0;
+  box-shadow: inset 0 0 0 transparent;
+}
+
+body {
+  font-size: 0.9rem;
 }
 
 .logo {

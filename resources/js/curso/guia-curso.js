@@ -286,8 +286,6 @@ function generateGuiaContinue(data, index) {
 
 $(function ($) {
 
-    return
-
     const step_guia_session = sessionStorage.getItem('guiaCamp') ? sessionStorage.getItem('guiaCamp') : "0";
 
     console.log(step_guia_session)

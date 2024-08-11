@@ -35,7 +35,8 @@ class DatabaseSeeder extends Seeder
             EntryTableSeeder::class,
             StatementsTableSeeder::class,
             FieldsTableSeeder::class,
-            WorkshopEntriesTableSeeder::class
+            WorkshopEntriesTableSeeder::class,
+            PucsTableSeeder::class
         ]);
     }
 }

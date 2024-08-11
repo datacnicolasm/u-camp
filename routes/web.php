@@ -46,8 +46,6 @@ Route::post('/payments', [PaymentController::class, 'store']);
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/', [HomeController::class, 'homePage'])->name('home-page');
 Route::get('/home/cursos', [HomeController::class, 'cursosPage'])->name('cursos-home');
-Route::get('/home/rutas', [HomeController::class, 'rutasPage'])->name('rutas-home');
-Route::get('/home/practicas', [HomeController::class, 'practicasPage'])->name('practicas-home');
 Route::get('/home/precios', [HomeController::class, 'preciosPage'])->name('precios-home');
 Route::get('/home/purchase', [HomeController::class, 'purchasePage'])->name('purchase-home');
 
@@ -62,6 +60,9 @@ Route::middleware(['guest'])->group(function () {
 
 // Aquí van las rutas que deseas proteger
 Route::middleware(['auth'])->group(function () {
+
+    // Obtener cuentas del puc
+    Route::post('/lessons/getPucAccounts', [LessonController::class, 'getCuentas'])->name('lessons.getPucAccounts');
 
     // Calificar formulario DIAN
     Route::post('/workshop/{workshop}/calificarWorkshop', [WorkshopController::class, 'calificarWorkshop'])->name('calificar-workshop');

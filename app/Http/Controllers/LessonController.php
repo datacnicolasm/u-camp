@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Curso;
 use App\Models\Lesson;
 use App\Models\Point;
+use App\Models\Puc;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -162,5 +163,15 @@ class LessonController extends Controller
                 ]
             ]);
         }
+    }
+
+    public function getCuentas(Request $request)
+    {
+        // Obtener toda las cuentas
+        $cuentas = Puc::get();
+
+        return response()->json([
+            'data' => $cuentas
+        ]);
     }
 }

@@ -16,7 +16,6 @@
 @import './cursos/detalle-curso.scss';
 @import './cursos/video-curso.scss';
 @import './cursos/cuestionario-curso.scss';
-@import './cursos/interactivo-curso.scss';
 @import './cursos/cursos-dian/header-dian.scss';
 @import './cursos/cursos-dian/new-dian.scss';
 @import './cursos/cursos-dian/formulario-dian.scss';
@@ -40,6 +39,15 @@
 @import './grupos/list-groups.scss';
 @import './grupos/list-members.scss';
 @import './dashboard/dashboard-home.scss';
+
+@import './cursos/interactivo/interactivo-curso.scss';
+@import './cursos/interactivo/left-interactivo.scss';
+@import './cursos/interactivo/right-interactivo.scss';
+@import './cursos/interactivo/content-causaciones.scss';
+
+body{
+    font-size: .9rem;
+}
 
 .logo {
     margin-bottom: 15px;
