@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             ChaptersTableSeeder::class,
             LessonsTableSeeder::class,
             QuestionsTableSeeder::class,
-            //GroupsTableSeeder::class,
+            GroupsTableSeeder::class,
             //GroupUserSeeder::class,
             WorkshopsTableSeeder::class,
             LawsTableSeeder::class,

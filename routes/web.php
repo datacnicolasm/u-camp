@@ -66,6 +66,10 @@ Route::prefix('groups')->group(function () {
     Route::post('/link', [GruposController::class, 'createLinkGroup'])->name('create-link-group');
     Route::get('/join-group/{key}', [GruposController::class, 'joinGroup'])->name('join-group');
     Route::post('/link-new-user', [GruposController::class, 'createUserGroup'])->name('link-new-user');
+    Route::post('/link-is-user', [GruposController::class, 'linkIsUser'])->name('link-is-user');
+    Route::post('/link-new-user-view', [GruposController::class, 'toNewUser'])->name('link-new-user-view');
+    Route::post('/link-attach-group', [GruposController::class, 'attachGroup'])->name('link-attach-group');
+    Route::post('/delete-user', [GruposController::class, 'deleteUserGroup'])->name('delete-user');
 });
 
 // Rutas protegidas por autenticación

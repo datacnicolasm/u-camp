@@ -2,26 +2,6 @@ window.$ = window.jQuery = require('jquery');
 import { gsap } from 'gsap';
 import { GLOBAL_VARS } from '@globals';
 
-// Función para mostrar el efecto de carga
-function showLoading() {
-    var $overlay = $('.loading-overlay');
-    $overlay.show();
-
-    gsap.to('.spinner', {
-        rotation: 360,
-        repeat: -1,
-        ease: 'linear',
-        duration: 1
-    });
-}
-
-// Función para ocultar el efecto de carga
-function hideLoading() {
-    var $overlay = $('.loading-overlay');
-    $overlay.hide();
-    gsap.killTweensOf('.spinner');
-}
-
 // Ajustar tabla segun Array
 function renderTable(users) {
     var $tableBody = $('.table-estudiantes tbody');
@@ -68,6 +48,12 @@ function setlinkInvite(link){
     $(".generate-link").show()
     $("#select-grupo").prop('disabled', true);
     $("#link-generate").val(link);
+
+    setTimeout(() => {
+        $(".generate-link").hide()
+        $("#select-grupo").prop('disabled', false);
+        $("#link-generate").val("");
+    }, 5000);
 }
 
 $(function ($) {
@@ -179,51 +165,6 @@ $(function ($) {
         });
 
         renderTable(send_ids);
-    })
-
-    $('.single-checkbox').on('change', function () {
-        if ($(this).is(':checked')) {
-            $('.single-checkbox').not(this).prop('checked', false);
-        }
-    });
-
-    $("#delete-group").on("click", function () {
-
-        $('#modal-group-select').empty()
-
-        var checkedRow = $("input.single-checkbox:checked");
-
-        if (checkedRow.length > 0) {
-            $("#modal-delete-group").modal("show");
-            var elementItem = $(checkedRow[0].parentElement.parentElement);
-            var idGroups = elementItem.data("idgroups").split(',');
-            var nameGroups = elementItem.data("sgroups").split(',');
-
-            $("#modal-delete-group").find(".usuario").html(elementItem.data("nameuser"));
-
-            const $select = $('#modal-group-select');
-
-            idGroups.forEach((element, index) => {
-                const $option = $('<option>', {
-                    value: element,
-                    text: nameGroups[index]
-                });
-                $select.append($option);
-            });
-        }
-    })
-
-    $("#eliminar-btn-modal").on("click", function () {
-        var checkedRow = $("input.single-checkbox:checked");
-
-        if (checkedRow.length > 0) {
-
-            var elementItem = $(checkedRow[0].parentElement.parentElement);
-            var idUser = elementItem.data("iduser").toString()
-            var idGroup = $('#modal-group-select').val();
-
-            console.log([idUser, idGroup])
-        }
     })
 
     $("#btn-crear-link").on("click", function () {

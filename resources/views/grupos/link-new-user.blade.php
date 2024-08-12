@@ -16,7 +16,7 @@
             <!-- -->
             <div class="col-12">
                 <div class="row justify-content-md-center">
-                    <div class="col-8">
+                    <div class="col-6">
                         <div class="card notice-info">
                             <div class="card-body">
                                 <h2>¡Bienvenido!</h2>
@@ -37,14 +37,14 @@
             <!-- -->
             <div class="col-12">
                 <div class="row justify-content-md-center">
-                    <div class="col-8">
+                    <div class="col-6">
                         <div class="card create-cuenta-info">
                             <div class="card-body">
                                 <p class="my-3">Para unirte al grupo <strong>{{ $group->name }}</strong>, primero
                                     crea tu cuenta personal:</p>
 
                                 <div class="my-4 row justify-content-md-center">
-                                    <div class="col-6">
+                                    <div class="col-8">
                                         <!-- Formulario de creación de usuario -->
                                         <form method="POST" action="{{ route('link-new-user') }}" id="link-new-user">
                                             @csrf <!-- Directiva Blade para incluir el token CSRF -->
@@ -136,8 +136,24 @@
                 </div>
             </div>
 
+             <!-- -->
+             <div class="mb-5 col-12">
+                <div class="row justify-content-md-center">
+                    <p class="text-center m-0">
+                        <form id="linkIsUserForm" action="{{ route('link-is-user') }}" method="POST" style="display: none;">
+                            @csrf
+                            <input type="hidden" name="user_id" value="{{ $user_create->id }}">
+                            <input type="hidden" name="group_id" value="{{ $group->id }}">
+                            <input type="hidden" name="invitation_key" value="{{ $invitation_key }}">
+                        </form>
+                        
+                        ¿No tienes una cuenta? <a href="#" onclick="document.getElementById('linkIsUserForm').submit();"><b>Clic aquí</b></a> para crear una cuenta.
+                    </p>
+                </div>
+            </div>
+
             <!-- -->
-            <div class="col-12">
+            <div class="mt-5 col-12">
                 <div class="row justify-content-md-center">
                     <div class="col-8">
                         <footer class="footer-notice">

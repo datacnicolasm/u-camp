@@ -118,6 +118,15 @@ class GruposController extends Controller
         ], 200);
     }
 
+    public function toNewUser(Request $request)
+    {
+        return view('grupos.link-new-user')->with([
+            'user_create' => User::findOrFail($request->user_create),
+            'group' => Group::findOrFail($request->group),
+            'invitation_key' => $request->invitation_key
+        ]);
+    }
+
     public function joinGroup(Request $request, $key)
     {
         // Buscar el enlace de invitación basado en la clave proporcionada
@@ -129,10 +138,11 @@ class GruposController extends Controller
             return view('grupos.link-invalid');
         }
 
+        $invitationLink->load("user");
+        $invitationLink->load("group");
+
         // Verificar si el usuario no ha iniciado sesión
         if (!$request->user()) {
-            $invitationLink->load("user");
-            $invitationLink->load("group");
             // Usuario no autenticado, redirigir a la vista de creación de cuenta o inicio de sesión
             return view('grupos.link-new-user')->with([
                 'user_create' => $invitationLink->user,
@@ -144,7 +154,10 @@ class GruposController extends Controller
         // Usuario autenticado, verificar si ya es miembro del grupo
         if ($request->user()->group->contains($invitationLink->group_id)) {
             // Usuario ya es miembro del grupo, redirigir con un mensaje de error
-            return view('grupos.already-member');
+            return view('grupos.already-member')->with([
+                'user_create' => $invitationLink->user,
+                'group' => $invitationLink->group
+            ]);
         }
 
         // Usuario autenticado y no es miembro del grupo, unirlo al grupo
@@ -152,7 +165,8 @@ class GruposController extends Controller
         $user->group()->attach($invitationLink->group_id);
 
         // Redirigir al espacio de trabajo del grupo con un mensaje de éxito
-        return view('grupos.link-valid')->with([
+        return view('grupos.user-attached')->with([
+            'user_create' => $invitationLink->user,
             'group' => $invitationLink->group
         ]);
     }
@@ -193,9 +207,82 @@ class GruposController extends Controller
             // Redireccionar con un mensaje de éxito
             return redirect()->route('login-dashboard');
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
             // Manejar cualquier error que ocurra durante la creación del usuario
             return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el usuario. Por favor, inténtelo de nuevo.']);
         }
+    }
+
+    public function deleteUserGroup(Request $request)
+    {
+        $id_user = $request->id_user;
+        $id_group = $request->id_group;
+
+        // Buscar la instancia de la tabla pivote
+        $user = User::findOrFail($id_user);
+        $group = Group::findOrFail($id_group);
+
+        // Eliminar la relación en la tabla pivote
+        $user->group()->detach($group);
+
+        return response()->json([
+            "data" => true
+        ]);
+    }
+
+    public function attachGroup(Request $request)
+    {
+        // Validar los datos del formulario
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string',
+            'key' => 'required|string',
+        ]);
+
+        // Obtener las credenciales del request
+        $credentials = $request->only('email', 'password');
+
+        // Intentar iniciar sesión
+        if (Auth::attempt($credentials)) {
+            // La autenticación fue exitosa...
+
+            // Regenerar la sesión para protegerla contra fijación de sesión
+            $request->session()->regenerate();
+
+            // Buscar el enlace de invitación basado en la clave proporcionada
+            $invitationLink = GroupInvitationLink::where('invitation_key', $request->key)->first();
+
+            // Buscar usuario
+            $user = User::where('email', $request->email)->first();
+
+            // Usuario autenticado, verificar si ya es miembro del grupo
+            if ($user->group->contains($invitationLink->group_id)) {
+                // Usuario ya es miembro del grupo, redirigir con un mensaje de error
+                return view('grupos.already-member')->with([
+                    'user_create' => $invitationLink->user,
+                    'group' => $invitationLink->group
+                ]);;
+            }
+
+            // Asignar el grupo al usuario
+            if ($invitationLink) {
+                $user->group()->attach($invitationLink->group_id);
+                // Redirigir al usuario a su página de destino
+                return redirect()->intended('dashboard');
+            }
+        }
+
+        // Si la autenticación falla, redirigir de vuelta con un mensaje de error
+        return back()->withErrors([
+            'email' => 'Las credenciales proporcionadas no coinciden con nuestros registros.',
+        ])->onlyInput('email');
+    }
+
+    public function linkIsUser(Request $request)
+    {
+        return view('grupos.link-valid')->with([
+            'user_create' => User::findOrFail($request->user_id),
+            'group' => Group::findOrFail($request->group_id),
+            'invitation_key' => $request->invitation_key
+        ]);;
     }
 }

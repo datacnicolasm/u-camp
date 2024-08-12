@@ -26,9 +26,11 @@ import './rutas/view-rutas.js';
 import './rutas/list-rutas.js';
 import './purchase/purchase.js';
 import './lesson/questionario.js';
+
 import './groups/groups.js';
 import './groups/members.js';
 import './groups/link-new-user.js';
+import './groups/delete-user.js';
 
 import './curso/interactivo/interactivo.js';
 import './curso/interactivo/tabla-causaciones.js';
