@@ -15,6 +15,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                <!-- Notificacion para cuenta de docente -->
+                @if (!Auth::user()->has_groups)
+                    <div class="callout callout-info">
+                        <h5>¿{{ $formattedName }}, eres docente?</h5>
+                        <p>¡La versión para docentes es <strong>Gratis</strong>! Solicita ya la versión para docentes.</p>
+                        <button class="btn btn-sm btn-3-ucamp">Soy docente</button>
+                    </div>
+                @endif
+
+                <!-- Notificacion para verificar correo -->
                 @if (!Auth::user()->hasVerifiedEmail())
                     <div class="callout callout-danger">
                         <h5>{{ $formattedName }}, verifica tu dirección de correo electrónico para comenzar</h5>
@@ -22,7 +32,7 @@
                             correo electrónico.</p>
                         <form method="POST" action="{{ route('verification.send') }}">
                             @csrf
-                            <button type="submit" class="btn btn-3-ucamp">Reenviar correo de verificación</button>
+                            <button type="submit" class="btn btn-sm btn-3-ucamp">Reenviar correo de verificación</button>
                         </form>
                     </div>
                 @endif
@@ -66,7 +76,7 @@
                                         echo '<p class="m-0">';
                                         echo $consecutive_days;
 
-                                        $text_dias = $consecutive_days > 1 ? 'días' : 'día';
+                                        $text_dias = $consecutive_days == 1 ? 'día' : 'días';
                                         echo ' ' . $text_dias;
                                         echo '</p>';
                                     @endphp
@@ -113,12 +123,17 @@
                                 </dis>
                             </div>
                         </div>
+
+                        @php
+                            $coursesWithProgress = App\Models\User::getCoursesWithProgress(Auth::user());
+                        @endphp
+
+                        @if (count($coursesWithProgress) > 0)
                         <div class="col-12 mt-3 item-cursos-dash">
                             <span class="text-muted">
+                                
                                 <span class="font-weight-bold">Tus cursos</span>
-                                @php
-                                    $coursesWithProgress = App\Models\User::getCoursesWithProgress(Auth::user());
-                                @endphp
+
                                 <ul class="list-cursos">
                                     @foreach ($coursesWithProgress as $curso)
                                         <li class="card item-curso-dash">
@@ -140,7 +155,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-4 content-btn-continuar">
-                                                        <a href="{{ route('view-curso', ['curso' => $curso["course"]->id]) }}" class="btn btn-3-ucamp">
+                                                        <a href="{{ route('view-curso', ['curso' => $curso["course"]->id]) }}" class="btn btn-sm btn-3-ucamp">
                                                             Continuar
                                                         </a>
                                                     </div>
@@ -151,6 +166,49 @@
                                 </ul>
                             </span>
                         </div>
+                        @endif
+
+                        @php
+                            $coursesWithoutProgress = App\Models\User::getCoursesWithoutProgress(Auth::user());
+                        @endphp
+
+                        @if (count($coursesWithoutProgress) > 0)
+                        <div class="col-12 mt-3 item-cursos-dash">
+                            <span class="text-muted">
+                                
+                                <span class="font-weight-bold">Iniciar un curso</span>
+
+                                <ul class="list-cursos">
+                                    @foreach ($coursesWithoutProgress as $curso)
+                                        <li class="card item-curso-dash">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <div
+                                                            class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
+                                                            {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
+                                                        </div>
+                                                        <div class="title-curso">
+                                                            {{ $curso->titulo }}
+                                                        </div>
+                                                        <div class="mb-1 text-secondary descript-curso">
+                                                            Curso con explicaciones varias.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 content-btn-continuar">
+                                                        <a href="{{ route('view-curso', ['curso' => $curso->id]) }}" class="btn btn-sm btn-3-ucamp">
+                                                            Iniciar curso
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </span>
+                        </div>
+                        @endif
+
                     </div>
                 </div>
             </div>

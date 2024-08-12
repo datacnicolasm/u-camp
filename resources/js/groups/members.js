@@ -1,5 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 
 // Función para mostrar el efecto de carga
 function showLoading() {
@@ -25,7 +26,7 @@ function hideLoading() {
 function renderTable(users) {
     var $tableBody = $('.table-estudiantes tbody');
 
-    $tableBody.find("tr").each(function (index, element){
+    $tableBody.find("tr").each(function (index, element) {
         const id_user = $(element).data("iduser")
 
         if (!users.includes(id_user)) {
@@ -62,6 +63,13 @@ function downloadCSV(csvContent, filename) {
     document.body.removeChild(link);
 }
 
+// Función para establecer el link de invitación
+function setlinkInvite(link){
+    $(".generate-link").show()
+    $("#select-grupo").prop('disabled', true);
+    $("#link-generate").val(link);
+}
+
 $(function ($) {
     const matrix_data = []
 
@@ -73,7 +81,7 @@ $(function ($) {
         const email_user = $(element).data("emailuser")
         const groups = $(element).data("idgroups")
         const n_groups = $(element).data("sgroups")
-        
+
         matrix_data.push({
             id: id_user,
             name: name_user,
@@ -83,18 +91,22 @@ $(function ($) {
         })
     })
 
-    $('#export-csv').on('click', function() {
+    $('#export-csv').on('click', function () {
+        if ($(this).data("enabled") == "disabled") {
+            return;
+        }
+
         const csvContent = convertToCSV(matrix_csv);
         downloadCSV(csvContent, 'data.csv');
     });
 
-    $('#search-estudiantes').on('keyup', function() {
+    $('#search-estudiantes').on('keyup', function () {
 
         $("#label-group .selected").html("Todos los grupos")
-        
+
         var query = $(this).val().toLowerCase();
 
-        var filteredUsers = matrix_data.map(function(user) {
+        var filteredUsers = matrix_data.map(function (user) {
             var isVisible = user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query);
             return {
                 ...user,
@@ -102,7 +114,7 @@ $(function ($) {
             };
         });
 
-        var visibleUsers = filteredUsers.filter(function(user) {
+        var visibleUsers = filteredUsers.filter(function (user) {
             return user.visible;
         });
 
@@ -130,7 +142,7 @@ $(function ($) {
             $("#label-group .selected").html(name_group)
             $(".select-options-group").toggle();
 
-            var filteredUsers = matrix_data.map(function(user) {
+            var filteredUsers = matrix_data.map(function (user) {
                 var array_ids = user.groups.split(',');
                 var isVisible = array_ids.includes(id_group);
                 return {
@@ -139,24 +151,24 @@ $(function ($) {
                 };
             });
 
-            var visibleUsers = filteredUsers.filter(function(user) {
+            var visibleUsers = filteredUsers.filter(function (user) {
                 return user.visible;
             });
 
             matrix_csv = visibleUsers;
-    
+
             var send_ids = []
-    
+
             visibleUsers.forEach(user => {
                 send_ids.push(user.id)
             });
-    
+
             renderTable(send_ids);
-            
+
         })
     })
 
-    $("li.item-list-group-all").on("click", function(){
+    $("li.item-list-group-all").on("click", function () {
         $("#label-group .selected").html("Todos los grupos")
         $(".card").css("border-top-color", "#05bd9b")
 
@@ -169,19 +181,19 @@ $(function ($) {
         renderTable(send_ids);
     })
 
-    $('.single-checkbox').on('change', function() {
+    $('.single-checkbox').on('change', function () {
         if ($(this).is(':checked')) {
             $('.single-checkbox').not(this).prop('checked', false);
         }
     });
 
-    $("#delete-group").on("click", function(){
+    $("#delete-group").on("click", function () {
 
         $('#modal-group-select').empty()
-        
+
         var checkedRow = $("input.single-checkbox:checked");
 
-        if (checkedRow.length > 0){
+        if (checkedRow.length > 0) {
             $("#modal-delete-group").modal("show");
             var elementItem = $(checkedRow[0].parentElement.parentElement);
             var idGroups = elementItem.data("idgroups").split(',');
@@ -201,16 +213,44 @@ $(function ($) {
         }
     })
 
-    $("#eliminar-btn-modal").on("click", function(){
+    $("#eliminar-btn-modal").on("click", function () {
         var checkedRow = $("input.single-checkbox:checked");
 
-        if (checkedRow.length > 0){
-            
+        if (checkedRow.length > 0) {
+
             var elementItem = $(checkedRow[0].parentElement.parentElement);
             var idUser = elementItem.data("iduser").toString()
             var idGroup = $('#modal-group-select').val();
 
             console.log([idUser, idGroup])
+        }
+    })
+
+    $("#btn-crear-link").on("click", function () {
+        if ($(this).data("status")) {
+            // Obtener el valor de la opción seleccionada
+            var selectedValue = $("#select-grupo").val();
+
+            // Si necesitas obtener el texto de la opción seleccionada
+            var selectedText = $('#select-grupo option:selected').text();
+
+            // Solicitud AJAX
+            $.ajax({
+                url: GLOBAL_VARS.api_url + 'groups/link',
+                type: 'POST',
+                data: {
+                    group_id: selectedValue,
+                    _token: $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function (response) {
+                    if (response.data.success){
+                        setlinkInvite(response.data.link)
+                    }
+                },
+                error: function (xhr) {
+                    console.log(xhr)
+                }
+            });
         }
     })
 

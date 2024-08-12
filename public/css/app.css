@@ -9425,7 +9425,7 @@ a.ui-button:active,
 
 @media (max-width: 480px) {
   .text-md-large {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1201px) {
@@ -9451,7 +9451,7 @@ a.ui-button:active,
 }
 
 .text-tint-5 {
-  color: #71F5F9;
+  color: #2A5A5B;
 }
 
 .bg-tint-1 {
@@ -9471,7 +9471,7 @@ a.ui-button:active,
 }
 
 .bg-tint-5 {
-  background-color: #71F5F9;
+  background-color: #2A5A5B;
 }
 
 pre {
@@ -9492,7 +9492,7 @@ pre {
 }
 
 .login-page {
-  background-image: url(../images/background-login.svg?ff93cc9f6ce5e32421e0f10ef0d86d9e);
+  background-image: url(../images/background-create.svg?e5ec261fffb92d5a041adf4ca1b0cafe);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -9748,7 +9748,7 @@ nav.view-curso-footer-nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 100%;
 }
 nav.view-curso-footer-nav div.footer-nav-contenido {
@@ -9868,10 +9868,10 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 .content-formularios .container-guia .modal-content-guia .modal-body-guia i {
   font-size: 5rem;
-  color: #71F5F9;
+  color: #2A5A5B;
   margin: 1rem auto;
   border-radius: 50%;
-  border: solid 20px #d3fcfd;
+  border: solid 20px #4a9fa1;
 }
 .content-formularios .container-guia .modal-content-guia .modal-footer-guia {
   display: flex;
@@ -9893,11 +9893,11 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   text-align: end;
 }
 .content-formularios .container-guia .callout-curso .content-next-step .next-step {
-  background-color: #d3fcfd;
+  background-color: #4a9fa1;
   padding: 3px 10px;
   display: inline-block;
   border-radius: 15px;
-  border: solid 0.5px #71F5F9;
+  border: solid 0.5px #2A5A5B;
   color: #213147;
   font-size: 0.9rem;
   font-weight: bold;
@@ -9967,8 +9967,11 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   align-items: center;
   padding: 0.5rem 0;
 }
-.chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left {
+.chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left.enabled {
   color: #000;
+}
+.chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left.no-enabled {
+  color: #8a8a8a;
 }
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-right {
   min-width: 100px;
@@ -10033,7 +10036,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 .video-view-curso .video-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .video-view-curso .experience-points {
   font-size: 0.9rem;
@@ -10105,7 +10108,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 .cuestionario-view-curso .questionnaire-section .questionnaire-header h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
 }
 .cuestionario-view-curso .questionnaire-section .questionnaire-header i {
@@ -10130,7 +10133,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   text-align: justify;
 }
 .cuestionario-view-curso .questionnaire-section .questionnaire-content div.text-question h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
   margin-top: 20px;
   font-weight: bold;
@@ -10147,7 +10150,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 .cuestionario-view-curso .questionnaire-section .response-options .options-header h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
 }
 .cuestionario-view-curso .questionnaire-section .response-options .options-header i {
@@ -10343,7 +10346,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   margin-right: 0;
 }
 .content-formularios .main-header-ucamp .navigation-menu .container-bottom {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: white;
   text-align: center;
   padding: 5px 10px;
@@ -10679,7 +10682,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 .content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .title-dian {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .content-formularios .container-resultados-DIAN #formulario .content-formulario-generate .logo-dian-form {
   display: flex;
@@ -11167,7 +11170,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 }
 #right-panel .instruc-section .instruc-header h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
 }
 #right-panel .instruc-section .instruc-content {
@@ -11433,7 +11436,7 @@ body.page-home-camp .text-three-camp {
   color: #05bd9b;
 }
 body.page-home-camp .text-four-camp {
-  color: #71F5F9;
+  color: #05bd9b;
 }
 body.page-home-camp .text-five-camp {
   color: #fcce0d;
@@ -11494,7 +11497,7 @@ body.page-home-camp #home-section-1 {
 @media (max-width: 480px) {
   body.page-home-camp #home-section-1 .text-home-1 p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 769px) {
@@ -11758,6 +11761,43 @@ body.page-home-camp .home-signup p.text-small {
   text-align: justify;
   line-height: 1.2;
 }
+body.page-home-camp .home-signup .card {
+  margin: 0;
+}
+body.page-home-camp .home-signup .card-body .text-create {
+  text-align: center;
+}
+body.page-home-camp .home-signup .card-body .text-create p {
+  text-align: center;
+}
+body.page-home-camp .home-signup .card-body .input-group {
+  margin-bottom: 1rem;
+}
+body.page-home-camp .home-signup .card-body .input-group .form-control::-moz-placeholder {
+  color: #6c757d;
+}
+body.page-home-camp .home-signup .card-body .input-group .form-control::placeholder {
+  color: #6c757d;
+}
+body.page-home-camp .home-signup .card-body .input-group .input-group-append .input-group-text .fas {
+  color: #6c757d;
+}
+body.page-home-camp .home-signup .card-body .btn-ucamp {
+  width: 100%;
+}
+body.page-home-camp .home-signup .card-body .text-muted {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+body.page-home-camp .home-signup .card-body .alert ul {
+  margin: 0;
+  padding: 0;
+}
+body.page-home-camp .home-signup .card-body .alert ul li {
+  list-style: none;
+  margin: 0;
+}
 
 .page-purchase-camp {
   background-color: #021221;
@@ -11838,7 +11878,7 @@ body.page-home-camp .home-signup p.text-small {
   color: #05bd9b;
 }
 .page-purchase-camp .form-sumary {
-  background-color: #71F5F9;
+  background-color: #2A5A5B;
   border-radius: 5px;
   padding: 40px 20px;
   border-top: solid 3px #05bd9b;
@@ -11848,7 +11888,7 @@ body.page-home-camp .home-signup p.text-small {
   border-bottom: solid 0.5px #ccc;
 }
 .page-purchase-camp .section-formulario {
-  background-color: #71F5F9;
+  background-color: #2A5A5B;
   border-top: solid 3px #05bd9b;
   border-radius: 5px;
   padding: 15px;
@@ -11887,7 +11927,7 @@ body.page-home-camp .home-signup p.text-small {
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  border: solid 5px #71F5F9;
+  border: solid 5px #2A5A5B;
 }
 .page-purchase-camp .section-formulario .title-section-formulario .number-activate {
   background-color: #05bd9b;
@@ -11922,7 +11962,7 @@ body.page-home-camp .home-signup p.text-small {
   width: 100%;
   border: solid 1px #fff;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 23px;
   border-radius: 0.25rem;
 }
@@ -12006,6 +12046,24 @@ body.page-home-camp .home-signup p.text-small {
   width: 90%;
 }
 
+.list-groups .card {
+  border-top: 6px solid #05bd9b;
+}
+.list-groups .card .card-body .no-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+}
+.list-groups .card .card-body .no-items .icon {
+  font-size: 2.5rem;
+  color: #8b8b8b;
+}
+.list-groups .card .card-body .no-items .text {
+  font-size: 1.2rem;
+  color: #8b8b8b;
+}
 .list-groups .btn-add-group {
   padding: 5px 20px;
   font-size: 16px;
@@ -12042,7 +12100,7 @@ body.page-home-camp .home-signup p.text-small {
   border: none;
   background: none;
   color: #6c757d;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 .list-groups .table-groups .content-btns .icon-button:hover {
@@ -12128,7 +12186,7 @@ body.page-home-camp .home-signup p.text-small {
 .list-members .title-members .select-group ul.select-options-group li {
   list-style: none;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 5px 15px;
 }
 .list-members .title-members .select-group ul.select-options-group li:hover {
@@ -12207,6 +12265,21 @@ body.page-home-camp .home-signup p.text-small {
 .list-members .card-body {
   position: relative;
 }
+.list-members .card-body .no-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+}
+.list-members .card-body .no-items .icon {
+  font-size: 2.5rem;
+  color: #8b8b8b;
+}
+.list-members .card-body .no-items .text {
+  font-size: 1.2rem;
+  color: #8b8b8b;
+}
 .list-members .card-body .loading-overlay {
   display: none;
   position: absolute;
@@ -12227,6 +12300,69 @@ body.page-home-camp .home-signup p.text-small {
 .list-members .card-body .loading-overlay .spinner {
   font-size: 2rem;
   color: #333;
+}
+
+#crear-link .generate-link {
+  display: none;
+}
+
+.page-notice-link {
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.page-notice-link .logo-notice {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.page-notice-link .logo-notice span {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.page-notice-link .logo-notice .u-logo {
+  font-size: 2.4rem;
+  color: #05bd9b;
+}
+.page-notice-link .logo-notice .camp-logo {
+  font-size: 2.4rem;
+  margin-left: 2px;
+  color: #021221;
+}
+.page-notice-link .notice-info {
+  text-align: center;
+}
+.page-notice-link .notice-info .icon {
+  font-size: 2.4rem;
+  color: #8a8a8a;
+}
+.page-notice-link .create-cuenta-info {
+  border-top: solid 4px #05bd9b;
+  text-align: center;
+}
+.page-notice-link #link-new-user #key {
+  display: none;
+}
+.page-notice-link #link-new-user .input-group {
+  position: relative;
+}
+.page-notice-link #link-new-user .input-group .feedback-msg {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 101%;
+  width: 170px;
+  background-color: #ffeded;
+  color: #ce0101;
+  border: solid 0.3px #ce0101;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.page-notice-link #link-new-user .input-group .feedback-msg .msg {
+  display: none;
 }
 
 .dashboard-container .card-user-dashboard .user-sect {
@@ -12280,7 +12416,7 @@ body.page-home-camp .home-signup p.text-small {
   color: #05bd9b;
 }
 .dashboard-container .card-user-dashboard .user-points .points .title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   color: #535353;
 }
@@ -12319,7 +12455,7 @@ body.page-home-camp .home-signup p.text-small {
   color: #ffe300;
 }
 .dashboard-container .card-user-dashboard .user-streak .title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   color: #535353;
 }
@@ -12359,7 +12495,7 @@ body.page-home-camp .home-signup p.text-small {
   color: #535353;
 }
 .dashboard-container .card-user-dashboard .user-week .title {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   color: #535353;
 }

@@ -27,8 +27,8 @@ class DatabaseSeeder extends Seeder
             ChaptersTableSeeder::class,
             LessonsTableSeeder::class,
             QuestionsTableSeeder::class,
-            GroupsTableSeeder::class,
-            GroupUserSeeder::class,
+            //GroupsTableSeeder::class,
+            //GroupUserSeeder::class,
             WorkshopsTableSeeder::class,
             LawsTableSeeder::class,
             LawWorkshopSeeder::class,
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             StatementsTableSeeder::class,
             FieldsTableSeeder::class,
             WorkshopEntriesTableSeeder::class,
-            PucsTableSeeder::class
+            //PucsTableSeeder::class
         ]);
     }
 }

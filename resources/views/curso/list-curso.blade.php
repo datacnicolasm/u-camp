@@ -73,6 +73,9 @@
 
         </div>
 
+        <!-- Main footer -->
+        @include('curso.components.main-footer')
+
     </div>
 
     @include('components.footer')

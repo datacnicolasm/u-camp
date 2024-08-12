@@ -1,6 +1,6 @@
 $tint-1: #021221;
 $tint-4: #213147;
-$tint-5: #71F5F9;
+$tint-5: #2A5A5B;
 $tint-6: #003b77;
 $tint-2: #d31a71;
 $tint-3: #05bd9b;
@@ -70,7 +70,7 @@ h2{
 
 .text-md-large{
     @include responsive(mobile) {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     @include responsive(extra-large) {
         font-size: 1.3rem;

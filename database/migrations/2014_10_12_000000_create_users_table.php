@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->boolean('has_groups')->default(0);
+            $table->boolean('is_premium')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });

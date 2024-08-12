@@ -11,13 +11,13 @@
 
             <div class="content-type-lesson">
                 <!-- Content Wrapper. Contains page content -->
-                @if ( $lesson->type == 'video' )
+                @if ($lesson->type == 'video')
                     @include('curso.components.video-curso')
-                @elseif ( $lesson->type == 'questionnaire' )
+                @elseif ($lesson->type == 'questionnaire')
                     @include('curso.components.cuestionario-curso')
-                @elseif ( $lesson->type == 'interactive' )
+                @elseif ($lesson->type == 'interactive')
                     @include('curso.interactivo.interactivo-curso')
-                @elseif ( $lesson->type == 'dian' )
+                @elseif ($lesson->type == 'dian')
                     @include('curso.dian-components.formularios-dian')
                 @endif
             </div>

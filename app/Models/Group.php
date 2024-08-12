@@ -23,7 +23,7 @@ class Group extends Model
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(User::class, 'group_user', 'group_id', 'user_id')->withTimestamps();
     }
 
     static function getGroupsUser(User $user)
@@ -58,5 +58,13 @@ class Group extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /*
+    * 
+    */
+    public function invitationLinks()
+    {
+        return $this->hasMany(GroupInvitationLink::class);
     }
 }

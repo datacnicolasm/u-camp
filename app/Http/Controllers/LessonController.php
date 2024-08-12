@@ -9,6 +9,7 @@ use App\Models\Puc;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 
 class LessonController extends Controller
 {
@@ -19,46 +20,154 @@ class LessonController extends Controller
     {
         $user = $request->user();
 
-        // Cargar las relaciones chapters y lessons
-        $curso->load('chapters.lessons');
+        // Cargar las relaciones chapters y lessons ordenadas por 'order'
+        $this->loadChaptersAndLessons($curso);
 
-        // Condicional para cargar video
-        if ($lesson->type == "video") {
+        // Procesar y registrar la lección vista por el usuario si aplica
+        $this->processLesson($user, $lesson);
+
+        // Verificar si la lección es del tipo DIAN y manejar el flujo específico
+        if ($lesson->type === "dian") {
+            return $this->handleDianLesson($curso, $lesson);
+        }
+
+        // Calcular el progreso del curso
+        $courseProgress = $this->calculateCourseProgress($curso, $user);
+
+        // Verificar y habilitar lecciones basadas en el progreso del usuario
+        $this->checkAndEnableLessons($curso, $user);
+
+        return view('curso.view-curso')->with([
+            'curso' => $curso,
+            'lesson' => $lesson,
+            'courseProgress' => $courseProgress // Pasar el progreso del curso a la vista
+        ]);
+    }
+
+    /**
+     * Cargar las relaciones chapters y lessons, ordenadas por 'order'.
+     *
+     * @param Curso $curso
+     * @return void
+     */
+    private function loadChaptersAndLessons(Curso $curso)
+    {
+        $curso->load(['chapters.lessons' => function ($query) {
+            $query->orderBy('order'); // Ordenar las lecciones por el campo 'order'
+        }]);
+    }
+
+    /**
+     * Procesar la lección según su tipo y registrar la lección vista por el usuario.
+     *
+     * @param User $user
+     * @param Lesson $lesson
+     * @return void
+     */
+    private function processLesson(User $user, Lesson $lesson)
+    {
+        if ($lesson->type === "video") {
             // Registrar la lección vista
             $user->lessons()->syncWithoutDetaching([$lesson->id]);
 
-            // Cuando un usuario completa una lección, se debe registrar en el modelo Point.
+            // Registrar en el modelo Point cuando un usuario completa una lección.
             Point::completeLesson($user, $lesson, 'lesson_video');
-        }
-
-        // Carrgar la relacion de questions
-        if ($lesson->type == "questionnaire") {
+        } elseif ($lesson->type === "questionnaire") {
+            // Cargar la relación de questions
             $lesson->load('question');
         }
+    }
 
-        // Condicional para cargar leccion DIAN
-        if ($lesson->type == "dian") {
-            // Ruta al archivo JSON
-            $jsonPath = database_path('data/guia.json');
+    /**
+     * Manejar el flujo específico para lecciones del tipo DIAN.
+     *
+     * @param Curso $curso
+     * @param Lesson $lesson
+     * @return \Illuminate\View\View
+     */
+    private function handleDianLesson(Curso $curso, Lesson $lesson)
+    {
+        // Ruta al archivo JSON
+        $jsonPath = database_path('data/guia.json');
 
-            // Leer el contenido del archivo JSON
-            if (File::exists($jsonPath)) {
-                $json = File::get($jsonPath);
-                $guia_DIAN = json_decode($json, true);
-            }
-
-            return view('curso.view-curso')->with([
-                'curso' => $curso,
-                'lesson' => $lesson,
-                'guia' => $guia_DIAN
-            ]);
+        // Leer el contenido del archivo JSON
+        if (File::exists($jsonPath)) {
+            $json = File::get($jsonPath);
+            $guia_DIAN = json_decode($json, true);
         }
 
         return view('curso.view-curso')->with([
             'curso' => $curso,
-            'lesson' => $lesson
+            'lesson' => $lesson,
+            'guia' => $guia_DIAN
         ]);
     }
+
+    /**
+     * Calcular el progreso del curso basado en las lecciones vistas por el usuario.
+     *
+     * @param Curso $curso
+     * @param User $user
+     * @return int $courseProgress
+     */
+    private function calculateCourseProgress(Curso $curso, User $user)
+    {
+        $totalLessonsInCourse = 0;
+        $viewedLessonsInCourse = 0;
+
+        foreach ($curso->chapters as $chapter) {
+            $chapter->total_lessons = $chapter->lessons->count();
+            $chapter->viewed_lessons = 0;
+
+            $totalLessonsInCourse += $chapter->total_lessons;
+
+            foreach ($chapter->lessons as $chapterLesson) {
+                $chapterLesson->viewed = $user->hasViewedLesson($chapterLesson->id);
+                if ($chapterLesson->viewed) {
+                    $chapter->viewed_lessons++;
+                    $viewedLessonsInCourse++;
+                }
+            }
+        }
+
+        return $totalLessonsInCourse > 0
+            ? round(($viewedLessonsInCourse / $totalLessonsInCourse) * 100)
+            : 0;
+    }
+
+    /**
+     * Verificar y habilitar lecciones basadas en el progreso del usuario.
+     *
+     * @param Curso $curso
+     * @param User $user
+     * @return void
+     */
+    private function checkAndEnableLessons(Curso $curso, User $user)
+    {
+        // Cargar la última lección vista por el usuario
+        $lastLessonData = CursoController::getLastLesson($curso, $user);
+        $lastLessonId = $lastLessonData['lesson_id'];
+        $isFirstLesson = $lastLessonData['is_first'];
+
+        foreach ($curso->chapters as $chapter) {
+            $chapter->total_lessons = $chapter->lessons->count();
+            $chapter->viewed_lessons = 0;
+            $canView = $isFirstLesson;
+
+            foreach ($chapter->lessons as $chapLesson) {
+                $chapLesson->viewed = $user->hasViewedLesson($chapLesson->id);
+                $chapLesson->enabled = $canView || $chapLesson->id == $lastLessonId; // Habilitar la lección si es la última vista o si puede ser vista
+
+                if ($chapLesson->viewed) {
+                    $chapter->viewed_lessons++;
+                    $canView = true; // Permitir al usuario ver la siguiente lección
+                } else {
+                    $canView = false; // Detener la habilitación de lecciones si se encuentra una no vista
+                }
+            }
+        }
+    }
+
 
     /**
      * 

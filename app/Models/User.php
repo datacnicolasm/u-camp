@@ -20,8 +20,8 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array<int, string>
      */
     protected $fillable = [
-        'first-name',
-        'last-name',
+        'first_name',
+        'last_name',
         'email',
         'password',
         'has_groups'
@@ -59,7 +59,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function group(): BelongsToMany
     {
-        return $this->belongsToMany(Group::class)->withTimestamps();
+        return $this->belongsToMany(Group::class, 'group_user', 'user_id', 'group_id')->withTimestamps();
     }
 
     public function hasViewedLesson($lessonId)
@@ -110,5 +110,36 @@ class User extends Authenticatable implements MustVerifyEmail
         }
 
         return $coursesWithProgress;
+    }
+
+    public static function getCoursesWithoutProgress(User $user)
+    {
+        // Obtener los IDs de los cursos en los que el usuario ya ha hecho progreso
+        $coursesWithProgress = DB::table('cursos')
+            ->join('chapters', 'cursos.id', '=', 'chapters.curso_id')
+            ->join('lessons', 'chapters.id', '=', 'lessons.chapter_id')
+            ->join('lesson_user', 'lessons.id', '=', 'lesson_user.lesson_id')
+            ->where('lesson_user.user_id', $user->id)
+            ->select('cursos.id')
+            ->distinct()
+            ->pluck('cursos.id')
+            ->toArray();
+
+        // Obtener los cursos en los que el usuario no ha hecho ningún progreso
+        $coursesWithoutProgress = DB::table('cursos')
+            ->leftJoin('chapters', 'cursos.id', '=', 'chapters.curso_id')
+            ->leftJoin('lessons', 'chapters.id', '=', 'lessons.chapter_id')
+            ->whereNotIn('cursos.id', $coursesWithProgress)
+            ->groupBy('cursos.id', 'cursos.titulo', 'cursos.short_description', 'cursos.long_description', 'cursos.tipo', 'cursos.dificultad', 'cursos.tutor', 'cursos.ruta_profesional_id')
+            ->select('cursos.*')
+            ->get();
+
+
+        return $coursesWithoutProgress;
+    }
+
+    public function invitationLinks()
+    {
+        return $this->hasMany(GroupInvitationLink::class);
     }
 }

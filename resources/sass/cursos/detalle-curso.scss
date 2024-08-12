@@ -69,8 +69,12 @@
                         align-items: center;
                         padding: .5rem 0;
 
-                        .item-lesson-left {
+                        .item-lesson-left.enabled {
                             color: #000;
+                        }
+
+                        .item-lesson-left.no-enabled {
+                            color: #8a8a8a;
                         }
 
                         .item-lesson-right {

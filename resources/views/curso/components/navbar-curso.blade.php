@@ -35,7 +35,7 @@
             <div class="col-3 container-course-progress">
 
                 <div class="progress-text mr-2"></div>
-                <div class="progress-container" data-progress="10">
+                <div class="progress-container" data-progress="{{ $courseProgress }}">
                     <div class="progress-bar"></div>
                 </div>                                                               
 

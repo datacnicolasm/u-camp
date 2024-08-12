@@ -25,33 +25,48 @@ class CursoController extends Controller
      * View one curso
      */
     public function viewCursos(Request $request, Curso $curso)
-    {      
+    {
         // Cargar las relaciones chapters y lessons
-        $curso->load('chapters.lessons');
+        $curso->load(['chapters.lessons' => function ($query) {
+            $query->orderBy('order'); // Ordenar las lecciones por el campo 'order'
+        }]);
 
         // Cargar la última lección vista por el usuario
-        $lastLesson = $this->getLastLesson($curso, $request->user());
+        $lastLessonData = $this->getLastLesson($curso, $request->user());
+        $lastLessonId = $lastLessonData['lesson_id'];
+        $isFirstLesson = $lastLessonData['is_first'];
 
-        // Verificar si cada lección ha sido vista por el usuario
+        // Verificar si cada lección puede ser vista por el usuario
         foreach ($curso->chapters as $chapter) {
             $chapter->total_lessons = $chapter->lessons->count();
             $chapter->viewed_lessons = 0;
+            $canView = $isFirstLesson;
 
             foreach ($chapter->lessons as $lesson) {
                 $lesson->viewed = $request->user()->hasViewedLesson($lesson->id);
+                $lesson->enabled = $canView || $lesson->id == $lastLessonId; // Habilitar la lección si es la última vista o si puede ser vista
+
                 if ($lesson->viewed) {
                     $chapter->viewed_lessons++;
+                    $canView = true; // Permitir al usuario ver la siguiente lección
+                } else {
+                    $canView = false; // Detener la habilitación de lecciones si se encuentra una no vista
                 }
             }
         }
-        
-        return view('curso.detalle-curso')->with(['curso' => $curso, 'lastLesson' => $lastLesson]);
+
+        return view('curso.detalle-curso')->with([
+            'curso' => $curso,
+            'lastLesson' => $lastLessonData
+        ]);
     }
+
+
 
     /**
      * Obtener la primera lesson del curso
      */
-    public function getLastLesson(Curso $curso, User $user)
+    public static function getLastLesson(Curso $curso, User $user)
     {
         // Obtener todas las lecciones del curso
         $lessons = $curso->lessons()->orderBy('id')->get();

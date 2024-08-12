@@ -17,17 +17,17 @@
             <a href="{{ route('login-dashboard') }}" class="nav-link">Inicio</a>
         </li>
 
-        <li class="nav-item-camp nav-item d-none d-sm-inline-block">
-            <a href="{{ route('certificados') }}" class="nav-link">Certificados</a>
-        </li>
-
         <?php $class_items_grupos = "" ?>
         @if (Route::currentRouteName() == 'dashboard-grupos')
             <?php $class_items_grupos .= "active-item-bar" ?>
         @endif
-        <li class="nav-item-camp nav-item d-none d-sm-inline-block <?php echo $class_items_grupos ?>">
-            <a href="{{ route('dashboard-grupos') }}" class="nav-link">Grupos</a>
-        </li>
+
+        @if ( Auth::user()->has_groups )
+            <li class="nav-item-camp nav-item d-none d-sm-inline-block <?php echo $class_items_grupos ?>">
+                <a href="{{ route('dashboard-grupos') }}" class="nav-link">Grupos</a>
+            </li>
+        @endif
+        
     </ul>
 </nav>
 <!-- /.navbar -->

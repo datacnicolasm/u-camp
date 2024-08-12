@@ -95,9 +95,16 @@
                                                         <span class="text-toggle text-primary font-weight-bold">Ver contenido</span>
                                                         <ul class="lessons-list-items">
                                                             @foreach($chapter->lessons as $lesson)
+                                                            @php
+                                                                $url_lesson = $lesson->enabled
+                                                                    ? route('view-lesson', ['curso' => $curso->id, 'lesson' => $lesson->id])
+                                                                    : '#';
+
+                                                                $class_enabled = $lesson->enabled ? "enabled" : "no-enabled";
+                                                            @endphp
                                                                 <li>
-                                                                    <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lesson->id ]) }}">
-                                                                        <div class="item-lesson-left">
+                                                                    <a href="{{ $url_lesson }}">
+                                                                        <div class="item-lesson-left {{ $class_enabled }}">
                                                                             @if ( $lesson->type == 'video' )
                                                                                 <i class="fas fa-video <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
                                                                             @elseif ( $lesson->type == 'questionnaire' )
@@ -130,6 +137,9 @@
             </section>
 
         </div>
+
+        <!-- Main footer -->
+        @include('curso.components.main-footer')
 
     </div>
 

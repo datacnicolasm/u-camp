@@ -1,27 +1,23 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <!-- -->
-            <div class="col-md-3 col-sm-12 my-2 nosotros-footer">
-                <h5 class="font-weight-bold text-sm-center">Sobre Nosotros</h5>
-                <a href="" class="text-white my-1 mx-0 text-sm-center">Quienes somos</a>
-                <a href="" class="text-white my-1 mx-0 text-sm-center">Blog</a>
-                <a href="" class="text-white my-1 mx-0 text-sm-center">Contacto</a>
-                <a href="" class="text-white my-1 mx-0 text-sm-center">Trabaja con nosotros</a>
+
+            <div class="col-md-8 col-sm-12 my-2">
+                <ul class="legal-temr">
+                    <li class="mr-3">
+                        <span class="copy-footer text-muted">&copy; {{ date('Y') }} AcoountCamp, Inc. All Rights
+                            Reserved.</span>
+                    </li>
+                    <li class="privacy mr-3">
+                        <a href="" class="text-muted">Politica de privacidad</a>
+                    </li>
+                    <li class="terms mr-3">
+                        <a href="" class="text-muted">Terminos y condiciones</a>
+                    </li>
+                </ul>
             </div>
 
-            <!-- -->
-            <div class="col-md-3 col-sm-12 my-2">
-                <div class="my-2 nosotros-footer">
-                    <h5 class="font-weight-bold text-sm-center">Aprendizaje</h5>
-                    <a href="" class="text-white my-1 mx-0 text-sm-center">Precios</a>
-                    <a href="" class="text-white my-1 mx-0 text-sm-center">Cursos</a>
-                    <a href="" class="text-white my-1 mx-0 text-sm-center">Rutas</a>
-                </div>
-            </div>
-
-            <!-- -->
-            <div class="col-md-3 col-sm-12 my-2">
+            <div class="col-md-4 col-sm-12 my-2">
                 <ul class="items-social">
                     <li class="mx-2">
                         <a rel="noopener" target="_blank" href="https://www.facebook.com/datacampinc/"
@@ -73,21 +69,6 @@
                 </ul>
             </div>
 
-            <!-- -->
-            <div class="col-md-8 col-sm-12 my-2">
-                <ul class="legal-temr">
-                    <li class="mr-3">
-                        <span class="copy-footer text-muted">&copy; {{ date('Y') }} AcoountCamp, Inc. All Rights
-                            Reserved.</span>
-                    </li>
-                    <li class="privacy mr-3">
-                        <a href="" class="text-muted">Politica de privacidad</a>
-                    </li>
-                    <li class="terms mr-3">
-                        <a href="" class="text-muted">Terminos de uso</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </footer>

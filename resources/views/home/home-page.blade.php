@@ -30,9 +30,9 @@
         </div>
     </section>
 
-    <!-- Seccion "" -->
+    <!-- Seccion "¿Que es AccountCamp?" -->
     <section id="home-section-2" class="section-home">
-        <div class="container content">
+        <div id="cursos" class="container content">
             <div class="row">
                 <div class="col-12 main-cont-flex p-sm">
                     <h1 class="flex-100 mt-md-0 mb-md-4 text-white font-weight-bold">¿Qué es <span
@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <!-- Seccion "" -->
+    <!-- Seccion "Experiencia de aprendizaje" -->
     <section id="home-section-3" class="section-home">
         <div class="container content">
             <div class="row">
@@ -101,9 +101,9 @@
         </div>
     </section>
 
-    <!-- Seccion "" -->
+    <!-- Seccion "Para profesores" -->
     <section id="home-section-4" class="section-home">
-        <div class="container content">
+        <div id="para-profesores" class="container content">
             <div class="row">
                 <div class="col-sm-12 col-md-7 mb-4 cont-flex p-sm">
                     <div class="main-cont-flex">
@@ -130,9 +130,9 @@
         </div>
     </section>
 
-    <!-- Seccion "" -->
+    <!-- Seccion "Para estudiantes" -->
     <section id="home-section-5" class="section-home">
-        <div class="container content">
+        <div id="para-estudiantes" class="container content">
             <div class="row">
                 <div class="col-sm-12 col-md-5 my-4 cont-flex p-sm">
                     <div class="main-cont-flex">

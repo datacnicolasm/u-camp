@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -43,41 +44,38 @@ class UserController extends Controller
     /**
      * Form process create user
      */
-    public function createUserForm(Request $request)
+    public function createUserForm(CreateUserRequest $request)
     {
-        // Mensajes de error personalizados
-        $messages = [
-            'email.required' => 'El campo correo electrónico es obligatorio.',
-            'email.email' => 'El formato del correo electrónico no es válido.',
-            'email.unique' => 'El correo electrónico ya está registrado.',
-            'password.required' => 'El campo contraseña es obligatorio.',
-            'password.min' => 'La contraseña es muy corta. Debe tener al menos 6 caracteres.',
-        ];
-
-        // Validar los datos del formulario con mensajes personalizados
+        // Validar los datos del formulario, incluyendo la confirmación de la contraseña
         $request->validate([
-            'email' => 'required|email|max:255|unique:users,email',
-            'password' => 'required|string|min:6',
-        ], $messages);
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
 
-        $email = $request->email;
+        try {
+            // Crear el usuario
+            $user = User::create([
+                'first_name' => strtoupper($request->first_name),
+                'last_name' => strtoupper($request->last_name),
+                'email' => strtoupper($request->email),
+                'password' => Hash::make($request->password),
+            ]);
 
-        // Crear el usuario
-        $user = new User();
-        $user->first_name = strtoupper($request->first_name);
-        $user->last_name = strtoupper($request->last_name);
-        $user->email = strtoupper($email);
-        $user->password = bcrypt($request->password);
-        $user->save();
+            // Generar evento de registro
+            event(new Registered($user));
 
-        // Generar evento de registro
-        event(new Registered($user));
+            // Iniciar sesión automáticamente para el usuario creado
+            Auth::login($user);
 
-        // Iniciar sesión automáticamente para el usuario creado
-        Auth::login($user);
-
-        // Redireccionar con un mensaje de éxito
-        return redirect()->route('login-dashboard');
+            // Redireccionar con un mensaje de éxito
+            return redirect()->route('login-dashboard');
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            // Manejar cualquier error que ocurra durante la creación del usuario
+            return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el usuario. Por favor, inténtelo de nuevo.']);
+        }
     }
 
     /**
@@ -132,5 +130,4 @@ class UserController extends Controller
 
         return response()->json(['exists' => $exists]);
     }
-    
 }

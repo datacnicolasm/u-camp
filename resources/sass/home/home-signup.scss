@@ -1,17 +1,70 @@
 body.page-home-camp {
-    .home-signup{
-        div.text-create{
-            p{
+    .home-signup {
+        div.text-create {
+            p {
                 font-size: 1.3rem;
                 font-weight: bold;
                 color: #404040;
             }
         }
 
-        p.text-small{
+        p.text-small {
             font-size: 0.8rem;
             text-align: justify;
             line-height: 1.2;
+        }
+
+        .card {
+            margin: 0;
+        }
+    
+        .card-body {
+            .text-create {
+                text-align: center;
+    
+                p {
+                    text-align: center;
+                }
+            }
+    
+            .input-group {
+                margin-bottom: 1rem;
+    
+                .form-control {
+                    &::placeholder {
+                        color: #6c757d;
+                    }
+                }
+    
+                .input-group-append {
+                    .input-group-text {
+                        .fas {
+                            color: #6c757d;
+                        }
+                    }
+                }
+            }
+    
+            .btn-ucamp {
+                width: 100%;
+            }
+    
+            .text-muted {
+                margin-top: 1rem;
+                margin-bottom: 0;
+                font-size: 0.875rem;
+            }
+
+            .alert{
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        list-style: none;
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 }

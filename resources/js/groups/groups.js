@@ -17,7 +17,7 @@ $(function ($) {
             $("#edit-modal").attr("data-idgroup", id_group)
 
             $.ajax({
-                url: GLOBAL_VARS.api_url + 'group-get',
+                url: GLOBAL_VARS.api_url + 'groups/get',
                 type: 'POST',
                 data: {
                     id: id_group,
@@ -58,7 +58,7 @@ $(function ($) {
         const color_grupo = $("#edit-modal").find("#color-group").attr("value")
 
         $.ajax({
-            url: GLOBAL_VARS.api_url + 'edit-group',
+            url: GLOBAL_VARS.api_url + 'groups/edit',
             type: 'POST',
             data: {
                 id: id_grupo,
@@ -92,13 +92,14 @@ $(function ($) {
     })
 
     // Crear grupo - guardar informacion
-    $("#crear-modal").find("#create-modal").on("click", function (event) {
+    $("#crear-modal").find("#btn-crear-grupo").on("click", function (event) {
+        console.log("Crear grupo")
 
         const name_grupo = $("#crear-modal").find("#name").val()
         const color_grupo = $("#crear-modal").find("#color-group").attr("value")
 
         $.ajax({
-            url: GLOBAL_VARS.api_url + 'create-group',
+            url: GLOBAL_VARS.api_url + 'groups/create',
             type: 'POST',
             data: {
                 name: name_grupo,
@@ -107,6 +108,7 @@ $(function ($) {
             },
             success: function (response) {
                 $("#crear-modal").modal('hide');
+                $("#crear-modal").find("#name").val("")
                 location.reload();
             },
             error: function (xhr) {
@@ -124,7 +126,7 @@ $(function ($) {
             const paren_element = event.currentTarget.parentElement.parentElement.parentElement
 
             $.ajax({
-                url: GLOBAL_VARS.api_url + 'delete-group',
+                url: GLOBAL_VARS.api_url + 'groups/delete',
                 type: 'POST',
                 data: {
                     id: id_group,
@@ -147,6 +149,7 @@ $(function ($) {
                                         paren_element.remove()
                                     }
                                 })
+                                location.reload();
                             }
                         })
                 },

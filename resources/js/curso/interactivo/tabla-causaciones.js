@@ -33,20 +33,6 @@ function setCuentasInput(data) {
 
 $(function ($) {
 
-    $.ajax({
-        url: GLOBAL_VARS.api_url + 'lessons/getPucAccounts',
-        type: 'POST',
-        data: {
-            _token: $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (response) {
-            setCuentasInput(response.data);
-        },
-        error: function (xhr) {
-            console.log(xhr)
-        }
-    });
-
     $("input.val-causacion").each(function (index, element) {
         $(element).on('keydown', function (e) {
             // Permitir teclas de control como backspace, tab, enter, escape, delete y flechas

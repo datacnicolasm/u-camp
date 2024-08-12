@@ -19,15 +19,8 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
 
-                <li class="btn-item">
-                    <a href="" class="btn btn-block font-weight-bold text-white bg-tint-3 btn-invitar py-2">Invitar estudiantes</a>
-                </li>
-
-                <!-- Division de secciones -->
-                <div class="item-div-sidebar"></div>
-
                 <!--  -->
-                <li class="nav-item">
+                <li class="mt-3 nav-item">
                     <a class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>Cuadro de mando</p>
