@@ -29,7 +29,7 @@ use Illuminate\Http\Request;
 Auth::routes(['verify' => true]);
 
 // Ruta para verificar el email
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) { 
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
     return redirect('/dashboard');
 })->middleware(['auth', 'signed'])->name('verification.verify');
@@ -42,9 +42,6 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 // Rutas públicas
 Route::get('/', [HomeController::class, 'homePage'])->name('home-page');
-Route::get('/home/cursos', [HomeController::class, 'cursosPage'])->name('cursos-home');
-Route::get('/home/precios', [HomeController::class, 'preciosPage'])->name('precios-home');
-Route::get('/home/purchase', [HomeController::class, 'purchasePage'])->name('purchase-home');
 Route::post('/check-email', [UserController::class, 'checkEmail']);
 Route::post('/payments', [PaymentController::class, 'store']);
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
@@ -55,6 +52,15 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/sign-up', [UserController::class, 'createUser'])->name('sign-up');
     Route::post('/process-login', [UserController::class, 'loginUserForm'])->name('process-login');
     Route::post('/process-sign-up', [UserController::class, 'createUserForm'])->name('process-sign-up');
+});
+
+// Home
+Route::prefix('home')->group(function () {
+    Route::get('cursos', [HomeController::class, 'cursosPage'])->name('cursos-home');
+    Route::get('precios', [HomeController::class, 'preciosPage'])->name('precios-home');
+    Route::get('purchase', [HomeController::class, 'purchasePage'])->name('purchase-home');
+    Route::get('terminos-y-condiciones', [HomeController::class, 'terminosPage'])->name('terminos-home');
+    Route::get('politica-privacidad', [HomeController::class, 'privacidadPage'])->name('privacidad-home');
 });
 
 // Grupos

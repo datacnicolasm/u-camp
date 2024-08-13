@@ -97,4 +97,14 @@ class HomeController extends Controller
         // Iniciar sesión automáticamente para el usuario creado
         Auth::login($user);
     }
+
+    public function terminosPage()
+    {
+        return view('home.home-terminos');
+    }
+
+    public function privacidadPage()
+    {
+        return view('home.home-privacidad');
+    }
 }

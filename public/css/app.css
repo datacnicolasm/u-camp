@@ -11323,6 +11323,17 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   color: #0056b3;
 }
 
+body.page-home {
+  padding-top: 80px;
+}
+body.page-home .section-home-first {
+  background-color: #05bd9b;
+  text-align: center;
+}
+body.page-home .terminos-condiciones-sect p {
+  text-align: justify;
+}
+
 body.page-home-camp .footer {
   padding: 40px 0;
   background-color: #021221;

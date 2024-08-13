@@ -92,8 +92,7 @@
 
                 <!-- Términos y condiciones -->
                 <p class="m-2 text-muted text-small">
-                    Al continuar, aceptas nuestros Términos y condiciones, nuestra Política de Privacidad y que tus
-                    datos sean almacenados.
+                    Al continuar, aceptas nuestros <a href="{{ route('terminos-home') }}">Términos y condiciones</a>, nuestra <a href="{{ route('privacidad-home') }}">Politica de Privacidad</a> y que tus datos sean almacenados.
                 </p>
             </div>
         </div>

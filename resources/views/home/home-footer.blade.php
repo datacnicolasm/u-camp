@@ -9,10 +9,10 @@
                             Reserved.</span>
                     </li>
                     <li class="privacy mr-3">
-                        <a href="" class="text-muted">Politica de privacidad</a>
+                        <a href="{{ route('privacidad-home') }}" class="text-muted">Politica de privacidad</a>
                     </li>
                     <li class="terms mr-3">
-                        <a href="" class="text-muted">Terminos y condiciones</a>
+                        <a href="{{ route('terminos-home') }}" class="text-muted">Terminos y condiciones</a>
                     </li>
                 </ul>
             </div>
