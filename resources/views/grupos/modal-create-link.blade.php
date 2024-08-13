@@ -4,6 +4,7 @@
 
             <!-- -->
             <div class="modal-header">
+                <h5 class="m-0 font-weight-bold">Crear link de invitación</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -13,7 +14,6 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="py-1 px-3 col-12">
-                        <h5 class="mb-3 font-weight-bold">Crear link de invitación</h5>
                         <p>Los enlaces de invitación se utilizan para que otros usuarios se puedan unir a tus grupos de
                             clase.</p>
                     </div>

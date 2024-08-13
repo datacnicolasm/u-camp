@@ -146,7 +146,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th style="width: 20px">
-                                                            <input type="checkbox">
+                                                            
                                                         </th>
                                                         <th>Nombre del estudiante</th>
                                                         <th>Correo del estudiante</th>

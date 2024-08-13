@@ -4,7 +4,7 @@
 
             <!-- -->
             <div class="modal-header">
-                <h4 class="modal-title">Crear grupo de clase</h4>
+                <h5 class="m-0 font-weight-bold">Crear grupo de clase</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -48,8 +48,8 @@
 
             <!-- -->
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button id="btn-crear-grupo" type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
+                <button id="btn-crear-grupo" type="button" class="btn btn-sm btn-primary">
                     Crear grupo
                 </button>
             </div>
