@@ -39,6 +39,18 @@
                     </a>
                 </li>
 
+                <!-- Listado de enlaces -->
+                <?php $class_items_links = "" ?>
+                @if (Route::currentRouteName() == 'links-members')
+                    <?php $class_items_links .= "active-item-nav" ?>
+                @endif
+                <li class="nav-item">
+                    <a href="{{ route('links-members') }}" class="nav-link <?php echo $class_items_links ?>">
+                        <i class="nav-icon fas fa-link"></i>
+                        <p>Enlaces de invitación</p>
+                    </a>
+                </li>
+
                 <!-- Listado de grupos -->
                 <?php $class_items_grupos = "" ?>
                 @if (Route::currentRouteName() == 'list-groups')

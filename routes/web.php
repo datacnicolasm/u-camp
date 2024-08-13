@@ -90,8 +90,9 @@ Route::middleware(['auth'])->group(function () {
     // Grupos
     Route::prefix('groups')->group(function () {
         Route::get('/dashboard', [GruposController::class, 'dashboardGrupos'])->name('dashboard-grupos');
-        Route::get('/list', [GruposController::class, 'listGroups'])->name('list-groups');
+        Route::get('/groups', [GruposController::class, 'listGroups'])->name('list-groups');
         Route::get('/members', [GruposController::class, 'listMembers'])->name('list-members');
+        Route::get('/links-members', [GruposController::class, 'getLinksGroup'])->name('links-members');
     });
 
     // Perfil de usuario

@@ -60,7 +60,7 @@
                                 </button>
                                 <div class="mt-2 links-creados">
                                     <i class="text-primary mr-2 fas fa-link"></i>
-                                    <a href="">Ver links creados</a>
+                                    <a href="{{ route('links-members') }}">Ver links creados</a>
                                 </div>
                             </div>
                         </div>

@@ -41,4 +41,19 @@ class GroupInvitationLink extends Model
     {
         return Carbon::parse($this->expires_at)->isFuture();
     }
+
+    public static function getListLinksUser(User $user)
+    {
+        // Obtener los enlaces de invitación generados por el usuario
+        $invitationLinks = GroupInvitationLink::where('user_id', $user->id)->get();
+
+        // Iterar sobre cada enlace para verificar si ha expirado
+        foreach ($invitationLinks as $link) {
+            // Verificar si el enlace ha expirado
+            $link->expired = Carbon::now()->greaterThan(Carbon::parse($link->expires_at));
+        }
+
+        // Retornar la lista de enlaces con la información de expiración
+        return $invitationLinks;
+    }
 }

@@ -285,4 +285,9 @@ class GruposController extends Controller
             'invitation_key' => $request->invitation_key
         ]);;
     }
+
+    public function getLinksGroup()
+    {
+        return view('grupos.list-links');
+    }
 }
