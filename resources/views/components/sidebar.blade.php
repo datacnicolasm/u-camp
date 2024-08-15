@@ -21,7 +21,7 @@
 
                 <!-- Ver clases que tiene el usuario -->
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('login-dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-meteor"></i>
                         <p>Tu progreso</p>
                     </a>
@@ -57,9 +57,12 @@
 
                 <!-- Practica -->
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="" class="nav-link">
                         <i class="nav-icon fas fa-dumbbell"></i>
-                        <p>Práctica</p>
+                        <p>
+                            Práctica
+                            <span class="right badge badge-warning">Muy pronto</span>
+                        </p>
                     </a>
                 </li>
 
@@ -71,9 +74,12 @@
 
                 <!-- Pruebas de conocimiento -->
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="" class="nav-link">
                         <i class="nav-icon fas fa-medal"></i>
-                        <p>Evaluate</p>
+                        <p>
+                            Evaluate
+                            <span class="right badge badge-warning">Muy pronto</span>
+                        </p>
                     </a>
                 </li>
 

@@ -67,4 +67,9 @@ class Group extends Model
     {
         return $this->hasMany(GroupInvitationLink::class);
     }
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
+    }
 }

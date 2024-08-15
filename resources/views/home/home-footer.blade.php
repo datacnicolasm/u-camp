@@ -20,20 +20,11 @@
             <div class="col-md-4 col-sm-12 my-2">
                 <ul class="items-social">
                     <li class="mx-2">
-                        <a rel="noopener" target="_blank" href="https://www.facebook.com/datacampinc/"
+                        <a rel="noopener" target="_blank" href="https://www.facebook.com/people/Account-Camp/61564677680590/"
                             class="css-evebs5"><i aria-hidden="true"><svg fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg" width="10" height="16">
                                     <path
                                         d="M6.164 15.875V8.691h2.514l.376-2.8h-2.89V4.102c0-.81.233-1.362 1.448-1.362l1.545-.001V.234A22.319 22.319 0 006.903.125c-2.23 0-3.756 1.305-3.756 3.701v2.065H.625v2.8h2.522v7.184h3.016z">
-                                    </path>
-                                </svg></i></a>
-                    </li>
-                    <li class="mx-2">
-                        <a rel="noopener" target="_blank" href="https://twitter.com/datacamp" class="css-evebs5"><i
-                                aria-hidden="true"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    width="17" height="17">
-                                    <path
-                                        d="M15.75 3.27a6.445 6.445 0 01-1.855.512 3.254 3.254 0 001.42-1.794 6.519 6.519 0 01-2.053.788 3.214 3.214 0 00-2.359-1.026 3.24 3.24 0 00-3.23 3.245c0 .254.029.503.084.74a9.163 9.163 0 01-6.659-3.392 3.24 3.24 0 00-.437 1.632c0 1.126.571 2.12 1.437 2.701A3.217 3.217 0 01.634 6.27v.04a3.248 3.248 0 002.592 3.183 3.225 3.225 0 01-1.459.054 3.233 3.233 0 003.017 2.254 6.464 6.464 0 01-4.013 1.386c-.26 0-.518-.015-.771-.043a9.11 9.11 0 004.952 1.46c5.944 0 9.192-4.946 9.192-9.236l-.01-.42a6.456 6.456 0 001.616-1.676z">
                                     </path>
                                 </svg></i></a>
                     </li>

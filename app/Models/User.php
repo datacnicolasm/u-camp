@@ -57,6 +57,14 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(Lesson::class)->withTimestamps();
     }
 
+    /**
+     * Obtener las lecciones creadas por el usuario
+     */
+    public function createdLessons()
+    {
+        return $this->hasMany(Lesson::class, 'user_id', 'id');
+    }
+
     public function group(): BelongsToMany
     {
         return $this->belongsToMany(Group::class, 'group_user', 'user_id', 'group_id')->withTimestamps();

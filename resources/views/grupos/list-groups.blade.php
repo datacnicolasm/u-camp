@@ -13,7 +13,7 @@
         @include('components.navbar')
 
         <!-- Barra de navegacion lateral -->
-        @include('grupos.sidebar')
+        @include('grupos.components.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -44,10 +44,10 @@
                     <div class="container-fluid">
 
                         <!-- Modal para editar un grupo -->
-                        @include('grupos.modal-edit-group')
+                        @include('grupos.modal.modal-edit-group')
 
                         <!-- Modal para crear un grupo -->
-                        @include('grupos.modal-create-group')
+                        @include('grupos.modal.modal-create-group')
 
                         <div class="row">
                             <div class="col-12">

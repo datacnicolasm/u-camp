@@ -78,6 +78,12 @@ Route::prefix('groups')->group(function () {
     Route::post('/delete-user', [GruposController::class, 'deleteUserGroup'])->name('delete-user');
 });
 
+// Lessons
+Route::prefix('lessons')->group(function () {
+    Route::post('/delete', [LessonController::class, 'deleteLesson'])->name('delete-group');
+    Route::post('/create-assignment', [LessonController::class, 'createLesson'])->name('create-assignment');
+});
+
 // Rutas protegidas por autenticación
 Route::middleware(['auth'])->group(function () {
 
@@ -93,6 +99,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/groups', [GruposController::class, 'listGroups'])->name('list-groups');
         Route::get('/members', [GruposController::class, 'listMembers'])->name('list-members');
         Route::get('/links-members', [GruposController::class, 'getLinksGroup'])->name('links-members');
+        Route::get('/{user}/actividades', [WorkshopController::class, 'listActividadesGroup'])->name('list-actividades');
     });
 
     // Perfil de usuario
@@ -112,6 +119,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/{lesson}/verifyResponse', [LessonController::class, 'verifyResponse'])->name('lessons.verifyResponse');
         Route::post('/getGuiaJSON', [LessonController::class, 'getGuiaJSON'])->name('lessons.guiajson');
         Route::post('/{lesson}/view', [LessonController::class, 'markAsViewed'])->middleware('auth');
+        Route::post('/create-assignment', [LessonController::class, 'createLesson'])->name('create-assignment');
     });
 
     // Rutas Profesionales

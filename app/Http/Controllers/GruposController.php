@@ -15,7 +15,7 @@ class GruposController extends Controller
 {
     public function dashboardGrupos()
     {
-        return view('grupos.dashboard');
+        return view('grupos.components.dashboard');
     }
 
     public function listGroups()

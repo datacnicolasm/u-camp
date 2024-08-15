@@ -11,11 +11,17 @@ class Lesson extends Model
     use HasFactory;
 
     protected $fillable = [
+        'activo',
         'title',
         'type',
+        'use_type',
         'points_xp',
         'order',
-        'chapter_id'
+        'user_id',
+        'group_id',
+        'chapter_id',
+        'expires_at',
+        'is_archived'
     ];
 
     // Relación con el modelo Point (opcional si se necesita)
@@ -30,6 +36,16 @@ class Lesson extends Model
     public function chapter()
     {
         return $this->belongsTo(Chapter::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
     }
 
     public function users(): BelongsToMany

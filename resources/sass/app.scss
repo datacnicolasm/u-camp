@@ -2,6 +2,7 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~jquery-ui/themes/base/all.css';
 @import '../adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';
+@import '~tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css';
 @import '../adminlte/dist/css/adminlte.min.css';
 @import './user/login.scss';
 @import './user/create.scss';
@@ -43,6 +44,8 @@
 @import './grupos/list-groups.scss';
 @import './grupos/list-members.scss';
 @import './grupos/link-new-user.scss';
+@import './grupos/modal-create-actividad.scss';
+@import './grupos/list-actividades.scss';
 
 @import './dashboard/dashboard-home.scss';
 
@@ -53,6 +56,10 @@
 
 body{
     font-size: .9rem;
+}
+
+.card-top-camp{
+    border-top: 6px solid $tint-3;
 }
 
 .logo {

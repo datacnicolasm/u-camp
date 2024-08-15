@@ -7,12 +7,35 @@ use App\Models\Lesson;
 use App\Models\Point;
 use App\Models\Puc;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 
 class LessonController extends Controller
 {
+    public function createLesson(Request $request)
+    {
+        try {
+            Log::info($request->all());
+
+            Lesson::create([
+                'title' => $request->input('titulo_actividad'),
+                'type' => $request->input('tipo_actividad'),
+                'use_type' => 'group',
+                'points_xp' => $request->input('puntos_xp'),
+                'order' => $request->input('orden'),
+                'group_id' => $request->input('grupo_id'),
+                'user_id' => $request->user()->id,
+                'expires_at' => Carbon::parse($request->input('vencimiento')),
+            ]);
+
+            return redirect()->route('list-cursos');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el recurso.']);
+        }
+    }
+
     /**
      * Display view for a lesson
      */
@@ -282,5 +305,24 @@ class LessonController extends Controller
         return response()->json([
             'data' => $cuentas
         ]);
+    }
+
+    public function deleteLesson(Request $request)
+    {
+        // Validar el ID del grupo
+        $request->validate([
+            'id' => 'required|exists:lessons,id'
+        ]);
+
+        // Buscar y eliminar el grupo
+        $lesson = Lesson::find($request->id);
+
+        if ($lesson) {
+            $lesson->activo = 0;
+            $lesson->save();
+            return response()->json(['message' => 'Recurso marcado correctamente.'], 200);
+        }
+
+        return response()->json(['message' => 'Recurso no encontrado.'], 404);
     }
 }

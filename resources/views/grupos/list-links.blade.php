@@ -13,7 +13,7 @@
         @include('components.navbar')
 
         <!-- Barra de navegacion lateral -->
-        @include('grupos.sidebar')
+        @include('grupos.components.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">

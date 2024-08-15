@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const webpack = require('webpack');
 const path = require('path');
 
 mix.js('resources/js/app.js', 'public/js')
@@ -27,7 +28,14 @@ mix.webpackConfig({
     },
     output: {
         publicPath: '/fonts/'
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+        }),
+    ]
 });
 
 // Copiar los archivos de jQuery UI CSS

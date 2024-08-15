@@ -1,0 +1,77 @@
+.list-actividades {
+    .table-actividades {
+        margin: 0;
+
+        .color-group {
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+            float: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #eee;
+        }
+
+        .content-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-button {
+                border: none;
+                background: none;
+                color: #6c757d;
+                font-size: .9rem;
+                cursor: pointer;
+                position: relative;
+
+                .tool-tip {
+                    display: none;
+                    position: absolute;
+                    top: 105%;
+                    left: 50%;
+                    padding: 4px 12px;
+                    background-color: #b8f9d7;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: normal;
+                }
+            }
+
+            .icon-button:hover {
+                color: $tint-3;
+
+                .tool-tip{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        .no-items {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 4rem 0;
+
+            .icon i {
+                font-size: 4rem;
+                color: #d3d3d3;
+            }
+        }
+    }
+}

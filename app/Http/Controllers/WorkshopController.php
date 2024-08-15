@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lesson;
 use App\Models\Point;
+use App\Models\User;
 use App\Models\UserWorkshop;
 use App\Models\UserWorkshopEntry;
 use App\Models\Workshop;
@@ -49,7 +51,7 @@ class WorkshopController extends Controller
 
             // Si no se encuentra el WorkshopEntry o los valores no coinciden, marcar como no verificado
             if (!$workshopEntry || intval($entry['val']) !== $workshopEntry->value_input) {
-                
+
                 $verify_input = "error";
                 $int_errores += 1;
 
@@ -59,11 +61,10 @@ class WorkshopController extends Controller
                 $userWorkshopEntry->verify_value = $verify_input;
                 $userWorkshopEntry->userworkshop_id = $userWorkshop->id;
                 $userWorkshopEntry->save();
-
-            }elseif( intval($entry['val']) == 0 && $workshopEntry->value_input == 0){
+            } elseif (intval($entry['val']) == 0 && $workshopEntry->value_input == 0) {
                 $verify_input = "no-calificable";
                 $int_null += 1;
-            }else{
+            } else {
                 $int_aciertos += 1;
 
                 $userWorkshopEntry = new UserWorkshopEntry();
@@ -82,9 +83,9 @@ class WorkshopController extends Controller
             ];
         }
 
-        $aprobado = ( $int_aciertos / ($int_errores + $int_aciertos)) > 0.7 ? true : false;
+        $aprobado = ($int_aciertos / ($int_errores + $int_aciertos)) > 0.7 ? true : false;
 
-        if ( $aprobado ) {
+        if ($aprobado) {
             // Registrar la lección vista
             $user->lessons()->syncWithoutDetaching([$userWorkshop->workshop->lesson->id]);
 
@@ -103,6 +104,30 @@ class WorkshopController extends Controller
                 'matriz' => $matriz_verificacion,
                 'userWorkshop' => $userWorkshop
             ]
+        ]);
+    }
+
+    public function listActividadesGroup(User $user)
+    {
+        // Obtener listado de lecciones
+        $lessons = Lesson::where('activo', 1)
+            ->where('user_id', $user->id)
+            ->where('use_type', 'group')
+            ->where('type', 'dian')
+            ->orderBy('expires_at', 'asc')
+            ->get();
+
+        // Cargar la relación 'group'
+        $lessons->load('group');
+
+        // Iterar sobre las lecciones y agregar un nuevo campo 'status'
+        foreach ($lessons as $lesson) {
+            $lesson->status = $lesson->expires_at > now() ? 'activa' : 'vencida';
+        }
+
+        return view('grupos.actividades.list-actividades')->with([
+            'user' => $user,
+            'lessons' => $lessons
         ]);
     }
 }

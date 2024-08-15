@@ -13,7 +13,7 @@
         @include('components.navbar')
 
         <!-- Barra de navegacion lateral -->
-        @include('grupos.sidebar')
+        @include('grupos.components.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -72,10 +72,10 @@
                     <div class="container-fluid">
 
                         <!-- Modal para eliminar de un gruppo -->
-                        @include('grupos.modal-delete-user')
+                        @include('grupos.modal.modal-delete-user')
 
                         <!-- Modal para crear enlace de invitacion -->
-                        @include('grupos.modal-create-link')
+                        @include('grupos.modal.modal-create-link')
 
                         <div class="row">
                             <div class="col-12">
