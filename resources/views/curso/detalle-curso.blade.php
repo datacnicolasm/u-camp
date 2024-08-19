@@ -19,7 +19,7 @@
                         <!-- Header Curso -->
                         <div class="col-12">
                             <div class="row header-detalle-cursos py-3 px-3">
-                                <div class="col-10">
+                                <div class="col-sm-12 col-md-10">
                                     <p class="my-2 d-block text-medium text-white">
                                         CURSO
                                     </p>
@@ -27,7 +27,7 @@
                                         {{ $curso->titulo }}
                                     </h2>
                                 </div>
-                                <div class="col-10 btn-curso">
+                                <div class="col-sm-12 col-md-10 btn-curso">
                                     <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lastLesson["lesson_id"] ]) }}" class="btn bg-3-ucamp mt-2">
                                         @if ($lastLesson["is_first"])
                                             <span>Iniciar curso</span>
@@ -36,7 +36,7 @@
                                         @endif
                                     </a>
                                 </div>
-                                <div class="col-10 mt-3 ml-2 datos-curso">
+                                <div class="col-sm-12 col-md-10 mt-3 ml-2 datos-curso">
                                     <p class="m-0 pr-2 d-inline-block text-medium text-white">
                                         {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
                                     </p>
@@ -58,7 +58,7 @@
                                             @foreach($curso->chapters as $chapter)
                                                 <div class="mb-3 py-3 px-3 chapter-item">
                                                     <div class="row chapter-header">
-                                                        <div class="col-8 chapter-title">
+                                                        <div class="col-sm-12 col-md-8 chapter-title">
                                                             <p class="m-0 font-weight-bold">
                                                                 {{ $chapter->title }}
                                                             </p>
@@ -72,7 +72,7 @@
                                                                 </div>
                                                             @endif
                                                         </div>
-                                                        <div class="col-4 chapter-bar">
+                                                        <div class="col-sm-12 col-md-4 chapter-bar">
                                                             <div class="container-course-progress">
                                                                 <?php
                                                                     $class_progress = 0;

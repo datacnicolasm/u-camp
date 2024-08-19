@@ -7,10 +7,10 @@
     <!--  -->
     <section class="section-home-first">
         <div class="container">
-            <div class="row py-5 justify-content-md-center flex-column align-items-center">
+            <div class="row py-4 justify-content-md-center flex-column align-items-center">
 
                 <h1 class="col-12 mt-3 font-weight-bold text-white m-0">Terminos y Condiciones</h1>
-                <p class="col-6 my-3 text-white text-large">Estos Términos y Condiciones tienen como propósito detallar
+                <p class="col-md-6 col-sm-12 my-3 text-white text-large">Estos Términos y Condiciones tienen como propósito detallar
                     nuestras obligaciones como proveedor de servicios, así como las responsabilidades que usted, como
                     usuario, debe cumplir.</p>
                 <h5 class="col-12 mb-3 font-weight-bold text-tint-1">Última modificación: 12 de agosto de 2024</h5>
@@ -22,7 +22,7 @@
     <!--  -->
     <section class="section-home-second terminos-condiciones-sect">
         <div class="container">
-            <div class="row py-5 justify-content-md-center flex-column align-items-center">
+            <div class="row py-4 justify-content-md-center flex-column align-items-center">
 
                 <div class="col-md-8 col-sm-12">
                     <strong>Introducción</strong>

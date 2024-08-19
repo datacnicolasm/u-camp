@@ -14,6 +14,7 @@ import '../adminlte/plugins/jquery/jquery.min.js';
 import '../adminlte/plugins/datatables/jquery.dataTables.min.js';
 import '../adminlte/plugins/datatables-bs4/js/datatables.js';
 import '../adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js';
+import '../adminlte/dist/js/adminlte.js';
 
 // Importar Bootstrap y otros scripts
 import './bootstrap';

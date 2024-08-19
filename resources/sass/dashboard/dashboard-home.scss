@@ -203,6 +203,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: end;
+
+                    @include responsive(mobile) {
+                        margin-top: 1.5rem;
+                        justify-content: center;
+                    }
                 }
 
                 .container-course-progress{

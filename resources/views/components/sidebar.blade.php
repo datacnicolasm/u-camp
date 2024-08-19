@@ -26,26 +26,49 @@
                 <!-- Ver clases que tiene el usuario -->
                 <li class="nav-item">
                     <a href="{{ route('login-dashboard') }}" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+
+                <!-- Ver clases que tiene el usuario -->
+                <li class="nav-item">
+                    <a href="{{ route('login-dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-meteor"></i>
                         <p>Tu progreso</p>
                     </a>
                 </li>
 
+                <?php $class_items_grupos = ''; ?>
+                @if (Route::currentRouteName() == 'dashboard-grupos')
+                    <?php $class_items_grupos .= 'active-item-nav'; ?>
+                @endif
+
+                @if (Auth::user()->has_groups)
+                    <!--  -->
+                    <li class="nav-item">
+                        <a href="{{ route('dashboard-grupos') }}" class="nav-link <?php echo $class_items_grupos; ?>">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>Grupos</p>
+                        </a>
+                    </li>
+                @endif
+
                 <!-- Division de secciones -->
                 <div class="item-div-sidebar"></div>
-                
+
                 <!-- Seccion de Aprendizaje -->
                 <li class="nav-header"><strong>APRENDIZAJE</strong></li>
 
                 <!-- Cursos disponibles -->
                 <li class="nav-item">
-                    <?php $class_items_cursos = "" ?>
+                    <?php $class_items_cursos = ''; ?>
                     @if (Route::currentRouteName() == 'list-cursos')
-                        <?php $class_items_cursos .= "active-item-nav" ?>
+                        <?php $class_items_cursos .= 'active-item-nav'; ?>
                     @elseif (Route::currentRouteName() == 'view-curso')
-                        <?php $class_items_cursos .= "active-item-nav" ?>
+                        <?php $class_items_cursos .= 'active-item-nav'; ?>
                     @endif
-                    <a href="{{ route('list-cursos') }}" class="nav-link <?php echo $class_items_cursos ?>">
+                    <a href="{{ route('list-cursos') }}" class="nav-link <?php echo $class_items_cursos; ?>">
                         <i class="nav-icon fas fa-atom"></i>
                         <p>Cursos</p>
                     </a>
@@ -95,7 +118,8 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                    <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a href="#" class="nav-link"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="nav-icon fas fa-right-from-bracket"></i>
                         <p>Cerrar sesión</p>
                     </a>
@@ -103,7 +127,7 @@
 
             </ul>
         </nav>
-        
+
     </div>
-    
+
 </aside>

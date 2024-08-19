@@ -7,10 +7,10 @@
     <!--  -->
     <section class="section-home-first">
         <div class="container">
-            <div class="row py-5 justify-content-md-center flex-column align-items-center">
+            <div class="row py-4 justify-content-md-center flex-column align-items-center">
 
                 <h1 class="col-12 mt-3 font-weight-bold text-white m-0">Política de privacidad</h1>
-                <p class="col-6 my-3 text-white text-large">En AccountCamp, nos comprometemos a proteger tu información personal. Nuestra Política de Privacidad detalla cómo recopilamos, utilizamos y salvaguardamos tus datos, garantizando tu seguridad y transparencia en todo momento.</p>
+                <p class="col-sm-12 col-md-6  my-3 text-white text-large">En AccountCamp, nos comprometemos a proteger tu información personal. Nuestra Política de Privacidad detalla cómo recopilamos, utilizamos y salvaguardamos tus datos, garantizando tu seguridad y transparencia en todo momento.</p>
                 <h5 class="col-12 mb-3 font-weight-bold text-tint-1">Última modificación: 12 de agosto de 2024</h5>
 
             </div>
@@ -20,7 +20,7 @@
     <!--  -->
     <section class="section-home-second terminos-condiciones-sect">
         <div class="container">
-            <div class="row py-5 justify-content-md-center flex-column align-items-center">
+            <div class="row py-4 justify-content-md-center flex-column align-items-center">
 
                 <div class="col-md-8 col-sm-12">
                     <strong>1. Introducción</strong>

@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed">
 
     <div class="wrapper">
         @if (session('success'))

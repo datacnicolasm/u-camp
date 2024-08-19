@@ -69,6 +69,24 @@
                         align-items: center;
                         padding: .5rem 0;
 
+                        @include responsive(mobile) {
+                            flex-wrap: wrap;
+                        }
+
+                        .item-lesson-left{
+                            @include responsive(mobile) {
+                                flex: 0 0 100%;
+                                width: 100%;
+                            }
+                        }
+
+                        .item-lesson-right{
+                            @include responsive(mobile) {
+                                flex: 0 0 100%;
+                                width: 100%;
+                            }
+                        }
+
                         .item-lesson-left.enabled {
                             color: #000;
                         }

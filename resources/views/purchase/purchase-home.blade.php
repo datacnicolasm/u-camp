@@ -58,7 +58,7 @@
             </div>
 
             <!-- Resumen de compra -->
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12">
                 <div class="form-sumary">
                     <div class="container">
                         <div class="row">
@@ -66,11 +66,11 @@
                             <div class="col-8 text-muted-dark">PLAN</div>
                             <div class="col-4 text-muted-dark text-right">PRECIO</div>
                             <div class="col-8 mb-4 text-white">Premium mensual</div>
-                            <div class="col-4 mb-4 text-white text-right">$23.00</div>
+                            <div class="col-4 mb-4 text-white text-right">$10.00</div>
                             <div class="col-8 py-4 text-white sub-sumary">SUBTOTAL</div>
-                            <div class="col-4 py-4 text-white sub-sumary text-right">$23.00</div>
+                            <div class="col-4 py-4 text-white sub-sumary text-right">$10.00</div>
                             <div class="col-8 my-4 font-weight-bold text-white">TOTAL A PAGAR</div>
-                            <div class="col-4 my-4 font-weight-bold text-white text-right">$23.00</div>
+                            <div class="col-4 my-4 font-weight-bold text-white text-right">$10.00</div>
                             <span class="text-white">*Valor en <b>DOLARES</b></span>
                         </div>
                     </div>
@@ -86,17 +86,17 @@
                 $step_payment = 'cuenta';
             }
             ?>
-            <div id="form-main-pago" class="col-8" data-step="<?php echo $step_payment; ?>">
+            <div id="form-main-pago" class="col-md-8 col-sm-12" data-step="<?php echo $step_payment; ?>">
 
                 <!-- 1. Detalles de cuenta -->
                 <div id="cuenta" class="mb-3 section-formulario">
                     <div class="container">
                         <div class="row">
-                            <div class="col-6 title-section-formulario">
+                            <div class="col-md-6 col-sm-12 title-section-formulario">
                                 <div class="number cuenta-step">1</div>
                                 <div class="text text-large ml-3 font-weight-bold">Crea tu cuenta</div>
                             </div>
-                            <div class="col-6 text-sesion">
+                            <div class="col-md-6 col-sm-12 text-sesion">
                                 ¿Ya tienes una cuenta?
                                 <a href="#" id="login-pago" class="text-tint-3 ml-1 font-weight-bold">Iniciar sesión</a>
                             </div>
@@ -109,7 +109,7 @@
 
                                             <!-- Otros campos -->
                                             <div class="form-row">
-                                                <div class="form-group email-input col-6">
+                                                <div class="form-group email-input col-md-6 col-sm-12">
                                                     <p class="label-input">Correo electronico</p>
                                                     <input type="email" class="form-control" id="email"
                                                         placeholder="Correo electronico" required>
@@ -123,7 +123,7 @@
                                                         Email válido.
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-6">
+                                                <div class="form-group col-md-6 col-sm-12">
                                                     <p class="label-input">Contraseña</p>
                                                     <input type="password" class="form-control" id="password"
                                                         placeholder="Contraseña" required>
@@ -136,12 +136,12 @@
                                                         Contraseña valida.
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-6">
+                                                <div class="form-group col-md-6 col-sm-12">
                                                     <p class="label-input">Nombres</p>
                                                     <input type="text" class="form-control" id="first-name"
                                                         placeholder="Nombres" required>
                                                 </div>
-                                                <div class="form-group col-6">
+                                                <div class="form-group col-md-6 col-sm-12">
                                                     <p class="label-input">Apellidos</p>
                                                     <input type="text" class="form-control" id="last-name"
                                                         placeholder="Apellidos" required>
@@ -149,12 +149,12 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-sm-12">
                                         <button data-coderef="<?php echo $reference; ?>" id="crear-payment"
                                             class="btn btn-block btn-3-ucamp">Continuar</button>
                                     </div>
-                                    <div class="col-9">
-                                        <span class="text-muted-dark">
+                                    <div class="col-md-9 col-sm-12">
+                                        <span class="text-muted-dark text-justify">
                                             Al continuar, aceptas nuestros <a
                                                 href="{{ route('terminos-home') }}">Términos y condiciones</a>, nuestra
                                             <a href="{{ route('privacidad-home') }}">Politica de Privacidad</a> y que
@@ -185,7 +185,7 @@
                                     </div>
                                     <div class="col-7 medios-pago-paypal">
                                     </div>-->
-                                    <div class="col-5 my-3">
+                                    <div class="col-md-5 col-sm-12 my-3">
                                         <form id="form-pago-wompi">
                                             <?php
                                             $public_key = 'pub_test_C3EHFG30gb9kJRJJbhuDInR0OacWifjT';
@@ -201,7 +201,7 @@
                                             </script>
                                         </form>
                                     </div>
-                                    <div class="col-7 my-3 medios-pago-wompi">
+                                    <div class="col-md-7 col-sm-12 my-3 medios-pago-wompi">
                                         <img src="{{ asset('img/logo-american-express.svg') }}" alt="">
                                         <img src="{{ asset('img/logo-mastercard.svg') }}" alt="">
                                         <img src="{{ asset('img/logo-maestro.svg') }}" alt="">

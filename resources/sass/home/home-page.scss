@@ -184,6 +184,10 @@ body.page-home-camp {
         background-color: #fff;
         padding-bottom: 4rem;
 
+        @include responsive(mobile) {
+            padding-bottom: 2rem;
+        }
+
         .main-cont-flex {
             display: flex;
             justify-content: flex-start;

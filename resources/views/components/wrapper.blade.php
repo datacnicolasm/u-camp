@@ -61,7 +61,7 @@
             <div class="row">
 
                 <!-- User card -->
-                <div class="col-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="card card-user-dashboard">
                         <!-- Card body -->
                         <div class="card-body">
@@ -121,12 +121,12 @@
                     </div>
                 </div>
 
-                <div class="col-8 pt-2">
+                <div class="col-sm-12 col-md-8 pt-2">
                     <div class="row">
-                        <div class="col-6 font-weight-bold">
+                        <div class="col-sm-12 col-md-6 font-weight-bold text-sm-center">
                             Tu aprendizaje
                         </div>
-                        <div class="col-6">
+                        <div class="col-sm-12 col-md-6">
                             <div class="float-sm-right">
 
                                 @if (Auth::user()->is_premium)
@@ -162,7 +162,7 @@
                             <div class="col-12 mt-3 item-cursos-dash">
                                 <span class="text-muted">
 
-                                    <span class="font-weight-bold">Tus cursos</span>
+                                    <span class="font-weight-bold text-sm-center">Tus cursos</span>
 
                                     <ul class="list-cursos">
                                         @foreach ($coursesWithProgress as $curso)
@@ -208,26 +208,26 @@
                             <div class="col-12 mt-3 item-cursos-dash">
                                 <span class="text-muted">
 
-                                    <span class="font-weight-bold">Iniciar un curso</span>
+                                    <span class="font-weight-bold text-sm-center">Iniciar un curso</span>
 
                                     <ul class="list-cursos">
                                         @foreach ($coursesWithoutProgress as $curso)
                                             <li class="card item-curso-dash">
                                                 <div class="card-body">
                                                     <div class="row">
-                                                        <div class="col-8">
+                                                        <div class="col-sm-12 col-md-8 text-sm-center">
                                                             <div
                                                                 class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
                                                                 {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
                                                             </div>
-                                                            <div class="title-curso">
+                                                            <div class="title-curso text-sm-center">
                                                                 {{ $curso->titulo }}
                                                             </div>
-                                                            <div class="mb-1 text-secondary descript-curso">
+                                                            <div class="mb-1 text-secondary descript-curso text-justify">
                                                                 Curso con explicaciones varias.
                                                             </div>
                                                         </div>
-                                                        <div class="col-4 content-btn-continuar">
+                                                        <div class="col-sm-12 col-md-4 content-btn-continuar">
                                                             <a href="{{ route('view-curso', ['curso' => $curso->id]) }}"
                                                                 class="btn btn-sm btn-3-ucamp">
                                                                 Iniciar curso

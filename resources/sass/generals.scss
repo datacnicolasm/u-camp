@@ -40,6 +40,12 @@ $breakpoint-large: 1200px;
     }
 }
 
+.text-large{
+    @include responsive(mobile) {
+        font-size: 1rem !important;
+    }
+}
+
 .text-sm-center{
     @include responsive(mobile) {
         text-align: center !important;

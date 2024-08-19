@@ -19,7 +19,7 @@
                         <!-- Header Cursos -->
                         <div class="col-12">
                             <div class="row header-cursos py-5 px-3">
-                                <div class="col-10">
+                                <div class="col-sm-12 col-md-10">
                                     <h2 class="d-inline-block font-weight-bold">Cursos</h2>
                                     <div class="px-2 ml-3 bg-3-ucamp d-inline-block rounded">
                                         <i class="nav-icon fas fa-cubes mr-1"></i>
@@ -31,7 +31,6 @@
                                         contabilidad, impuestos, auditoría y mucho más.
                                     </div>
                                 </div>
-                                <div class="col-2"></div>
                             </div>
                         </div>
 
@@ -40,7 +39,7 @@
                             <div class="row">
 
                                 @foreach ($cursos as $curso)
-                                    <div class="col-4">
+                                    <div class="col-sm-12 col-md-4">
                                         <div class="row card-curso px-2 py-3 m-1">
                                             <div class="col-12 level-curso">
                                                 <div class="px-2 mb-3 bg-2-ucamp rounded d-inline-block text-medium">

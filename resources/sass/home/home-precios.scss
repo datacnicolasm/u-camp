@@ -5,6 +5,130 @@
         background-repeat: no-repeat;
         background-position: center top;
     }
+
+    .sect-preguntas{
+        @include responsive(mobile) {
+            background-color: #fff;
+        }
+    }
+
+    .sect-precios-planes{
+        @include responsive(mobile) {
+            background-color: $tint-1;
+            padding-bottom: 20px;
+        }
+    }
+
+    .card-premium{
+        background-color: #fbf8f8;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #303030;
+
+        @include responsive(desktop) {
+            display: none;
+        }
+
+        .premium-header{
+            padding: 20px;
+            position: relative;
+
+            .alert-premium{
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                background-color: $tint-3;
+                width: 100%;
+                height: 10px;
+
+                span{
+                    background-color: $tint-3;
+                    border-radius: 8px;
+                    color: #fff;
+                    position: absolute;
+                    top: -10px;
+                    left: 30px;
+                    padding: 3px 15px;
+                }
+            }
+
+            .acceso{
+                font-weight: normal;
+                color: #8a8a8a;
+            }
+
+            .value-plan{
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+
+                .amount-value{
+                    font-size: 3.0rem;
+                    line-height: 72px;
+                }
+
+                .info-value{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-flow: column;
+
+                    span{
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        .premium-body{
+            ul{
+                margin: 0;
+
+                li{
+                    list-style: none;
+                    margin-bottom: .8rem;
+
+                }
+            }
+        }
+    }
+
+    .card-free{
+        background-color: #fbf8f8;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #303030;
+
+        @include responsive(desktop) {
+            display: none;
+        }
+
+        .free-plan{
+            padding: 20px;
+
+            .acceso{
+                font-weight: normal;
+                color: #8a8a8a;
+            }
+
+            .value-plan{
+                .amount-value{
+                    font-size: 2.5rem;
+                    line-height: 72px;
+                }
+            }
+        }
+
+        .free-body{
+            ul{
+                margin: 0;
+
+                li{
+                    list-style: none;
+                    margin-bottom: .8rem;
+
+                }
+            }
+        }
+    }
     
     .pricing-table {
         width: 100%;
@@ -13,6 +137,10 @@
         border-spacing: 0;
         border-radius: 5px;
         box-shadow: 1.5px 1.5px 1px rgba(15,15,15,.3);
+
+        @include responsive(mobile) {
+            display:none;
+        }
 
         thead {
             th {

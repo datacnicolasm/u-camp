@@ -9399,6 +9399,12 @@ a.ui-button:active,
 /*# sourceMappingURL=adminlte.min.css.map */
 @charset "UTF-8";
 @media (max-width: 480px) {
+  .text-large {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
   .text-sm-center {
     text-align: center !important;
     margin: auto;
@@ -10026,6 +10032,23 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0;
+}
+@media (max-width: 480px) {
+  .chapters-curso .chapter-item .lessons-list .lessons-list-items li a {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 480px) {
+  .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-right {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 }
 .chapters-curso .chapter-item .lessons-list .lessons-list-items li a .item-lesson-left.enabled {
   color: #000;
@@ -11472,7 +11495,19 @@ body.page-home-camp .navbar {
   display: flex;
   align-items: center;
 }
-body.page-home-camp .navbar ul.navbar-nav .item-link::after {
+@media (max-width: 480px) {
+  body.page-home-camp .navbar {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  body.page-home-camp .navbar .navbar-collapse {
+    background-color: #f8f9fa;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+body.page-home-camp .navbar .navbar-collapse ul.navbar-nav .item-link::after {
   content: "";
   width: 0%;
   height: 5px;
@@ -11482,8 +11517,13 @@ body.page-home-camp .navbar ul.navbar-nav .item-link::after {
   transition: width 0.5s ease;
   border-radius: 2px;
 }
-body.page-home-camp .navbar ul.navbar-nav .item-link:hover::after {
+body.page-home-camp .navbar .navbar-collapse ul.navbar-nav .item-link:hover::after {
   width: 100%;
+}
+@media (max-width: 480px) {
+  body.page-home-camp .navbar .navbar-collapse ul.navbar-nav .item-btn {
+    padding: 0.5rem 0;
+  }
 }
 body.page-home-camp .navbar .btn-primary {
   background-color: #021221;
@@ -11668,6 +11708,11 @@ body.page-home-camp #home-section-4 {
   background-color: #fff;
   padding-bottom: 4rem;
 }
+@media (max-width: 480px) {
+  body.page-home-camp #home-section-4 {
+    padding-bottom: 2rem;
+  }
+}
 body.page-home-camp #home-section-4 .main-cont-flex {
   display: flex;
   justify-content: flex-start;
@@ -11720,6 +11765,105 @@ body.page-home-camp #home-section-5 .main-cont-flex {
   background-repeat: no-repeat;
   background-position: center top;
 }
+@media (max-width: 480px) {
+  .page-pricing .sect-preguntas {
+    background-color: #fff;
+  }
+}
+@media (max-width: 480px) {
+  .page-pricing .sect-precios-planes {
+    background-color: #021221;
+    padding-bottom: 20px;
+  }
+}
+.page-pricing .card-premium {
+  background-color: #fbf8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #303030;
+}
+@media (min-width: 769px) {
+  .page-pricing .card-premium {
+    display: none;
+  }
+}
+.page-pricing .card-premium .premium-header {
+  padding: 20px;
+  position: relative;
+}
+.page-pricing .card-premium .premium-header .alert-premium {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #05bd9b;
+  width: 100%;
+  height: 10px;
+}
+.page-pricing .card-premium .premium-header .alert-premium span {
+  background-color: #05bd9b;
+  border-radius: 8px;
+  color: #fff;
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  padding: 3px 15px;
+}
+.page-pricing .card-premium .premium-header .acceso {
+  font-weight: normal;
+  color: #8a8a8a;
+}
+.page-pricing .card-premium .premium-header .value-plan {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.page-pricing .card-premium .premium-header .value-plan .amount-value {
+  font-size: 3rem;
+  line-height: 72px;
+}
+.page-pricing .card-premium .premium-header .value-plan .info-value {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+}
+.page-pricing .card-premium .premium-header .value-plan .info-value span {
+  line-height: 20px;
+}
+.page-pricing .card-premium .premium-body ul {
+  margin: 0;
+}
+.page-pricing .card-premium .premium-body ul li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+.page-pricing .card-free {
+  background-color: #fbf8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #303030;
+}
+@media (min-width: 769px) {
+  .page-pricing .card-free {
+    display: none;
+  }
+}
+.page-pricing .card-free .free-plan {
+  padding: 20px;
+}
+.page-pricing .card-free .free-plan .acceso {
+  font-weight: normal;
+  color: #8a8a8a;
+}
+.page-pricing .card-free .free-plan .value-plan .amount-value {
+  font-size: 2.5rem;
+  line-height: 72px;
+}
+.page-pricing .card-free .free-body ul {
+  margin: 0;
+}
+.page-pricing .card-free .free-body ul li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
 .page-pricing .pricing-table {
   width: 100%;
   margin: auto;
@@ -11727,6 +11871,11 @@ body.page-home-camp #home-section-5 .main-cont-flex {
   border-spacing: 0;
   border-radius: 5px;
   box-shadow: 1.5px 1.5px 1px rgba(15, 15, 15, 0.3);
+}
+@media (max-width: 480px) {
+  .page-pricing .pricing-table {
+    display: none;
+  }
 }
 .page-pricing .pricing-table thead th {
   padding: 20px;
@@ -11874,6 +12023,11 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   background-color: #021221;
   padding: 30px;
 }
+@media (max-width: 480px) {
+  .page-purchase-camp {
+    padding: 15px !important;
+  }
+}
 .page-purchase-camp .logo-purchase {
   margin-bottom: 15px;
   display: flex;
@@ -11899,6 +12053,11 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   margin: auto;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .page-purchase-camp .text-purchase {
+    width: 100%;
+  }
+}
 .page-purchase-camp .payment-steps {
   width: 40%;
   margin: auto;
@@ -11906,6 +12065,11 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
+@media (max-width: 480px) {
+  .page-purchase-camp .payment-steps {
+    width: 100%;
+  }
 }
 .page-purchase-camp .payment-steps .payment-steps-number {
   width: 100%;
@@ -11954,6 +12118,11 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   padding: 40px 20px;
   border-top: solid 3px #05bd9b;
 }
+@media (max-width: 480px) {
+  .page-purchase-camp .form-sumary {
+    margin-bottom: 20px;
+  }
+}
 .page-purchase-camp .form-sumary .sub-sumary {
   border-top: solid 0.5px #ccc;
   border-bottom: solid 0.5px #ccc;
@@ -11964,6 +12133,11 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   border-radius: 5px;
   padding: 15px;
   color: #fff;
+}
+@media (max-width: 480px) {
+  .page-purchase-camp .section-formulario {
+    padding: 15px 5px;
+  }
 }
 .page-purchase-camp .section-formulario input {
   border-left: solid 5px #05bd9b;
@@ -12060,9 +12234,20 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   max-width: 600px;
   margin: auto;
 }
+@media (max-width: 480px) {
+  .page-purchase-camp .payment-confirmation {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .page-purchase-camp .payment-confirmation .succes-payment {
   width: 60%;
   margin: 2rem auto;
+}
+@media (max-width: 480px) {
+  .page-purchase-camp .payment-confirmation .succes-payment {
+    width: 100%;
+  }
 }
 .page-purchase-camp .payment-confirmation .confirmation-icon {
   font-size: 4rem;
@@ -12086,6 +12271,12 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   margin-bottom: 20px;
   margin: auto;
   width: 90%;
+}
+@media (max-width: 480px) {
+  .page-purchase-camp .payment-confirmation .payment-details {
+    width: 100%;
+    padding: 15px 2px;
+  }
 }
 .page-purchase-camp .payment-confirmation .payment-details p {
   margin: 10px 0;
@@ -12692,6 +12883,12 @@ body.page-home-camp .home-signup .card-body .alert ul li {
   display: flex;
   align-items: center;
   justify-content: end;
+}
+@media (max-width: 480px) {
+  .dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .content-btn-continuar {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
 }
 .dashboard-container .item-cursos-dash .list-cursos .item-curso-dash .container-course-progress {
   width: 250px;
