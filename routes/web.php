@@ -100,6 +100,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/members', [GruposController::class, 'listMembers'])->name('list-members');
         Route::get('/links-members', [GruposController::class, 'getLinksGroup'])->name('links-members');
         Route::get('/{user}/actividades', [WorkshopController::class, 'listActividadesGroup'])->name('list-actividades');
+        Route::get('/form-docente', [GruposController::class, 'getCuentaDocente'])->name('form-docente');
+        Route::post('/crear-solicitud-docente', [GruposController::class, 'createSolicitudDocente'])->name('crear-solicitud-docente');
     });
 
     // Perfil de usuario
@@ -120,6 +122,13 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/getGuiaJSON', [LessonController::class, 'getGuiaJSON'])->name('lessons.guiajson');
         Route::post('/{lesson}/view', [LessonController::class, 'markAsViewed'])->middleware('auth');
         Route::post('/create-assignment', [LessonController::class, 'createLesson'])->name('create-assignment');
+    });
+
+    // user
+    Route::prefix('user')->group(function () {
+        Route::get('/user-cuenta', [UserController::class, 'getUserCuenta'])->name('user-cuenta');
+        Route::put('{id}', [UserController::class, 'update'])->name('user.update');
+
     });
 
     // Rutas Profesionales

@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->string('profile_image')->nullable();
             $table->string('password');
             $table->boolean('has_groups')->default(0);
             $table->boolean('is_premium')->default(0);

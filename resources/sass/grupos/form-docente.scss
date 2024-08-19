@@ -1,0 +1,21 @@
+.form-docente {
+    .header-form-docente {
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+
+        .icon i {
+            font-size: 4rem;
+            color: #d3d3d3;
+        }
+    }
+
+    form.form-cuenta-docente{
+        width: 40%;
+    }
+}

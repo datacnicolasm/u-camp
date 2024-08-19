@@ -35,6 +35,9 @@ import './curso/dian-components/left-panel.js';
 import './curso/dian-components/right-panel.js';
 import './rutas/view-rutas.js';
 import './rutas/list-rutas.js';
+
+import './user/ajustes.js';
+
 import './purchase/purchase.js';
 import './lesson/questionario.js';
 

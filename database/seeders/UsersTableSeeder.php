@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
                     'first_name' =>     $user['first_name'],
                     'last_name' =>      $user['last_name'],
                     'email' =>          $user['email'],
-                    'password' =>       bcrypt('password'),
+                    'password' =>       bcrypt('password147'),
                     'has_groups' =>          $user['has_groups']
                 ]);
             }

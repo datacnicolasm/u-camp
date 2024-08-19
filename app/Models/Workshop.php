@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Facades\Log;
 
 class Workshop extends Model
 {
@@ -25,6 +26,13 @@ class Workshop extends Model
     public function lesson()
     {
         return $this->belongsTo(Lesson::class);
+    }
+
+    static public function createWorkshopDefault(Lesson $lesson)
+    {
+        $lesson = Workshop::create([
+            'lesson_id' => $lesson->id,
+        ]);
     }
 
     /**

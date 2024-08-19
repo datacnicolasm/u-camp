@@ -6,6 +6,8 @@
 @import '../adminlte/dist/css/adminlte.min.css';
 @import './user/login.scss';
 @import './user/create.scss';
+@import './user/ajustes.scss';
+
 @import './components/sidebar.scss';
 @import './components/navbar.scss';
 @import './cursos/list-cursos.scss';
@@ -46,6 +48,7 @@
 @import './grupos/link-new-user.scss';
 @import './grupos/modal-create-actividad.scss';
 @import './grupos/list-actividades.scss';
+@import './grupos/form-docente.scss';
 
 @import './dashboard/dashboard-home.scss';
 
@@ -129,10 +132,11 @@ body{
 }
 
 .btn-3-ucamp {
-    color: #fff;
+    color: #fff !important;
     background-color: $tint-3;
     border: 2px solid $tint-3;
     box-shadow: none;
+    text-decoration: none !important;
 
     &:hover {
         color: #fff;

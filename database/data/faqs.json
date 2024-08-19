@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "question": "¿Cuál es la diferencia entre la cuenta gratuita y la cuenta premium?",
+        "answer": "Con la cuenta gratuita, puedes acceder a una cantidad limitada de cursos y módulos de práctica. Con la cuenta premium, tienes acceso a todos los cursos y módulos de práctica, contenido adicional, webinars exclusivos, sesiones en vivo con expertos, material de estudio descargable, descuentos en futuros cursos y programas, soporte prioritario al cliente y acceso a todos los cursos próximos a lanzarse."
+    },
+    {
+        "id": 2,
+        "question": "¿Necesito un software o hardware especial?",
+        "answer": "Para nuestros espacios interactivos DIAN y de causación, no necesitas ningún software o hardware especial. Solo requieres una conexión a internet estable y un navegador web actualizado."
+    },
+    {
+        "id": 3,
+        "question": "Soy docente, ¿cómo puedo obtener una cuenta para docente?",
+        "answer": "Debes crear una cuenta y, después de iniciar sesión, verás la opción de solicitar una cuenta docente a través de un formulario. Una vez aprobada la solicitud, tendrás acceso a todas las funcionalidades para docentes."
+    },
+    {
+        "id": 4,
+        "question": "¿Cómo puedo obtener un certificado de un curso?",
+        "answer": "Debes tener una cuenta premium y finalizar el curso para obtener el certificado."
+    },
+    {
+        "id": 5,
+        "question": "¿Puedo cambiar mi plan de cuenta después de registrarme?",
+        "answer": "Sí, puedes actualizar tu plan a premium en cualquier momento desde la configuración de tu cuenta."
+    },
+    {
+        "id": 6,
+        "question": "¿Qué sucede si no finalizo un curso?",
+        "answer": "No hay penalización si no terminas un curso. Puedes retomarlo cuando desees, pero solo recibirás el certificado al completar todas las lecciones y evaluaciones del curso."
+    },
+    {
+        "id": 7,
+        "question": "¿Puedo cancelar mi suscripción premium en cualquier momento?",
+        "answer": "Sí, puedes cancelar tu suscripción premium en cualquier momento desde la configuración de tu cuenta. Sin embargo, no se realizarán reembolsos por los períodos no utilizados."
+    },
+    {
+        "id": 8,
+        "question": "¿Cómo puedo contactar al soporte técnico si tengo problemas?",
+        "answer": "Puedes contactar al soporte técnico a través de la sección de ayuda en tu cuenta o enviando un correo electrónico a nuestro equipo de soporte. Los usuarios premium tienen acceso a soporte prioritario."
+    }
+]

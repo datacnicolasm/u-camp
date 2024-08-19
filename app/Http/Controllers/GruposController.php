@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Group;
 use App\Models\GroupInvitationLink;
+use App\Models\Solicitud;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -84,7 +85,7 @@ class GruposController extends Controller
 
         // Crear grupo
         $group = Group::create([
-            'name' =>       $validatedData['name'],
+            'name' =>       strtoupper($validatedData['name']),
             'color' =>      $validatedData['color'],
             'user_id' =>    $request->user()->id,
         ]);
@@ -289,5 +290,31 @@ class GruposController extends Controller
     public function getLinksGroup()
     {
         return view('grupos.list-links');
+    }
+
+    public function getCuentaDocente()
+    {
+        return view('grupos.form-docente');
+    }
+
+    public function createSolicitudDocente(Request $request)
+    {
+        try {
+            $solicitud = Solicitud::create([
+                'user_id' => $request->user()->id,
+                'nombre_institucion' => $request->nombre_institucion,
+                'pais_docente' => $request->pais_docente,
+                'departamento_docente' => $request->departamento_docente,
+                'conocimiento_docente' => $request->conocimiento_docente,
+            ]);
+
+            Log::info($solicitud);
+            
+            return redirect()->route('dashboard-grupos');
+        } catch (\Exception $e) {
+            Log::info($e->getMessage());
+            // Manejar cualquier error que ocurra durante la creación del usuario
+            return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el usuario. Por favor, inténtelo de nuevo.']);
+        }
     }
 }

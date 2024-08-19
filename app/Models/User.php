@@ -27,6 +27,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'has_groups'
     ];
 
+    public function solicitud()
+    {
+        return $this->hasOne(Solicitud::class);
+    }
+
     // Relación con el modelo Point
     public function points()
     {
@@ -72,7 +77,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function hasViewedLesson($lessonId)
     {
-        return $this->lessons()->where('lesson_id', $lessonId)->where('user_id', $this->id)->exists();
+        return $this->lessons()
+            ->wherePivot('lesson_id', $lessonId)
+            ->wherePivot('user_id', $this->id)
+            ->exists();
     }
 
     /**

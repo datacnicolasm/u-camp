@@ -9,15 +9,61 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+    public function update(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'password' => 'nullable|string|min:8',
+            'country' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:255',
+            'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+
+        if ($request->filled('password')) {
+            $user->password = bcrypt($request->input('password'));
+        }
+
+        $user->country = $request->input('country');
+        $user->city = $request->input('city');
+
+        if ($request->hasFile('profile_image')) {
+            
+            // Delete the old image if it exists
+            if ($user->profile_image) {
+                Storage::delete('public/' . $user->profile_image);
+            }
+    
+            // Store the new image
+            $path = $request->file('profile_image')->store('profile_images', 'public');
+            $user->profile_image = $path;
+        }
+
+        $user->save();
+
+        return redirect()->route('user-cuenta');
+    }
+
     /**
      * Display form login user
      */
     public function loginUser()
     {
         return view('user.login');
+    }
+
+    public function getUserCuenta()
+    {
+        return view('user.ajustes-user')->with('user', Auth::user());
     }
 
     /**

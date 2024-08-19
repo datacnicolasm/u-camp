@@ -39,7 +39,7 @@
                 <i class="far fa-user"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
+                <a href="{{ route('user-cuenta') }}" class="dropdown-item">
                     <i class="fas fa-cog mr-2"></i>
                     Ajustes de cuenta
                 </a>

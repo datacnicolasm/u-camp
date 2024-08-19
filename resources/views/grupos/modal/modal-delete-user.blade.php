@@ -23,7 +23,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancelar</button>
-                <button id="eliminar-btn-modal" type="button" class="btn btn-sm btn-primary">Eliminar
+                <button id="eliminar-btn-modal" type="button" class="btn btn-sm btn-ucamp">Eliminar
                     estudiante</button>
             </div>
         </div>

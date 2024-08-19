@@ -43,7 +43,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
-                <button id="save-modal" type="button" class="btn btn-sm btn-primary">Guardar
+                <button id="save-modal" type="button" class="btn btn-sm btn-ucamp">Guardar
                     cambios</button>
             </div>
         </div>

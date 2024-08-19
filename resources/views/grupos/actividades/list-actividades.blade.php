@@ -434,7 +434,7 @@
                                                         <p class="my-2">Asigna a tus estudiantes actividades
                                                             especificas de <strong>AccountCamp</strong> y luego sigue su
                                                             progreso.</p>
-                                                        <button class="btn btn-3-ucamp mt-3" data-toggle="modal"
+                                                        <button class="btn btn-sm btn-3-ucamp mt-3" data-toggle="modal"
                                                             data-target="#modal-create-actividad" type="button">
                                                             <i class="fas fa-plus mr-2"></i> Crear actividad
                                                         </button>

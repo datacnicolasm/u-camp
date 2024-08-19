@@ -5,9 +5,13 @@
     <div class="sidebar">
 
         <!--  -->
-        <a href="" class="mt-2 user-sect-sodebar">
+        <a href="{{ route('user-cuenta') }}" class="mt-2 user-sect-sodebar">
             <div class="user-icon">
-                <img src="{{ asset('img/user-default-1.jpg') }}" alt="">
+                @if (Auth::user()->profile_image)
+                    <img src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="Profile Image" class="img-fluid">
+                @else
+                    <img src="{{ asset('img/user-default.png') }}" alt="Profile Image" class="img-fluid">
+                @endif
             </div>
             <div class="user-info">
                 <p>{{ Auth::user()->first_name }}</p>

@@ -1,0 +1,127 @@
+[
+    {
+        "name": "Primer capítulo de cada curso gratis",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso desde cualquier dispositivo (móvil, tablet, PC)",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a evaluaciones para medir tu progreso",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a la comunidad de estudiantes y foros",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "Certificado de finalización de curso",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso ilimitado a todos los cursos",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a espacios interactivos de aprendizaje",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a todos los cursos próximos a lanzarse",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Soporte al cliente prioritario",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a todos los módulos de práctica para mejorar tus conocimientos",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Material de estudio descargable",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Webinars exclusivos y sesiones en vivo con expertos",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a contenido adicional (videos, lecturas, casos de estudio)",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Descuentos en futuros cursos y programas",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a todos los cursos próximos a lanzarse",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Soporte al cliente prioritario",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Acceso a todos nuestros módulos de práctica para mejorar tus conocimientos",
+        "available_free": false,
+        "available_premium": true
+    },
+    {
+        "name": "Solicita tu cuenta de docente y accede a todas las funcionalidades",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Crear grupos de estudiantes por clase",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Compartir un enlace público para que los estudiantes se unan al grupo",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Desarrollar actividades de clase a través de la plataforma",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Mejorar la experiencia de aprendizaje con gamificación, feedback inmediato y entorno práctico",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Crear actividades interactivas y ver resultados y estadísticas de los estudiantes",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Asignar prácticas y generar feedback inmediato para los estudiantes",
+        "available_free": true,
+        "available_premium": true
+    },
+    {
+        "name": "<strong>(Docente)</strong> Facilitar la calificación de actividades con normativa NIIF y tributaria actualizada",
+        "available_free": true,
+        "available_premium": true
+    }
+]

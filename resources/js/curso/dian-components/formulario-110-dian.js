@@ -374,8 +374,10 @@ $(function ($) {
 
             const cod_field = $(element).data("cod-field")
 
-            $("#" + cod_field).show()
-            $("#" + cod_field).css("margin-top", top_position + "px")
+            console.log(cod_field)
+
+            $("#110-" + cod_field).show()
+            $("#110-" + cod_field).css("margin-top", top_position + "px")
 
         });
 
@@ -383,7 +385,7 @@ $(function ($) {
 
             const cod_field = $(element).data("cod-field")
 
-            $("#" + cod_field).hide()
+            $("#110-" + cod_field).hide()
 
         });
     })

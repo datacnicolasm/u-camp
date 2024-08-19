@@ -15,5 +15,6 @@ class Payment extends Model
         'password',
         'first_name',
         'last_name',
+        'type_user',
     ];
 }

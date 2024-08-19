@@ -14,13 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->id(); // ID
-            $table->string('code', 20)->unique(); // Código alfanumérico aleatorio único de 20 caracteres
-            $table->string('email'); // Correo del usuario
-            $table->string('password'); // Password del usuario
-            $table->string('first_name'); // First name
-            $table->string('last_name'); // Last name
-            $table->timestamps(); // Timestamps (created_at y updated_at)
+            $table->id();
+            $table->string('code', 20)->unique();
+            $table->string('email');
+            $table->string('password')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('type_user');
+            $table->timestamps();
         });
     }
 

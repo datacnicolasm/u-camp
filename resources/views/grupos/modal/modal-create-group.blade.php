@@ -49,7 +49,7 @@
             <!-- -->
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
-                <button id="btn-crear-grupo" type="button" class="btn btn-sm btn-primary">
+                <button id="btn-crear-grupo" type="button" class="btn btn-sm btn-ucamp">
                     Crear grupo
                 </button>
             </div>

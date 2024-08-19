@@ -61,7 +61,7 @@
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
                 <button data-status="{{ $valid_btn }}" id="btn-crear-link" type="button"
-                    class="btn btn-sm btn-primary">
+                    class="btn btn-sm btn-ucamp">
                     Crear link
                 </button>
             </div>

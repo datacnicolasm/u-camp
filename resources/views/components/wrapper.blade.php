@@ -15,14 +15,27 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <!-- Notificacion para cuenta de docente -->
-                @if (!Auth::user()->has_groups)
+                @php
+                    $userCuenta = Auth::user();
+                    $solicitudPendiente = $userCuenta->solicitud()->exists();
+                @endphp
+
+                <!-- Notificación para cuenta de docente -->
+                @if (!$userCuenta->has_groups)
                     <div class="callout callout-info">
                         <h5>¿{{ $formattedName }}, eres docente?</h5>
-                        <p>¡La versión para docentes es <strong>Gratis</strong>! Solicita ya la versión para docentes.</p>
-                        <button class="btn btn-sm btn-3-ucamp">Soy docente</button>
+                        <p>¡La versión para docentes es <strong>Gratis</strong>! Solicita ya la versión para docentes.
+                        </p>
+
+                        @if (!$solicitudPendiente)
+                            <a href="{{ route('form-docente') }}" class="btn btn-sm btn-3-ucamp">Solicitar cuenta</a>
+                        @else
+                            <span class="text-muted">Ya tienes una solicitud de cuenta pendiente. Te informaremos el
+                                resultado de la validación.</span>
+                        @endif
                     </div>
                 @endif
+
 
                 <!-- Notificacion para verificar correo -->
                 @if (!Auth::user()->hasVerifiedEmail())
@@ -32,7 +45,8 @@
                             correo electrónico.</p>
                         <form method="POST" action="{{ route('verification.send') }}">
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-3-ucamp">Reenviar correo de verificación</button>
+                            <button type="submit" class="btn btn-sm btn-3-ucamp">Reenviar correo de
+                                verificación</button>
                         </form>
                     </div>
                 @endif
@@ -45,13 +59,19 @@
         <div class="container-fluid">
 
             <div class="row">
+
+                <!-- User card -->
                 <div class="col-4">
                     <div class="card card-user-dashboard">
                         <!-- Card body -->
                         <div class="card-body">
                             <div class="user-sect">
                                 <div class="user-icon">
-                                    <img class="img-fluid" src="{{ asset('img/user-default-1.jpg') }}" alt="">
+                                    @if (Auth::user()->profile_image)
+                                        <img src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="Profile Image" class="img-fluid">
+                                    @else
+                                        <img src="{{ asset('img/user-default.png') }}" alt="Profile Image" class="img-fluid">
+                                    @endif
                                 </div>
                                 <div class="user-info">
                                     <span class="m-0">Hola, {{ $formattedName }}!</span>
@@ -108,19 +128,29 @@
                         </div>
                         <div class="col-6">
                             <div class="float-sm-right">
-                                <dis class="suscrib-text">
-                                    <span class="text-basis mr-2">
-                                        Suscripción básica
-                                    </span>
-                                    •
-                                    <a href="{{ route('precios-home') }}"
-                                        class="text-upgrate ml-2 text-3-ucamp font-weight-bold">
-                                        Obtener Premium
-                                        <span class="icon-up">
-                                            <i class="fas fa-arrow-up"></i>
+
+                                @if (Auth::user()->is_premium)
+                                    <dis class="suscrib-text">
+                                        <span class="text-basis mr-2">
+                                            Tienes suscripción premium
                                         </span>
-                                    </a>
-                                </dis>
+                                    </dis>
+                                @else
+                                    <dis class="suscrib-text">
+                                        <span class="text-basis mr-2">
+                                            Suscripción básica
+                                        </span>
+                                        •
+                                        <a href="{{ route('precios-home') }}"
+                                            class="text-upgrate ml-2 text-3-ucamp font-weight-bold">
+                                            Obtener Premium
+                                            <span class="icon-up">
+                                                <i class="fas fa-arrow-up"></i>
+                                            </span>
+                                        </a>
+                                    </dis>
+                                @endif
+
                             </div>
                         </div>
 
@@ -129,43 +159,45 @@
                         @endphp
 
                         @if (count($coursesWithProgress) > 0)
-                        <div class="col-12 mt-3 item-cursos-dash">
-                            <span class="text-muted">
-                                
-                                <span class="font-weight-bold">Tus cursos</span>
+                            <div class="col-12 mt-3 item-cursos-dash">
+                                <span class="text-muted">
 
-                                <ul class="list-cursos">
-                                    @foreach ($coursesWithProgress as $curso)
-                                        <li class="card item-curso-dash">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div
-                                                            class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
-                                                            {{ \App\Models\Curso::$dificultadTexto[$curso["course"]->dificultad] }}
-                                                        </div>
-                                                        <div class="title-curso">
-                                                            {{ $curso["course"]->titulo }}
-                                                        </div>
-                                                        <div class="container-course-progress">
-                                                            <div class="progress-text mr-2"></div>
-                                                            <div class="progress-container" data-progress="{{ $curso["progress"] }}">
-                                                                <div class="progress-bar"></div>
+                                    <span class="font-weight-bold">Tus cursos</span>
+
+                                    <ul class="list-cursos">
+                                        @foreach ($coursesWithProgress as $curso)
+                                            <li class="card item-curso-dash">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <div
+                                                                class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
+                                                                {{ \App\Models\Curso::$dificultadTexto[$curso['course']->dificultad] }}
+                                                            </div>
+                                                            <div class="title-curso">
+                                                                {{ $curso['course']->titulo }}
+                                                            </div>
+                                                            <div class="container-course-progress">
+                                                                <div class="progress-text mr-2"></div>
+                                                                <div class="progress-container"
+                                                                    data-progress="{{ $curso['progress'] }}">
+                                                                    <div class="progress-bar"></div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-4 content-btn-continuar">
-                                                        <a href="{{ route('view-curso', ['curso' => $curso["course"]->id]) }}" class="btn btn-sm btn-3-ucamp">
-                                                            Continuar
-                                                        </a>
+                                                        <div class="col-4 content-btn-continuar">
+                                                            <a href="{{ route('view-curso', ['curso' => $curso['course']->id]) }}"
+                                                                class="btn btn-sm btn-3-ucamp">
+                                                                Continuar
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </span>
-                        </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </span>
+                            </div>
                         @endif
 
                         @php
@@ -173,40 +205,41 @@
                         @endphp
 
                         @if (count($coursesWithoutProgress) > 0)
-                        <div class="col-12 mt-3 item-cursos-dash">
-                            <span class="text-muted">
-                                
-                                <span class="font-weight-bold">Iniciar un curso</span>
+                            <div class="col-12 mt-3 item-cursos-dash">
+                                <span class="text-muted">
 
-                                <ul class="list-cursos">
-                                    @foreach ($coursesWithoutProgress as $curso)
-                                        <li class="card item-curso-dash">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-8">
-                                                        <div
-                                                            class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
-                                                            {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
+                                    <span class="font-weight-bold">Iniciar un curso</span>
+
+                                    <ul class="list-cursos">
+                                        @foreach ($coursesWithoutProgress as $curso)
+                                            <li class="card item-curso-dash">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <div
+                                                                class="px-2 mb-2 bg-2-ucamp rounded d-inline-block text-medium">
+                                                                {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
+                                                            </div>
+                                                            <div class="title-curso">
+                                                                {{ $curso->titulo }}
+                                                            </div>
+                                                            <div class="mb-1 text-secondary descript-curso">
+                                                                Curso con explicaciones varias.
+                                                            </div>
                                                         </div>
-                                                        <div class="title-curso">
-                                                            {{ $curso->titulo }}
+                                                        <div class="col-4 content-btn-continuar">
+                                                            <a href="{{ route('view-curso', ['curso' => $curso->id]) }}"
+                                                                class="btn btn-sm btn-3-ucamp">
+                                                                Iniciar curso
+                                                            </a>
                                                         </div>
-                                                        <div class="mb-1 text-secondary descript-curso">
-                                                            Curso con explicaciones varias.
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4 content-btn-continuar">
-                                                        <a href="{{ route('view-curso', ['curso' => $curso->id]) }}" class="btn btn-sm btn-3-ucamp">
-                                                            Iniciar curso
-                                                        </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </span>
-                        </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </span>
+                            </div>
                         @endif
 
                     </div>

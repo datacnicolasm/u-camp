@@ -79,16 +79,14 @@
 
             <!-- Formulario principal -->
             <?php
-            $step_payment = "";
-            if ( Request::get('id') !== null )
-            {
-                $step_payment = "confirm";
-            } elseif ( Request::get('id') == null )
-            {
-                $step_payment = "cuenta";
-            };
+            $step_payment = '';
+            if (Request::get('id') !== null) {
+                $step_payment = 'confirm';
+            } elseif (Request::get('id') == null) {
+                $step_payment = 'cuenta';
+            }
             ?>
-            <div id="form-main-pago" class="col-8" data-step="<?php echo $step_payment ?>">
+            <div id="form-main-pago" class="col-8" data-step="<?php echo $step_payment; ?>">
 
                 <!-- 1. Detalles de cuenta -->
                 <div id="cuenta" class="mb-3 section-formulario">
@@ -100,17 +98,21 @@
                             </div>
                             <div class="col-6 text-sesion">
                                 ¿Ya tienes una cuenta?
-                                <a href="{{ route('login') }}" class="text-tint-3 ml-1 font-weight-bold">Iniciar
-                                    sesión</a>
+                                <a href="#" id="login-pago" class="text-tint-3 ml-1 font-weight-bold">Iniciar sesión</a>
                             </div>
                             <div class="col-12">
                                 <div class="row content-cuenta">
                                     <div class="col-12 my-3">
                                         <form>
+                                            <!-- Tipo de usuario -->
+                                            <input type="hidden" id="type_user" name="type_user" value="new_user">
+
+                                            <!-- Otros campos -->
                                             <div class="form-row">
                                                 <div class="form-group email-input col-6">
                                                     <p class="label-input">Correo electronico</p>
-                                                    <input type="email" class="form-control" id="email" placeholder="Correo electronico" required>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="Correo electronico" required>
                                                     <div class="invalid-feedback-mail">
                                                         Por favor, ingresa un correo electrónico válido.
                                                     </div>
@@ -123,7 +125,8 @@
                                                 </div>
                                                 <div class="form-group col-6">
                                                     <p class="label-input">Contraseña</p>
-                                                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="Contraseña" required>
                                                     <div class="invalid-feedback">
                                                         1. Al menos 6 caracteres.<br>
                                                         2. Al menos un número.<br>
@@ -151,7 +154,12 @@
                                             class="btn btn-block btn-3-ucamp">Continuar</button>
                                     </div>
                                     <div class="col-9">
-                                        <span class="text-muted-dark">Al continuar, aceptas nuestros Términos y condiciones, nuestra Política de Privacidad y que tus datos sean almacenados</span>
+                                        <span class="text-muted-dark">
+                                            Al continuar, aceptas nuestros <a
+                                                href="{{ route('terminos-home') }}">Términos y condiciones</a>, nuestra
+                                            <a href="{{ route('privacidad-home') }}">Politica de Privacidad</a> y que
+                                            tus datos sean almacenados.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +197,8 @@
                                             ?>
                                             <script src="https://checkout.wompi.co/widget.js" data-render="button" data-public-key="<?php echo $public_key; ?>"
                                                 data-currency="COP" data-amount-in-cents="<?php echo $value; ?>" data-reference="<?php echo $num_ref; ?>"
-                                                data-redirect-url="http://localhost/ibero-lab/public/home/purchase" data-signature:integrity="<?php echo $hash; ?>"></script>
+                                                data-redirect-url="http://localhost/ibero-lab/public/home/purchase" data-signature:integrity="<?php echo $hash; ?>">
+                                            </script>
                                         </form>
                                     </div>
                                     <div class="col-7 my-3 medios-pago-wompi">
@@ -220,46 +229,53 @@
                                 <div class="row content-confirmacion">
                                     <div class="col-12 py-3">
                                         <?php
-                                        if ( $id_wompi !== null )
-                                        {
-                                            if ( $transaction["status"] == "APPROVED" ){
+                                        if ($id_wompi !== null) {
+                                            // Verificar si la clave 'status' existe en el array $transaction antes de acceder a ella
+                                            if (isset($transaction["status"]) && $transaction["status"] == "APPROVED") {
                                                 ?>
-                                                <div class="payment-confirmation">
-                                                    <div class="confirmation-icon">
-                                                        <i class="fas fa-check-circle text-tint-3"></i>
+                                                    <div class="payment-confirmation">
+                                                        <div class="confirmation-icon">
+                                                            <i class="fas fa-check-circle text-tint-3"></i>
+                                                        </div>
+                                                        <h1 class="text-tint-3 font-weight-bold m-0">¡Pago exitoso!</h1>
+                                                        <p class="text-tint-1 succes-payment">
+                                                            Felicitaciones {{ $payment->first_name }}, todo está listo para que
+                                                            llevemos tu aprendizaje al siguiente nivel.
+                                                        </p>
+                                                        <div class="payment-details my-4">
+                                                            <p><strong>Valor pagado:</strong> $23.00</p>
+                                                            <p><strong>Método de pago:</strong>
+                                                                {{ $transaction['payment_method_type'] }}</p>
+                                                            <p><strong>Referencia de pago:</strong> {{ $transaction['reference'] }}
+                                                            </p>
+                                                            <p><strong>ID de pago:</strong> {{ $id_wompi }}</p>
+                                                            <p><strong>Correo:</strong> {{ $payment->email }}</p>
+                                                            <p><strong>Plan adquirido:</strong> Premium mensual</p>
+                                                        </div>
+                                                        <a href="{{ route('login-dashboard') }}"
+                                                            class="btn btn-3-ucamp px-5 font-weight-bold text-large">Inicia tu
+                                                            aprendizaje</a>
                                                     </div>
-                                                    <h1 class="text-tint-3 font-weight-bold m-0">¡Pago exitoso!</h1>
-                                                    <p class="text-tint-1 succes-payment">
-                                                        Felicitaciones {{ $payment->first_name }}, todo está listo para que llevemos tu aprendizaje al siguiente nivel.
-                                                    </p>
-                                                    <div class="payment-details my-4">
-                                                        <p><strong>Valor pagado:</strong> $23.00</p>
-                                                        <p><strong>Método de pago:</strong> {{$transaction["payment_method_type"] }}</p>
-                                                        <p><strong>Referencia de pago:</strong> {{ $transaction["reference"] }}</p>
-                                                        <p><strong>ID de pago:</strong> {{ $id_wompi }}</p>
-                                                        <p><strong>Correo:</strong> {{ $payment->email }}</p>
-                                                        <p><strong>Plan adquirido:</strong> Premium mensual</p>
-                                                    </div>
-                                                    <a href="{{ route('login-dashboard') }}" class="btn btn-3-ucamp px-5 font-weight-bold text-large">Inicia tu aprendizaje</a>
-                                                </div>
                                                 <?php
-                                            }else{
+                                            } else {
                                                 ?>
-                                                <div class="payment-confirmation">
-                                                    <div class="confirmation-icon">
-                                                        <i class="fas fa-times-circle text-danger"></i>
+                                                    <div class="payment-confirmation">
+                                                        <div class="confirmation-icon">
+                                                            <i class="fas fa-times-circle text-danger"></i>
+                                                        </div>
+                                                        <h1 class="text-danger font-weight-bold m-0">¡Pago cancelado!</h1>
+                                                        <div class="payment-details my-4">
+                                                            <p><strong>Valor:</strong> $23.00</p>
+                                                            <p><strong>Método de pago:</strong>
+                                                                {{ $transaction['payment_method_type'] }}</p>
+                                                            <p><strong>Referencia de pago:</strong> {{ $transaction['reference'] }}
+                                                            </p>
+                                                            <p><strong>ID de pago:</strong> {{ $id_wompi }}</p>
+                                                            <p><strong>Correo:</strong> {{ $transaction['merchant']['email'] }}</p>
+                                                            <p><strong>Plan:</strong> Premium mensual</p>
+                                                        </div>
+                                                        <a href="{{ route('purchase-home') }}" class="btn bg-danger px-5 font-weight-bold text-large">Reintentar pago</a>
                                                     </div>
-                                                    <h1 class="text-danger font-weight-bold m-0">¡Pago cancelado!</h1>
-                                                    <div class="payment-details my-4">
-                                                        <p><strong>Valor:</strong> $23.00</p>
-                                                        <p><strong>Método de pago:</strong> {{$transaction["payment_method_type"] }}</p>
-                                                        <p><strong>Referencia de pago:</strong> {{ $transaction["reference"] }}</p>
-                                                        <p><strong>ID de pago:</strong> {{ $id_wompi }}</p>
-                                                        <p><strong>Correo:</strong> {{ $transaction["merchant"]["email"] }}</p>
-                                                        <p><strong>Plan:</strong> Premium mensual</p>
-                                                    </div>
-                                                    <a href="{{ route('purchase-home') }}" class="btn bg-danger px-5 font-weight-bold text-large">Reintentar pago</a>
-                                                </div>
                                                 <?php
                                             }
                                         }

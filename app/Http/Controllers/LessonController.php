@@ -7,6 +7,7 @@ use App\Models\Lesson;
 use App\Models\Point;
 use App\Models\Puc;
 use App\Models\User;
+use App\Models\Workshop;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -17,10 +18,8 @@ class LessonController extends Controller
     public function createLesson(Request $request)
     {
         try {
-            Log::info($request->all());
-
-            Lesson::create([
-                'title' => $request->input('titulo_actividad'),
+            $lesson = Lesson::create([
+                'title' => strtoupper($request->input('titulo_actividad')),
                 'type' => $request->input('tipo_actividad'),
                 'use_type' => 'group',
                 'points_xp' => $request->input('puntos_xp'),
@@ -29,6 +28,8 @@ class LessonController extends Controller
                 'user_id' => $request->user()->id,
                 'expires_at' => Carbon::parse($request->input('vencimiento')),
             ]);
+
+            Workshop::createWorkshopDefault($lesson);
 
             return redirect()->route('list-cursos');
         } catch (\Exception $e) {
@@ -51,7 +52,7 @@ class LessonController extends Controller
 
         // Verificar si la lección es del tipo DIAN y manejar el flujo específico
         if ($lesson->type === "dian") {
-            return $this->handleDianLesson($curso, $lesson);
+            return $this->handleDianLesson($curso, $lesson, $user);
         }
 
         // Calcular el progreso del curso
@@ -108,7 +109,7 @@ class LessonController extends Controller
      * @param Lesson $lesson
      * @return \Illuminate\View\View
      */
-    private function handleDianLesson(Curso $curso, Lesson $lesson)
+    private function handleDianLesson(Curso $curso, Lesson $lesson, User $user)
     {
         // Ruta al archivo JSON
         $jsonPath = database_path('data/guia.json');
@@ -119,9 +120,13 @@ class LessonController extends Controller
             $guia_DIAN = json_decode($json, true);
         }
 
+        // Calcular el progreso del curso
+        $courseProgress = $this->calculateCourseProgress($curso, $user);
+
         return view('curso.view-curso')->with([
             'curso' => $curso,
             'lesson' => $lesson,
+            'courseProgress' => $courseProgress,
             'guia' => $guia_DIAN
         ]);
     }
@@ -236,10 +241,14 @@ class LessonController extends Controller
 
         $lesson->load('workshop.laws', 'workshop.statements.entry');
 
+        // Calcular el progreso del curso
+        $courseProgress = $this->calculateCourseProgress($curso, $request->user());
+
         return view('curso.dian-components.formulario-110-dian')->with([
             'campos'    => $campos_DIAN,
             'curso'     => $curso,
             'lesson'    => $lesson,
+            'courseProgress' => $courseProgress,
             'guia' => $guia_DIAN
         ]);
     }
