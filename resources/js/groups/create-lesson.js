@@ -20,6 +20,8 @@ function validarFormulario() {
             close: 'fas fa-times'
         }
     });
+
+    
     
     $(".form-create-lesson").find("input").removeClass(["is-invalid", "is-valid"]);
 

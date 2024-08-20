@@ -293,6 +293,12 @@
         "name_en": "Equity social"
     },
     {
+        "type_eeff": "financial-position",
+        "type_group": "equity",
+        "name_es": "Ganancias del ejercicio",
+        "name_en": "Equity social"
+    },
+    {
         "type_eeff": "comprehensive-income",
         "type_group": "gross-profit",
         "name_es": "Ingresos",

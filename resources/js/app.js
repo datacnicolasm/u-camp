@@ -2,7 +2,7 @@
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
-import 'bootstrap';
+import './bootstrap';
 
 import 'summernote/dist/summernote-bs4.min.js';
 
@@ -14,6 +14,8 @@ window.moment = moment;
 require('tempusdominus-bootstrap-4');
 
 // Importar otros plugins que dependen de jQuery
+import '../adminlte/plugins/jquery/jquery.min.js';
+import '../adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js';
 import '../adminlte/dist/js/adminlte.js';
 
 import './components/sidebar.js';

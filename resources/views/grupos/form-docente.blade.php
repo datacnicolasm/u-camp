@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body class="layout-fixed">
+<body class="sidebar-mini layout-fixed">
 
     <div class="wrapper">
 

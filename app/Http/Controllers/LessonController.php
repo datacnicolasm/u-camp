@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curso;
+use App\Models\Entry;
 use App\Models\Lesson;
 use App\Models\Point;
 use App\Models\Puc;
+use App\Models\Statement;
 use App\Models\User;
 use App\Models\Workshop;
 use App\Models\WorkshopEntry;
@@ -53,12 +55,18 @@ class LessonController extends Controller
             }
         }
 
+        $statement_entries = Statement::where('workshop_id', $lesson->workshop->id)
+                ->get();
+
+        $entries_table = Entry::all();
+
         return view('grupos.actividades.edit-lesson')->with([
             'lesson' => $lesson,
             'campos' => $campos_DIAN,
+            'statement_entries' => $statement_entries,
+            'entries_table' => $entries_table
         ]);
     }
-
 
     public function editLessonDocenteForm(Request $request, Lesson $lesson)
     {
@@ -86,9 +94,11 @@ class LessonController extends Controller
                 'expires_at' => Carbon::parse($request->input('vencimiento')),
             ]);
 
-            Workshop::createWorkshopDefault($lesson);
+            $workshop = Workshop::createWorkshopDefault($lesson);
 
-            return redirect()->route('edit-assignment', ['lesson' => $lesson->id]);
+            $statement_entries = Statement::createStatementDefault($workshop);
+
+            return redirect()->route('edit-assignment', ['lesson' => $lesson->id, 'statement_entries' => $statement_entries]);
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el recurso.']);
         }

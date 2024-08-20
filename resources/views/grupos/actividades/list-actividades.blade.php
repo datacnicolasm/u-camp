@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body>
+<body class="sidebar-mini layout-fixed">
 
     <div class="wrapper">
         @if (session('success'))
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="float-sm-right">
-                                    <button class="btn btn-ucamp btn-add-group" data-toggle="modal"
+                                    <button class="btn btn-ucamp" data-toggle="modal"
                                         data-target="#modal-create-actividad" type="button">
                                         <i class="fas fa-plus mr-2"></i> Crear actividad
                                     </button>

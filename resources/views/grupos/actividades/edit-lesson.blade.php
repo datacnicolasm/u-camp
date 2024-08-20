@@ -1,6 +1,6 @@
 @include('components.header')
 
-<body>
+<body class="sidebar-mini layout-fixed">
 
     <div class="wrapper">
         @if (session('success'))
@@ -388,6 +388,417 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <h5 class="title-section-card">Edición de estados financieros para actividad DIAN</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="mt-3 text-justify">Dado que la declaración de renta para empresas exige el uso de estados financieros y la depuración de los valores fiscales tanto de la situación financiera como del estado de resultados, en esta sección te invitamos a preparar los estados financieros que los estudiantes utilizarán para desarrollar la actividad.</p>
+                                            </div>
+                                            <div class="col-12">
+
+                                                <!-- Estado de Situación Financiera -->
+                                                <div class="form-group accordion-camp">
+                                                    <div class="header-edit-lesson">
+                                                        Estado de Situación Financiera
+                                                        <i class="fas fa-chevron-down arrow-icon"></i>
+                                                    </div>
+                                                    <div class="body-edit-lesson">
+                                                        <div class="eeff-lesson">
+                                                            <p class="subtle-title text-center my-1">EMPRESAS COMERCIALES DE COLOMBIA S.A.S</p>
+                                                            <p class="subtle-title text-center my-1">Nit: 900.000.001-0</p>
+                                                            <p class="subtle-title text-center my-1"><strong>Estado de Situación Financiera</strong></p>
+                                                            <p class="subtle-title text-center my-1">Saldos a 31 de Diciembre de {{ $lesson->workshop->year_form }}</p>
+
+                                                            <table class="table financial-table">
+                                                                @php
+                                                                    $color_row = "#e2efff";
+                                                                @endphp
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th width="80px"></th>
+                                                                        <th width="170px" class="text-center">Valor (COP)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+
+                                                            <!-- Accordion activos -->
+                                                            <div class="container-fluid">
+                                                                <div class="eeff-accordion row">
+                                                                    <div class="eeff-header col-12">
+                                                                        <strong>Activos</strong>
+                                                                        <i class="fas fa-chevron-down arrow-icon"></i>
+                                                                    </div>
+                                                                    <div class="eeff-body col-12">
+                                                                        <table class="table financial-table">
+                                                                            <tbody>            
+                                                                                <!-- Activos corrientes -->
+                                                                                @if ($statement_entries && count($statement_entries) > 0)
+                                                                                    @php
+                                                                                        $sum_activos_corrientes = 0;
+                                                                                        // Filtrar la colección original
+                                                                                        $entries_assets = $statement_entries->filter(function ($statement_entry) {
+                                                                                            if (
+                                                                                                $statement_entry->entry->sub_type_group == 'current-assets'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+            
+                                                                                        // Filtrar la coleccion de entries
+                                                                                        $entries_current_assets = $entries_table->filter(function ($entry_t) {
+                                                                                            if (
+                                                                                                $entry_t->sub_type_group == 'current-assets'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+                                                                                    @endphp
+                                                                                    @foreach ($entries_assets as $item)
+                                                                                        @php
+                                                                                            $sum_activos_corrientes += $item->value;
+                                                                                        @endphp
+                                                                                        <tr class="line-item-statement">
+                                                                                            <td class="name_es">
+                                                                                                <select disabled="true" name="entry_id" class="form-control form-control-sm entry-select">
+                                                                                                    @foreach( $entries_current_assets as $entri_t )
+                                                                                                        <option value="{{ $entri_t->id }}"
+                                                                                                            {{ $entri_t->id == $item->entry->id ? 'selected' : '' }}>
+                                                                                                            {{ $entri_t->name_es }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </td>
+                                                                                            <!-- Contenedor de botones -->
+                                                                                            @include('grupos.actividades.edit-lesson.btns-entry')
+                                                                                            <td  width="170px" class="text-right value-entry">
+                                                                                                <input disabled="true" type="text" class="form-control form-control-sm input-dian" value="{{ $item->value }}">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    @endforeach
+                                                                                    <tr>
+                                                                                        <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Activos Corrientes</strong></td>
+                                                                                        <td style="background-color: {{$color_row}};"></td>
+                                                                                        <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                            <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_activos_corrientes }}">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                @endif
+            
+                                                                                <!-- Activos NO corrientes -->
+                                                                                @if ($statement_entries && count($statement_entries) > 0)
+                                                                                    @php
+                                                                                        $sum_activos_nocorrientes = 0;
+                                                                                        // Filtrar la colección original
+                                                                                        $entries_assets_nocorrientes = $statement_entries->filter(function ($statement_entry) {
+                                                                                            if (
+                                                                                                $statement_entry->entry->sub_type_group == 'non-current-assets'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+            
+                                                                                        // Filtrar la coleccion de entries
+                                                                                        $entries_noncurrent_assets = $entries_table->filter(function ($entry_t) {
+                                                                                            if (
+                                                                                                $entry_t->sub_type_group == 'non-current-assets'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+                                                                                    @endphp
+                                                                                    @foreach ($entries_assets_nocorrientes as $item)
+                                                                                        @php
+                                                                                            $sum_activos_nocorrientes += $item->value;
+                                                                                        @endphp
+                                                                                        <tr class="line-item-statement">
+                                                                                            <td class="name_es">
+                                                                                                <select disabled="true" name="entry_id" class="form-control form-control-sm entry-select">
+                                                                                                    @foreach( $entries_noncurrent_assets as $entri_t )
+                                                                                                        <option value="{{ $entri_t->id }}"
+                                                                                                            {{ $entri_t->id == $item->entry->id ? 'selected' : '' }}>
+                                                                                                            {{ $entri_t->name_es }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </td>
+                                                                                            <!-- Contenedor de botones -->
+                                                                                            @include('grupos.actividades.edit-lesson.btns-entry')
+                                                                                            <td  width="170px" class="text-right value-entry">
+                                                                                                <input disabled="true" type="text" class="form-control form-control-sm input-dian" value="{{ $item->value }}">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    @endforeach
+                                                                                    <tr>
+                                                                                        <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Activos No Corrientes</strong></td>
+                                                                                        <td style="background-color: {{$color_row}};"></td>
+                                                                                        <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                            <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_activos_nocorrientes }}">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                @endif
+                                                                                
+                                                                                <!-- Total activos -->
+                                                                                <tr>
+                                                                                    <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Activos</strong></td>
+                                                                                    <td style="background-color: {{$color_row}};"></td>
+                                                                                    <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                        <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_activos_nocorrientes + $sum_activos_corrientes }}">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <!-- Accordion pasivos -->
+                                                            <div class="container-fluid">
+                                                                <div class="eeff-accordion row">
+                                                                    <div class="eeff-header col-12">
+                                                                        <strong>Pasivos</strong>
+                                                                        <i class="fas fa-chevron-down arrow-icon"></i>
+                                                                    </div>
+                                                                    <div class="eeff-body col-12">
+                                                                        <table class="table financial-table">
+                                                                            <tbody>
+            
+                                                                                <!-- Total Pasivos Corrientes -->
+                                                                                @if ($statement_entries && count($statement_entries) > 0)
+                                                                                    @php
+                                                                                        $sum_pasivos_corrientes = 0;
+                                                                                        // Filtrar la colección original
+                                                                                        $entries_pasivos_corrientes = $statement_entries->filter(function ($statement_entry) {
+                                                                                            if (
+                                                                                                $statement_entry->entry->sub_type_group == 'current-liabilities'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+            
+                                                                                         // Filtrar la coleccion de entries
+                                                                                         $entries_current_pasivos = $entries_table->filter(function ($entry_t) {
+                                                                                            if (
+                                                                                                $entry_t->sub_type_group == 'current-liabilities'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+                                                                                    @endphp
+                                                                                    @foreach ($entries_pasivos_corrientes as $item)
+                                                                                        @php
+                                                                                            $sum_pasivos_corrientes += $item->value;
+                                                                                        @endphp
+                                                                                        <tr class="line-item-statement">
+                                                                                            <td class="name_es">
+                                                                                                <select disabled="true" name="entry_id" class="form-control form-control-sm entry-select">
+                                                                                                    @foreach( $entries_current_pasivos as $entri_t )
+                                                                                                        <option value="{{ $entri_t->id }}"
+                                                                                                            {{ $entri_t->id == $item->entry->id ? 'selected' : '' }}>
+                                                                                                            {{ $entri_t->name_es }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </td>
+                                                                                            <!-- Contenedor de botones -->
+                                                                                            @include('grupos.actividades.edit-lesson.btns-entry')
+                                                                                            <td width="170px" class="text-right value-entry">
+                                                                                                <input disabled="true" type="text" class="form-control form-control-sm input-dian" value="{{ $item->value }}">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    @endforeach
+                                                                                    <tr>
+                                                                                        <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Pasivos Corrientes</strong></td>
+                                                                                        <td style="background-color: {{$color_row}};"></td>
+                                                                                        <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                            <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_pasivos_corrientes }}">
+                                                                                        </td>
+                                                                                    </tr>    
+                                                                                @endif
+            
+                                                                                <!-- Total Pasivos No Corrientes -->
+                                                                                @if ($statement_entries && count($statement_entries) > 0)
+                                                                                    @php
+                                                                                        $sum_pasivos_nocorrientes = 0;
+                                                                                        // Filtrar la colección original
+                                                                                        $entries_pasivos_nocorrientes = $statement_entries->filter(function ($statement_entry) {
+                                                                                            if (
+                                                                                                $statement_entry->entry->sub_type_group == 'non-current-liabilities'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+            
+                                                                                        // Filtrar la coleccion de entries
+                                                                                        $entries_noncurrent_pasivos = $entries_table->filter(function ($entry_t) {
+                                                                                            if (
+                                                                                                $entry_t->sub_type_group == 'non-current-liabilities'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+                                                                                    @endphp
+                                                                                    @foreach ($entries_pasivos_nocorrientes as $item)
+                                                                                        @php
+                                                                                            $sum_pasivos_nocorrientes += $item->value;
+                                                                                        @endphp
+                                                                                        <tr class="line-item-statement">
+                                                                                            <td class="name_es">
+                                                                                                <select disabled="true" name="entry_id" class="form-control form-control-sm entry-select">
+                                                                                                    @foreach( $entries_noncurrent_pasivos as $entri_t )
+                                                                                                        <option value="{{ $entri_t->id }}"
+                                                                                                            {{ $entri_t->id == $item->entry->id ? 'selected' : '' }}>
+                                                                                                            {{ $entri_t->name_es }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </td>
+                                                                                            <!-- Contenedor de botones -->
+                                                                                            @include('grupos.actividades.edit-lesson.btns-entry')
+                                                                                            <td width="170px" class="text-right value-entry">
+                                                                                                <input disabled="true" type="text" class="form-control form-control-sm input-dian" value="{{ $item->value }}">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    @endforeach
+                                                                                    <tr>
+                                                                                        <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Pasivos No Corrientes</strong></td>
+                                                                                        <td style="background-color: {{$color_row}};"></td>
+                                                                                        <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                            <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_pasivos_nocorrientes }}">
+                                                                                        </td>
+                                                                                    </tr>    
+                                                                                @endif
+            
+                                                                                <!-- Total pasivos -->
+                                                                                <tr>
+                                                                                    <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Pasivos</strong></td>
+                                                                                    <td style="background-color: {{$color_row}};"></td>
+                                                                                    <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                        <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_pasivos_corrientes + $sum_pasivos_nocorrientes }}">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Accordion patrimonio -->
+                                                            <div class="container-fluid">
+                                                                <div class="eeff-accordion row">
+                                                                    <div class="eeff-header col-12">
+                                                                        <strong>Patrimonio</strong>
+                                                                        <i class="fas fa-chevron-down arrow-icon"></i>
+                                                                    </div>
+                                                                    <div class="eeff-body col-12">
+                                                                        <table class="table financial-table">
+                                                                            <tbody>
+            
+                                                                                <!-- Patrimonio -->
+                                                                                @if ($statement_entries && count($statement_entries) > 0)
+                                                                                    @php
+                                                                                        $sum_equity = 0;
+                                                                                        // Filtrar la colección original
+                                                                                        $entries_equity = $statement_entries->filter(function ($statement_entry) {
+                                                                                            if (
+                                                                                                $statement_entry->entry->type_group == 'equity'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+
+                                                                                         // Filtrar la coleccion de entries
+                                                                                         $entries_equity_st = $entries_table->filter(function ($entry_t) {
+                                                                                            if (
+                                                                                                $entry_t->type_group == 'equity'
+                                                                                            ) {
+                                                                                                return true;
+                                                                                            } else {
+                                                                                                return false;
+                                                                                            }
+                                                                                        });
+                                                                                    @endphp
+                                                                                    @foreach ($entries_equity as $item)
+                                                                                        @php
+                                                                                            $sum_equity += $item->value;
+                                                                                        @endphp
+                                                                                        <tr class="line-item-statement">
+                                                                                            <td class="name_es">
+                                                                                                <select disabled="true" name="entry_id" class="form-control form-control-sm entry-select">
+                                                                                                    @foreach( $entries_equity_st as $entri_t )
+                                                                                                        <option value="{{ $entri_t->id }}"
+                                                                                                            {{ $entri_t->id == $item->entry->id ? 'selected' : '' }}>
+                                                                                                            {{ $entri_t->name_es }}
+                                                                                                        </option>
+                                                                                                    @endforeach
+                                                                                                </select>
+                                                                                            </td>
+                                                                                            <!-- Contenedor de botones -->
+                                                                                            @include('grupos.actividades.edit-lesson.btns-entry')
+                                                                                            <td width="170px" class="text-right value-entry">
+                                                                                                <input disabled="true" type="text" class="form-control form-control-sm input-dian" value="{{ $item->value }}">
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    @endforeach
+                                                                                    <!-- Total patrimonio -->
+                                                                                    <tr>
+                                                                                        <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Patrimonio</strong></td>
+                                                                                        <td style="background-color: {{$color_row}};"></td>
+                                                                                        <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                            <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_equity }}">
+                                                                                        </td>
+                                                                                    </tr>    
+                                                                                @endif
+            
+                                                                                <!-- Total Pasivos y Patrimonio -->
+                                                                                <tr>
+                                                                                    <td style="background-color: {{$color_row}};" class="total-eeff"><strong>Total Pasivos y Patrimonio</strong></td>
+                                                                                    <td style="background-color: {{$color_row}};"></td>
+                                                                                    <td style="background-color: {{$color_row}};" class="text-right value-entry">
+                                                                                        <input disabled="true" type="text" class="form-control form-control-sm input-dian float-right" value="{{ $sum_equity + $sum_pasivos_corrientes + $sum_pasivos_nocorrientes }}">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Estado de Resultados Integral -->
+                                                <div class="form-group accordion-camp">
+                                                    <div class="header-edit-lesson">
+                                                        Estado de Resultados Integral
+                                                        <i class="fas fa-chevron-down arrow-icon"></i>
+                                                    </div>
+                                                    <div class="body-edit-lesson">
+                                                        <div class="eeff-lesson">
+                                                            <p class="subtle-title text-center my-1">EMPRESAS COMERCIALES DE COLOMBIA S.A.S</p>
+                                                            <p class="subtle-title text-center my-1">Nit: 900.000.001-0</p>
+                                                            <p class="subtle-title text-center my-1"><strong>Estado de Resultados Integral</strong></p>
+                                                            <p class="subtle-title text-center my-1">Saldos a 31 de Diciembre de {{ $lesson->workshop->year_form }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

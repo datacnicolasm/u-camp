@@ -130,7 +130,7 @@ $(function ($) {
 
         var matrix_inputs = []
 
-        $("input.input-dian").each(function (index, element) {
+        $("#workshop-edit input.input-dian").each(function (index, element) {
             var val_input = $(element).val() ? parseFloat($(element).val().replace(/\./g, '').replace(',', '.')) : 0
             var name_input = $(element).data("cod-field")
             var name_section = $(element).data("section")
@@ -165,5 +165,66 @@ $(function ($) {
 
         console.log(dataSend)
     })
+
+    $(".content-btns .btn-entry-edit").on("click", function(event){
+        event.preventDefault();
+
+        const line_item = $(this)[0].parentNode.parentNode;
+
+        $(line_item).find(".entry-select").prop("disabled", false);
+        $(line_item).find(".value-entry input").prop("disabled", false);
+    })
+
+    $(".content-btns .btn-entry-save").on("click", function(event){
+        event.preventDefault();
+
+        const line_item = $(this)[0].parentNode.parentNode;
+
+        $(line_item).find(".entry-select").prop("disabled", true);
+        $(line_item).find(".value-entry input").prop("disabled", true);
+    })
+
+    $(".eeff-accordion .eeff-header").each(function (index, element) {
+        $(element).on("click", function () {
+            var content = $(this).next();
+            var icon = $(this).find(".arrow-icon");
+
+            // Alterna la visibilidad del contenido
+            content.slideToggle();
+
+            if (!icon.hasClass("actived")) {
+                gsap.fromTo(
+                    icon,
+                    {
+                        rotation: 0,
+                    },
+                    {
+                        rotation: 180,
+                        duration: .5,
+                        ease: "power1.out",
+                        onComplete: function () {
+                            icon.addClass("actived")
+                        }
+                    }
+                );
+            } else {
+                gsap.fromTo(
+                    icon,
+                    {
+                        rotation: 180,
+                    },
+                    {
+                        rotation: 0,
+                        duration: .5,
+                        ease: "power1.out",
+                        onComplete: function () {
+                            icon.removeClass("actived")
+                        }
+                    }
+                );
+            }
+        });
+    })
+
 
 });

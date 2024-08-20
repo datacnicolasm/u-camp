@@ -11580,17 +11580,17 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
 #left-panel .content-panel .content-tab-panel .financial-table td {
   padding: 0.4rem 0.75rem 0.4rem 2rem;
 }
-#left-panel .content-panel .content-tab-panel .table tbody td.clase-puc {
+#left-panel .content-panel .content-tab-panel .financial-table tbody td.clase-puc {
   background-color: #cbcbcb;
   padding: 0.4rem 0.75rem;
 }
-#left-panel .content-panel .content-tab-panel .table tbody td.total-eeff {
+#left-panel .content-panel .content-tab-panel .financial-table tbody td.total-eeff {
   padding: 0.4rem 0.75rem 0.4rem 1rem;
 }
-#left-panel .content-panel .content-tab-panel .table tbody tr:hover .content-btn-mark-line {
+#left-panel .content-panel .content-tab-panel .financial-table tbody tr:hover .content-btn-mark-line {
   opacity: 1;
 }
-#left-panel .content-panel .content-tab-panel .table tbody .content-btn-mark-line {
+#left-panel .content-panel .content-tab-panel .financial-table tbody .content-btn-mark-line {
   opacity: 0;
   background-color: #05bd9b;
   width: 30px;
@@ -11600,7 +11600,7 @@ nav.view-curso-footer-nav div.footer-nav-contenido .button-container .btn i {
   border-radius: 3px;
   cursor: pointer;
 }
-#left-panel .content-panel .content-tab-panel .table tbody .content-btn-mark-line:hover i {
+#left-panel .content-panel .content-tab-panel .financial-table tbody .content-btn-mark-line:hover i {
   font-size: 1rem;
 }
 
@@ -13202,6 +13202,126 @@ h5.title-section-card {
   min-height: 0px;
   padding: 15px;
   border-radius: 5px;
+}
+
+.eeff-lesson .subtle-title {
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+.eeff-lesson .subtle-title {
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+.eeff-lesson .financial-table {
+  margin: 0;
+}
+.eeff-lesson .financial-table td {
+  padding: 0.4rem 0.75rem 0.4rem 2rem;
+}
+.eeff-lesson .financial-table tbody td input {
+  max-width: 180px;
+}
+.eeff-lesson .financial-table tbody td.clase-puc {
+  background-color: #cbcbcb;
+  padding: 0.4rem 0.75rem;
+}
+.eeff-lesson .financial-table tbody td {
+  vertical-align: middle;
+}
+.eeff-lesson .financial-table tbody td.total-eeff {
+  padding: 0.4rem 0.75rem 0.4rem 1rem;
+  vertical-align: middle;
+}
+.eeff-lesson .financial-table tbody tr:hover .content-btn-mark-line {
+  opacity: 1;
+}
+.eeff-lesson .financial-table tbody .value-entry {
+  padding: 0.4rem 0.75rem 0.4rem 0.4rem;
+  text-align: right;
+}
+.eeff-lesson .financial-table tbody .value-entry input {
+  float: right;
+}
+.eeff-lesson .financial-table tbody .line-item-statement:hover .content-btns {
+  opacity: 1;
+}
+.eeff-lesson .financial-table tbody .line-item-statement .content-btns {
+  padding: 0.4rem;
+  opacity: 0;
+}
+.eeff-lesson .financial-table tbody .line-item-statement .content-btns .icon-button {
+  border: none;
+  background: none;
+  color: #6c757d;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+}
+.eeff-lesson .financial-table tbody .line-item-statement .content-btns .icon-button .tool-tip {
+  display: none;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  padding: 4px 12px;
+  background-color: #b8f9d7;
+  border: none;
+  border-radius: 10px;
+  font-weight: normal;
+}
+.eeff-lesson .financial-table tbody .line-item-statement .content-btns .icon-button:hover {
+  color: #05bd9b;
+}
+.eeff-lesson .financial-table tbody .line-item-statement .content-btns .icon-button:hover .tool-tip {
+  display: block;
+}
+.eeff-lesson .financial-table tbody .content-btn-mark-line {
+  opacity: 0;
+  background-color: #05bd9b;
+  width: 30px;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.eeff-lesson .financial-table tbody .content-btn-mark-line:hover i {
+  font-size: 1rem;
+}
+.eeff-lesson .eeff-accordion {
+  position: relative;
+  margin-bottom: 10px;
+}
+.eeff-lesson .eeff-accordion .eeff-header {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eeff-lesson .eeff-accordion .eeff-header .arrow-icon {
+  background-color: #021221;
+  font-size: 0.8rem;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+.eeff-lesson .eeff-accordion .eeff-header:hover {
+  background-color: #ddd;
+}
+.eeff-lesson .eeff-accordion .eeff-body {
+  display: none;
+  padding: 0;
+  border: 1px solid #e1e1e1;
+  border-top: none;
 }
 
 .dashboard-container .card-user-dashboard .user-sect {

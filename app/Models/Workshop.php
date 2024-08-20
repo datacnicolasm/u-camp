@@ -30,9 +30,11 @@ class Workshop extends Model
 
     static public function createWorkshopDefault(Lesson $lesson)
     {
-        $lesson = Workshop::create([
+        $workshop = Workshop::create([
             'lesson_id' => $lesson->id,
         ]);
+
+        return $workshop;
     }
 
     /**
