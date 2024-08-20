@@ -29,7 +29,7 @@
                                 </svg></i></a>
                     </li>
                     <li class="mx-2">
-                        <a rel="noopener" target="_blank" href="https://www.linkedin.com/school/datacampinc/"
+                        <a rel="noopener" target="_blank" href=""
                             class="css-evebs5"><i aria-hidden="true"><svg fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                                     <path
@@ -40,7 +40,7 @@
                     </li>
                     <li class="mx-2">
                         <a rel="noopener" target="_blank"
-                            href="https://www.youtube.com/channel/UC79Gv3mYp6zKiSwYemEik9A" class="css-evebs5"><i
+                            href="" class="css-evebs5"><i
                                 aria-hidden="true"> <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                     width="17" height="17">
                                     <path
@@ -49,7 +49,7 @@
                                 </svg></i></a>
                     </li>
                     <li class="mx-2">
-                        <a rel="noopener" target="_blank" href="https://www.instagram.com/datacamp/"
+                        <a rel="noopener" target="_blank" href=""
                             class="css-evebs5"><i aria-hidden="true"><svg fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                                     <path fill-rule="evenodd"

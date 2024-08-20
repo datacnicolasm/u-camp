@@ -7,7 +7,11 @@
         <!--  -->
         <a href="" class="mt-2 user-sect-sodebar">
             <div class="user-icon">
-                <img src="{{ asset('img/user-default-1.jpg') }}" alt="">
+                @if (Auth::user()->profile_image)
+                    <img src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="Profile Image" class="img-fluid">
+                @else
+                    <img src="{{ asset('img/user-default.png') }}" alt="Profile Image" class="img-fluid">
+                @endif
             </div>
             <div class="user-info">
                 <p>{{ Auth::user()->first_name }}</p>
@@ -19,8 +23,20 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
 
+                <?php $class_items_grupos = ''; ?>
+                @if (Route::currentRouteName() == 'dashboard-grupos')
+                    <?php $class_items_grupos .= 'active-item-nav'; ?>
+                @endif
                 <!--  -->
                 <li class="mt-3 nav-item">
+                    <a href="{{ route('dashboard-grupos') }}" class="nav-link <?php echo $class_items_grupos; ?>">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+
+                <!--  -->
+                <li class="nav-item">
                     <a class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>Cuadro de mando</p>
@@ -109,10 +125,9 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                    <a href="#" class="nav-link"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a href="{{ route('login-dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-right-from-bracket"></i>
-                        <p>Cerrar sesión</p>
+                        <p>Salir</p>
                     </a>
                 </li>
 

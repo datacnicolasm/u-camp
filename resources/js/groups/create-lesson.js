@@ -5,6 +5,22 @@ import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
 
 function validarFormulario() {
+    // Inicializar el selector de fecha y hora
+    $('#datetimepicker1').datetimepicker({
+        format: 'YYYY-MM-DD hh:mm a',
+        icons: {
+            time: 'fas fa-clock',
+            date: 'fas fa-calendar',
+            up: 'fas fa-chevron-up',
+            down: 'fas fa-chevron-down',
+            previous: 'fas fa-chevron-left',
+            next: 'fas fa-chevron-right',
+            today: 'fas fa-calendar-check',
+            clear: 'fas fa-trash',
+            close: 'fas fa-times'
+        }
+    });
+    
     $(".form-create-lesson").find("input").removeClass(["is-invalid", "is-valid"]);
 
     const titulo_actividad = $(".form-create-lesson").find("#titulo_actividad").val();

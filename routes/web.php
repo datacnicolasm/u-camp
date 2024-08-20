@@ -122,6 +122,8 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/getGuiaJSON', [LessonController::class, 'getGuiaJSON'])->name('lessons.guiajson');
         Route::post('/{lesson}/view', [LessonController::class, 'markAsViewed'])->middleware('auth');
         Route::post('/create-assignment', [LessonController::class, 'createLesson'])->name('create-assignment');
+        Route::get('/{lesson}/edit-assignment', [LessonController::class, 'editLessonDocente'])->name('edit-assignment');
+        Route::post('/{lesson}/form-edit-assignment', [LessonController::class, 'editLessonDocenteForm'])->name('form-edit-assignment');
     });
 
     // user
@@ -139,9 +141,14 @@ Route::middleware(['auth'])->group(function () {
 
     // Talleres
     Route::post('/workshop/{workshop}/calificarWorkshop', [WorkshopController::class, 'calificarWorkshop'])->name('calificar-workshop');
+    Route::post('/workshop/{workshop}/editWorkshop', [WorkshopController::class, 'editWorkshop'])->name('editar-workshop');
 });
 
 // Ruta para recuperar usuario
 Route::get('/forgot-user', function () {
     return view('user.forgot');
 })->name('forgot-user');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

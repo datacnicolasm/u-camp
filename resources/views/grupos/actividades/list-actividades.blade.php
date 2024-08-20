@@ -129,28 +129,28 @@
                                                                                 </button>
 
                                                                                 <!-- Botón editar -->
-                                                                                <button class="icon-button mr-2">
+                                                                                <a class="icon-button mr-2" href="{{ route('edit-assignment', ['lesson' => $lesson->id]) }}">
                                                                                     <i class="fas fa-edit"></i>
                                                                                     <span class="tool-tip">Editar</span>
-                                                                                </button>
+                                                                                </a>
 
                                                                                 <!-- Botón archivar -->
-                                                                                <button class="icon-button mr-2">
+                                                                                <a class="icon-button mr-2">
                                                                                     <i class="fas fa-file-alt"></i>
                                                                                     <span class="tool-tip">Archivar</span>
-                                                                                </button>
+                                                                                </a>
 
                                                                                 <!-- Ver actividad -->
-                                                                                <button class="icon-button mr-2">
+                                                                                <a class="icon-button mr-2">
                                                                                     <i class="fas fa-eye"></i>
                                                                                     <span class="tool-tip">Preview</span>
-                                                                                </button>
+                                                                                </a>
 
                                                                                 <!-- Ver resultados -->
-                                                                                <button class="icon-button">
+                                                                                <a class="icon-button">
                                                                                     <i class="fas fa-tachometer-alt"></i>
                                                                                     <span class="tool-tip">Resultados</span>
-                                                                                </button>
+                                                                                </a>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
@@ -256,10 +256,10 @@
                                                                                 </button>
 
                                                                                 <!-- Botón editar -->
-                                                                                <button class="icon-button mr-2">
+                                                                                <a class="icon-button mr-2" href="{{ route('edit-assignment', ['lesson' => $lesson->id]) }}">
                                                                                     <i class="fas fa-edit"></i>
                                                                                     <span class="tool-tip">Editar</span>
-                                                                                </button>
+                                                                                </a>
 
                                                                                 <!-- Botón archivar -->
                                                                                 <button class="icon-button mr-2">
@@ -380,10 +380,10 @@
                                                                                 </button>
 
                                                                                 <!-- Botón editar -->
-                                                                                <button class="icon-button mr-2">
+                                                                                <a class="icon-button mr-2" href="{{ route('edit-assignment', ['lesson' => $lesson->id]) }}">
                                                                                     <i class="fas fa-edit"></i>
                                                                                     <span class="tool-tip">Editar</span>
-                                                                                </button>
+                                                                                </a>
 
                                                                                 <!-- Botón archivar -->
                                                                                 <button class="icon-button mr-2">

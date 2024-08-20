@@ -8,6 +8,7 @@ use App\Models\Point;
 use App\Models\Puc;
 use App\Models\User;
 use App\Models\Workshop;
+use App\Models\WorkshopEntry;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -15,6 +16,62 @@ use Illuminate\Support\Facades\Log;
 
 class LessonController extends Controller
 {
+    public function editLessonDocente(Lesson $lesson)
+    {
+        // Ruta al archivo JSON
+        $jsonPath = database_path('data/campos-110.json');
+
+        // Inicializar la variable campos_DIAN
+        $campos_DIAN = [];
+
+        // Leer el contenido del archivo JSON
+        if (File::exists($jsonPath)) {
+            try {
+                $json = File::get($jsonPath);
+                $campos_DIAN = json_decode($json, true);
+            } catch (\Exception $e) {
+                Log::error("Error leyendo o decodificando el archivo JSON: " . $e->getMessage());
+            }
+        } else {
+            Log::warning("Archivo JSON no encontrado: " . $jsonPath);
+        }
+
+        $lesson->load('workshop.entries');
+
+        if (!empty($campos_DIAN)) {
+            // Obtén todas las entradas del taller de una sola vez
+            $workshopEntries = WorkshopEntry::where('workshop_id', $lesson->workshop->id)->get()->keyBy('cod_input');
+
+            foreach ($campos_DIAN as &$item) {
+                foreach ($item['fields'] as $title => &$field) {
+                    $field['val_input'] = 0;
+
+                    if (isset($workshopEntries[$title])) {
+                        $field['val_input'] = $workshopEntries[$title]->value_input;
+                    }
+                }
+            }
+        }
+
+        return view('grupos.actividades.edit-lesson')->with([
+            'lesson' => $lesson,
+            'campos' => $campos_DIAN,
+        ]);
+    }
+
+
+    public function editLessonDocenteForm(Request $request, Lesson $lesson)
+    {
+        $lesson->title = strtoupper($request->input('titulo_actividad'));
+        $lesson->points_xp = $request->input('puntos_xp');
+        $lesson->order = $request->input('orden');
+        $lesson->expires_at = Carbon::parse($request->input('vencimiento'));
+
+        $lesson->save();
+
+        return redirect()->route('edit-assignment', ['lesson' => $lesson->id]);
+    }
+
     public function createLesson(Request $request)
     {
         try {
@@ -31,7 +88,7 @@ class LessonController extends Controller
 
             Workshop::createWorkshopDefault($lesson);
 
-            return redirect()->route('list-cursos');
+            return redirect()->route('edit-assignment', ['lesson' => $lesson->id]);
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => 'Hubo un problema al crear el recurso.']);
         }

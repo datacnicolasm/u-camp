@@ -107,8 +107,6 @@ $(function ($) {
         var firstName = $('#first-name').val();
         var lastName = $('#last-name').val();
 
-        console.log(type_user, code, email, password, firstName, lastName)
-
         // Validar que los campos no estén vacíos
         if (type_user == "new_user") {
 

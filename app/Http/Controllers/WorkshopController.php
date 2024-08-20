@@ -15,6 +15,42 @@ use Illuminate\Support\Facades\Log;
 
 class WorkshopController extends Controller
 {
+    public function editWorkshop(Request $request, Workshop $workshop)
+    {
+        $workshop->context_workshop = $request->contexto;
+        $workshop->indicaciones_workshop = $request->indicaciones;
+        $workshop->save();
+
+        // Acceder a la entrada 'entries_workshop' como un array
+        $entries_workshop = $request->input('campos', []);
+
+        foreach ($entries_workshop as $entry)
+        {
+            // Buscar el elemento en WorkshopEntry
+            $workshopEntry = WorkshopEntry::where('cod_input', $entry['name'])
+                ->where('workshop_id', $workshop->id)
+                ->first();
+
+            // Si no se encuentra el WorkshopEntry, crearlo
+            if (!$workshopEntry) {
+                $workshopEntry = WorkshopEntry::create([
+                    'value_input' => $entry['val'],
+                    'cod_input' => $entry['name'],
+                    'workshop_id' => $workshop->id
+                ]);
+            }else{
+                $workshopEntry->value_input = $entry['val'];
+                $workshopEntry->save();
+            }
+        }
+
+        return response()->json([
+            'data' => [
+                'msg' => 'Workshop editado'
+            ]
+        ])->setStatusCode(200);
+    }
+
     public function calificarWorkshop(Request $request, Workshop $workshop)
     {
         $matriz_verificacion = array();

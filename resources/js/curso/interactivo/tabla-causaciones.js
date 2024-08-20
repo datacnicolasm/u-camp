@@ -20,12 +20,6 @@ function setCuentasInput(data) {
         $(element).on('change', function () {
             const codigoCuenta = $(this).val();
             const cuenta = data_cuentas.find(cuenta => cuenta.codigo_cuenta === codigoCuenta);
-
-            if (cuenta) {
-                console.log(cuenta);
-            } else {
-                console.log('No se encontró ninguna cuenta con ese código.');
-            }
         });
     });
 

@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
-import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 
 function getScreenSize() {
     const width = window.innerWidth;
@@ -287,8 +287,6 @@ function generateGuiaContinue(data, index) {
 $(function ($) {
 
     const step_guia_session = sessionStorage.getItem('guiaCamp') ? sessionStorage.getItem('guiaCamp') : "0";
-
-    console.log(step_guia_session)
 
     if (step_guia_session == "0") {
 

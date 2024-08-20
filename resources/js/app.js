@@ -2,26 +2,23 @@
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
+import 'bootstrap';
+
+import 'summernote/dist/summernote-bs4.min.js';
+
 // Importar Moment.js
 import moment from 'moment';
 window.moment = moment;
 
-// Importar Tempus Dominus Bootstrap 4
+//Importar Tempus Dominus Bootstrap 4
 require('tempusdominus-bootstrap-4');
 
 // Importar otros plugins que dependen de jQuery
-import '../adminlte/plugins/jquery/jquery.min.js';
-import '../adminlte/plugins/datatables/jquery.dataTables.min.js';
-import '../adminlte/plugins/datatables-bs4/js/datatables.js';
-import '../adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js';
 import '../adminlte/dist/js/adminlte.js';
 
-// Importar Bootstrap y otros scripts
-import './bootstrap';
-import './components/teacher.js';
 import './components/sidebar.js';
 import './curso/components/navbar.js';
-import './curso/components/footer.js';
+
 import './curso/detalle-curso.js';
 import './curso/video.js';
 import './curso/cuestionario.js';
@@ -48,6 +45,7 @@ import './groups/link-new-user.js';
 import './groups/delete-user.js';
 import './groups/delete-lesson.js';
 import './groups/create-lesson.js';
+import './groups/edit-lesson.js';
 
 import './curso/interactivo/interactivo.js';
 import './curso/interactivo/tabla-causaciones.js';

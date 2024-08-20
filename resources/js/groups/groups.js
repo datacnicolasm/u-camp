@@ -93,7 +93,6 @@ $(function ($) {
 
     // Crear grupo - guardar informacion
     $("#crear-modal").find("#btn-crear-grupo").on("click", function (event) {
-        console.log("Crear grupo")
 
         const name_grupo = $("#crear-modal").find("#name").val()
         const color_grupo = $("#crear-modal").find("#color-group").attr("value")

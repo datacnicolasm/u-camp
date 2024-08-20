@@ -36,9 +36,6 @@ function downloadCSV(csvContent, filename) {
 
     link.setAttribute('href', url);
     link.setAttribute('download', filename);
-    link.style.visibility = 'hidden';
-
-    document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }

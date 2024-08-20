@@ -17,10 +17,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Google Font: Madimi One -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- datatables -->
-    <link href="https://cdn.datatables.net/v/bs4/dt-2.0.5/b-3.0.2/datatables.min.css" rel="stylesheet">
     <!-- Llamado al archivo CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>

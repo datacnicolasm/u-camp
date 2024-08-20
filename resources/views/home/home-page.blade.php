@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 mb-5 p-sm">
-                    <img src="{{ asset('img/screenshot.jpg') }}" class="img-fluid" alt="Entorno de aprendizaje">
+                    <img src="{{ asset('img/screenshot_1.png') }}" class="img-fluid" alt="Entorno de aprendizaje">
                 </div>
 
                 <div class="col-sm-12 col-md-6 cont-flex px-3 mb-5 p-sm">
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 mb-5 p-sm">
-                    <img src="{{ asset('img/screenshot.jpg') }}" class="img-fluid" alt="Entorno de aprendizaje">
+                    <img src="{{ asset('img/screenshot_4.png') }}" class="img-fluid" alt="Entorno de aprendizaje">
                 </div>
 
                 <div class="col-sm-12 col-md-6 cont-flex px-3 mb-5 p-sm">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 mb-5 p-sm">
-                    <img src="{{ asset('img/screenshot.jpg') }}" class="img-fluid" alt="Entorno de aprendizaje">
+                    <img src="{{ asset('img/screenshot_3.png') }}" class="img-fluid" alt="Entorno de aprendizaje">
                 </div>
 
                 <div class="col-sm-12 col-md-6 cont-flex px-3 mb-5 p-sm">
@@ -123,7 +123,7 @@
                 </div>
                 <div class="col-sm-12 col-md-5 my-4 cont-flex p-sm">
                     <div class="main-cont-flex">
-                        <img src="{{ asset('img/screenshot.jpg') }}" class="img-fluid" alt="Entorno de aprendizaje">
+                        <img src="{{ asset('img/screenshot_2.png') }}" class="img-fluid" alt="Entorno de aprendizaje">
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-5 my-4 cont-flex p-sm">
                     <div class="main-cont-flex">
-                        <img src="{{ asset('img/screenshot.jpg') }}" class="img-fluid" alt="Entorno de aprendizaje">
+                        <img src="{{ asset('img/screenshot_5.png') }}" class="img-fluid" alt="Entorno de aprendizaje">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-7 mb-4 cont-flex p-sm">

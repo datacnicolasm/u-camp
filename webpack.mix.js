@@ -8,10 +8,11 @@ mix.js('resources/js/app.js', 'public/js')
             prependData: `@import "generals";`
         }
     })
-    .setResourceRoot('../')
-    .babelConfig({
-        presets: ['@babel/preset-env']
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery']
     })
+    .setPublicPath('public')
+    .setResourceRoot('../')
     .sourceMaps()
     .version();
 
@@ -23,23 +24,15 @@ if (mix.inProduction()) {
 mix.webpackConfig({
     resolve: {
         alias: {
-            '@globals': path.resolve(__dirname, 'resources/js/globals.js')
+            '@globals': path.resolve(__dirname, 'resources/js/globals.js'),
+            jQuery: path.resolve(__dirname, 'node_modules/jquery/dist/jquery.js')
         }
     },
     output: {
-        publicPath: '/fonts/'
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-        }),
-    ]
+        publicPath: '/fonts/',
+        assetModuleFilename: 'fonts/[name][ext]',
+    }
 });
 
-// Copiar los archivos de jQuery UI CSS
-mix.copy('node_modules/jquery-ui/themes/base/all.css', 'public/css/jquery-ui.css');
-
-//
+// Copiar las imágenes a la carpeta public
 mix.copy('resources/images', 'public/images')

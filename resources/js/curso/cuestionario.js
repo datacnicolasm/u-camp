@@ -1,6 +1,6 @@
 window.$ = window.jQuery = require('jquery');
-import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
+import { GLOBAL_VARS } from '@globals';
 
 $(function ($) {
     const pdfUrl = $('.cuestionario-view-curso').data('pdf-url');
@@ -11,9 +11,15 @@ $(function ($) {
 
     // Animación de pdf section
     const pdf_view = $('.pdf-section');
-    gsap.from(pdf_view, { duration: 1.0, x: -200, opacity: 0, ease: 'power2.out' });
+
+    if (pdf_view.length > 0) {
+        gsap.from(pdf_view, { duration: 1.0, x: -200, opacity: 0, ease: 'power2.out' });
+    }
 
     // Animación de question section
     const question_view = $('.questionnaire-section');
-    gsap.from(question_view, { duration: 1.0, x: 200, opacity: 0, ease: 'power2.out' });
+
+    if (question_view.length > 0) {
+        gsap.from(question_view, { duration: 1.0, x: 200, opacity: 0, ease: 'power2.out' });
+    }
 });

@@ -1,7 +1,6 @@
 window.$ = window.jQuery = require('jquery');
-import { GLOBAL_VARS } from '@globals';
 import { gsap } from 'gsap';
-import Chart from 'chart.js/auto';
+import { GLOBAL_VARS } from '@globals';
 
 function formatCurrency(value) {
     // Redondear
@@ -308,6 +307,13 @@ $(function ($) {
     })
 
     $("input.input-dian").each(function (index, element) {
+        let value = parseFloat($(this).val().replace(/\./g, '').replace(',', '.'));
+        if (!isNaN(value)) {
+            let formattedValue = formatCurrency(value);
+            $(this).val(formattedValue);
+        }
+        updateFormValues();
+        
         $(element).on('keydown', function (e) {
             // Permitir teclas de control como backspace, tab, enter, escape, delete y flechas
             if (
@@ -373,8 +379,6 @@ $(function ($) {
             const top_position = $(element.parentNode).position().top - 2
 
             const cod_field = $(element).data("cod-field")
-
-            console.log(cod_field)
 
             $("#110-" + cod_field).show()
             $("#110-" + cod_field).css("margin-top", top_position + "px")
