@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('cursos', function (Blueprint $table) {
             $table->id();
+            $table->boolean('activo')->default(0);
             $table->string('titulo');
             $table->tinyInteger('tipo')->unsigned()->default(0);
             $table->tinyInteger('dificultad')->unsigned()->default(0);

@@ -25,6 +25,7 @@ class Curso extends Model
      * @var array
      */
     protected $fillable = [
+        'activo',
         'titulo',
         'tipo',
         'dificultad',

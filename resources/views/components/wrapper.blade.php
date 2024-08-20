@@ -228,10 +228,16 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-12 col-md-4 content-btn-continuar">
-                                                            <a href="{{ route('view-curso', ['curso' => $curso->id]) }}"
-                                                                class="btn btn-sm btn-3-ucamp">
-                                                                Iniciar curso
-                                                            </a>
+                                                            @if ($curso->activo)
+                                                                <a href="{{ route('view-curso', ['curso' => $curso->id]) }}"
+                                                                    class="btn btn-sm btn-3-ucamp">
+                                                                    Iniciar curso
+                                                                </a>
+                                                            @else
+                                                                <div class="px-2 mb-3 rounded d-inline-block text-medium float-right text-white badge-warning">
+                                                                    Muy pronto
+                                                                </div>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>

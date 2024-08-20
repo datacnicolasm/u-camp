@@ -45,6 +45,11 @@
                                                 <div class="px-2 mb-3 bg-2-ucamp rounded d-inline-block text-medium">
                                                     {{ \App\Models\Curso::$dificultadTexto[$curso->dificultad] }}
                                                 </div>
+                                                @if (!$curso->activo)
+                                                    <div class="px-2 mb-3 rounded d-inline-block text-medium float-right text-white badge-warning">
+                                                        Muy pronto
+                                                    </div>
+                                                @endif
                                             </div>
                                             <div class="col-12 mb-2 title-curso text-large">
                                                 <strong>{{ $curso->titulo }}</strong>

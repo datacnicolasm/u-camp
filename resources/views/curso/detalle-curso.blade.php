@@ -28,13 +28,19 @@
                                     </h2>
                                 </div>
                                 <div class="col-sm-12 col-md-10 btn-curso">
-                                    <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lastLesson["lesson_id"] ]) }}" class="btn bg-3-ucamp mt-2">
-                                        @if ($lastLesson["is_first"])
-                                            <span>Iniciar curso</span>
-                                        @else
-                                            <span>Continuar curso</span>
-                                        @endif
-                                    </a>
+                                    @if ($curso->activo)
+                                        <a href="{{ route('view-lesson', ['curso' => $curso->id, 'lesson' => $lastLesson["lesson_id"] ]) }}" class="btn bg-3-ucamp mt-2">
+                                            @if ($lastLesson["is_first"])
+                                                <span>Iniciar curso</span>
+                                            @else
+                                                <span>Continuar curso</span>
+                                            @endif
+                                        </a>
+                                    @else
+                                        <div class="px-2 mb-3 rounded d-inline-block text-medium float-left text-white badge-warning">
+                                            Muy pronto
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="col-sm-12 col-md-10 mt-3 ml-2 datos-curso">
                                     <p class="m-0 pr-2 d-inline-block text-medium text-white">
@@ -91,40 +97,44 @@
                                                     <p class="mt-3 mb-0 text-justify">
                                                         {{ $chapter->description }}
                                                     </p>
-                                                    <div class="lessons-list">
-                                                        <span class="text-toggle text-primary font-weight-bold">Ver contenido</span>
-                                                        <ul class="lessons-list-items">
-                                                            @foreach($chapter->lessons as $lesson)
-                                                            @php
-                                                                $url_lesson = $lesson->enabled
-                                                                    ? route('view-lesson', ['curso' => $curso->id, 'lesson' => $lesson->id])
-                                                                    : '#';
+                                                    @if ($curso->activo)
+                                                        <div class="lessons-list">
+                                                            
+                                                            <span class="text-toggle text-primary font-weight-bold">Ver contenido</span>
+                                                            
+                                                            <ul class="lessons-list-items">
+                                                                @foreach($chapter->lessons as $lesson)
+                                                                @php
+                                                                    $url_lesson = $lesson->enabled
+                                                                        ? route('view-lesson', ['curso' => $curso->id, 'lesson' => $lesson->id])
+                                                                        : '#';
 
-                                                                $class_enabled = $lesson->enabled ? "enabled" : "no-enabled";
-                                                            @endphp
-                                                                <li>
-                                                                    <a href="{{ $url_lesson }}">
-                                                                        <div class="item-lesson-left {{ $class_enabled }}">
-                                                                            @if ( $lesson->type == 'video' )
-                                                                                <i class="fas fa-video <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
-                                                                            @elseif ( $lesson->type == 'questionnaire' )
-                                                                                <i class="fas fa-check-square <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
-                                                                            @elseif ( $lesson->type == 'interactive' )
-                                                                                <i class="fas fa-keyboard <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
-                                                                            @elseif ( $lesson->type == 'dian' )
-                                                                                <i class="fas fa-file-invoice <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
-                                                                            @endif
-                                                                            <span>{{ $lesson->title }}</span>
-                                                                        </div>
-                                                                        <div class="item-lesson-right <?php echo ($lesson->viewed) ? 'text-success is-view-lesson' : 'text-2-ucamp'; ?>">
-                                                                            <?php echo ($lesson->viewed) ? '<i class="fas fa-check icon-circle"></i>' : ''; ?>
-                                                                            {{ $lesson->points_xp }}xp
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
+                                                                    $class_enabled = $lesson->enabled ? "enabled" : "no-enabled";
+                                                                @endphp
+                                                                    <li>
+                                                                        <a href="{{ $url_lesson }}">
+                                                                            <div class="item-lesson-left {{ $class_enabled }}">
+                                                                                @if ( $lesson->type == 'video' )
+                                                                                    <i class="fas fa-video <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
+                                                                                @elseif ( $lesson->type == 'questionnaire' )
+                                                                                    <i class="fas fa-check-square <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
+                                                                                @elseif ( $lesson->type == 'interactive' )
+                                                                                    <i class="fas fa-keyboard <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
+                                                                                @elseif ( $lesson->type == 'dian' )
+                                                                                    <i class="fas fa-file-invoice <?php echo ($lesson->viewed) ? 'viewed' : 'no-viewed'; ?>"></i>
+                                                                                @endif
+                                                                                <span>{{ $lesson->title }}</span>
+                                                                            </div>
+                                                                            <div class="item-lesson-right <?php echo ($lesson->viewed) ? 'text-success is-view-lesson' : 'text-2-ucamp'; ?>">
+                                                                                <?php echo ($lesson->viewed) ? '<i class="fas fa-check icon-circle"></i>' : ''; ?>
+                                                                                {{ $lesson->points_xp }}xp
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             @endforeach
                                         @endif
