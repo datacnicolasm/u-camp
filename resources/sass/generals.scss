@@ -83,6 +83,192 @@ h2{
     }
 }
 
+body{
+    font-size: .9rem;
+}
+
+.card-top-camp{
+    border-top: 6px solid $tint-3;
+}
+
+.logo {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    span {
+        font-family: "Madimi One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .u-logo {
+        font-size: 2.9rem;
+        color: $tint-3;
+    }
+
+    .camp-logo {
+        font-size: 2.9rem;
+        margin-left: 2px;
+        color: $tint-1;
+    }
+}
+
+.btn-ucamp {
+    color: #fff;
+    background-color: $tint-4;
+    border-color: $tint-4;
+    box-shadow: none;
+
+    &:hover {
+        color: #fff;
+        background-color: $tint-3;
+        border-color: $tint-3;
+        box-shadow: none;
+    }
+}
+
+.btn-ucamp-border {
+    color: $tint-1;
+    background-color: none;
+    border: 2px solid $tint-1;
+    box-shadow: none;
+
+    &:hover {
+        color: white;
+        background-color: $tint-1;
+        border: 2px solid $tint-1;
+        box-shadow: none;
+    }
+}
+
+.btn-2-ucamp-border {
+    color: $tint-2;
+    background-color: none;
+    border: 2px solid $tint-2;
+    box-shadow: none;
+
+    &:hover {
+        color: white;
+        background-color: $tint-2;
+        border: 2px solid $tint-2;
+        box-shadow: none;
+    }
+}
+
+.btn-3-ucamp {
+    color: #fff !important;
+    background-color: $tint-3;
+    border: 2px solid $tint-3;
+    box-shadow: none;
+    text-decoration: none !important;
+
+    &:hover {
+        color: #fff;
+        background-color: darken($tint-3, 2);
+        border: 2px solid darken($tint-3, 2);
+        box-shadow: none;
+    }
+}
+
+.btn-2-ucamp {
+    color: #fff;
+    background-color: $tint-2;
+    border: 2px solid $tint-2;
+    box-shadow: none;
+
+    &:hover {
+        color: #fff;
+        background-color: $tint-3;
+        border: 2px solid $tint-3;
+        box-shadow: none;
+    }
+}
+
+.bg-ucamp {
+    color: #fff;
+    background-color: $tint-1;
+}
+
+.text-ucamp {
+    color: $tint-1;
+}
+
+.bg-2-ucamp {
+    color: #fff;
+    background-color: $tint-2;
+}
+
+.text-2-ucamp {
+    color: $tint-2;
+}
+
+.bg-3-ucamp {
+    color: #fff;
+    background-color: $tint-3;
+}
+
+.text-3-ucamp {
+    color: $tint-3;
+}
+
+.text-small {
+    font-size: 0.7em;
+}
+
+.text-medium {
+    font-size: 0.9em;
+}
+
+.text-large {
+    font-size: 1.3em;
+}
+
+.bg-ucamp {
+    background-color: #e8c042 !important;
+    color: white;
+}
+
+.logo-ucamp {
+    color: $tint-1;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.5em;
+}
+
+.container-course-progress {
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .progress-text{
+        color: $tint-3;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    .progress-container {
+        width: 100%;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+
+        .progress-bar {
+            height: 15px;
+            width: 0%;
+            background-color: $tint-3;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+    }
+}
 
 // Textos
 .text-tint-1 {
