@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             CursosTableSeeder::class,
             ChaptersTableSeeder::class,
             GroupsTableSeeder::class,
-            GroupUserSeeder::class,
+            //GroupUserSeeder::class,
             LessonsTableSeeder::class,
             QuestionsTableSeeder::class,
             WorkshopsTableSeeder::class,

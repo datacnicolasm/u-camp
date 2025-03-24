@@ -74,7 +74,7 @@ class HomeController extends Controller
 
         if ($id_wompi) {
             // Url de conexión
-            $url = 'https://sandbox.wompi.co/v1/transactions/' . $id_wompi;
+            $url = 'https://production.wompi.co/v1/transactions/' . $id_wompi;
 
             try {
                 $response = Http::get($url);

@@ -1,5 +1,4 @@
 export const GLOBAL_VARS = {
-    app_env: 'local',
+    app_env: 'production',
     api_url: '/ibero-lab/public/',
-    app_name: 'My App'
 }

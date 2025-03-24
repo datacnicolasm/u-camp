@@ -22,24 +22,24 @@
         <nav class="mt-2 sidebar-menu">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
-
-                <?php $class_items_grupos = ''; ?>
-                @if (Route::currentRouteName() == 'dashboard-grupos')
-                    <?php $class_items_grupos .= 'active-item-nav'; ?>
+                
+                <!-- Listado de grupos -->
+                <?php $class_items_grupos = "" ?>
+                @if (Route::currentRouteName() == 'list-groups')
+                    <?php $class_items_grupos .= "active-item-nav" ?>
                 @endif
-                <!--  -->
-                <li class="mt-3 nav-item">
-                    <a href="{{ route('dashboard-grupos') }}" class="nav-link <?php echo $class_items_grupos; ?>">
+                <li class="nav-item">
+                    <a href="{{ route('list-groups') }}" class="nav-link <?php echo $class_items_grupos ?>">
                         <i class="nav-icon fas fa-users"></i>
-                        <p>Inicio</p>
+                        <p>Grupos</p>
                     </a>
                 </li>
 
                 <!--  -->
                 <li class="nav-item">
                     <a class="nav-link">
-                        <i class="nav-icon fas fa-chart-bar"></i>
-                        <p>Cuadro de mando</p>
+                        <i class="nav-icon fas fa-chart-line"></i>
+                        <p>Panel de aprendizaje</p>
                     </a>
                 </li>
 
@@ -67,18 +67,6 @@
                     </a>
                 </li>
 
-                <!-- Listado de grupos -->
-                <?php $class_items_grupos = "" ?>
-                @if (Route::currentRouteName() == 'list-groups')
-                    <?php $class_items_grupos .= "active-item-nav" ?>
-                @endif
-                <li class="nav-item">
-                    <a href="{{ route('list-groups') }}" class="nav-link <?php echo $class_items_grupos ?>">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>Grupos</p>
-                    </a>
-                </li>
-
                 <!-- Division de secciones -->
                 <div class="item-div-sidebar"></div>
 
@@ -93,32 +81,8 @@
                     </a>
                 </li>
 
-                <!--  -->
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="nav-icon fas fa-chart-line"></i>
-                        <p>Panel de aprendizaje</p>
-                    </a>
-                </li>
-
-                <!--  -->
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Analitica</p>
-                    </a>
-                </li>
-
                 <!-- Division de secciones -->
                 <div class="item-div-sidebar"></div>
-
-                <!--  -->
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="nav-icon fas fa-cogs"></i>
-                        <p>Ajustes</p>
-                    </a>
-                </li>
 
                 <!-- Cerrar sesion -->
                 <li class="nav-item">

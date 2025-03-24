@@ -188,10 +188,10 @@
                                     <div class="col-md-5 col-sm-12 my-3">
                                         <form id="form-pago-wompi">
                                             <?php
-                                            $public_key = 'pub_test_C3EHFG30gb9kJRJJbhuDInR0OacWifjT';
+                                            $public_key = 'pub_prod_TtV0nFoIKX8eSL9NGtlXPmiyDxmO0Ac0';
                                             $num_ref = $reference;
-                                            $value = 24900000;
-                                            $secret = 'test_integrity_5xU445cUaVu3mafI4VCvRvX4czc1Q2YH';
+                                            $value = 4026000;
+                                            $secret = 'prod_integrity_plNODmhW6wZEMRxhntPnwkux2JFdOMHD';
                                             $string = $num_ref . $value . 'COP' . $secret;
                                             $hash = hash('sha256', $string);
                                             ?>

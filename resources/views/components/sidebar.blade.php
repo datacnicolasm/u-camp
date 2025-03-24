@@ -47,7 +47,7 @@
                 @if (Auth::user()->has_groups)
                     <!--  -->
                     <li class="nav-item">
-                        <a href="{{ route('dashboard-grupos') }}" class="nav-link <?php echo $class_items_grupos; ?>">
+                        <a href="{{ route('list-groups') }}" class="nav-link <?php echo $class_items_grupos; ?>">
                             <i class="nav-icon fas fa-users"></i>
                             <p>Grupos</p>
                         </a>
